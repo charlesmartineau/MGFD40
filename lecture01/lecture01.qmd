@@ -1,0 +1,5 @@
+---
+title: "MGFD40 - Lecture 1"
+bibliography: lit.bib
+---
+
