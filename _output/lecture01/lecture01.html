@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.5.55">
 
   <meta name="author" content="Charles Martineau">
-  <title>MGFD40 - Lecture 1</title>
+  <title>Lecture 1: Introduction to investor psychology and behavioral finance</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -329,25 +329,209 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">MGFD40 - Lecture 1</h1>
+  <h1 class="title">Lecture 1:<br><span style="color:#045282">Introduction to investor psychology and behavioral finance</span></h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-<a href="charlesmartineau.com">Charles Martineau</a> 
-</div>
-<div class="quarto-title-author-email">
-<a href="mailto:charles.martineau@utoronto.ca">charles.martineau@utoronto.ca</a>
+Charles Martineau 
 </div>
         <p class="quarto-title-affiliation">
-            UTSC
+            UTSC and Rotman | <a href="https://www.charlesmartineau.com">www.charlesmartineau.com</a>
           </p>
     </div>
 </div>
 
 </section>
-<section class="slide level2">
+<section id="welcome-to-mgfd40" class="slide level2">
+<h2>Welcome to MGFD40</h2>
+<div style="height: 2em;">
 
+</div>
+<ul>
+<li><p>Requirements:</p>
+<ul>
+<li>MGFC10H3: Intermediate Finance</li>
+<li>MGEB12H3: Quantitative Methods in Economics II</li>
+<li>Come to every class.</li>
+</ul></li>
+<li><p>Programming:</p>
+<ul>
+<li>Python will be used for coding trading strategies</li>
+<li>Can use AI.</li>
+</ul></li>
+<li><p>Econometrics:</p>
+<ul>
+<li>Basic understanding of regression analysis is assumed</li>
+</ul></li>
+</ul>
+</section>
+<section id="instructor" class="slide level2">
+<h2>Instructor</h2>
+<p>Charles Martineau</p>
+<ul>
+<li>From Montreal</li>
+<li>Joined UTSC and Rotman in 2017</li>
+<li>PhD in Finance from UBC.
+<ul>
+<li>Specialize in information economics. E.g., how information is produced, disseminated, and used in financial markets.</li>
+<li>see <a href="www.charlesmartineau.com">charlesmartineau.com</a> for research portfolio.</li>
+</ul></li>
+</ul>
+</section>
+<section id="objective-of-this-course" class="slide level2">
+<h2>Objective of this course</h2>
+<div style="height: 2em;">
+
+</div>
+<div class="r-fit-text">
+<p><strong>Theoretical component:</strong></p>
+<ul>
+<li>The systematic behavioral biases of market participants and its impact on asset pricing and corporate decisions.</li>
+<li>The rationality assumption and efficient market hypothesis and know how they are violated in reality.</li>
+<li>The types of psychological biases that lead to asset mispricing.</li>
+</ul>
+<p><strong>Practical component:</strong></p>
+<ul>
+<li>How to code in Python and develop trading strategies to take advantage of mispricing.</li>
+</ul>
+</div>
+</section>
+<section id="what-is-behavioral-economics" class="slide level2">
+<h2>What is Behavioral economics?</h2>
+<div style="height: 2em;">
+
+</div>
+<p>When people face complex decisions, they often rely on basic judgments, preferences, and heuristics to simplify the situation rather than acting completely rationally.</p>
+<div style="height: 1em;">
+
+</div>
+<p>Behavioral economics is the study of these “irrational actions” and how it impact financial decisions.</p>
+</section>
+<section id="an-example-of-a-behavioral-heuristic-availability" class="slide level2">
+<h2>An example of a behavioral heuristic: Availability</h2>
+<div style="height: 2em;">
+
+</div>
+<p>You plan to invest money, but you remembered a recent stock market crash.</p>
+<ul>
+<li>This news might affect your decision to invest or not in financial markets despite that crashes do not occur frequently (they do occur but not frequently).</li>
+<li>Thus you forego a return on your money.</li>
+</ul>
+</section>
+<section id="lets-do-an-experiment-the-ultimatum-game" class="slide level2">
+<h2>Let’s do an experiment: The ultimatum game</h2>
+<div style="height: 2em;">
+
+</div>
+<p>Here’s how it works:</p>
+<div style="height: 1em;">
+
+</div>
+<p>I give your friend $20 in $1 bill. He has to share a portion of his $20 with you and can give you as much as he wants. If you accept the offer, you get that amount, and he keeps the rest. If you turn down his offer, both of you get nothing.</p>
+<div style="height: 1em;">
+
+</div>
+<p>Let’s say he offers you $1. Would you take it?</p>
+</section>
+<section id="more-experiments" class="slide level2">
+<h2>More experiments</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p>… with the help of Richard Thaler of the University of Chicago, who won the Nobel Prize in Economics in 2017 for his pioneering work in behavioral economics.</p>
+<p>First homework: Watch this <a href="https://player.pbs.org/viralplayer/2365517540/">video</a>.</p>
+</div><div class="column" style="width:40%;">
+<p><img data-src="figures/thaler.png" style="width:100.0%"></p>
+</div></div>
+</section>
+<section id="key-behavioral-biases" class="slide level2">
+<h2>Key behavioral biases</h2>
+<div style="height: 2em;">
+
+</div>
+<ul>
+<li>Overconfidence</li>
+<li>Loss aversion</li>
+<li>Anchoring</li>
+<li>Representativeness</li>
+<li>Regret</li>
+<li>Mental accounting</li>
+<li>… and more</li>
+</ul>
+</section>
+<section id="congnitive-constraints" class="slide level2">
+<h2>Congnitive constraints</h2>
+<div style="height: 2em;">
+
+</div>
+<p>A key congnitive constraint we will discuss in class is limited attention, i.e., our inability topay attention to everything!</p>
+</section>
+<section id="a-classic-example-of-limited-attention" class="slide level2">
+<h2>A classic example of limited attention</h2>
+<div style="height: 2em;">
+
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>The stock market reaction to earnings announcements.</p>
+<ul>
+<li>Prices reacting slowly to new information (earnings announcement). This figure is from the 1980s.</li>
+<li>Do you think pattern is still true today?</li>
+<li>We’ll discuss more in the next class.</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><img data-src="figures/pead.png" style="width:100.0%"></p>
+</div></div>
+</section>
+<section id="themes-of-the-course" class="slide level2">
+<h2>Themes of the course</h2>
+<ul>
+<li>Introduction to Behavioral Finance &amp; Decision-Making Under Uncertainty (mostly theory)</li>
+<li>Individual Biases and Retail Trading Behavior</li>
+<li>CAPM and Cross-Sectional Asset Pricing and violations</li>
+<li>Liquidity, Transaction Costs, and Limits to Arbitrage</li>
+<li>Market Efficiency and Event Studies</li>
+<li>Return Predictability</li>
+<li>Momentum and Reversal</li>
+</ul>
+</section>
+<section id="course-syllabus" class="slide level2">
+<h2>Course syllabus</h2>
+<div style="height: 2em;">
+
+</div>
+<p>Available here</p>
+</section>
+<section id="coding" class="slide level2">
+<h2>Coding</h2>
+<div style="height: 2em;">
+
+</div>
+<p>Coding is an essential part of this course… for your final project. Python will be used. Here are some resources to get you started (YouTube videos by my co-author):</p>
+<ul>
+<li>Installation for windows users, see <a href="https://www.youtube.com/watch?v=uxgkWssqkAU">link</a></li>
+<li>Installation for Mac users, see <a href="https://www.youtube.com/watch?v=0wj8F_oBYEE">link</a></li>
+<li>This installation uses the environment UV (not anaconda). If you already use Anaconda, that’s not a problem.</li>
+<li>Now with AI tools, coding is easier than ever! I encourage you to use AI tools to help you code your trading strategies.</li>
+</ul>
+</section>
+<section id="policy-of-reference-letters" class="slide level2">
+<h2>Policy of reference letters</h2>
+<div style="height: 2em;">
+
+</div>
+<p>A necessary condition: grade <strong>A</strong> or above</p>
+<p>What do I need to write your letter:</p>
+<ul>
+<li>Your CV and Personal Statement</li>
+<li>Your (unofficial) transcript</li>
+<li>Your scanned UoT ID Card</li>
+<li>If you want to have an emotional and strong letter instead of a template, do speak up and leave an impression!</li>
+</ul>
+<p>Very important:</p>
+<ul>
+<li>I discuss your group project in my letter. It is important that you show leadership and do very well on the group project. It is the best way for me to assess your potential for graduate schools.</li>
+</ul>
 <div class="quarto-auto-generated-content">
 <p><img src="../logos/uoft.png" class="slide-logo"></p>
 <div class="footer footer-default">
