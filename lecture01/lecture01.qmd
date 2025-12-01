@@ -2,7 +2,7 @@
 title: "Lecture 1:<br><span style='color:#045282'>Introduction to investor psychology and behavioral finance</span>"
 author: "Charles Martineau"
 institute: "UTSC and Rotman | [www.charlesmartineau.com](https://www.charlesmartineau.com)"
-bibliography: lit.bib
+bibliography: ../lit.bib
 ---
 
 ## Welcome to MGFD40
