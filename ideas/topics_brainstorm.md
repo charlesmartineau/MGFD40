@@ -28,6 +28,23 @@ The objective of this course is to provide 4th year undergraduate students in bu
 ---
 
 ### Class 2: Individual Biases and Retail Trading Behavior
+
+- Overconfidence / over-optimism
+  - Odean's paper
+- Confirmation bias / over optimism
+  - social media
+- Anchoring
+  - pead / george and hwang
+- Representativeness heuristic
+  - forecast revision
+- Availability bias
+  - Barber and Odean "All that glitters"
+- Ambiguity aversion
+  - underdiversification / naive diversification
+  - home local biases
+
+
+
 **Classical Finance Benchmark:**
 - Rational expectations and Bayesian updating
 - Efficient information processing
@@ -53,34 +70,7 @@ The objective of this course is to provide 4th year undergraduate students in bu
 
 ---
 
-### Class 3: CAPM and Cross-Sectional Asset Pricing
-**Classical Finance Benchmark:**
-- Capital Asset Pricing Model (Sharpe, Lintner, Mossin)
-- Mean-variance efficiency
-- Market portfolio as optimal portfolio
-- Single-factor pricing: E[Ri] = Rf + βi(E[Rm] - Rf)
-
-**Empirical Evidence (Classical):**
-- Early tests supporting CAPM (Black, Jensen, Scholes, 1972)
-- Market beta as risk measure
-
-**Behavioral Challenge:**
-- Systematic mispricing due to behavioral biases
-- Size effect (small firms outperform)
-- Value effect (high B/M outperforms)
-- Behavioral explanations: extrapolation, representativeness
-- Limits to arbitrage preventing correction
-
-**Empirical Evidence (Behavioral):**
-- Fama-French three-factor model (1993) - size and value factors
-- Long-term reversal of extreme performers
-- Lottery-like stock preferences
-- Low-volatility anomaly
-- Behavioral interpretations of factor premia
-
----
-
-### Class 4: Market Efficiency and Event Studies
+### Class 3: Market Efficiency, liquidity, market frictions, and Event Studies
 **Classical Finance Benchmark:**
 - Efficient Market Hypothesis (Fama, 1970)
 - Three forms: weak, semi-strong, strong
@@ -196,28 +186,30 @@ The objective of this course is to provide 4th year undergraduate students in bu
 - Fire sales and liquidation value
 - Failure of convergence in arbitrage opportunities
 
-## behavioral biases in finance and economics are
 
-- Overconfidence
-- Loss aversion
-- Anchoring
-- Herding behavior
-- Mental accounting
-- Prospect theory
-- Confirmation bias
-- Framing effects
-- Availability bias
-- Endowment effect
-- Status quo bias
-- Representativeness heuristic
-- Hyperbolic discounting
-- Self-attribution bias
-- Optimism bias
-- Regret aversion
-- Gambler's fallacy
-- Sunk cost fallacy
-- Social comparison bias
-- Negativity bias
-- Planning fallacy
-- Choice overload
-- Time inconsistency
+### Class 3: CAPM and Cross-Sectional Asset Pricing
+**Classical Finance Benchmark:**
+- Capital Asset Pricing Model (Sharpe, Lintner, Mossin)
+- Mean-variance efficiency
+- Market portfolio as optimal portfolio
+- Single-factor pricing: E[Ri] = Rf + βi(E[Rm] - Rf)
+
+**Empirical Evidence (Classical):**
+- Early tests supporting CAPM (Black, Jensen, Scholes, 1972)
+- Market beta as risk measure
+
+**Behavioral Challenge:**
+- Systematic mispricing due to behavioral biases
+- Size effect (small firms outperform)
+- Value effect (high B/M outperforms)
+- Behavioral explanations: extrapolation, representativeness
+- Limits to arbitrage preventing correction
+
+**Empirical Evidence (Behavioral):**
+- Fama-French three-factor model (1993) - size and value factors
+- Long-term reversal of extreme performers
+- Lottery-like stock preferences
+- Low-volatility anomaly
+- Behavioral interpretations of factor premia
+
+---

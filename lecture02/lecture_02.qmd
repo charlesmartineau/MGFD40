@@ -54,7 +54,7 @@ Utility function: $U(w)$
 
 **Max** $U(w)$ subject to $f(w)=c$ (some constraints)
 
-- $w$ corresponds to endownment. You consume endownment to get utility. 
+- $w$ corresponds to endowment. You consume endowment to get utility. 
 
 ---
 
@@ -568,6 +568,8 @@ Prospect theory says that losses hurt more than gains. Let's apply this thinking
 1. The disposition effect
    - Odean (1998)
    - Frazzini (2006)
+2. Equity risk premium puzzle
+   - Benartzi and Thaler (1995)
 
 ---
 
