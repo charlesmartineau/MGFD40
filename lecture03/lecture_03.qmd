@@ -383,7 +383,7 @@ George and Hwang (2004) find that:
 - Overconfidence is a cognitive bias that can be exacerbated by heuristics, but it's not itself a heuristic.
 - Subjects overestimate both their own predictive abilities and precision of information they have been given.
 - People think that they are smarter and have better information than they actually do.
-- Think of all the "planning falacy" ... "it will only take me 2 hours to finish this project" ... "I will only need $5000 to start my business" ...
+- Think of all the "planning fallacy" ... "it will only take me 2 hours to finish this project" ... "I will only need $5000 to start my business" ...
 
 
 ---
@@ -407,7 +407,20 @@ Overconfidence leads to an illusion of control when people are given the opportu
 
 --- 
 
-## Implications of Overconfidence Bias in Finance
+## Implications for retail investors
+
+::: {style="height: 2em;"}
+:::
+
+Overconfidence bias has significant implications for retail investors, often leading to suboptimal investment decisions.
+- Overconfident investors may trade excessively, believing they can time the market or pick winning stocks more accurately than they actually can.
+- They may underestimate risks, leading to portfolios that are not well-diversified.
+- Overconfidence can also lead to a lack of learning from past mistakes, as investors may attribute successes to their skill and failures to external factors.
+
+
+---
+
+## Overconfidence of Retail Investors
 
 ::: {style="height: 2em;"}
 :::
@@ -416,14 +429,14 @@ Individuals and institutions trade much more than can be justified on rational g
 
 Barber and Odean (2000, JF) find that:
 
-- After taking trading costs into account, the average return of investors is well belowthe return of standard benchmarks, largely due to transaction costs.
+- After taking trading costs into account, the average return of investors is well below the return of standard benchmarks, largely due to transaction costs.
 - Those that trade most earn an annual return of 11.4%, while the market returns 17.9%.
-- "trading is hazardous to your wealth!"
+- "Trading is hazardous to your wealth!"
 - The effect is actually stronger for men than for women.
 
 --- 
 
-## Implications of Overconfidence Bias in Finance
+## Overconfidence Bias for Retail Investors
 
 ::: {style="height: 2em;"}
 :::
@@ -432,4 +445,3 @@ Barber and Odean (2000, JF) find that:
 
 ---
 
-## Biases and Retail Trading Behavior
