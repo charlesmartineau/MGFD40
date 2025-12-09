@@ -428,21 +428,33 @@ Charles Martineau
 <h2>CAPM</h2>
 <p>The Capital Asset Pricing Model (CAPM) is a foundational model in finance that describes the relationship between systematic risk and expected return for stocks.</p>
 <p>Formula: <span class="math display">E(R_i) = R_f + \beta_i (E(R_m) - R_f)</span></p>
-<p>Where: - (E(R_i)): Expected return of asset (i) - (R_f): Risk-free rate - (_i): Beta of asset (i) (measure of its sensitivity to market movements) - (E(R_m)): Expected return of the market portfolio - (E(R_m) - R_f): Market risk premium - (_i = ) - Assumptions: Investors are rational, markets are efficient, and there are no taxes or transaction costs.</p>
+<p>Where:</p>
+<ul>
+<li><span class="math inline">E(R_i)</span>: Expected return of asset (i)</li>
+<li><span class="math inline">R_f</span>: Risk-free rate</li>
+<li><span class="math inline">\beta_i</span>: Beta of asset (i) (measure of its sensitivity to market movements)</li>
+<li><span class="math inline">E(R_m)</span>: Expected return of the market portfolio</li>
+<li><span class="math inline">E(R_m) - R_f</span>: Market risk premium</li>
+<li><span class="math inline">\beta_i</span> = <span class="math inline">\frac{Cov(R_i, R_m)}{Var(R_m)}</span></li>
+<li>Assumptions: Investors are rational, markets are efficient, and there are no taxes or transaction costs.</li>
+</ul>
 </section>
 <section id="security-market-line-sml" class="slide level2">
 <h2>Security Market Line (SML)</h2>
+<div style="height: 2em;">
+
+</div>
 <p>The Security Market Line (SML) is a graphical representation of the CAPM. It plots the expected return of securities against their beta (systematic risk).</p>
 <p><strong>Key properties:</strong></p>
 <ul>
-<li>The SML has a y-intercept equal to the risk-free rate ((R_f))</li>
-<li>The slope of the SML equals the market risk premium ((E(R_m) - R_f))</li>
+<li>The SML has a y-intercept equal to the risk-free rate <span class="math inline">R_f</span></li>
+<li>The slope of the SML equals the market risk premium <span class="math inline">E(R_m) - R_f</span></li>
 <li>All correctly priced assets should lie on the SML</li>
 </ul>
 </section>
 <section id="sml-simulated-data" class="slide level2">
 <h2>SML: Simulated Data</h2>
-<div id="22a71961" class="cell" data-execution_count="1">
+<div id="5e6846e4" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href=""></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href=""></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href=""></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -479,7 +491,7 @@ Charles Martineau
 </section>
 <section id="sml-simulated-data-1" class="slide level2">
 <h2>SML: Simulated Data</h2>
-<div id="26795227" class="cell" data-execution_count="2">
+<div id="e73111d8" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-stdout">
 <pre><code>Simulated Securities Data:
    Security   Beta  Expected Return (%)  Actual Return (%)
@@ -510,7 +522,7 @@ Market risk premium: 6.00%</code></pre>
 </section>
 <section id="capm-test-french-beta-portfolios" class="slide level2">
 <h2>CAPM Test: French Beta Portfolios</h2>
-<div id="63d37f28" class="cell" data-execution_count="4">
+<div id="8c894ddd" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href=""></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb3-2"><a href=""></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb3-3"><a href=""></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -573,7 +585,7 @@ Market risk premium: 6.00%</code></pre>
 </section>
 <section id="capm-test-does-it-hold" class="slide level2">
 <h2>CAPM Test: Does It Hold?</h2>
-<div id="a96c90e8" class="cell" data-execution_count="5">
+<div id="63f2d4fc" class="cell" data-execution_count="5">
 
 <div class="cell-output cell-output-stdout">
 <pre><code>
@@ -595,15 +607,115 @@ Beta 10   | 1.604 |  15.85% |  13.15% |  -2.70%</code></pre>
 <img data-src="lecture_05_files/figure-revealjs/cell-6-output-1.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="buy-and-hold-returns" class="slide level2">
 <h2>Buy-and-Hold Returns</h2>
-<div id="85465e03" class="cell" data-execution_count="6">
-<div class="cell-output cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="lecture_05_files/figure-revealjs/cell-7-output-1.png" class="quarto-figure quarto-figure-center"></p>
-</figure>
+
+<img data-src="lecture_05_files/figure-revealjs/cell-7-output-1.png" class="quarto-figure quarto-figure-center r-stretch"><ul>
+<li>High-<span class="math inline">\beta</span> stocks earn less than predicted</li>
+<li>Low-<span class="math inline">\beta</span> stocks earn more than predicted</li>
+</ul>
+</section>
+<section id="other-challenges-to-the-capm" class="slide level2">
+<h2>Other challenges to the CAPM</h2>
+<div style="height: 2em;">
+
 </div>
+<ul>
+<li><strong>Fama-French Three-Factor Model</strong>: Adds size and value factors to better explain returns.</li>
+<li><strong>Momentum Effect</strong>: Stocks that have performed well in the past tend to continue performing well in the short term.</li>
+<li><strong>Behavioral Biases</strong>: Investor psychology can lead to mispricings that CAPM does not account for.</li>
+<li><strong>Liquidity Risk</strong>: Assets with lower liquidity may require higher expected returns, which CAPM does not consider.</li>
+<li><strong>Empirical Anomalies</strong>: Various market anomalies (e.g., January effect, low-volatility anomaly) that CAPM cannot explain.</li>
+</ul>
+</section>
+<section id="how-to-test-alternative-asset-pricing-models" class="slide level2">
+<h2>How to test alternative asset pricing models?</h2>
+<div style="height: 2em;">
+
 </div>
+<p>Fama-French 1993 find that size and book-to-market factors help explain the cross-section of average returns better than CAPM alone. Therefore, one should test models by including additional factors.</p>
+<p><span class="math display">E(R_i) = R_f + \beta_{i,MKT} (E(R_m) - R_f) + \beta_{i,SMB} E(SMB) + \beta_{i,HML} E(HML)</span></p>
+<p>Where:</p>
+<ul>
+<li>(SMB): Small Minus Big (size factor)</li>
+<li>(HML): High Minus Low (value factor)</li>
+</ul>
+<p>Fama-French have argued that these additional factors capture systematic risks not accounted for by CAPM.</p>
+</section>
+<section id="anomalies" class="slide level2">
+<h2>Anomalies</h2>
+<div style="height: 2em;">
+
 </div>
+<p>If you find an anomaly that contradicts CAPM, you can:</p>
+<ol type="1">
+<li>Propose a new risk factor that explains the anomaly.</li>
+<li>Argue that the anomaly is due to behavioral biases or market frictions.</li>
+<li>Test the anomaly across different markets and time periods to assess its robustness.</li>
+<li>Examine whether the anomaly persists after controlling for known risk factors.</li>
+</ol>
+<p>How to test these explanations empirically?</p>
+<ul>
+<li>Form a long-short portfolio based on the anomaly. E.g., for the momentum anomaly, go long past winners and short past losers.</li>
+<li>Regress the returns of this long-short portfolio on the factors of the asset pricing model being tested.</li>
+<li>If the alpha (intercept) is statistically significant, it suggests that the anomaly is not fully explained by the model.</li>
+</ul>
+</section>
+<section id="testing-an-anomaly-an-example" class="slide level2">
+<h2>Testing an Anomaly: An Example</h2>
+<p>Fang and Peress (2009) find that stocks with high media coverage earn lower returns.</p>
+<ul>
+<li>Form a long-short portfolio: Long low media coverage stocks, short high media coverage stocks.</li>
+</ul>
+
+<img data-src="figures/fang.png" class="center r-stretch"><p>What can you conclude from this regression / findings?</p>
+</section>
+<section id="your-alpha-is-it-risk-or-mispricing" class="slide level2">
+<h2>Your “alpha” is it risk or mispricing?</h2>
+<div style="height: 2em;">
+
+</div>
+<p>RISK-BASED:</p>
+<ul>
+<li>✓ Does it covary with bad economic states?</li>
+<li>✓ Is it persistent across time/markets?</li>
+<li>✓ Does it capture systematic covariation?</li>
+<li>✓ Can you identify the economic risk?</li>
+</ul>
+<p>MISPRICING-BASED:</p>
+<ul>
+<li>✓ Is there a behavioral bias that explains it?</li>
+<li>✓ Are there limits to arbitrage?</li>
+<li>✓ Does it vary with sentiment/attention?</li>
+<li>✓ Is there evidence of correction over time?</li>
+</ul>
+</section>
+<section id="zoo-of-anomalies-factors" class="slide level2">
+<h2>Zoo of Anomalies / Factors</h2>
+<p>Campbell R. Harvey, Yan Liu, and Heqing Zhu (2016) “…there are now more than 300 documented anomalies in the asset pricing literature.”</p>
+<ul>
+<li>Is it too easy to find anomalies?</li>
+<li>Data mining concerns</li>
+<li>Publication bias</li>
+<li>P-hacking</li>
+<li>Multiple testing problem</li>
+<li>Lack of out-of-sample validation</li>
+<li>Economic significance vs.&nbsp;statistical significance</li>
+<li>Robustness across different markets and time periods</li>
+<li>Theoretical justification for the anomaly</li>
+<li>Practical implementability (transaction costs, liquidity)</li>
+<li>Survivorship bias in datasets</li>
+</ul>
+</section>
+<section id="joint-hypothesis-problem" class="slide level2">
+<h2>Joint Hypothesis Problem</h2>
+<div style="height: 2em;">
+
+</div>
+<p>Fama (1970) argued that “tests of the efficiency of markets are joint tests of the efficiency hypothesis and of a particular asset-pricing model.”</p>
+<p><strong>Implication:</strong> Rejection of an asset pricing model does not necessarily imply market inefficiency; it could also indicate that the model is misspecified.</p>
+</section>
+<section id="is-the-capm-really-dead" class="slide level2">
+<h2>Is the CAPM really dead?</h2>
+<p>Hasler and Martineau (2022) find that the conditional CAPM holds up well when accounting for time-varying betas and risk premia.</p>
 <div class="quarto-auto-generated-content">
 <p><img src="../logos/uoft.png" class="slide-logo"></p>
 <div class="footer footer-default">
