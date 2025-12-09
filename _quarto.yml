@@ -2,6 +2,8 @@ project:
   output-dir: _output
   render:
     - "lecture*/*.qmd"
+  resources:
+    - "logos/**"
 preview:
   port: 4200
   browser: true
@@ -17,7 +19,7 @@ format:
       buttons: false
     slide-number: true
     footer: "MGFD40"
-    logo: "../logos/uoft.png"
+    logo: "logos/uoft.png"
     transition: slide
     background-transition: fade
     header-includes: |
