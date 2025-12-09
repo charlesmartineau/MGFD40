@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+# Allow RevealJS dist folders
+!_output/**/revealjs/dist/
+
 # Distribution / packaging
 .Python
 build/
