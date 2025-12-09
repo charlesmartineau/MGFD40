@@ -224,3 +224,10 @@ Very important:
 - I discuss your group project in my letter. It is important that you show leadership and do very well on the group project. It is the best way for me to assess your potential for graduate schools.
 
 
+## Recommended books on behavioral finance
+
+- Thaler, R. H. (2016). *Misbehaving: The making of behavioral economics*. WW Norton & Company.
+- Lewis, M. (2017). *The Undoing Project: A Friendship That Changed Our Minds*. WW Norton & Company.
+- Barberis, N., & Thaler, R. (2003). A survey of behavioral finance. In *Handbook of the Economics of Finance* (Vol. 1, pp. 1052-1121). Elsevier.
+- Shefrin, H. (2002). *Beyond greed and fear: Understanding behavioral finance and the psychology of investing*. Oxford University Press.
+- Kahneman, D. (2011). *Thinking, fast and slow*. Macmillan.
