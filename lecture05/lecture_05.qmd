@@ -1,0 +1,13 @@
+---
+title: "Lecture 5:<br><span style='color:#045282'>Cross-Sectional Asset Pricing Test: Biases and Sentiment Distorting Valuation</span>"
+author: "Charles Martineau"
+institute: "UTSC and Rotman | [www.charlesmartineau.com](https://www.charlesmartineau.com)"
+bibliography: ../lit.bib
+format:
+  revealjs:
+    theme: default
+    slide-number: true
+    chalkboard: true
+    incremental: false
+jupyter: python3
+---

@@ -17,19 +17,23 @@ jupyter: python3
 ::: {style="height: 0.5em;"}
 :::
 
-1. History of the Efficient Market Hypothesis (EMH)
-2. Three Forms of Market Efficiency
-3. Frictions to Market Efficiency
+1. **History of the Efficient Market Hypothesis (EMH)**
+2. **Three Forms of Market Efficiency**
+3. **Frictions to Market Efficiency**
    - Behavioral Biases
    - Transaction Costs and Other Market Frictions
-4. Testing Weak Form Market Efficiency
-   - 4A. Random Walk Tests with Python (Ljung-Box, Variance Ratio)
-   - 4B. Return Predictability
-     - Price-to-Dividend Ratios
-     - In-Sample vs. Out-of-Sample Testing
-   - 4C. Contrarian and Momentum Strategies
-     - De Bondt and Thaler (1985) Contrarian Findings
-     - Jegadeesh & Titman (2001) Momentum Findings
+4. **Testing Weak Form Market Efficiency**
+   - Random Walk Tests (Ljung-Box, Variance Ratio)
+   - Return Predictability (Price-to-Dividend Ratios)
+   - Contrarian and Momentum Strategies
+5. **Testing Semi-Strong Form Market Efficiency**
+   - Event Studies
+   - Post-Earnings Announcement Drift (PEAD)
+6. **Testing Strong Form Market Efficiency**
+7. **Limits to Market Efficiency: Three Pillars**
+   - Investor Rationality
+   - Uncorrelated Errors
+   - Unlimited Arbitrage
 
 ## History of the Efficient Market Hypothesis (EMH)
 
