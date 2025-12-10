@@ -1,5 +1,5 @@
 ---
-title: "Lecture 2:<br><span style='color:#045282'>Introduction to Behavioral Finance & Decision-Making Under Uncertainty</span>"
+title: "Lecture 2:<br><span style='color:#045282'>Behavioral Finance & Decision-Making Under Uncertainty</span>"
 author: "Charles Martineau"
 institute: "UTSC and Rotman | [www.charlesmartineau.com](https://www.charlesmartineau.com)"
 bibliography: ../lit.bib
