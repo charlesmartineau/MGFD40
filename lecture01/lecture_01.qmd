@@ -40,6 +40,7 @@ Charles Martineau
   - Specialize in information economics. E.g., how information is produced, disseminated, and used in financial markets.
   - see [charlesmartineau.com](www.charlesmartineau.com) for research portfolio.
 
+[MGFD40 Course Material](www.charlesmartineau.com/mgfd40)
 
 ---
 
@@ -69,7 +70,13 @@ Charles Martineau
 ::: {style="height: 2em;"}
 :::
 
-When people face complex decisions, they often rely on basic judgments, preferences, and heuristics to simplify the situation rather than acting completely rationally.
+When people face complex decisions, individuals often rely on:
+
+- basic judgments  
+- preferences  
+- heuristics 
+
+This simplify the decision-making process rather than acting completely rationally.
 
 ::: {style="height: 1em;"}
 :::
@@ -83,22 +90,24 @@ Behavioral economics is the study of these "irrational actions" and how it impac
 ::: {style="height: 2em;"}
 :::
 
-You plan to invest money, but you remembered a recent stock market crash. 
+You plan to invest money, but you recall a recent stock market crash. 
 
-- This news might affect your decision to invest or not in financial markets despite that crashes do not occur frequently (they do occur but not frequently). 
-- Thus you forego a return on your money.
+- This "recall" might affect your decision to invest or not in financial markets despite that crashes do not occur frequently. 
+
+Consequence: you forego a return on your money.
 
 ---
 
 ## Let’s do an experiment: The ultimatum game
-::: {style="height: 2em;"}
-:::
-Here’s how it works:
 
 ::: {style="height: 1em;"}
 :::
 
-I give your friend $20 in $1 bill. He has to share a portion of his $20 with you and can give you as much as he wants. If you accept the offer, you get that amount, and he keeps the rest. If you turn down his offer, both of you get nothing.
+I give your friend $20 in $1 bill. 
+
+- He has to share a portion of his $20 with you and can give you as much as he wants. 
+- If you accept the offer, you get that amount, and he keeps the rest. 
+- If you turn down his offer, both of you get nothing.
 
 ::: {style="height: 1em;"}
 :::
@@ -142,7 +151,9 @@ First homework: Watch this [video](https://player.pbs.org/viralplayer/2365517540
 ::: {style="height: 2em;"}
 :::
 
-A key congnitive constraint we will discuss in class is limited attention, i.e., our inability topay attention to everything!
+We will also discuss various cognitive constraints that affect decision-making.
+
+- A key congnitive constraint we will discuss in class is limited attention, i.e., our inability to pay attention to everything!
 
 ---
 
@@ -186,7 +197,7 @@ The stock market reaction to earnings announcements.
 ::: {style="height: 2em;"}
 :::
 
-Available here 
+Available [here](https://www.dropbox.com/scl/fi/bpbmgzatjmjnqw69x10jm/MGFD40H3S-2026_Winter_Syllabus-20251125.pdf?rlkey=imn1hhmnx2dwwn084nyiokanq&dl=0). 
 
 ---
 
