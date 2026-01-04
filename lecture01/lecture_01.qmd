@@ -12,18 +12,18 @@ bibliography: ../lit.bib
 
 
 
-- Requirements:
+- **Requirements**:
 
     - MGFC10H3: Intermediate Finance
     - MGEB12H3: Quantitative Methods in Economics II
     - Come to every class.
 
-- Programming:
+- **Programming**:
 
     - Python will be used for coding trading strategies
     - Can use AI.
 
-- Econometrics:
+- **Econometrics**:
 
     - Basic understanding of regression analysis is assumed
 
@@ -35,12 +35,22 @@ bibliography: ../lit.bib
 Charles Martineau
 
 - From Montreal
-- Joined UTSC and Rotman in 2017
 - PhD in Finance from UBC.
   - Specialize in information economics. E.g., how information is produced, disseminated, and used in financial markets.
   - see [charlesmartineau.com](www.charlesmartineau.com) for research portfolio.
+- Joined UTSC and Rotman in 2017
+  - I taught this course from 2019-2023 followed by a 2-year sabbatical.
 
-[MGFD40 Course Material](www.charlesmartineau.com/mgfd40)
+---
+
+## Course material
+
+Link: [MGFD40 Course Material](www.charlesmartineau.com/MGFD40)
+
+- Lecture notes
+- Assignment
+
+
 
 ---
 
@@ -53,9 +63,8 @@ Charles Martineau
 
 **Theoretical component:**
 
-  - The systematic behavioral biases of market participants and its impact on asset pricing and corporate decisions.
   - The rationality assumption and efficient market hypothesis and know how they are violated in reality.
-  - The types of psychological biases that lead to asset mispricing.
+  - The systematic behavioral biases of market participants and its impact on asset pricing and corporate decisions.
 
 **Practical component:**
 
@@ -94,7 +103,7 @@ You plan to invest money, but you recall a recent stock market crash.
 
 - This "recall" might affect your decision to invest or not in financial markets despite that crashes do not occur frequently. 
 
-Consequence: you forego a return on your money.
+**Consequence**: you forego a return on your money.
 
 ---
 
@@ -210,9 +219,16 @@ Coding is an essential part of this course... for your final project. Python wil
 
 -  Installation for windows users, see [link](https://www.youtube.com/watch?v=uxgkWssqkAU)
 -  Installation for Mac users, see [link](https://www.youtube.com/watch?v=0wj8F_oBYEE)
--  This installation uses the environment UV (not anaconda). If you already use Anaconda, that's not a problem. 
--  Now with AI tools, coding is easier than ever! I encourage you to use AI tools to help you code your trading strategies.
+-  This installation uses the environment UV (not anaconda). 
+   -  If you already use Anaconda, that's not a problem. 
+-  Now with AI tools, coding is easier than ever! 
+   -  I encourage you to use AI tools to help you code your trading strategies.
 
+The Python assignment is on the course website already. 
+
+❗ I will not do a live coding session in class. 
+
+   - However, if you have questions, please ask and I can cover them in class.
 
 ---
 
@@ -230,9 +246,9 @@ What do I need to write your letter:
 - Your scanned UoT ID Card
 - If you want to have an emotional and strong letter instead of a template, do speak up and leave an impression!
 
-Very important:
+❗Very important:
 
-- I discuss your group project in my letter. It is important that you show leadership and do very well on the group project. It is the best way for me to assess your potential for graduate schools.
+  - I discuss your group project in my letter. It is important that you show leadership and do very well on the group project. It is the best way for me to assess your potential for graduate schools.
 
 
 ## Recommended books on behavioral finance

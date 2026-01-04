@@ -33,6 +33,10 @@ In standard neo-classical economics, researchers usually assume that people are 
 
 What does it mean to be "rational"?
 
+  - People have consistent preferences
+  - People maximize their utility
+  - People make decisions based on all relevant information
+
 ::: {style="height: 2em;"}
 :::
 
@@ -113,7 +117,7 @@ There is a lottery with two possible outcomes:
 - **Outcome 2:** Payoff= $200,$ with probability $60\%$
 - agent has a log utility: $U(w) = \ln(w)$
 
-Will this agent prefer this lottery to a payoff of $(200 × 0.6 + 100 × 0.4) = 160$ without any uncertainty?
+Will this agent prefer this lottery to a payoff of $(200 × 0.6 + 100 × 0.4) = 160$ without any risk?
 
 $E[U(w)] = 0.4 × \ln(100) + 0.6 × \ln(200) = 5.02 <$
 
@@ -250,18 +254,18 @@ Risk Neutral:
 
 **Experiment 1:** Which lottery do you prefer?
 
-Lottery A: Get $1M for sure.
+Lottery A: Get $10M for sure.
 
-Lottery B: Get $0 with prob. 1%, $1M with prob. 89%, and $5M with prob. 10%.
+Lottery B: Get $0 with prob. 1%, $10M with prob. 89%, and $50M with prob. 10%.
 
 ::: {style="height: 2em;"}
 :::
 
 **Experiment 2:** Which lottery do you prefer?
 
-Lottery A: Get $0 with prob. 89%, get $1M with 11% prob.
+Lottery A: Get $0 with prob. 89%, get $10M with 11% prob.
 
-Lottery B: Get $0 with prob. 90%, get $5M with 10% prob.
+Lottery B: Get $0 with prob. 90%, get $50M with 10% prob.
 
 ---
 
@@ -272,11 +276,11 @@ Lottery B: Get $0 with prob. 90%, get $5M with 10% prob.
 
 In the first experiment, most people **choose A,** which means:
 
-$U(1, 000, 000) > 0.89U(1, 000, 000) + 0.1U(5, 000, 000)$ if $U(0) = 0$
+$U(10, 000, 000) > 0.89U(10, 000, 000) + 0.1U(50, 000, 000)$ if $U(0) = 0$
 
 Organize this expression, we get:
 
-$0.11U(1, 000, 000) > 0.1U(5, 000, 000)$
+$0.11U(10, 000, 000) > 0.1U(50, 000, 000)$
 
 ---
 
