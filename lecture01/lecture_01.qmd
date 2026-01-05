@@ -255,6 +255,6 @@ What do I need to write your letter:
 
 - Thaler, R. H. (2016). *Misbehaving: The making of behavioral economics*. WW Norton & Company.
 - Lewis, M. (2017). *The Undoing Project: A Friendship That Changed Our Minds*. WW Norton & Company.
-- Barberis, N., & Thaler, R. (2003). A survey of behavioral finance. In *Handbook of the Economics of Finance* (Vol. 1, pp. 1052-1121). Elsevier.
+- Barberis, N., & Thaler, R. (2003). A survey of behavioral finance. In *Handbook of the Economics of Finance* (Vol. 1, pp. 1052-1121). Elsevier. [Link to PDF](https://www.dropbox.com/scl/fi/0op5ctm93st3kvn8qzb1i/ch18_6.pdf?rlkey=75gp8737873lv4im30jthhgb5&dl=0)
 - Shefrin, H. (2002). *Beyond greed and fear: Understanding behavioral finance and the psychology of investing*. Oxford University Press.
 - Kahneman, D. (2011). *Thinking, fast and slow*. Macmillan.
