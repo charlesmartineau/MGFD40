@@ -582,7 +582,8 @@ Prospect theory says that losses hurt more than gains. Let's apply this thinking
 The disposition effect is the tendency of individual investors to sell assets whose price has increased and keep assets that have dropped in value;
 
 - A direct implication of the prospect theory.
-- This is puzzling. Stocks that have recently done well continue to outperform, on average, while those that have done poorly continue to underperform. As such, investors should concentrate their selling among stocks with poor past performance—but they do the opposite.
+- This is puzzling. Stocks that have recently done well continue to outperform, on average, while those that have done poorly continue to underperform. 
+  - As such, investors should concentrate their selling among stocks with poor past performance—but they do the opposite.
 
 ---
 
@@ -590,7 +591,12 @@ The disposition effect is the tendency of individual investors to sell assets wh
 
 **Why is this related to prospect theory?**
 
-The intuition is that, if a stock performs poorly (great), this brings its owner in to the loss (gain) stock region of the value function, where, because of the convexity (concavity), the owner becomes risk-seeking (risk-averse). As a result, investor holds on to (sells) the stock in the hope of breaking even later on.
+The intuition is as follow:
+
+- If a stock performs poorly, this brings its owner in to the loss stock region of the value function, where, because of the convexity, the owner becomes risk-seeking 
+  - $\rightarrow$ willing to hold on the stock to break even.
+- If a stock performs great, this brings its owner in to the gain stock region of the value function, where, because of the concavity, the owner becomes risk-averse. 
+  - $\rightarrow$ sell and realize gains.
 
 ---
 
@@ -605,21 +611,34 @@ Terry Odean examines the disposition effect, the tendency of investors to hold l
 - Realized gain (losses) is your return after selling the asset.
 - Paper gain (losses) is your return that is not yet realized, i.e., you haven't sold the asset yet.
 
+---
+
 ### Findings:
 
-![](version_00/Figures/Odean1.png){.absolute top=200 right=0 width=50%}
+:::{.columns}
+::: {.column width="50%"}
+::: {style="height: 2em;"}
+:::
 
-- Investors hold winning stocks for 102 days and losing stocks for 124 days..
+![](version_00/Figures/Odean1.png){width=100%}
+:::
+
+
+::: {.column width="50%"}
+::: {style="height: 4em;"}
+:::
+
+- Investors hold winning stocks for 102 days and losing stocks for 124 days.
 - Why look at December separately?
+:::
+:::
 
 ---
 
 ## Bonus: Recent interview with Terry Odean
 
-::: {style="height: 2em;"}
-:::
 
-Terry explains his research since 1998 in this [interview](https://www.youtube.com/watch?v=Y2ECnsx1cvs) 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Y2ECnsx1cvs?si=5B8SgxhCDTBGj6Us" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ---
 
@@ -674,13 +693,11 @@ Why slow price drift for capital gain? Because following a positive news, people
 
 ## Main empirical findings of Frazzini (2006)
 
-Frazzini confirms his hypothesis empirically. He first calculates capital gains (losses) overhang as the percentage deviation of the aggregate cost basis from the current price:
+Frazzini confirms his hypothesis empirically. 
 
-$g_t = \frac{p_t − rp_t}{p_t}$
-
-where $p_t$ is the current price and $rp_t$ is the reference price of the aggregate investor calculated from mutual fund holdings. Think about it as the "mental" gain (or loss).
-
-He then examines on each month, based on the previous earnings announcement news (at $t-1$, $t-2$ or $t-3$), if the monthly price on month $t$, month $t + 1$, and so on show price drifts consistent with the figures on the previous slides and he does.
+- He first calculates capital gains (losses) overhang as the percentage deviation of the aggregate cost basis from the current price:
+- $g_t = \frac{p_t − rp_t}{p_t}$, where $p_t$ is the current price and $rp_t$ is the reference price of the aggregate investor calculated from mutual fund holdings. Think about it as the "mental" gain (or loss).
+- He then examines on each month, based on the previous earnings announcement news (at $t-1$, $t-2$ or $t-3$), if the monthly price on month $t$, month $t + 1$, and so on show price drifts consistent with the figures on the previous slides and he does.
 
 ---
 
@@ -737,18 +754,6 @@ Tversky and Kahneman refer to framing as choices made by agents that depend on t
 
 ---
 
-## Framing
-
-## How to manipulate your audience
-
-In general, the way we frame a problem or a question can illicit the behavior we want from someone (i.e., manipulation).
-
-For instance, regarding COVID, Trump framed the issue as "save the economy or lock everything down" - as if it was a binary decision. A good strategy to fire up its base!
-
-Binary framing is often suboptimal. It masks the possibility of other alternatives, or pursuing one decision in some places or situations and a different one in others.
-
----
-
 
 ## A Special Type of Framing: Mental Accounting
 
@@ -791,14 +796,3 @@ All the examples on the previous slides is a clear violation of expected utility
 
 - In (2), it also violates the principle of **fungibility** (there shouldn't be a distinction between your poker and investment money account).
 
-
-## Summary
-
-We review the neoclassical utility functions and the notions of risk attitude;
-
-We review the expected utility theory;
-
-We discuss the Allais Paradox and show the following violations of expected utility theory
-
-- Prospect utility
-- Framing and mental accounting
