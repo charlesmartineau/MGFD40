@@ -21,14 +21,9 @@ for d in range(1, 11):
     replace = len(group) < num_students
     samples[d] = group.sample(n=num_students, replace=replace, random_state=42)
 
-# Build assignment table so each student gets one ticker from each decile
 assignments = pd.DataFrame({'Student': range(1, num_students+1)})
 for d in range(1, 11):
     assignments[f'Ticker {d}'] = samples[d]['Symbol'].tolist()
-
-# Save the assignment grid
-assignments.to_csv('assignment/tickers/student_assignments.csv', index=False)
-
 # %%
 long_df = assignments.melt(id_vars='Student', var_name='Decile', value_name='Symbol')
 info_map = market_cap.set_index('Symbol')[['Name','marketcap','country']].to_dict('index')
@@ -38,3 +33,7 @@ long_df['Country']    = long_df['Symbol'].map(lambda s: info_map.get(s, {}).get(
 long_df = long_df.drop(columns=['Student', 'Decile']).rename(columns={'Symbol': 'Ticker'})
 long_df.to_csv('assignment/tickers/stock_ticker_details.csv', index=False)
 # %%
+students = pd.read_csv('assignment/tickers/students.csv')[['StudentID', 'Student Name']]
+assignments = pd.concat([students.reset_index(drop=True), assignments.reset_index(drop=True)], axis=1)
+assignments = assignments.drop(columns=['Student'])
+assignments.to_csv('assignment/tickers/student_assignments.csv', index=False)
