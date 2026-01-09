@@ -1,29 +1,47 @@
 #%%
 import pandas as pd
+import yfinance as yf
+from tqdm import tqdm
 
 raw_data = pd.read_csv('assignment/tickers/raw_data.csv').dropna(subset=['Symbol'])
-# %%
-allowed_countries = ['United States', 'China', 'Japan', 'Canada', 'United Kingdom', 'Germany', 'Switzerland', 'France', 'South Korea', 'Hong Kong', 'Taiwan']
+
+allowed_countries = ['United States', 'Canada']
 raw_data = raw_data[raw_data['country'].isin(allowed_countries)]
 
 market_cap = raw_data.sort_values('marketcap', ascending=False).reset_index(drop=True)
-market_cap = market_cap.head(1200)
-market_cap['decile'] = pd.qcut(
-    market_cap['marketcap'].rank(method='first', ascending=False),
+market_cap = market_cap.head(1000)
+
+valid_tickers = []
+print("Checking 10-year price history for each ticker...")
+for _, row in tqdm(market_cap.iterrows(), total=len(market_cap)):
+    ticker = row['Symbol']
+    try:
+        stock = yf.Ticker(ticker)
+        hist = stock.history(period="10y")
+        if not hist.empty and (hist.index.min().year <= pd.Timestamp.now().year - 10):
+            valid_tickers.append(row)
+    except Exception as e:
+        print(f"Error fetching data for {ticker}: {e}")
+
+valid_market_cap = pd.DataFrame(valid_tickers)
+
+valid_market_cap['decile'] = pd.qcut(
+    valid_market_cap['marketcap'].rank(method='first', ascending=False),
     10,
     labels=range(1, 11)
 )
-# %%
+
 num_students = 120
 samples = {}
 for d in range(1, 11):
-    group   = market_cap[market_cap['decile'] == d]
+    group = valid_market_cap[valid_market_cap['decile'] == d]
     replace = len(group) < num_students
     samples[d] = group.sample(n=num_students, replace=replace, random_state=42)
 
-assignments = pd.DataFrame({'Student': range(1, num_students+1)})
+assignments = pd.DataFrame({'Student': range(1, num_students + 1)})
 for d in range(1, 11):
     assignments[f'Ticker {d}'] = samples[d]['Symbol'].tolist()
+
 # %%
 long_df = assignments.melt(id_vars='Student', var_name='Decile', value_name='Symbol')
 info_map = market_cap.set_index('Symbol')[['Name','marketcap','country']].to_dict('index')
