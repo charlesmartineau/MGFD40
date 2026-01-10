@@ -6,7 +6,6 @@ BKNG,Booking Holdings (Booking.com),176495165440,United States
 NFLX,Netflix,384452362240,United States
 HON,Honeywell,134443737088,United States
 GILD,Gilead Sciences,154294337536,United States
-GILD,Gilead Sciences,154294337536,United States
 GE,General Electric,343200595968,United States
 AAPL,Apple,3863398318080,United States
 MU,Micron Technology,382166663168,United States
@@ -14,118 +13,61 @@ QCOM,QUALCOMM,194425028608,United States
 GOOG,Alphabet (Google),3892321189888,United States
 CSCO,Cisco,295225786368,United States
 LRCX,Lam Research,256090439680,United States
-GOOG,Alphabet (Google),3892321189888,United States
 APH,Amphenol,170033561600,United States
 BA,Boeing,178634211328,United States
-NFLX,Netflix,384452362240,United States
 GS,Goldman Sachs,284866609152,United States
 BSX,Boston Scientific,146242895872,United States
 INTU,Intuit,181280161792,United States
-MU,Micron Technology,382166663168,United States
 MCD,McDonald,217049923584,United States
 KLAC,KLA,179050135552,United States
 RY,Royal Bank Of Canada,237659127808,Canada
-BA,Boeing,178634211328,United States
 SYK,Stryker Corporation,140636291072,United States
-MA,Mastercard,524254543872,United States
-TJX,TJX Companies,171437080576,United States
 TJX,TJX Companies,171437080576,United States
 ABT,Abbott Laboratories,221107912704,United States
-TJX,TJX Companies,171437080576,United States
 INTC,Intel,203345100800,United States
 PEP,Pepsico,187577270272,United States
-APH,Amphenol,170033561600,United States
-AAPL,Apple,3863398318080,United States
-INTC,Intel,203345100800,United States
 AVGO,Broadcom,1628627533824,United States
-NFLX,Netflix,384452362240,United States
 TD,Toronto Dominion Bank,160809238528,Canada
 CRM,Salesforce,253346234368,United States
 BAC,Bank of America,420643962880,United States
 MSFT,Microsoft,3593712959488,United States
-BA,Boeing,178634211328,United States
 ORCL,Oracle,554054385664,United States
 BRK-B,Berkshire Hathaway,1070296924160,United States
-QCOM,QUALCOMM,194425028608,United States
-GOOG,Alphabet (Google),3892321189888,United States
 UNP,Union Pacific Corporation,133152751616,United States
-BA,Boeing,178634211328,United States
 NEE,Nextera Energy,163214131200,United States
 TMO,Thermo Fisher Scientific,231868235776,United States
 TSLA,Tesla,1434791706624,United States
-ABT,Abbott Laboratories,221107912704,United States
 IBM,IBM,277363982336,United States
 ADBE,Adobe,143422029824,United States
 LOW,Lowe's Companies,138622337024,United States
 MRK,Merck,271259254784,United States
 ISRG,Intuitive Surgical,212314898432,United States
-MSFT,Microsoft,3593712959488,United States
-GOOG,Alphabet (Google),3892321189888,United States
 META,Meta Platforms (Facebook),1635041017856,United States
 BX,Blackstone Group,188463955968,United States
-MSFT,Microsoft,3593712959488,United States
-BX,Blackstone Group,188463955968,United States
 T,AT&T,171394744320,United States
-BAC,Bank of America,420643962880,United States
-TMO,Thermo Fisher Scientific,231868235776,United States
 CAT,Caterpillar,279457038336,United States
 NOW,ServiceNow,159221071872,United States
-TJX,TJX Companies,171437080576,United States
-ORCL,Oracle,554054385664,United States
 SHOP,Shopify,217069305856,Canada
-MA,Mastercard,524254543872,United States
-COF,Capital One,161957756928,United States
-ADBE,Adobe,143422029824,United States
-TJX,TJX Companies,171437080576,United States
 RTX,RTX,249021579264,United States
-SYK,Stryker Corporation,140636291072,United States
 PANW,Palo Alto Networks,135148298240,United States
-QCOM,QUALCOMM,194425028608,United States
-GE,General Electric,343200595968,United States
 PG,Procter & Gamble,323080585216,United States
-BA,Boeing,178634211328,United States
 PM,Philip Morris International,241512480768,United States
 WFC,Wells Fargo,302052474880,United States
-MA,Mastercard,524254543872,United States
 C,Citigroup,223429787648,United States
 VZ,Verizon,169205153792,United States
-NEE,Nextera Energy,163214131200,United States
-BRK-B,Berkshire Hathaway,1070296924160,United States
 NVDA,NVIDIA,4604261564416,United States
-TSLA,Tesla,1434791706624,United States
-T,AT&T,171394744320,United States
 JPM,JPMorgan Chase,899141992448,United States
-LOW,Lowe's Companies,138622337024,United States
-TSLA,Tesla,1434791706624,United States
-IBM,IBM,277363982336,United States
-IBM,IBM,277363982336,United States
-GS,Goldman Sachs,284866609152,United States
 AMZN,Amazon,2582328639488,United States
-PM,Philip Morris International,241512480768,United States
 UNH,UnitedHealth,309525053440,United States
-AVGO,Broadcom,1628627533824,United States
-TD,Toronto Dominion Bank,160809238528,Canada
-COF,Capital One,161957756928,United States
 WMT,Walmart,898699821056,United States
-CAT,Caterpillar,279457038336,United States
-GS,Goldman Sachs,284866609152,United States
-SHOP,Shopify,217069305856,Canada
 HD,Home Depot,347493236736,United States
-TJX,TJX Companies,171437080576,United States
 AXP,American Express,263196573696,United States
-TMO,Thermo Fisher Scientific,231868235776,United States
-IBM,IBM,277363982336,United States
-VZ,Verizon,169205153792,United States
-ABT,Abbott Laboratories,221107912704,United States
-ADBE,Adobe,143422029824,United States
-AAPL,Apple,3863398318080,United States
 DELL,Dell,80470933504,United States
 CMCSA,Comcast,109958488064,United States
 HLT,Hilton Worldwide,69029371904,United States
 GLW,Corning,75439136768,United States
 ENB,Enbridge,98737094656,Canada
 CNQ,Canadian Natural Resources,63766409216,Canada
-MDLZ,Mondelez International,66651127808,United States
 MDLZ,Mondelez International,66651127808,United States
 MCO,Moody's,95318360064,United States
 WELL,Welltower,127416803328,United States
@@ -134,118 +76,61 @@ EMR,Emerson,79931236352,United States
 DE,Deere &amp; Company (John Deere),128515678208,United States
 MO,Altria Group,91923636224,United States
 MMM,3M,86770704384,United States
-DE,Deere &amp; Company (John Deere),128515678208,United States
 CMI,Cummins,74405683200,United States
 ECL,Ecolab,76224192512,United States
-ENB,Enbridge,98737094656,Canada
 MMC,Marsh & McLennan Companies,89918029824,United States
 AJG,Arthur J. Gallagher & Co.,66512494592,United States
 ORLY,O'Reilly Automotive,76862038016,United States
-SBUX,Starbucks,98575204352,United States
 ELV,Elevance Health,82570633216,United States
 EQIX,Equinix,76246401024,United States
 CM,CIBC,85257420800,Canada
-ECL,Ecolab,76224192512,United States
 TFC,Truist Financial,65219633152,United States
-CMCSA,Comcast,109958488064,United States
-CTAS,Cintas,75230388224,United States
 CTAS,Cintas,75230388224,United States
 SHW,Sherwin-Williams,82631557120,United States
-CTAS,Cintas,75230388224,United States
 B,Barrick Gold,80823304192,Canada
 AMT,American Tower,79340486656,United States
-CMI,Cummins,74405683200,United States
-WELL,Welltower,127416803328,United States
-B,Barrick Gold,80823304192,Canada
 KKR,KKR & Co.,121138372608,United States
-ENB,Enbridge,98737094656,Canada
 EPD,Enterprise Products,68638347264,United States
 MAR,Marriott International,86665625600,United States
 MCK,McKesson,102486523904,United States
 VRTX,Vertex Pharmaceuticals,124131532800,United States
-ECL,Ecolab,76224192512,United States
 HCA,HCA Healthcare,110129037312,United States
 PLD,Prologis,117873221632,United States
-EMR,Emerson,79931236352,United States
-DE,Deere &amp; Company (John Deere),128515678208,United States
 TRV,The Travelers Companies,63755653120,United States
-ECL,Ecolab,76224192512,United States
 SPG,Simon Property Group,69387231232,United States
 BK,BNY Mellon (Bank of New York Mellon),84946255872,United States
 NEM,Newmont,118643548160,United States
-SHW,Sherwin-Williams,82631557120,United States
 UPS,United Parcel Service,89428328448,United States
 CSX,CSX Corporation,65342906368,United States
 PWR,Quanta Services,65147240448,United States
 CDNS,Cadence Design Systems,87343939584,United States
 RCL,Royal Caribbean Group,82473861120,United States
-VRTX,Vertex Pharmaceuticals,124131532800,United States
-DE,Deere &amp; Company (John Deere),128515678208,United States
 IBKR,Interactive Brokers,121273540608,United States
 FCX,Freeport-McMoRan,79694151680,United States
-VRTX,Vertex Pharmaceuticals,124131532800,United States
-FCX,Freeport-McMoRan,79694151680,United States
 CI,The Cigna Group,74560159744,United States
-MCK,McKesson,102486523904,United States
-BK,BNY Mellon (Bank of New York Mellon),84946255872,United States
 BNS,Scotiabank,89754058752,Canada
 WDC,Western Digital,68517969920,United States
-CTAS,Cintas,75230388224,United States
-HCA,HCA Healthcare,110129037312,United States
 NOC,Northrop Grumman,82618007552,United States
-CMCSA,Comcast,109958488064,United States
-HLT,Hilton Worldwide,69029371904,United States
-CSX,CSX Corporation,65342906368,United States
-CTAS,Cintas,75230388224,United States
 REGN,Regeneron Pharmaceuticals,86090416128,United States
-TFC,Truist Financial,65219633152,United States
 CP,CPKC (Canadian Pacific Kansas City),64477220864,Canada
-EMR,Emerson,79931236352,United States
-MCO,Moody's,95318360064,United States
 SO,Southern Company,94992318464,United States
-ECL,Ecolab,76224192512,United States
 USB,U.S. Bancorp,85388115968,United States
 ICE,Intercontinental Exchange,92686745600,United States
-CMCSA,Comcast,109958488064,United States
 HWM,Howmet Aerospace,84887248896,United States
 MNST,Monster Beverage,74400161792,United States
-SPG,Simon Property Group,69387231232,United States
-PLD,Prologis,117873221632,United States
 SCCO,Southern Copper,129490804736,United States
-NEM,Newmont,118643548160,United States
-CI,The Cigna Group,74560159744,United States
 LMT,Lockheed Martin,116001783808,United States
-PWR,Quanta Services,65147240448,United States
-NEM,Newmont,118643548160,United States
-UPS,United Parcel Service,89428328448,United States
-UPS,United Parcel Service,89428328448,United States
-MMC,Marsh & McLennan Companies,89918029824,United States
 PGR,Progressive,122574422016,United States
-USB,U.S. Bancorp,85388115968,United States
 GD,General Dynamics,93364436992,United States
-KKR,KKR & Co.,121138372608,United States
-EPD,Enterprise Products,68638347264,United States
-HLT,Hilton Worldwide,69029371904,United States
 BMY,Bristol-Myers Squibb,115467919360,United States
-BNS,Scotiabank,89754058752,Canada
-MMC,Marsh & McLennan Companies,89918029824,United States
-NOC,Northrop Grumman,82618007552,United States
 CME,CME Group,96224247808,United States
-CTAS,Cintas,75230388224,United States
 WM,Waste Management,87007191040,United States
-BK,BNY Mellon (Bank of New York Mellon),84946255872,United States
-UPS,United Parcel Service,89428328448,United States
-MNST,Monster Beverage,74400161792,United States
-SHW,Sherwin-Williams,82631557120,United States
-CSX,CSX Corporation,65342906368,United States
-WELL,Welltower,127416803328,United States
 GBTC,Grayscale Bitcoin Trust,49158266880,United States
 LHX,L3Harris Technologies,57954488320,United States
 OKE,Oneok,44536344576,United States
 ROP,Roper Technologies,47102140416,United States
 ET,Energy Transfer Partners,56719552512,United States
 A,Agilent Technologies,41904197632,United States
-EXC,Exelon Corporation,43419353088,United States
 EXC,Exelon Corporation,43419353088,United States
 SRE,Sempra Energy,56365576192,United States
 MSI,Motorola Solutions,62891298816,United States
@@ -254,120 +139,62 @@ NA.TO,National Bank of Canada,48954365164,Canada
 SLB,SLB (Schlumberger),63297540096,United States
 PSX,Phillips 66,55720652800,United States
 MPLX,MPLX,53337911296,United States
-SLB,SLB (Schlumberger),63297540096,United States
 DAL,Delta Air Lines,46784782336,United States
 TGT,Target,47107559424,United States
-ET,Energy Transfer Partners,56719552512,United States
 AZO,AutoZone,55188512768,United States
 WCN,Waste Connections,43331391488,United States
 GWW,W. W. Grainger,48056098816,United States
-URI,United Rentals,56676896768,United States
 CBRE,CBRE Group,49498644480,United States
 TTWO,Take-Two Interactive,47427186688,United States
 CMG,Chipotle Mexican Grill,52120199168,United States
-TGT,Target,47107559424,United States
 LVS,Las Vegas Sands,42168848384,United States
-LHX,L3Harris Technologies,57954488320,United States
-AMP,Ameriprise Financial,46951014400,United States
 AMP,Ameriprise Financial,46951014400,United States
 EW,Edwards Lifesciences,49803698176,United States
-AMP,Ameriprise Financial,46951014400,United States
 CAH,Cardinal Health,49227317248,United States
 AME,Ametek,48772853760,United States
-DAL,Delta Air Lines,46784782336,United States
-MSI,Motorola Solutions,62891298816,United States
-CAH,Cardinal Health,49227317248,United States
 FTNT,Fortinet,61316608000,United States
-ET,Energy Transfer Partners,56719552512,United States
 IMO,Imperial Oil,44318879744,Canada
 O,Realty Income,52756594688,United States
 NDAQ,Nasdaq,57609043968,United States
 ADSK,Autodesk,62577270784,United States
-TGT,Target,47107559424,United States
 APD,Air Products and Chemicals,58290102272,United States
 ROST,Ross Stores,60814061568,United States
-NA.TO,National Bank of Canada,48954365164,Canada
-SLB,SLB (Schlumberger),63297540096,United States
 YUM,Yum! Brands,41783975936,United States
-TGT,Target,47107559424,United States
 GWO.TO,Great-West Lifeco,44648271768,Canada
 L.TO,Loblaw Companies,51803958506,Canada
 AEP,American Electric Power,60859695104,United States
-EW,Edwards Lifesciences,49803698176,United States
 F,Ford,54747009024,United States
 LNG,Cheniere Energy,43089932288,United States
 CCL,Carnival Corporation,42128322560,United States
 ALL,Allstate,54616752128,United States
 AXON,Axon Enterprise,49323388928,United States
-ADSK,Autodesk,62577270784,United States
-SLB,SLB (Schlumberger),63297540096,United States
 MFC,Manulife Financial,61651111936,Canada
 HEI,HEICO,48901611520,United States
-ADSK,Autodesk,62577270784,United States
-HEI,HEICO,48901611520,United States
 MSTR,"Strategy 
  (MicroStrategy)",46824644608,United States
-NDAQ,Nasdaq,57609043968,United States
-L.TO,Loblaw Companies,51803958506,Canada
 SU,Suncor Energy,55144181760,Canada
 XYZ,Block,43566968832,United States
-AMP,Ameriprise Financial,46951014400,United States
-APD,Air Products and Chemicals,58290102272,United States
 CSU.TO,Constellation Software,49762934364,Canada
-LHX,L3Harris Technologies,57954488320,United States
-OKE,Oneok,44536344576,United States
-LNG,Cheniere Energy,43089932288,United States
-AMP,Ameriprise Financial,46951014400,United States
 MPC,Marathon Petroleum,52446543872,United States
-LVS,Las Vegas Sands,42168848384,United States
 FNV,Franco-Nevada,42112770048,Canada
-NA.TO,National Bank of Canada,48954365164,Canada
-SRE,Sempra Energy,56365576192,United States
 ARES,Ares Management,55958282240,United States
-TGT,Target,47107559424,United States
 VST,Vistra,52382425088,United States
 ALNY,Alnylam Pharmaceuticals,55818088448,United States
-LHX,L3Harris Technologies,57954488320,United States
 EA,Electronic Arts,51146702848,United States
 FAST,Fastenal,46621732864,United States
-GWO.TO,Great-West Lifeco,44648271768,Canada
-ROST,Ross Stores,60814061568,United States
 NSC,Norfolk Southern,63745994752,United States
-AEP,American Electric Power,60859695104,United States
-MSTR,"Strategy 
- (MicroStrategy)",46824644608,United States
 PCAR,Paccar,60556062720,United States
-CCL,Carnival Corporation,42128322560,United States
-AEP,American Electric Power,60859695104,United States
-F,Ford,54747009024,United States
-F,Ford,54747009024,United States
-AZO,AutoZone,55188512768,United States
 CL,Colgate-Palmolive,62305738752,United States
-VST,Vistra,52382425088,United States
 PYPL,PayPal,55899189248,United States
-FTNT,Fortinet,61316608000,United States
-IMO,Imperial Oil,44318879744,Canada
-OKE,Oneok,44536344576,United States
 KMI,Kinder Morgan,60068528128,United States
-SU,Suncor Energy,55144181760,Canada
-AZO,AutoZone,55188512768,United States
-CSU.TO,Constellation Software,49762934364,Canada
 WDAY,Workday,56374378496,United States
-AMP,Ameriprise Financial,46951014400,United States
 DLR,Digital Realty,54158741504,United States
-L.TO,Loblaw Companies,51803958506,Canada
-F,Ford,54747009024,United States
-FAST,Fastenal,46621732864,United States
-EW,Edwards Lifesciences,49803698176,United States
-LNG,Cheniere Energy,43089932288,United States
-MSI,Motorola Solutions,62891298816,United States
 EQT,EQT Corporation,34005620736,United States
 PEG,PSEG,38724366336,United States
 EME,Emcor,29141233664,United States
 KMB,Kimberly-Clark,32379492352,United States
 NUE,Nucor,37718196224,United States
 BIIB,Biogen,27420123136,United States
-LPLA,LPL Financial,28763922432,United States
 LPLA,LPL Financial,28763922432,United States
 TRGP,Targa Resources,37561737216,United States
 PRU,Prudential Financial,41124532224,United States
@@ -376,120 +203,62 @@ XYL,Xylem,33946888192,United States
 EBAY,eBay,41198551040,United States
 CPRT,Copart,36968591360,United States
 ED,Consolidated Edison,35866173440,United States
-EBAY,eBay,41198551040,United States
 QSR,Restaurant Brands International,30832664576,Canada
 FITB,Fifth Third Bank,32503814144,United States
-NUE,Nucor,37718196224,United States
 CIEN,Ciena,36571561984,United States
 ROL,Rollins,28604401664,United States
 MTB,M&T Bank,32746231808,United States
-MLM,Martin Marietta Materials,37694377984,United States
 WEC,WEC Energy Group,34168907776,United States
 SYF,Synchrony,32528990208,United States
 TER,Teradyne,35390681088,United States
-FITB,Fifth Third Bank,32503814144,United States
 LITE,Lumentum,27860140032,United States
-PEG,PSEG,38724366336,United States
-SATS,EchoStar,32288208896,United States
 SATS,EchoStar,32288208896,United States
 SYY,Sysco,34535460864,United States
-SATS,EchoStar,32288208896,United States
 PCG,Pacific Gas and Electric,34089592832,United States
 LYV,Live Nation,33428844544,United States
-QSR,Restaurant Brands International,30832664576,Canada
-PRU,Prudential Financial,41124532224,United States
-PCG,Pacific Gas and Electric,34089592832,United States
 DHI,D. R. Horton,40686952448,United States
-NUE,Nucor,37718196224,United States
 K,"Kellanova 
  (Kellogg's)",29031499776,United States
 VTR,Ventas,35554078720,United States
 EL,Estee Lauder,37935124480,United States
 CTSH,Cognizant Technology Solutions,41078980608,United States
-FITB,Fifth Third Bank,32503814144,United States
 DOL.TO,Dollarama,39075623829,Canada
 OXY,Occidental Petroleum,40383778816,United States
-XYL,Xylem,33946888192,United States
-EBAY,eBay,41198551040,United States
 DOV,Dover Corporation,27345608704,United States
-FITB,Fifth Third Bank,32503814144,United States
 ULTA,ULTA Beauty,29385269248,United States
 SLF,Sun Life Financial,35064172544,Canada
 FANG,Diamondback Energy,40658325504,United States
-SYY,Sysco,34535460864,United States
 HSY,The Hershey Company,36515516416,United States
 CHTR,Charter Communications,28186916864,United States
 FCNCA,First Citizens BancShares,27733614592,United States
 KEYS,Keysight,36480212992,United States
 UI,Ubiquiti,34089740288,United States
-CTSH,Cognizant Technology Solutions,41078980608,United States
-EBAY,eBay,41198551040,United States
 FFH.TO,Fairfax Financial,40732691355,Canada
 POW.TO,Power Corporation of Canada,33932797520,Canada
-CTSH,Cognizant Technology Solutions,41078980608,United States
-POW.TO,Power Corporation of Canada,33932797520,Canada
 DG,Dollar General,31589257216,United States
-EL,Estee Lauder,37935124480,United States
-SLF,Sun Life Financial,35064172544,Canada
 FIX,Comfort Systems USA,36520538112,United States
 NRG,NRG Energy,28803780608,United States
-SATS,EchoStar,32288208896,United States
-DOL.TO,Dollarama,39075623829,Canada
 FI,Fiserv,34314950656,United States
-PEG,PSEG,38724366336,United States
-EME,Emcor,29141233664,United States
-CHTR,Charter Communications,28186916864,United States
-SATS,EchoStar,32288208896,United States
 IFC.TO,Intact Financial,35534110822,Canada
-LITE,Lumentum,27860140032,United States
 DXCM,DexCom,27490082816,United States
-XYL,Xylem,33946888192,United States
-TRGP,Targa Resources,37561737216,United States
 KGC,Kinross Gold,37335871488,Canada
-FITB,Fifth Third Bank,32503814144,United States
 NTRA,Natera,35475853312,United States
 KDP,Keurig Dr Pepper,37021392896,United States
-PEG,PSEG,38724366336,United States
 FIS,Fidelity National Information Services,34858323968,United States
 VRSK,Verisk Analytics,30682806272,United States
-ULTA,ULTA Beauty,29385269248,United States
-OXY,Occidental Petroleum,40383778816,United States
 IQV,IQVIA,41602584576,United States
-FANG,Diamondback Energy,40658325504,United States
-DG,Dollar General,31589257216,United States
 MCHP,Microchip Technology,39960641536,United States
-FCNCA,First Citizens BancShares,27733614592,United States
-FANG,Diamondback Energy,40658325504,United States
-HSY,The Hershey Company,36515516416,United States
-HSY,The Hershey Company,36515516416,United States
-CIEN,Ciena,36571561984,United States
 ETR,Entergy,40778760192,United States
-NTRA,Natera,35475853312,United States
 WAB,Wabtec,37032742912,United States
-DHI,D. R. Horton,40686952448,United States
-K,"Kellanova 
- (Kellogg's)",29031499776,United States
-EME,Emcor,29141233664,United States
 VEEV,Veeva Systems,39344799744,United States
-FIX,Comfort Systems USA,36520538112,United States
-CIEN,Ciena,36571561984,United States
-FI,Fiserv,34314950656,United States
 STT,State Street Corporation,37575446528,United States
-SATS,EchoStar,32288208896,United States
 RMD,ResMed,36230291456,United States
-SLF,Sun Life Financial,35064172544,Canada
-HSY,The Hershey Company,36515516416,United States
-VRSK,Verisk Analytics,30682806272,United States
-SYY,Sysco,34535460864,United States
-CHTR,Charter Communications,28186916864,United States
-PRU,Prudential Financial,41124532224,United States
 PHM,PulteGroup,23141031936,United States
 WRB,W. R. Berkley,26027651072,United States
 INCY,Incyte,21707401216,United States
 CPAY,Corpay,22640384000,United States
 IRM,Iron Mountain,25731067904,United States
 NTAP,NetApp,20822192128,United States
-CASY,Casey's General Stores,21261963264,United States
 CASY,Casey's General Stores,21261963264,United States
 BR,Broadridge Financial Solutions,25618198528,United States
 MKL,Markel Group,27143475200,United States
@@ -498,119 +267,62 @@ ILMN,Illumina,23076517888,United States
 NTRS,Northern Trust,27192012800,United States
 LDOS,Leidos,25224540160,United States
 CNP,CenterPoint Energy,24645777408,United States
-NTRS,Northern Trust,27192012800,United States
 CNC,Centene,22496780288,United States
 PSTG,Pure Storage,22646472704,United States
-IRM,Iron Mountain,25731067904,United States
 TDY,Teledyne Technologies,24953509888,United States
 PBA,Pembina Pipeline,21215635456,Canada
 UTHR,United Therapeutics,22780016640,United States
-LEN,Lennar,25667690496,United States
 KEY,KeyCorp (KeyBank),23279185920,United States
 VRSN,VeriSign,22771146752,United States
 EQR,Equity Residential,24377223168,United States
-PSTG,Pure Storage,22646472704,United States
 HUBS,HubSpot,20983451648,United States
-WRB,W. R. Berkley,26027651072,United States
-PAAS,Pan American Silver,22516207616,Canada
 PAAS,Pan American Silver,22516207616,Canada
 PPG,PPG Industries,23450230784,United States
-PAAS,Pan American Silver,22516207616,Canada
 FWONK,Formula One Group,23185029120,United States
 FM.TO,First Quantum Minerals,22956933025,Canada
-CNC,Centene,22496780288,United States
-MKL,Markel Group,27143475200,United States
-FWONK,Formula One Group,23185029120,United States
 DLTR,Dollar Tree,26834008064,United States
-IRM,Iron Mountain,25731067904,United States
 SSNC,SS&C Technologies,21596430336,United States
 ES,Eversource Energy,24619913216,United States
 FSLR,First Solar,25873065984,United States
 TPR,Tapestry,27111512064,United States
-PSTG,Pure Storage,22646472704,United States
 CSGP,CoStar Group,26132912128,United States
 CBOE,Cboe Global Markets,26701094912,United States
-ILMN,Illumina,23076517888,United States
-NTRS,Northern Trust,27192012800,United States
 RGLD,Royal Gold,20485097472,United States
-PSTG,Pure Storage,22646472704,United States
 BCE,BCE,21755828224,Canada
 JBL,Jabil,23979638784,United States
 AEE,Ameren,26797930496,United States
-PPG,PPG Industries,23450230784,United States
 AWK,American Water,24840198144,United States
 LH,LabCorp,21084962816,United States
 IP,International Paper,20889196544,United States
 STLD,Steel Dynamics,24705347584,United States
 DRI,Darden Restaurants,23235999744,United States
-TPR,Tapestry,27111512064,United States
-NTRS,Northern Trust,27192012800,United States
 ATO,Atmos Energy,26874429440,United States
 CG,Carlyle Group,23044218880,United States
-TPR,Tapestry,27111512064,United States
-CG,Carlyle Group,23044218880,United States
 EIX,Edison International,22497396736,United States
-FSLR,First Solar,25873065984,United States
-JBL,Jabil,23979638784,United States
 HUBB,Hubbell,24882372608,United States
 EXPD,Expeditors,21294235648,United States
-PAAS,Pan American Silver,22516207616,Canada
-CSGP,CoStar Group,26132912128,United States
 TROW,T. Rowe Price,23289817088,United States
-WRB,W. R. Berkley,26027651072,United States
-INCY,Incyte,21707401216,United States
-LH,LabCorp,21084962816,United States
-PAAS,Pan American Silver,22516207616,Canada
 OMC,Omnicom Group,24619175936,United States
-HUBS,HubSpot,20983451648,United States
 PTC,PTC,20852084736,United States
-ILMN,Illumina,23076517888,United States
-BR,Broadridge Financial Solutions,25618198528,United States
 CINF,Cincinnati Financial,25495609344,United States
-PSTG,Pure Storage,22646472704,United States
 STZ,Constellation Brands,24454631424,United States
 ON,ON Semiconductor,25311399936,United States
-WRB,W. R. Berkley,26027651072,United States
 WAT,Waters Corporation,23783940096,United States
 LUV,Southwest Airlines,22394003456,United States
-BCE,BCE,21755828224,Canada
-CBOE,Cboe Global Markets,26701094912,United States
 KHC,Kraft Heinz,27235913728,United States
-AEE,Ameren,26797930496,United States
-EIX,Edison International,22497396736,United States
 TSCO,Tractor Supply,26362054656,United States
-IP,International Paper,20889196544,United States
-AEE,Ameren,26797930496,United States
-AWK,American Water,24840198144,United States
-AWK,American Water,24840198144,United States
-TDY,Teledyne Technologies,24953509888,United States
 BRO,Brown &amp; Brown,26907371520,United States
-STZ,Constellation Brands,24454631424,United States
 RF,Regions Financial,25395095552,United States
-DLTR,Dollar Tree,26834008064,United States
-SSNC,SS&C Technologies,21596430336,United States
-INCY,Incyte,21707401216,United States
 CFG,Citizens Financial Group,26307975168,United States
-HUBB,Hubbell,24882372608,United States
-TDY,Teledyne Technologies,24953509888,United States
-TROW,T. Rowe Price,23289817088,United States
 CQP,"Cheniere Energy
 Partners",25654788096,United States
-PAAS,Pan American Silver,22516207616,Canada
 FTAI,FTAI Aviation,24682123264,United States
-JBL,Jabil,23979638784,United States
-AWK,American Water,24840198144,United States
-LUV,Southwest Airlines,22394003456,United States
-PPG,PPG Industries,23450230784,United States
-LH,LabCorp,21084962816,United States
-MKL,Markel Group,27143475200,United States
 XPO,XPO Logistics,16945963008,United States
 NI,NiSource,19658080256,United States
 EWBC,East West Bancorp,16053479424,United States
 LNT,Alliant Energy,16605668352,United States
 CTRA,Coterra Energy,19299811328,United States
 KTOS,Kratos Defense &amp; Security Solutions,15438794752,United States
-AVAV,AeroVironment,15902409728,United States
 AVAV,AeroVironment,15902409728,United States
 TRMB,Trimble,19080361984,United States
 PFG,Principal Financial Group,20245196800,United States
@@ -619,118 +331,60 @@ NWS,News Corp,16794474496,United States
 TU,Telus,20395073536,Canada
 PKG,Packaging Corporation of America,18608513024,United States
 BG,Bunge Global SA,17903298560,United States
-TU,Telus,20395073536,Canada
 TOU.TO,Tourmaline Oil,16429160872,Canada
 ATI,Allegheny Technologies,16655633408,United States
-CTRA,Coterra Energy,19299811328,United States
 SNA,Snap-on,18391760896,United States
 SUI,Sun Communities,15793382400,United States
 COO,Cooper Companies,16680069120,United States
-EXAS,Exact Sciences,19285899264,United States
 CRS,Carpenter Technology,16962991104,United States
 TKO,TKO Group Holdings,16666396672,United States
 MKC,McCormick & Company,17543718912,United States
-ATI,Allegheny Technologies,16655633408,United States
 QXO,"QXO, Inc.",15770912768,United States
-NI,NiSource,19658080256,United States
-Z,Zillow,16500590592,United States
 Z,Zillow,16500590592,United States
 GPC,Genuine Parts Company,17049381888,United States
-Z,Zillow,16500590592,United States
 BBD-B.TO,Bombardier,16958288249,Canada
 HOLX,Hologic,16720994304,United States
-TOU.TO,Tourmaline Oil,16429160872,Canada
-PFG,Principal Financial Group,20245196800,United States
-BBD-B.TO,Bombardier,16958288249,Canada
 DGX,Quest Diagnostics,19920228352,United States
-CTRA,Coterra Energy,19299811328,United States
 GWRE,Guidewire Software,15956398080,United States
 THC,Tenet Healthcare,17846902784,United States
 TYL,Tyler Technologies,19391242240,United States
 GIB,CGI,20033875968,Canada
-ATI,Allegheny Technologies,16655633408,United States
 CHRW,C. H. Robinson,19697010688,United States
 TSN,Tyson Foods,19841796096,United States
-NWS,News Corp,16794474496,United States
-TU,Telus,20395073536,Canada
-ATI,Allegheny Technologies,16655633408,United States
 GEN,Gen Digital,16102457344,United States
 AGI,Alamos Gold,17271980032,Canada
 RCI,Rogers Communication,19873032192,Canada
-GPC,Genuine Parts Company,17049381888,United States
 FTV,Fortive,18317529088,United States
 TXT,Textron,15785425920,United States
 NLY,Annaly Capital Management,15737039872,United States
 DD,Dupont De Nemours,18112303104,United States
 USFD,US Foods,16959926272,United States
-GIB,CGI,20033875968,Canada
-TU,Telus,20395073536,Canada
 LUG.TO,Lundin Gold,19958428336,Canada
 WY,Weyerhaeuser,16724624384,United States
-GIB,CGI,20033875968,Canada
-WY,Weyerhaeuser,16724624384,United States
 IVN.TO,Ivanhoe Mines,16476887314,Canada
-TYL,Tyler Technologies,19391242240,United States
-AGI,Alamos Gold,17271980032,Canada
 ZBH,Zimmer Biomet,18365485056,United States
 MGA,Magna International,15917639680,Canada
-Z,Zillow,16500590592,United States
-CHRW,C. H. Robinson,19697010688,United States
 CDW,CDW Corporation,16977607680,United States
-NI,NiSource,19658080256,United States
-EWBC,East West Bancorp,16053479424,United States
-TXT,Textron,15785425920,United States
-Z,Zillow,16500590592,United States
 LII,Lennox,17736708096,United States
-QXO,"QXO, Inc.",15770912768,United States
 FFIV,F5,15563370496,United States
-NWS,News Corp,16794474496,United States
-TRMB,Trimble,19080361984,United States
 DKS,Dick's Sporting Goods,18900668416,United States
-ATI,Allegheny Technologies,16655633408,United States
 BWXT,BWX Technologies,17575878656,United States
 SGI,Somnigroup International,18688079872,United States
-NI,NiSource,19658080256,United States
 MEDP,Medpace,17269657600,United States
 TRU,TransUnion,16265799680,United States
-GEN,Gen Digital,16102457344,United States
-TSN,Tyson Foods,19841796096,United States
 CHD,Church & Dwight,20433897472,United States
-RCI,Rogers Communication,19873032192,Canada
-IVN.TO,Ivanhoe Mines,16476887314,Canada
 NVR,NVR,19746385920,United States
-NLY,Annaly Capital Management,15737039872,United States
-RCI,Rogers Communication,19873032192,Canada
-FTV,Fortive,18317529088,United States
-FTV,Fortive,18317529088,United States
-SNA,Snap-on,18391760896,United States
 WST,West Pharmaceutical,20031922176,United States
-BWXT,BWX Technologies,17575878656,United States
 GPN,Global Payments,18802051072,United States
-DGX,Quest Diagnostics,19920228352,United States
-GWRE,Guidewire Software,15956398080,United States
-EWBC,East West Bancorp,16053479424,United States
 JBHT,J. B. Hunt,19729629184,United States
-ZBH,Zimmer Biomet,18365485056,United States
-SNA,Snap-on,18391760896,United States
-CDW,CDW Corporation,16977607680,United States
 LUN.TO,Lundin Mining,19204500934,Canada
-Z,Zillow,16500590592,United States
 SMCI,Supermicro,17915103232,United States
-AGI,Alamos Gold,17271980032,Canada
-FTV,Fortive,18317529088,United States
-TRU,TransUnion,16265799680,United States
-GPC,Genuine Parts Company,17049381888,United States
-TXT,Textron,15785425920,United States
-PFG,Principal Financial Group,20245196800,United States
-CHD,Church & Dwight,20433897472,United States
 CLH,Clean Harbors,13043449856,United States
 EVR,Evercore,14428870656,United States
 HST,Host Hotels & Resorts,12392095744,United States
 PAA,Plains All American Pipeline,12706015232,United States
 HL,Hecla Mining,14320009216,United States
 IAG.TO,iA Financial,12116384799,Canada
-CDE,Coeur Mining,12375288832,United States
 CDE,Coeur Mining,12375288832,United States
 NBIX,Neurocrine Biosciences,14020614144,United States
 DECK,Deckers Brands,15285300224,United States
@@ -739,118 +393,61 @@ AMKR,Amkor Technology,13032038400,United States
 MRU.TO,Metro,15294809136,Canada
 DPZ,Domino's Pizza,13766287360,United States
 IONS,Ionis Pharmaceuticals,13471410176,United States
-MRU.TO,Metro,15294809136,Canada
 CNA,CNA Financial,12604943360,United States
 MDGL,Madrigal Pharmaceuticals,12744058880,United States
-HL,Hecla Mining,14320009216,United States
 PSKY,Paramount Skydance,13646177280,United States
 IVZ,Invesco,12348737536,United States
 WCC,WESCO International,12808513536,United States
-WSO,Watsco,14205924352,United States
 BEN,Franklin Resources,13112975360,United States
 MTSI,MACOM,12785063936,United States
 UNM,Unum,13354262528,United States
-MDGL,Madrigal Pharmaceuticals,12744058880,United States
 HAS,Hasbro,12212127744,United States
-EVR,Evercore,14428870656,United States
-GLPI,Gaming and Leisure Properties,12704244736,United States
 GLPI,Gaming and Leisure Properties,12704244736,United States
 CELH,Celsius Holdings,13234697216,United States
-GLPI,Gaming and Leisure Properties,12704244736,United States
 ACM,AECOM,13049914368,United States
 LAMR,Lamar Advertising,12882258944,United States
-CNA,CNA Financial,12604943360,United States
-DECK,Deckers Brands,15285300224,United States
-ACM,AECOM,13049914368,United States
 RBC,RBC Bearings,14774239232,United States
-HL,Hecla Mining,14320009216,United States
 PEN,Penumbra,12381121536,United States
 PFGC,Performance Food Group,13462322176,United States
 PNFP,Pinnacle Financial Partners,14382732288,United States
 FNF,Fidelity National Financial,15143303168,United States
-MDGL,Madrigal Pharmaceuticals,12744058880,United States
 ARCC,Ares Capital,14443363328,United States
 EMA.TO,Emera,14729326282,Canada
-AMKR,Amkor Technology,13032038400,United States
-MRU.TO,Metro,15294809136,Canada
 ELS,Equity LifeStyle Properties,12108419072,United States
-MDGL,Madrigal Pharmaceuticals,12744058880,United States
 CLX,Clorox,12412723200,United States
 JEF,Jefferies Financial Group,13340145664,United States
 ERIE,Erie Indemnity,14740513792,United States
-CELH,Celsius Holdings,13234697216,United States
 IEX,IDEX,13588602880,United States
 HRL,Hormel Foods,12289396736,United States
 SWK,Stanley Black &amp; Decker,12187897856,United States
 LECO,Lincoln Electric,13550984192,United States
 AMH,AMH (American Homes 4 Rent),13101194240,United States
-FNF,Fidelity National Financial,15143303168,United States
-MRU.TO,Metro,15294809136,Canada
 PWF-PS.TO,Power Financial,14819013170,Canada
 TOL,Toll Brothers,12992429056,United States
-FNF,Fidelity National Financial,15143303168,United States
-TOL,Toll Brothers,12992429056,United States
 AKAM,Akamai,12686035968,United States
-PNFP,Pinnacle Financial Partners,14382732288,United States
-JEF,Jefferies Financial Group,13340145664,United States
 PSHZF,Pershing Square Holdings,13603843072,United States
 FNMA,Fannie Mae,12379955200,United States
-GLPI,Gaming and Leisure Properties,12704244736,United States
-ARCC,Ares Capital,14443363328,United States
 MLI,Mueller Industries,13219503104,United States
-EVR,Evercore,14428870656,United States
-HST,Host Hotels & Resorts,12392095744,United States
-HRL,Hormel Foods,12289396736,United States
-GLPI,Gaming and Leisure Properties,12704244736,United States
 MAS,Masco,13462082560,United States
-HAS,Hasbro,12212127744,United States
 EPAM,EPAM Systems,12153066496,United States
-AMKR,Amkor Technology,13032038400,United States
-NBIX,Neurocrine Biosciences,14020614144,United States
 CSL,Carlisle Companies,13964100608,United States
-MDGL,Madrigal Pharmaceuticals,12744058880,United States
 RPM,RPM International,13447606272,United States
 GGG,Graco,13784122368,United States
-EVR,Evercore,14428870656,United States
 RGA,Reinsurance Group of America,13287487488,United States
 ZBRA,Zebra Technologies,12556719104,United States
-CLX,Clorox,12412723200,United States
-EMA.TO,Emera,14729326282,Canada
 ITT,ITT,15306518528,United States
-ERIE,Erie Indemnity,14740513792,United States
-AKAM,Akamai,12686035968,United States
 WPC,W. P. Carey,14531506176,United States
-SWK,Stanley Black &amp; Decker,12187897856,United States
-ERIE,Erie Indemnity,14740513792,United States
-IEX,IDEX,13588602880,United States
-IEX,IDEX,13588602880,United States
-PSKY,Paramount Skydance,13646177280,United States
 ENTG,Entegris,14834059264,United States
-RPM,RPM International,13447606272,United States
 UDR,UDR Apartments,13862327296,United States
-RBC,RBC Bearings,14774239232,United States
-PEN,Penumbra,12381121536,United States
-HST,Host Hotels & Resorts,12392095744,United States
 BBY,Best Buy,14461270016,United States
-PSHZF,Pershing Square Holdings,13603843072,United States
-PSKY,Paramount Skydance,13646177280,United States
-MLI,Mueller Industries,13219503104,United States
 NDSN,Nordson,14115533824,United States
-GLPI,Gaming and Leisure Properties,12704244736,United States
 JKHY,Jack Henry &amp; Associates,13513547776,United States
-JEF,Jefferies Financial Group,13340145664,United States
-IEX,IDEX,13588602880,United States
-ZBRA,Zebra Technologies,12556719104,United States
-CELH,Celsius Holdings,13234697216,United States
-HRL,Hormel Foods,12289396736,United States
-DECK,Deckers Brands,15285300224,United States
 BWA,BorgWarner,10267842560,United States
 CMA,Comerica,11677826048,United States
 TIH.TO,Toromont,9784765774,Canada
 UHAL,U-Haul,10078326784,United States
 LSCC,Lattice Semiconductor,11365069824,United States
 RGEN,Repligen,9515951104,United States
-ARX.TO,ARC Resources,9767585968,Canada
 ARX.TO,ARC Resources,9767585968,Canada
 STN,Stantec,11225782272,Canada
 TXRH,Texas Roadhouse,12013605888,United States
@@ -859,118 +456,61 @@ CAE,CAE,10233375744,Canada
 ALGN,Align Technology,12091450368,United States
 ATRL.TO,AtkinsRéalis,10967833021,Canada
 PAG,Penske Automotive Group,10680035328,United States
-ALGN,Align Technology,12091450368,United States
 RRX,Regal Rexnord,9986998272,United States
 ARMK,Aramark,10091410432,United States
-LSCC,Lattice Semiconductor,11365069824,United States
 IGM.TO,IGM Financial,10826829053,Canada
 WAL,Western Alliance Bancorporation,9701419008,United States
 TECH,Bio-Techne,10135616512,United States
-AYI,Acuity Brands,11362789376,United States
 ENSG,The Ensign Group,10332622848,United States
 SUN,Sunoco,10121406464,United States
 AAL,American Airlines,10554782720,United States
-ARMK,Aramark,10091410432,United States
 WLK,Westlake Chemical,9552501760,United States
-CMA,Comerica,11677826048,United States
-IAG,Iamgold,10069580800,Canada
 IAG,Iamgold,10069580800,Canada
 PEGA,Pegasystems,10411969536,United States
-IAG,Iamgold,10069580800,Canada
 AES,AES,10290147328,United States
 DDS,Dillard's,10166851584,United States
-RRX,Regal Rexnord,9986998272,United States
-TXRH,Texas Roadhouse,12013605888,United States
-AES,AES,10290147328,United States
 AGNC,AGNC Investment,11864329216,United States
-LSCC,Lattice Semiconductor,11365069824,United States
 WTFC,Wintrust Financial,9784486912,United States
 CRL,Charles River Laboratories,10668438528,United States
 CPT,Camden Property Trust,11564670976,United States
 RVTY,Revvity,11954314240,United States
-ARMK,Aramark,10091410432,United States
 SAP.TO,Saputo,11678101793,Canada
 BMRN,BioMarin Pharmaceutical,11778530304,United States
-CAE,CAE,10233375744,Canada
-ALGN,Align Technology,12091450368,United States
 HSIC,Henry Schein,9475912704,United States
-ARMK,Aramark,10091410432,United States
 EGP,EastGroup Properties,9789504512,United States
 BAX,Baxter,10486737920,United States
 BF-A,Brown Forman,11825737728,United States
-PEGA,Pegasystems,10411969536,United States
 WTRG,Essential Utilities,10762808320,United States
 STRL,Sterling Infrastructure,9591816192,United States
 GME,GameStop,9538121728,United States
 WBS,Webster Financial,10732464128,United States
 ATZ.TO,Aritzia,10295377106,Canada
-RVTY,Revvity,11954314240,United States
-ALGN,Align Technology,12091450368,United States
 BLD,TopBuild,11876556800,United States
 SJM,J.M. Smucker Company,10187174912,United States
-RVTY,Revvity,11954314240,United States
-SJM,J.M. Smucker Company,10187174912,United States
 PR,Permian Resources,10056468480,United States
-CPT,Camden Property Trust,11564670976,United States
-BAX,Baxter,10486737920,United States
 SEIC,SEI Investments,10818429952,United States
 SSB,South State Corp,9775775744,United States
-IAG,Iamgold,10069580800,Canada
-SAP.TO,Saputo,11678101793,Canada
 SPXC,SPX Corporation,10365799424,United States
-CMA,Comerica,11677826048,United States
-TIH.TO,Toromont,9784765774,Canada
-STRL,Sterling Infrastructure,9591816192,United States
-IAG,Iamgold,10069580800,Canada
 DY,Dycom Industries,10624242688,United States
-WLK,Westlake Chemical,9552501760,United States
 SAIA,Saia,9529539584,United States
-CAE,CAE,10233375744,Canada
-STN,Stantec,11225782272,Canada
 NCLH,Norwegian Cruise Line,11117387776,United States
-ARMK,Aramark,10091410432,United States
 ORI,Old Republic International,10558691328,United States
 FIVE,Five Below,11065062400,United States
-CMA,Comerica,11677826048,United States
 MANH,Manhattan Associates,10465299456,United States
 EFN.TO,Element Fleet Management,9953106152,Canada
-EGP,EastGroup Properties,9789504512,United States
-BMRN,BioMarin Pharmaceutical,11778530304,United States
 WYNN,Wynn Resorts,12099748864,United States
-BF-A,Brown Forman,11825737728,United States
-PR,Permian Resources,10056468480,United States
 CCK,Crown Holdings,11714367488,United States
-GME,GameStop,9538121728,United States
-BF-A,Brown Forman,11825737728,United States
-WTRG,Essential Utilities,10762808320,United States
-WTRG,Essential Utilities,10762808320,United States
-IGM.TO,IGM Financial,10826829053,Canada
 AIZ,Assurant,11933603840,United States
-ORI,Old Republic International,10558691328,United States
 SCI,Service Corporation International,11100961792,United States
-AGNC,AGNC Investment,11864329216,United States
-WTFC,Wintrust Financial,9784486912,United States
-TIH.TO,Toromont,9784765774,Canada
 BXP,"BXP, Inc.",11698167808,United States
-SEIC,SEI Investments,10818429952,United States
-IGM.TO,IGM Financial,10826829053,Canada
-SPXC,SPX Corporation,10365799424,United States
 GL,Globe Life,11321054208,United States
-IAG,Iamgold,10069580800,Canada
 EHC,HealthSouth,10713993216,United States
-BAX,Baxter,10486737920,United States
-WTRG,Essential Utilities,10762808320,United States
-EFN.TO,Element Fleet Management,9953106152,Canada
-PEGA,Pegasystems,10411969536,United States
-STRL,Sterling Infrastructure,9591816192,United States
-TXRH,Texas Roadhouse,12013605888,United States
 CADE,Cadence Bancorp,8350280192,United States
 ARE,Alexandria Real Estate Equities,9018011648,United States
 DOOO,Bombardier Recreational Products,8023764992,Canada
 OTEX,OpenText,8222794240,Canada
 KNX,Knight-Swift,8951372800,United States
 MTCH,Match Group,7841875456,United States
-CYTK,Cytokinetics,7998571520,United States
 CYTK,Cytokinetics,7998571520,United States
 ZION,Zions Bancorporation,8880609280,United States
 FLS,Flowserve,9394088960,United States
@@ -979,118 +519,61 @@ CUBE,CubeSmart,8327949824,United States
 AOS,A. O. Smith,9405498368,United States
 PAYC,Paycom,8822159360,United States
 CFR,Cullen/Frost Bankers,8658826240,United States
-AOS,A. O. Smith,9405498368,United States
 TTC,The Toro Company,8190706688,United States
 JBTM,JBT Marel Corporation,8227587584,United States
-KNX,Knight-Swift,8951372800,United States
 QBR-B.TO,Quebecor,8769832080,Canada
 IDCC,InterDigital,7978864128,United States
 CGG.TO,China Gold International Resources,8269760719,Canada
-ARWR,Arrowhead Pharmaceuticals,8925935616,United States
 APA,APA Corporation,8368625152,United States
 RRC,Range Resources,8258084352,United States
 LNC,Lincoln National Corporation,8486477312,United States
-JBTM,JBT Marel Corporation,8227587584,United States
 ATR,AptarGroup,7934649856,United States
-ARE,Alexandria Real Estate Equities,9018011648,United States
-MUSA,Murphy USA,8217579520,United States
 MUSA,Murphy USA,8217579520,United States
 HBM,Hudbay Minerals,8394390016,Canada
-MUSA,Murphy USA,8217579520,United States
 OMF,OneMain Financial,8360152064,United States
 CTRE,CareTrust REIT,8317937152,United States
-TTC,The Toro Company,8190706688,United States
-FLS,Flowserve,9394088960,United States
-OMF,OneMain Financial,8360152064,United States
 MGM,MGM Resorts,9332038656,United States
-KNX,Knight-Swift,8951372800,United States
 AGCO,AGCO,8022779904,United States
 COLB,Columbia Banking System,8646049792,United States
 ONB,Old National Bank,9003410432,United States
 WTS,Watts Water Technologies,9393182720,United States
-JBTM,JBT Marel Corporation,8227587584,United States
 OSK,Oshkosh Corporation,9071405056,United States
 KNSL,Kinsale Capital Group,9284117504,United States
-CUBE,CubeSmart,8327949824,United States
-AOS,A. O. Smith,9405498368,United States
 AN,AutoNation,7831305728,United States
-JBTM,JBT Marel Corporation,8227587584,United States
 LKQ,LKQ Corporation,8030119936,United States
 HQY,HealthEquity,8454694912,United States
 GTLS,Chart Industries,9291774976,United States
-HBM,Hudbay Minerals,8394390016,Canada
 BIO,Bio-Rad Laboratories,8742274048,United States
 DVA,DaVita,7937214976,United States
 BRX,Brixmor Property Group,7931051008,United States
 BPOP,Banco Popular,8722918400,United States
 CTC.TO,Canadian Tire,8368587074,Canada
-WTS,Watts Water Technologies,9393182720,United States
-AOS,A. O. Smith,9405498368,United States
 OC,Owens Corning,9345379328,United States
 GNRC,Generac Power Systems,8324921344,United States
-WTS,Watts Water Technologies,9393182720,United States
-GNRC,Generac Power Systems,8324921344,United States
 AWI,Armstrong World Industries,8192695296,United States
-ONB,Old National Bank,9003410432,United States
-HQY,HealthEquity,8454694912,United States
 AMG,Affiliated Managers Group,8742392832,United States
 CBSH,Commerce Bancshares,8000811008,United States
-MUSA,Murphy USA,8217579520,United States
-OSK,Oshkosh Corporation,9071405056,United States
 CU.TO,Canadian Utilities,8391164285,Canada
-ARE,Alexandria Real Estate Equities,9018011648,United States
-DOOO,Bombardier Recreational Products,8023764992,Canada
-DVA,DaVita,7937214976,United States
-MUSA,Murphy USA,8217579520,United States
 AXSM,Axsome Therapeutics,8604934144,United States
-ATR,AptarGroup,7934649856,United States
 UGI,UGI Corporation,7904875520,United States
-CUBE,CubeSmart,8327949824,United States
-ZION,Zions Bancorporation,8880609280,United States
 POOL,POOLCORP,8844740608,United States
-JBTM,JBT Marel Corporation,8227587584,United States
 SANM,Sanmina,8521867264,United States
 PPC,Pilgrim's Pride,8822512640,United States
-ARE,Alexandria Real Estate Equities,9018011648,United States
 PCTY,Paylocity,8452416000,United States
 CMC,Commercial Metals Company,8130930688,United States
-LKQ,LKQ Corporation,8030119936,United States
-KNSL,Kinsale Capital Group,9284117504,United States
 WCP.TO,Whitecap Resources,9471266452,Canada
-GTLS,Chart Industries,9291774976,United States
-AWI,Armstrong World Industries,8192695296,United States
 ALA.TO,AltaGas,9111157545,Canada
-BRX,Brixmor Property Group,7931051008,United States
-GTLS,Chart Industries,9291774976,United States
-BIO,Bio-Rad Laboratories,8742274048,United States
-BIO,Bio-Rad Laboratories,8742274048,United States
-QBR-B.TO,Quebecor,8769832080,Canada
 OVV,Ovintiv,9365500928,United States
-SANM,Sanmina,8521867264,United States
 FRT,Federal Realty Investment Trust,8824878080,United States
-MGM,MGM Resorts,9332038656,United States
-AGCO,AGCO,8022779904,United States
-DOOO,Bombardier Recreational Products,8023764992,Canada
 DOX,Amdocs,9093038080,United States
-AMG,Affiliated Managers Group,8742392832,United States
-QBR-B.TO,Quebecor,8769832080,Canada
-CU.TO,Canadian Utilities,8391164285,Canada
 TFII,TFI International,8897739776,Canada
-MUSA,Murphy USA,8217579520,United States
 OGE,OGE Energy,8690675712,United States
-HQY,HealthEquity,8454694912,United States
-BIO,Bio-Rad Laboratories,8742274048,United States
-CMC,Commercial Metals Company,8130930688,United States
-HBM,Hudbay Minerals,8394390016,Canada
-DVA,DaVita,7937214976,United States
-FLS,Flowserve,9394088960,United States
 KEY.TO,Keyera,6933279240,Canada
 CS.TO,Capstone Copper,7593465976,Canada
 MTG,MGIC Investment,6625231360,United States
 KEX,Kirby Corporation,6877907968,United States
 CIGI,Colliers International,7407377408,Canada
 CHE,Chemed,6401054208,United States
-NEU,NewMarket Corp,6558063616,United States
 NEU,NewMarket Corp,6558063616,United States
 FCFS,FirstCash,7349434368,United States
 EMP-A.TO,Empire Company,7797053838,Canada
@@ -1099,108 +582,52 @@ PRIM,Primoris Services Corporation,6929649152,United States
 CHP-UN.TO,Choice Properties REIT,7826590724,Canada
 FLR,Fluor Corporation,7177897984,United States
 PFSI,PennyMac,7081854464,United States
-CHP-UN.TO,Choice Properties REIT,7826590724,Canada
 PB,Prosperity Bancshares,6839721472,United States
 SSD,Simpson Manufacturing Company,6880172544,United States
-CIGI,Colliers International,7407377408,Canada
 NXE,NexGen Energy,7154352640,Canada
 GKOS,Glaukos,6532052992,United States
 EXLS,EXL Service,6901456896,United States
-DSGX,Descartes Systems Group,7366491136,Canada
 SNV,Synovus,6947805696,United States
 BYD,Boyd Gaming,6901454848,United States
 SMTC,Semtech,7044149248,United States
-SSD,Simpson Manufacturing Company,6880172544,United States
 LEA,Lear Corporation,6466669056,United States
-CS.TO,Capstone Copper,7593465976,Canada
-CLF,Cleveland-Cliffs,6859277824,United States
 CLF,Cleveland-Cliffs,6859277824,United States
 MAT,Mattel,6969185792,United States
-CLF,Cleveland-Cliffs,6859277824,United States
 OLLI,Ollie's Bargain Outlet,6936711168,United States
 FSS,Federal Signal,6915759616,United States
-PB,Prosperity Bancshares,6839721472,United States
-EMP-A.TO,Empire Company,7797053838,Canada
-OLLI,Ollie's Bargain Outlet,6936711168,United States
 ZWS,Zurn Water Solutions,7737574912,United States
-CIGI,Colliers International,7407377408,Canada
 FMCC,Freddie Mac,6604605440,United States
 SIRI,Sirius XM,7081651712,United States
 NFG,National Fuel Gas,7478822400,United States
 MIDD,Middleby,7794443264,United States
-SSD,Simpson Manufacturing Company,6880172544,United States
 EMN,Eastman Chemical,7607647744,United States
 CAG,Conagra Brands,7692180992,United States
-PRIM,Primoris Services Corporation,6929649152,United States
-CHP-UN.TO,Choice Properties REIT,7826590724,Canada
 THG,Hanover Insurance Group,6373936128,United States
-SSD,Simpson Manufacturing Company,6880172544,United States
 MHK,Mohawk Industries,6640037376,United States
 VNO,Vornado Realty Trust,7022795776,United States
 GSAT,Globalstar,7718117376,United States
-MAT,Mattel,6969185792,United States
 URBN,Urban Outfitters,7136366080,United States
 MKTX,MarketAxess,6490461184,United States
 TXNM,TXNM Energy,6440520192,United States
 DPM.TO,Dundee Precious Metals,7130652737,Canada
 EAT,Brinker International,6941488640,United States
-MIDD,Middleby,7794443264,United States
-CHP-UN.TO,Choice Properties REIT,7826590724,Canada
 BOKF,BOK Financial,7766278656,United States
 AXTA,Axalta,6920860160,United States
-MIDD,Middleby,7794443264,United States
-AXTA,Axalta,6920860160,United States
 STWD,Starwood Property Trust,6853961728,United States
-NFG,National Fuel Gas,7478822400,United States
-VNO,Vornado Realty Trust,7022795776,United States
 PJT,PJT Partners,7147925504,United States
 MSA,MSA Safety,6598687744,United States
-CLF,Cleveland-Cliffs,6859277824,United States
-EMN,Eastman Chemical,7607647744,United States
 IBP,Installed Building Products,6956675072,United States
-CS.TO,Capstone Copper,7593465976,Canada
-MTG,MGIC Investment,6625231360,United States
-MKTX,MarketAxess,6490461184,United States
-CLF,Cleveland-Cliffs,6859277824,United States
 ORA,Ormat Technologies,7077431808,United States
-LEA,Lear Corporation,6466669056,United States
 CWST,Casella Waste Systems,6401396224,United States
-PRIM,Primoris Services Corporation,6929649152,United States
-FCFS,FirstCash,7349434368,United States
 SFM,Sprouts Farmers Market,7303076864,United States
-SSD,Simpson Manufacturing Company,6880172544,United States
 FSV,FirstService,7064132608,Canada
 WING,Wingstop Restaurants,7208238080,United States
-CS.TO,Capstone Copper,7593465976,Canada
 VIRT,Virtu Financial,7019210240,United States
 IDA,Idacorp,6832937472,United States
-MHK,Mohawk Industries,6640037376,United States
-CAG,Conagra Brands,7692180992,United States
 CPB,Campbell's,7829005312,United States
-GSAT,Globalstar,7718117376,United States
-STWD,Starwood Property Trust,6853961728,United States
 R,Ryder,7675166208,United States
-TXNM,TXNM Energy,6440520192,United States
-GSAT,Globalstar,7718117376,United States
-URBN,Urban Outfitters,7136366080,United States
-URBN,Urban Outfitters,7136366080,United States
-NXE,NexGen Energy,7154352640,Canada
 IESC,IES Holdings,7794439680,United States
-FSV,FirstService,7064132608,Canada
 OR,Osisko Gold Royalties,7211138560,Canada
-ZWS,Zurn Water Solutions,7737574912,United States
-FMCC,Freddie Mac,6604605440,United States
-MTG,MGIC Investment,6625231360,United States
 EGO,Eldorado Gold,7674605568,Canada
-PJT,PJT Partners,7147925504,United States
-NXE,NexGen Energy,7154352640,Canada
-IBP,Installed Building Products,6956675072,United States
 MASI,Masimo,7363107840,United States
-CLF,Cleveland-Cliffs,6859277824,United States
 INGR,Ingredion,7085570048,United States
-VNO,Vornado Realty Trust,7022795776,United States
-URBN,Urban Outfitters,7136366080,United States
-IDA,Idacorp,6832937472,United States
-MAT,Mattel,6969185792,United States
-MKTX,MarketAxess,6490461184,United States
-EMP-A.TO,Empire Company,7797053838,Canada
