@@ -430,10 +430,10 @@ Charles Martineau
 <h2>Utility Maximization</h2>
 <p>The solution to the portfolio optimization problem gives us the <strong>efficient frontier</strong>:</p>
 
-<img data-src="version_00/Figures/frontier.jpg" style="width:70.0%" class="r-stretch"></section>
+<img data-src="figures/frontier.jpg" style="width:70.0%" class="r-stretch"></section>
 <section id="expected-utility-theory" class="slide level2">
 <h2>Expected Utility Theory</h2>
-<p><strong>Developed by John von Neumann and Oskar Morgenstern</strong> <img data-src="version_00/Figures/neumman.png" style="width:70.0%"></p>
+<p><strong>Developed by John von Neumann and Oskar Morgenstern</strong> <img data-src="figures/neumman.png" style="width:70.0%"></p>
 </section>
 <section id="expected-utility" class="slide level2">
 <h2>Expected Utility</h2>
@@ -494,7 +494,7 @@ Charles Martineau
 <li>When RP is positive, it means that this person dislike risks. She requires an additional payoff to take risk.</li>
 </ul>
 </div><div class="column" style="width:50%;">
-<p><img data-src="version_00/Figures/Riskpremium1.png" class="absolute" style="top: 150px; right: 0px; width: 50%; "></p>
+<p><img data-src="figures/Riskpremium1.png" class="absolute" style="top: 150px; right: 0px; width: 50%; "></p>
 </div></div>
 </section>
 <section id="lets-revise-the-previous-graph-with-numbers" class="slide level2">
@@ -534,7 +534,7 @@ Charles Martineau
 <li>The <strong>risk premium in this case negative</strong>. That persons likes to take risks and is willing to pay to to enjoy the risk.</li>
 </ul>
 </div><div class="column" style="width:50%;">
-<p><img data-src="version_00/Figures/Riskpremium3.png" class="absolute" style="top: 150px; right: 0px; width: 50%; "></p>
+<p><img data-src="figures/Riskpremium3.png" class="absolute" style="top: 150px; right: 0px; width: 50%; "></p>
 </div></div>
 </section>
 <section id="utility-function-2" class="slide level2">
@@ -548,7 +548,7 @@ Charles Martineau
 <li>Someone that is indifferent to risk. Only cares about the expected return.</li>
 </ul>
 </div><div class="column" style="width:50%;">
-<p><img data-src="version_00/Figures/Riskpremium2.png" class="absolute" style="top: 150px; right: 0px; width: 50%; "></p>
+<p><img data-src="figures/Riskpremium2.png" class="absolute" style="top: 150px; right: 0px; width: 50%; "></p>
 </div></div>
 </section>
 <section id="violations-of-expected-utility-theory-and-its-implication-in-financial-market" class="slide level2">
@@ -608,7 +608,7 @@ Charles Martineau
 <h2>Violations of Expected Utility Theory(2): Prospect Theory</h2>
 <p><strong>Developed by Daniel Kahneman and Amos Tversky</strong></p>
 
-<img data-src="version_00/Figures/kahneman_tversky.jpg" style="width:70.0%" class="r-stretch"></section>
+<img data-src="figures/kahneman_tversky.jpg" style="width:70.0%" class="r-stretch"></section>
 <section id="prospect-theory" class="slide level2">
 <h2>Prospect Theory</h2>
 <div style="height: 2em;">
@@ -735,56 +735,58 @@ Charles Martineau
 </section>
 <section id="prospect-theory-9" class="slide level2">
 <h2>Prospect Theory</h2>
+<h4 id="value-functions-and-their-weights">Value functions and their weights</h4>
+
+<img data-src="figures/prospect2.jpg" style="width:80.0%" class="r-stretch"></section>
+<section id="prospect-theory-probability-weighting" class="slide level2">
+<h2>Prospect Theory: Probability Weighting</h2>
 <div style="height: 2em;">
 
 </div>
-<p>People give a much higher weight on probability changes in extremes (e.g., close to 0% or 100%) relative to probability changes in normal ranges;</p>
-<p><strong>Example 1:</strong> A patient is willing to pay much more if a medication can change the probability of full recovery from no chance to 1% vs.&nbsp;from 50% to 51%.</p>
-<p><strong>Example 2:</strong> In Canada, the probability of winning a big lottery is 1 in 13,983,816; you are more likely to:</p>
+<p>People don’t treat probabilities linearly. Instead, they:</p>
 <ul>
-<li>Be killed in a terrorist attack while travelling (1 in 650,000).</li>
-<li>Be killed by lightning (1 in 56,439).</li>
+<li>Overweight small probabilities (rare events loom larger than they should)</li>
+<li>Overweight certainty (placing extreme value on eliminating all risk)</li>
+<li>Underweight moderate probabilities (middle-range probabilities as less important)</li>
 </ul>
+<p><strong>Example 1: The Certainty Effect</strong> A patient deciding on an expensive medication values probability changes very differently:</p>
+<ul>
+<li>0% → 1% chance of recovery: Willing to pay a LOT (overweighting the small probability)</li>
+<li>50% → 51% chance of recovery: Willing to pay relatively little</li>
+<li>99% → 100% chance of recovery: Willing to pay a LOT (overweighting certainty)</li>
+</ul>
+<p>Under <em>expected utility theory</em>, all three scenarios represent the same 1 percentage point improvement and should be valued equally. They’re not.</p>
 </section>
-<section id="prospect-theory-10" class="slide level2">
-<h2>Prospect Theory</h2>
-<div style="height: 2em;">
-
-</div>
-<p>People give a much higher weight on probability changes in extremes (e.g., close to 0% or 100%) relative to probability changes in normal ranges;</p>
-<p><strong>Example 1:</strong> A patient is willing to pay much more if a medication can change the probability of full recovery from no chance to 1% vs.&nbsp;from 50% to 51%.</p>
-<p><strong>Example 2:</strong> In Canada, the probability of winning a big lottery is 1 in 13,983,816; you are more likely to:</p>
+<section id="prospect-theory-probability-weighting-1" class="slide level2">
+<h2>Prospect Theory: Probability Weighting</h2>
+<p><strong>Example 2: Why People Play the Lottery</strong></p>
 <ul>
-<li>Be killed in a terrorist attack while travelling (1 in 650,000).</li>
-<li>Be killed by lightning (1 in 56,439).</li>
+<li>In Canada, the probability of winning a major lottery jackpot is 1 in 13,983,816. You are far more likely to:
+<ul>
+<li>Die in a terrorist attack while traveling (1 in 650,000)</li>
+<li>Be killed by lightning (1 in 56,439)</li>
+</ul></li>
 </ul>
-<p><strong>Observation 5:</strong> People <strong>overweight extreme probabilities and underweight normal probabilities.</strong></p>
+<p>Yet millions of people regularly buy lottery tickets, demonstrating massive overweighting of tiny probabilities. The 0.000007% chance of winning gets treated psychologically as if it’s far more likely.</p>
+<p><strong>Key Insight:</strong> The psychological weight people assign to probabilities follows an S-shaped curve, not a straight line. This explains seemingly irrational behaviors around insurance, gambling, and risk-taking.</p>
 </section>
 <section id="prospect-theory---value-functions-and-their-weights" class="slide level2">
+<h2>Prospect Theory - Value Functions and Their Weights</h2>
+
+<img data-src="figures/prob_weight.png" style="width:70.0%" class="r-stretch"></section>
+<section id="prospect-theory---value-functions-and-their-weights-1" class="slide level2">
 <h2>Prospect Theory - Value Functions and Their Weights</h2>
 <div style="height: 2em;">
 
 </div>
-<p>Kahneman and Tversky (1979): Prospect utility is developed to reconcile the violations of expected utility theory.</p>
-<p>Value function: prospect utility function</p>
+<p>Prospect theory utility function</p>
+<p><span class="math display">U(x)= \sum_{i=1}^N w(p_i) v(x_i)</span></p>
 <ul>
-<li><strong><span class="math inline">U(x)= \sum_{i=1}^N w(p_i) v(x_i)</span></strong></li>
 <li>where x is a state-dependent payoff.</li>
 <li><span class="math inline">w(.)</span> is the weight function so that</li>
-<li><span class="math inline">v(.)</span> is the value function, it is convex when <span class="math inline">x&lt;0</span> and concave when <span class="math inline">x&gt;0</span>.</li>
-</ul>
-<p>The key insights of prospect theory:</p>
-<ul>
-<li>assign higher weight on low-probability event when the payoff is negative;</li>
-<li>assign higher weight on certainty when the payoff is positive;</li>
-<li>assign higher weight when the probabilities are close to extremes.</li>
+<li><span class="math inline">v(.)</span> is the value function, it is <em>convex</em> when <span class="math inline">x&lt;0</span> and <em>concave</em> when <span class="math inline">x&gt;0</span>.</li>
 </ul>
 </section>
-<section id="prospect-theory-11" class="slide level2">
-<h2>Prospect Theory</h2>
-<h4 id="value-functions-and-their-weights">Value functions and their weights</h4>
-
-<img data-src="version_00/Figures/prospect2.jpg" style="width:80.0%" class="r-stretch"></section>
 <section id="prospect-theory-in-sports" class="slide level2">
 <h2>Prospect Theory in Sports</h2>
 <p>Prospect theory says that losses hurt more than gains. Let’s apply this thinking to sport coaches …</p>
@@ -798,9 +800,12 @@ Charles Martineau
 <section id="prospect-theory-in-sports-1" class="slide level2">
 <h2>Prospect Theory in Sports</h2>
 <ul>
-<li>Say that you are down 0-1, and you pull the goalie with 6 min left and lose 0-5, does the coach looks stupid? Yes, to many that don’t understand probabilities. A coach prefers to lose 0-1 or 0-2 than 0-5. The coach looks more credible, more likely to keep is job.</li>
+<li>Say that you are down 0-1, and you pull the goalie with 6 min left and lose 0-5, does the coach looks stupid? Yes, to those that don’t understand probabilities.
+<ul>
+<li>A coach prefers to lose 0-1 or 0-2 than 0-5. The coach looks more credible, more likely to keep is job.</li>
 <li>If a coach plays the probabilities, he might look wild, increase the likelihood to get fired, even though he makes the right choice.</li>
 <li>Hence, the psychological reflexion in the mind of the coach is that being scored by pulling the goalie to early hurts more (loss) than actually scoring and tie the game (gain).</li>
+</ul></li>
 <li>The same can be said for 4<span class="math inline">^{th}</span> down play in football.</li>
 </ul>
 </section>
@@ -812,10 +817,6 @@ Charles Martineau
 <li>Odean (1998)</li>
 <li>Frazzini (2006)</li>
 </ul></li>
-<li>Equity risk premium puzzle
-<ul>
-<li>Benartzi and Thaler (1995)</li>
-</ul></li>
 </ol>
 </section>
 <section id="disposition-effect" class="slide level2">
@@ -823,8 +824,9 @@ Charles Martineau
 <p>The disposition effect is the tendency of individual investors to sell assets whose price has increased and keep assets that have dropped in value;</p>
 <ul>
 <li>A direct implication of the prospect theory.</li>
-<li>This is puzzling. Stocks that have recently done well continue to outperform, on average, while those that have done poorly continue to underperform.
+<li>This is puzzling.
 <ul>
+<li>Stocks that have recently done well continue to outperform, on average, while those that have done poorly continue to underperform.</li>
 <li>As such, investors should concentrate their selling among stocks with poor past performance—but they do the opposite.</li>
 </ul></li>
 </ul>
@@ -846,7 +848,13 @@ Charles Martineau
 </section>
 <section id="are-investors-reluctant-to-realize-their-losses-odean-1998" class="slide level2">
 <h2>Are Investors Reluctant to Realize Their Losses? (Odean, 1998)</h2>
-<p>Terry Odean examines the disposition effect, the tendency of investors to hold losing investments too long and sell winning investments too soon, by analyzing trading records for 10,000 accounts at a large discount brokerage house.</p>
+<div style="height: 2em;">
+
+</div>
+<p>Terry Odean, in this <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/0022-1082.00072?casa_token=FJrSMnkEL9IAAAAA%3AsUz_4PAYrh2C1CMxJJUaXwwd9kapCjc4tHt0Q-8wTG0bqIpyOnzMHrt_A6fc0NSLOeAcTdP21t-Qe6zc">paper</a>, examines the disposition effect, the tendency of investors to hold losing investments too long and sell winning investments too soon, by analyzing trading records for 10,000 accounts at a large discount brokerage house.</p>
+<ul>
+<li>Bonus: <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-6261.1985.tb05002.x">Original study</a> that coined the term “disposition effect”</li>
+</ul>
 </section>
 <section class="slide level2">
 
@@ -864,7 +872,7 @@ Charles Martineau
 <div style="height: 2em;">
 
 </div>
-<p><img data-src="version_00/Figures/Odean1.png" style="width:100.0%"></p>
+<p><img data-src="figures/Odean1.png" style="width:100.0%"></p>
 </div><div class="column" style="width:50%;">
 <div style="height: 4em;">
 
@@ -880,14 +888,10 @@ Charles Martineau
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Y2ECnsx1cvs?si=5B8SgxhCDTBGj6Us" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
 </iframe>
 </section>
-<section id="disposition-effect-2" class="slide level2">
-<h2>Disposition Effect</h2>
-<p>The “disposition effect” is the tendency to sell assets that have gained value (‘winners’) and keep assets that have lost value (‘losers’).</p>
-<p>Bonus: <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-6261.1985.tb05002.x">Original study</a> that coined the term “disposition effect”</p>
-</section>
 <section id="the-disposition-effect-and-underreaction-to-news" class="slide level2">
 <h2>The Disposition Effect and Underreaction to News</h2>
-<p>If you recall from the first class, I showed you a plot of price underreaction to earnings announcements. In the paper titled <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/j.1540-6261.2006.00896.x?casa_token=WPM4cfaZRC4AAAAA%3A8DhfgxdlUNHpwriRoSAZRk2ENbRmqBUjVuAz9Cw7MVwcbbrn4kf3fFy5sR5Bkpvd3yajEpWUjPRF">“The Disposition Effect and Underreaction to News”</a>, Frazzini (2006) proposes that the disposition effect can explain (in part) such finding.</p>
+<p>If you recall from the first class, I showed you a plot of price underreaction to earnings announcements.</p>
+<p>In the paper titled <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/j.1540-6261.2006.00896.x?casa_token=WPM4cfaZRC4AAAAA%3A8DhfgxdlUNHpwriRoSAZRk2ENbRmqBUjVuAz9Cw7MVwcbbrn4kf3fFy5sR5Bkpvd3yajEpWUjPRF">“The Disposition Effect and Underreaction to News”</a>, Frazzini (2006) proposes that the disposition effect can explain (in part) such finding.</p>
 <ul>
 <li>Frazzini has a “reference price”, which is the aggregate price at which mutual funds paid for a particular stock on each month and examines whether prices underreact more to news (earnings announcements) if the stock price is in <strong>capital gain or losses</strong>.</li>
 <li>Let’s examine the theoretical arguments of Frazzini followed by its empirical exercise.</li>
@@ -896,22 +900,22 @@ Charles Martineau
 <section id="theoretical-findings" class="slide level2">
 <h2>Theoretical findings</h2>
 
-<img data-src="version_00/Figures/frazzini1.PNG" class="quarto-figure quarto-figure-center r-stretch" style="width:60.0%"><p>Prefer not to “not sell” because .5U(50) + .5U(30) &gt; U(40) since U is a convex function.</p>
+<img data-src="figures/frazzini1.PNG" class="quarto-figure quarto-figure-center r-stretch" style="width:60.0%"><p>Prefer not to “not sell” because .5U(50) + .5U(30) &gt; U(40) since U is a convex function.</p>
 </section>
 <section id="theoretical-findings-1" class="slide level2">
 <h2>Theoretical findings</h2>
 
-<img data-src="version_00/Figures/frazzini2.PNG" class="quarto-figure quarto-figure-center r-stretch" style="width:60.0%"><p>Prefer to “sell” because .5U(50) + .5U(70) &lt; U(60) since U is a concave function.</p>
+<img data-src="figures/frazzini2.PNG" class="quarto-figure quarto-figure-center r-stretch" style="width:60.0%"><p>Prefer to “sell” because .5U(50) + .5U(70) &lt; U(60) since U is a concave function.</p>
 </section>
 <section id="implications-to-bad-earnings-news" class="slide level2">
 <h2>Implications to bad earnings news</h2>
 
-<img data-src="version_00/Figures/frazzini3.PNG" class="quarto-figure quarto-figure-center r-stretch" style="width:70.0%"><p>Why a slow price drift for capital loss? Because following a negative news, people are <strong>not selling</strong>, limiting the the speed at which the price reaches its new equilibrium value.</p>
+<img data-src="figures/frazzini3.PNG" class="quarto-figure quarto-figure-center r-stretch" style="width:70.0%"><p>Why a slow price drift for capital loss? Because following a negative news, people are <strong>not selling</strong>, limiting the the speed at which the price reaches its new equilibrium value.</p>
 </section>
 <section id="implications-to-good-earnings-news" class="slide level2">
 <h2>Implications to good earnings news</h2>
 
-<img data-src="version_00/Figures/frazzini4.PNG" class="quarto-figure quarto-figure-center r-stretch" style="width:70.0%"><p>Why slow price drift for capital gain? Because following a positive news, people <strong>are selling</strong>, selling puts a downward pressure on the price limiting the speed at which the price reaches its new equilibrium value.</p>
+<img data-src="figures/frazzini4.PNG" class="quarto-figure quarto-figure-center r-stretch" style="width:70.0%"><p>Why slow price drift for capital gain? Because following a positive news, people <strong>are selling</strong>, selling puts a downward pressure on the price limiting the speed at which the price reaches its new equilibrium value.</p>
 </section>
 <section id="main-empirical-findings-of-frazzini-2006" class="slide level2">
 <h2>Main empirical findings of Frazzini (2006)</h2>
@@ -925,7 +929,7 @@ Charles Martineau
 <section id="violations-of-expected-utility-theory3-framing" class="slide level2">
 <h2>Violations of Expected Utility Theory(3): Framing</h2>
 
-<img data-src="version_00/Figures/arrows.png" class="quarto-figure quarto-figure-center r-stretch" style="width:50.0%"></section>
+<img data-src="figures/arrows.png" class="quarto-figure quarto-figure-center r-stretch" style="width:50.0%"></section>
 <section id="framing---experiment" class="slide level2">
 <h2>Framing - Experiment</h2>
 <p><strong>(Group Left) Experiment 1:</strong> Imagine that Canada is preparing for an unusual disease, which is expected to kill 600 people. Two alternative plans, A and B, are proposed to combat the disease. The consequences of two plans are provided as follows:</p>
@@ -989,18 +993,15 @@ Charles Martineau
 </section>
 <section id="mental-accounting-different-scenarios-thaler-1985-2" class="slide level2">
 <h2>Mental Accounting: Different scenarios (Thaler, 1985)</h2>
-<p>All the examples on the previous slide is a clear violation of expected utility theory since whether items are in the same account or different accounts should be irrelevant in expected utility theory.</p>
-<ul>
-<li>In (1), it violates the principle of <strong>fungibility</strong>. Money is not supposed to have labels attached to it. Yet, they treat the $300 into a “windfall” and “food” account. If, instead, they get a $300 increase in their monthly salary, do you think they would have gone to that expensive restaurant?</li>
-</ul>
-</section>
-<section id="mental-accounting-different-scenarios-thaler-1985-3" class="slide level2">
-<h2>Mental Accounting: Different scenarios (Thaler, 1985)</h2>
 <p>All the examples on the previous slides is a clear violation of expected utility theory since whether items are in the same account or different accounts should be irrelevant in expected utility theory.</p>
+<div>
 <ul>
-<li><p>In (1), it violates the principle of <strong>fungibility</strong>. Money is not supposed to have labels attached to it. Yet, they treat the $300 into a “windfall” and “food” account. If, instead, they get a $300 increase in their monthly salary, do you think they would have gone to that expensive restaurant?</p></li>
-<li><p>In (2), it also violates the principle of <strong>fungibility</strong> (there shouldn’t be a distinction between your poker and investment money account).</p></li>
+<li class="fragment">In (1), it violates the principle of <strong>fungibility</strong>. Money is not supposed to have labels attached to it. Yet, they treat the $300 into a “windfall” and “food” account. If, instead, they get a $300 increase in their monthly salary, do you think they would have gone to that expensive restaurant?</li>
+<li class="fragment">In (2), it also violates the principle of <strong>fungibility</strong> (there shouldn’t be a distinction between your poker and investment money account).</li>
+<li class="fragment">In (3), again violates the concept of fungibility (at a costs!) just for self-control.</li>
+<li class="fragment">In (4) illustrate the curious fact that people tend to give as gifts items that the recipients would not buy for themselves, and that the recipients approve the strategy.</li>
 </ul>
+</div>
 <div class="quarto-auto-generated-content">
 <p><img src="../logos/uoft.png" class="slide-logo"></p>
 <div class="footer footer-default">

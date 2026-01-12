@@ -81,14 +81,14 @@ Utility function: $U(w)$
 
 The solution to the portfolio optimization problem gives us the **efficient frontier**:
 
-![](version_00/Figures/frontier.jpg){width=70%}
+![](figures/frontier.jpg){width=70%}
 
 ---
 
 ## Expected Utility Theory
 
 **Developed by John von Neumann and Oskar Morgenstern**
-![](version_00/Figures/neumman.png){width=70%}
+![](figures/neumman.png){width=70%}
 
 
 ---
@@ -160,7 +160,7 @@ Risk Averse:
 :::
 
 ::: {.column width="50%"}
-![](version_00/Figures/Riskpremium1.png){.absolute top=150 right=0 width=50%}
+![](figures/Riskpremium1.png){.absolute top=150 right=0 width=50%}
 :::
 :::
 
@@ -205,7 +205,7 @@ Risk Seeking:
 :::
 
 ::: {.column width="50%"}
-![](version_00/Figures/Riskpremium3.png){.absolute top=150 right=0 width=50%}
+![](figures/Riskpremium3.png){.absolute top=150 right=0 width=50%}
 :::
 :::
 
@@ -223,7 +223,7 @@ Risk Neutral:
 - Someone that is indifferent to risk. Only cares about the expected return.
 :::
 ::: {.column width="50%"}
-![](version_00/Figures/Riskpremium2.png){.absolute top=150 right=0 width=50%}
+![](figures/Riskpremium2.png){.absolute top=150 right=0 width=50%}
 :::
 :::
 
@@ -304,7 +304,7 @@ Did you notice the preference sign flipping from > in A to < in B?
 
 **Developed by Daniel Kahneman and Amos Tversky**
 
-![](version_00/Figures/kahneman_tversky.jpg){width=70%}
+![](figures/kahneman_tversky.jpg){width=70%}
 
 ---
 
@@ -479,63 +479,6 @@ OR
 
 **Observation 4:** Losers become more willing to take on risk in an attempt to break even. This finding is thank to Richard Thaler.
 
----
-
-## Prospect Theory
-
-::: {style="height: 2em;"}
-:::
-
-People give a much higher weight on probability changes in extremes (e.g., close to 0% or 100%) relative to probability changes in normal ranges;
-
-**Example 1:** A patient is willing to pay much more if a medication can change the probability of full recovery from no chance to 1% vs. from 50% to 51%.
-
-**Example 2:** In Canada, the probability of winning a big lottery is 1 in 13,983,816; you are more likely to:
-
-- Be killed in a terrorist attack while travelling (1 in 650,000).
-- Be killed by lightning (1 in 56,439).
-
----
-
-## Prospect Theory
-
-::: {style="height: 2em;"}
-:::
-
-People give a much higher weight on probability changes in extremes (e.g., close to 0% or 100%) relative to probability changes in normal ranges;
-
-**Example 1:** A patient is willing to pay much more if a medication can change the probability of full recovery from no chance to 1% vs. from 50% to 51%.
-
-**Example 2:** In Canada, the probability of winning a big lottery is 1 in 13,983,816; you are more likely to:
-
-- Be killed in a terrorist attack while travelling (1 in 650,000).
-- Be killed by lightning (1 in 56,439).
-
-**Observation 5:** People **overweight extreme probabilities and underweight normal probabilities.**
-
----
-
-## Prospect Theory - Value Functions and Their Weights
-
-::: {style="height: 2em;"}
-:::
-
-Kahneman and Tversky (1979): Prospect utility is developed to reconcile the violations of expected utility theory.
-
-Value function: prospect utility function
-
- - **$U(x)= \sum_{i=1}^N w(p_i) v(x_i)$**
- - where x is a state-dependent payoff.
- - $w(.)$ is the weight function so that
- - $v(.)$ is the value function, it is convex when $x<0$ and concave when $x>0$.
-
-
-The key insights of prospect theory:
-
-- assign higher weight on low-probability event when the payoff is negative;
-- assign higher weight on certainty when the payoff is positive;
-- assign higher weight when the probabilities are close to extremes.
-
 
 ---
 
@@ -543,7 +486,67 @@ The key insights of prospect theory:
 
 #### Value functions and their weights
 
-![](version_00/Figures/prospect2.jpg){width=80%}
+![](figures/prospect2.jpg){width=80%}
+
+---
+
+
+## Prospect Theory: Probability Weighting
+
+::: {style="height: 2em;"}
+:::
+
+People don't treat probabilities linearly. Instead, they:
+
+- Overweight small probabilities (rare events loom larger than they should)
+- Overweight certainty (placing extreme value on eliminating all risk)
+- Underweight moderate probabilities (middle-range probabilities as less important)
+
+**Example 1: The Certainty Effect**
+A patient deciding on an expensive medication values probability changes very differently:
+
+- 0% → 1% chance of recovery: Willing to pay a LOT (overweighting the small probability)
+- 50% → 51% chance of recovery: Willing to pay relatively little
+- 99% → 100% chance of recovery: Willing to pay a LOT (overweighting certainty)
+
+Under *expected utility theory*, all three scenarios represent the same 1 percentage point improvement and should be valued equally. They're not.
+
+---
+
+## Prospect Theory: Probability Weighting
+
+**Example 2: Why People Play the Lottery**
+
+- In Canada, the probability of winning a major lottery jackpot is 1 in 13,983,816. You are far more likely to:
+  - Die in a terrorist attack while traveling (1 in 650,000)
+  - Be killed by lightning (1 in 56,439)
+
+Yet millions of people regularly buy lottery tickets, demonstrating massive overweighting of tiny probabilities. The 0.000007% chance of winning gets treated psychologically as if it's far more likely.
+
+**Key Insight:** The psychological weight people assign to probabilities follows an S-shaped curve, not a straight line. This explains seemingly irrational behaviors around insurance, gambling, and risk-taking.
+
+---
+
+
+## Prospect Theory - Value Functions and Their Weights
+
+![](figures/prob_weight.png){width=70%}
+
+---
+
+
+## Prospect Theory - Value Functions and Their Weights
+
+::: {style="height: 2em;"}
+:::
+
+Prospect theory utility function
+
+$$U(x)= \sum_{i=1}^N w(p_i) v(x_i)$$
+
+ - where x is a state-dependent payoff.
+ - $w(.)$ is the weight function so that
+ - $v(.)$ is the value function, it is *convex* when $x<0$ and *concave* when $x>0$.
 
 ---
 
@@ -560,9 +563,10 @@ Prospect theory says that losses hurt more than gains. Let's apply this thinking
 
 ## Prospect Theory in Sports
 
-- Say that you are down 0-1, and you pull the goalie with 6 min left and lose 0-5, does the coach looks stupid? Yes, to many that don't understand probabilities. A coach prefers to lose 0-1 or 0-2 than 0-5. The coach looks more credible, more likely to keep is job.
-- If a coach plays the probabilities, he might look wild, increase the likelihood to get fired, even though he makes the right choice.
-- Hence, the psychological reflexion in the mind of the coach is that being scored by pulling the goalie to early hurts more (loss) than actually scoring and tie the game (gain).
+- Say that you are down 0-1, and you pull the goalie with 6 min left and lose 0-5, does the coach looks stupid? Yes, to those that don't understand probabilities. 
+  - A coach prefers to lose 0-1 or 0-2 than 0-5. The coach looks more credible, more likely to keep is job.
+  - If a coach plays the probabilities, he might look wild, increase the likelihood to get fired, even though he makes the right choice.
+  - Hence, the psychological reflexion in the mind of the coach is that being scored by pulling the goalie to early hurts more (loss) than actually scoring and tie the game (gain).
 - The same can be said for 4$^{th}$ down play in football.
 
 ---
@@ -572,8 +576,6 @@ Prospect theory says that losses hurt more than gains. Let's apply this thinking
 1. The disposition effect
    - Odean (1998)
    - Frazzini (2006)
-2. Equity risk premium puzzle
-   - Benartzi and Thaler (1995)
 
 ---
 
@@ -582,7 +584,8 @@ Prospect theory says that losses hurt more than gains. Let's apply this thinking
 The disposition effect is the tendency of individual investors to sell assets whose price has increased and keep assets that have dropped in value;
 
 - A direct implication of the prospect theory.
-- This is puzzling. Stocks that have recently done well continue to outperform, on average, while those that have done poorly continue to underperform. 
+- This is puzzling. 
+  - Stocks that have recently done well continue to outperform, on average, while those that have done poorly continue to underperform. 
   - As such, investors should concentrate their selling among stocks with poor past performance—but they do the opposite.
 
 ---
@@ -602,7 +605,12 @@ The intuition is as follow:
 
 ## Are Investors Reluctant to Realize Their Losses? (Odean, 1998)
 
-Terry Odean examines the disposition effect, the tendency of investors to hold losing investments too long and sell winning investments too soon, by analyzing trading records for 10,000 accounts at a large discount brokerage house.
+::: {style="height: 2em;"}
+:::
+
+Terry Odean, in this [paper](https://onlinelibrary.wiley.com/doi/full/10.1111/0022-1082.00072?casa_token=FJrSMnkEL9IAAAAA%3AsUz_4PAYrh2C1CMxJJUaXwwd9kapCjc4tHt0Q-8wTG0bqIpyOnzMHrt_A6fc0NSLOeAcTdP21t-Qe6zc), examines the disposition effect, the tendency of investors to hold losing investments too long and sell winning investments too soon, by analyzing trading records for 10,000 accounts at a large discount brokerage house.
+
+- Bonus: [Original study](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-6261.1985.tb05002.x) that coined the term "disposition effect"
 
 ---
 
@@ -620,7 +628,7 @@ Terry Odean examines the disposition effect, the tendency of investors to hold l
 ::: {style="height: 2em;"}
 :::
 
-![](version_00/Figures/Odean1.png){width=100%}
+![](figures/Odean1.png){width=100%}
 :::
 
 
@@ -640,19 +648,14 @@ Terry Odean examines the disposition effect, the tendency of investors to hold l
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Y2ECnsx1cvs?si=5B8SgxhCDTBGj6Us" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
----
-
-## Disposition Effect
-
-The "disposition effect" is the tendency to sell assets that have gained value ('winners') and keep assets that have lost value ('losers').
-
-Bonus: [Original study](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-6261.1985.tb05002.x) that coined the term "disposition effect"
 
 ---
 
 ## The Disposition Effect and Underreaction to News
 
-If you recall from the first class, I showed you a plot of price underreaction to earnings announcements. In the paper titled ["The Disposition Effect and Underreaction to News"](https://onlinelibrary.wiley.com/doi/full/10.1111/j.1540-6261.2006.00896.x?casa_token=WPM4cfaZRC4AAAAA%3A8DhfgxdlUNHpwriRoSAZRk2ENbRmqBUjVuAz9Cw7MVwcbbrn4kf3fFy5sR5Bkpvd3yajEpWUjPRF), Frazzini (2006) proposes that the disposition effect can explain (in part) such finding.
+If you recall from the first class, I showed you a plot of price underreaction to earnings announcements. 
+
+In the paper titled ["The Disposition Effect and Underreaction to News"](https://onlinelibrary.wiley.com/doi/full/10.1111/j.1540-6261.2006.00896.x?casa_token=WPM4cfaZRC4AAAAA%3A8DhfgxdlUNHpwriRoSAZRk2ENbRmqBUjVuAz9Cw7MVwcbbrn4kf3fFy5sR5Bkpvd3yajEpWUjPRF), Frazzini (2006) proposes that the disposition effect can explain (in part) such finding.
 
 - Frazzini has a "reference price", which is the aggregate price at which mutual funds paid for a particular stock on each month and examines whether prices underreact more to news (earnings announcements) if the stock price is in **capital gain or losses**.
 - Let's examine the theoretical arguments of Frazzini followed by its empirical exercise.
@@ -661,7 +664,7 @@ If you recall from the first class, I showed you a plot of price underreaction t
 
 ## Theoretical findings
 
-![](version_00/Figures/frazzini1.PNG){width=60% fig-align="center"}
+![](figures/frazzini1.PNG){width=60% fig-align="center"}
 
 Prefer not to "not sell" because .5U(50) + .5U(30) > U(40) since U is a convex function.
 
@@ -669,7 +672,7 @@ Prefer not to "not sell" because .5U(50) + .5U(30) > U(40) since U is a convex f
 
 ## Theoretical findings
 
-![](version_00/Figures/frazzini2.PNG){width=60% fig-align="center"}
+![](figures/frazzini2.PNG){width=60% fig-align="center"}
 
 Prefer to "sell" because .5U(50) + .5U(70) < U(60) since U is a concave function.
 
@@ -677,7 +680,7 @@ Prefer to "sell" because .5U(50) + .5U(70) < U(60) since U is a concave function
 
 ## Implications to bad earnings news
 
-![](version_00/Figures/frazzini3.PNG){width=70% fig-align="center"}
+![](figures/frazzini3.PNG){width=70% fig-align="center"}
 
 Why a slow price drift for capital loss? Because following a negative news, people are **not selling**, limiting the the speed at which the price reaches its new equilibrium value.
 
@@ -685,7 +688,7 @@ Why a slow price drift for capital loss? Because following a negative news, peop
 
 ## Implications to good earnings news
 
-![](version_00/Figures/frazzini4.PNG){width=70% fig-align="center"}
+![](figures/frazzini4.PNG){width=70% fig-align="center"}
 
 Why slow price drift for capital gain? Because following a positive news, people **are selling**, selling puts a downward pressure on the price limiting the speed at which the price reaches its new equilibrium value.
 
@@ -704,7 +707,7 @@ Frazzini confirms his hypothesis empirically.
 
 ## Violations of Expected Utility Theory(3): Framing
 
-![](version_00/Figures/arrows.png){width=50% fig-align="center"}
+![](figures/arrows.png){width=50% fig-align="center"}
 
 ---
 
@@ -780,19 +783,16 @@ Mental Accounting is a set of cognitive operations used by individuals to organi
 
 ---
 
-## Mental Accounting: Different scenarios (Thaler, 1985)
-
-All the examples on the previous slide is a clear violation of expected utility theory since whether items are in the same account or different accounts should be irrelevant in expected utility theory.
-
-- In (1), it violates the principle of **fungibility**. Money is not supposed to have labels attached to it. Yet, they treat the $300 into a "windfall" and "food" account. If, instead, they get a $300 increase in their monthly salary, do you think they would have gone to that expensive restaurant?
-
----
 
 ## Mental Accounting: Different scenarios (Thaler, 1985)
 
 All the examples on the previous slides is a clear violation of expected utility theory since whether items are in the same account or different accounts should be irrelevant in expected utility theory.
 
+:::{.incremental}
+
 - In (1), it violates the principle of **fungibility**. Money is not supposed to have labels attached to it. Yet, they treat the $300 into a "windfall" and "food" account. If, instead, they get a $300 increase in their monthly salary, do you think they would have gone to that expensive restaurant?
-
 - In (2), it also violates the principle of **fungibility** (there shouldn't be a distinction between your poker and investment money account).
+- In (3), again violates the concept of fungibility (at a costs!) just for self-control.
+- In (4) illustrate the curious fact that people tend to give as gifts items that the recipients would not buy for themselves, and that the recipients approve the strategy.
 
+:::
