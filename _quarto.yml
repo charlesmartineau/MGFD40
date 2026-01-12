@@ -4,6 +4,7 @@ project:
     - "lecture*/*.qmd"
   resources:
     - "logos/**"
+    - "lecture*/figures/**"
 preview:
   port: 4200
   browser: true
