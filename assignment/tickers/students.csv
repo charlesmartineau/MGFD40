@@ -8,17 +8,17 @@ StudentID,Student Name,Course,Lecture,Session,Practical,Tutorial,CourseTitle,Dep
 1007319260,"Tam, Ka Man",MGFD40H3,L04,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA C,APP,4th Year,katelyn.tam@mail.utoronto.ca
 1007625660,"Wang, Jiarui",MGFD40H3,L01,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA C,APP,4th Year,jiaruii.wang@mail.utoronto.ca
 1007732928,"Oloko, Aleeyah Adebimpe",MGFD40H3,L01,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBAS,APP,4+ Year,aleeyah.oloko@mail.utoronto.ca
-1007800710,"Allidina, Zahra Akil",MGFD40H3,L02,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA C,APP,4th Year,zahra.allidina@mail.utoronto.ca
+1007799385,"Li, Zexi",MGFD40H3,L03,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA M,APP,4th Year,zexi.li@mail.utoronto.ca
+1007800710,"Allidina, Zahra Akil",MGFD40H3,L02,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCCRSBBA C,APP,4th Year,zahra.allidina@mail.utoronto.ca
 1007844193,"Charaspitayakul, Surachart",MGFD40H3,L02,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA C,APP,4th Year,s.charaspitayakul@mail.utoronto.ca
 1007929645,"De Marchi, Emilio",MGFD40H3,L01,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCCRSBBA C,APP,4th Year,emilio.demarchi@mail.utoronto.ca
 1007940203,"Singh, Aryaveer",MGFD40H3,L01,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCCRSBBASC,APP,4+ Year,veer.singh@mail.utoronto.ca
+1007975559,"Zhu, Yuying",MGFD40H3,L04,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCCRSBBA C,APP,4th Year,yuying.zhu@mail.utoronto.ca
 1007987421,"Zhang, Xinyue",MGFD40H3,L02,2026 S,,,Investor Psychology and Behavioural Finance,Management,SC   BBAS,APP,4+ Year,xinyuejenny.zhang@mail.utoronto.ca
 1008005061,"Prakash, Srivatsan",MGFD40H3,L01,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCCRSBBAS,APP,4+ Year,srivatsan.prakash@mail.utoronto.ca
-1008013668,"Men, Shengbo",MGFD40H3,L03,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA C,APP,4th Year,alex.men@mail.utoronto.ca
-1008027519,"Liu, Baicheng",MGFD40H3,L03,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA C,APP,4th Year,baicheng.liu@mail.utoronto.ca
 1008048140,"Nam, Soohyun",MGFD40H3,L01,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA C,APP,3rd Year,soohyun.nam@mail.utoronto.ca
 1008074432,"Sui, Yichen",MGFD40H3,L02,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCCRSBBASC,APP,4+ Year,stella.sui@mail.utoronto.ca
-1008119545,"Li, Jinrong",MGFD40H3,L02,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA C,APP,4th Year,jrong.li@mail.utoronto.ca
+1008119545,"Li, Jinrong",MGFD40H3,L02,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCCRSBBA C,APP,4th Year,jrong.li@mail.utoronto.ca
 1008145455,"Zhu, Yiyin",MGFD40H3,L04,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCCRSBBA C,APP,4th Year,yy.zhu@mail.utoronto.ca
 1008159127,"Yan, Yuening",MGFD40H3,L03,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCCRSBBA C,APP,4th Year,yuening.yan@mail.utoronto.ca
 1008195819,"Jiang, Jiale",MGFD40H3,L04,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCCRSBBA C,APP,4th Year,bbrian.jiang@mail.utoronto.ca
@@ -34,14 +34,18 @@ StudentID,Student Name,Course,Lecture,Session,Practical,Tutorial,CourseTitle,Dep
 1008745191,"Truong, Anh Cat Loi",MGFD40H3,L04,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA C,APP,4th Year,anhcatloi.truong@mail.utoronto.ca
 1008746029,"Rodriguez, Diego",MGFD40H3,L02,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA C,APP,4th Year,diegox.rodriguez@mail.utoronto.ca
 1008749669,"Pang, Yiting",MGFD40H3,L04,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA C,APP,4th Year,kathy.pang@mail.utoronto.ca
+1008766587,"Wang, Zihan",MGFD40H3,L01,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA,APP,4th Year,leowang.wang@mail.utoronto.ca
 1008777183,"Xu, Shunyin",MGFD40H3,L03,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA C,APP,4th Year,shunyin.xu@mail.utoronto.ca
 1008811537,"Wang, Lizeyu",MGFD40H3,L02,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA,APP,4th Year,stevenwangli.wang@mail.utoronto.ca
 1008818120,"Liu, Boyuan",MGFD40H3,L04,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA C,APP,4th Year,liuuuby.liu@mail.utoronto.ca
 1008822062,"Wu, Xuemeng",MGFD40H3,L04,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA C,APP,4th Year,xuemeng.wu@mail.utoronto.ca
+1008833737,"Wang, Shiyi",MGFD40H3,L03,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBAS,APP,4+ Year,shiyishelly.wang@mail.utoronto.ca
+1008834031,"Zhang, Yixuan",MGFD40H3,L01,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA,APP,4th Year,yixuanxuan.zhang@mail.utoronto.ca
 1008834120,"Bai, Siwan",MGFD40H3,L02,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA C,APP,4th Year,siwan.bai@mail.utoronto.ca
 1008834399,"Liu, Zhaorong",MGFD40H3,L01,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA,APP,4th Year,zhaorong.liu@mail.utoronto.ca
 1008834479,"Shi, Runqing",MGFD40H3,L01,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA C,APP,4th Year,runqing.shi@mail.utoronto.ca
 1008835138,"Guo, Jiayi",MGFD40H3,L01,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA,APP,4th Year,kellyjiayi.guo@mail.utoronto.ca
+1008835824,"Wang, Ruilin",MGFD40H3,L03,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCCRSBBA,APP,4th Year,ruilin.wang@mail.utoronto.ca
 1008837644,"Zhou, Tong",MGFD40H3,L03,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA,APP,4th Year,tonya.zhou@mail.utoronto.ca
 1008844510,"Cao, Keyi",MGFD40H3,L02,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA,APP,4th Year,keyi.cao@mail.utoronto.ca
 1008845546,"Wu, Tongyu",MGFD40H3,L04,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA,APP,4th Year,chelseatongyu.wu@mail.utoronto.ca
@@ -63,6 +67,7 @@ StudentID,Student Name,Course,Lecture,Session,Practical,Tutorial,CourseTitle,Dep
 1009043438,"Wu, Cyrus Cheuk Haye",MGFD40H3,L03,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA,APP,4th Year,cyrus.wu@mail.utoronto.ca
 1009055843,"Alizadeh Saghati, Niki",MGFD40H3,L04,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA C,APP,3rd Year,niki.alizadehsaghati@mail.utoronto.ca
 1009065459,"Hao, Bochen",MGFD40H3,L04,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA,APP,4th Year,bochen.hao@mail.utoronto.ca
+1009080799,"Ghanem, Ilhem",MGFD40H3,L01,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA C,APP,4th Year,ilhem.ghanem@mail.utoronto.ca
 1009106744,"Liang, Han",MGFD40H3,L02,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA,APP,4th Year,hank.liang@mail.utoronto.ca
 1009107495,"Li, Tina Tianlin",MGFD40H3,L01,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA,APP,4th Year,tinatianlin.li@mail.utoronto.ca
 1009107841,"Lee, Caleb Jabez",MGFD40H3,L03,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA C,APP,4th Year,calebj.lee@mail.utoronto.ca
@@ -71,6 +76,7 @@ StudentID,Student Name,Course,Lecture,Session,Practical,Tutorial,CourseTitle,Dep
 1009135026,"Kumar, Prachi",MGFD40H3,L01,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA C,APP,4th Year,prachi.kumar@mail.utoronto.ca
 1009138489,"Juma, Aahil Waleed",MGFD40H3,L01,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA,APP,4th Year,aahil.juma@mail.utoronto.ca
 1009151070,"Kargotsian, Nanar Alik",MGFD40H3,L04,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA,APP,4th Year,nanar.kargotsian@mail.utoronto.ca
+1009182475,"Xie, Yaxuan",MGFD40H3,L02,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBASC,APP,4th Year,yaxuan.xie@mail.utoronto.ca
 1009183553,"Mahishkar, Shreyas Kumar",MGFD40H3,L01,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA,APP,4th Year,shreyas.mahishkar@mail.utoronto.ca
 1009183900,"Liu, Yuntong",MGFD40H3,L01,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA,APP,4th Year,yuntong.liu@mail.utoronto.ca
 1009198510,"Lunev, Samuel Wesley",MGFD40H3,L03,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA C,APP,3rd Year,sam.lunev@mail.utoronto.ca
@@ -82,7 +88,7 @@ StudentID,Student Name,Course,Lecture,Session,Practical,Tutorial,CourseTitle,Dep
 1009302470,"Thavarajah, Theebana",MGFD40H3,L02,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBASC,APP,4+ Year,theebana.thavarajah@mail.utoronto.ca
 1009304744,"Tse, Hillary",MGFD40H3,L02,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA C,APP,4th Year,hillary.tse@mail.utoronto.ca
 1009304762,"Yazdanfar, Soheil",MGFD40H3,L03,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA C,APP,4th Year,soheil.yazdanfar@mail.utoronto.ca
-1009304888,"Jaikanthan, Lakiesh",MGFD40H3,L01,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA C,APP,3rd Year,lakiesh.jaikanthan@mail.utoronto.ca
+1009309525,"Roy Chowdhury, Aarav",MGFD40H3,L02,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA C,APP,4th Year,aarav.roychowdhury@mail.utoronto.ca
 1009315386,"Gao, Shengxian",MGFD40H3,L03,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA,APP,4th Year,shengxian.gao@mail.utoronto.ca
 1009319710,"Yang, Sophie",MGFD40H3,L03,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA C,APP,3rd Year,sophiey.yang@mail.utoronto.ca
 1009387414,"Gao, Tanny JiaJing",MGFD40H3,L02,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA C,APP,4th Year,tanny.gao@mail.utoronto.ca
@@ -103,7 +109,9 @@ StudentID,Student Name,Course,Lecture,Session,Practical,Tutorial,CourseTitle,Dep
 1009887437,"Chang, Tzu Hsuan",MGFD40H3,L03,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA,APP,4th Year,shina.chang@mail.utoronto.ca
 1009897532,"Yang, Hao",MGFD40H3,L01,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA,APP,3rd Year,bonniehao.yang@mail.utoronto.ca
 1009905444,"Song, Ge",MGFD40H3,L02,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA,APP,4th Year,lilyge.song@mail.utoronto.ca
+1009919457,"Fu, Ye",MGFD40H3,L03,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA,APP,4th Year,freya.fu@mail.utoronto.ca
 1009978605,"Lin, Zi Ze",MGFD40H3,L02,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA C,APP,4th Year,zize.lin@mail.utoronto.ca
+1009980460,"Duan, Haoran",MGFD40H3,L04,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA,APP,3rd Year,wilson.duan@mail.utoronto.ca
 1010036907,"Ye Wang, Luanne",MGFD40H3,L01,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA,APP,3rd Year,luanne.yewang@mail.utoronto.ca
 1010043132,"De Almeida Albuquerque Campos, Joao Felipe",MGFD40H3,L04,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA,APP,3rd Year,joao.campos@mail.utoronto.ca
 1010045069,"Konanur Patil, Aryan",MGFD40H3,L02,2026 S,,,Investor Psychology and Behavioural Finance,Management,SCPRGBBA C,APP,4th Year,a.konanur@mail.utoronto.ca

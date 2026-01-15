@@ -62,6 +62,8 @@ UNH,UnitedHealth,309525053440,United States
 WMT,Walmart,898699821056,United States
 HD,Home Depot,347493236736,United States
 AXP,American Express,263196573696,United States
+CVX,Chevron,312700436480,United States
+ADI,Analog Devices,143414804480,United States
 DELL,Dell,80470933504,United States
 CMCSA,Comcast,109958488064,United States
 HLT,Hilton Worldwide,69029371904,United States
@@ -125,6 +127,8 @@ GD,General Dynamics,93364436992,United States
 BMY,Bristol-Myers Squibb,115467919360,United States
 CME,CME Group,96224247808,United States
 WM,Waste Management,87007191040,United States
+NKE,Nike,93589839872,United States
+RSG,Republic Services,65278083072,United States
 GBTC,Grayscale Bitcoin Trust,49158266880,United States
 LHX,L3Harris Technologies,57954488320,United States
 OKE,Oneok,44536344576,United States
@@ -189,6 +193,8 @@ PYPL,PayPal,55899189248,United States
 KMI,Kinder Morgan,60068528128,United States
 WDAY,Workday,56374378496,United States
 DLR,Digital Realty,54158741504,United States
+WPM,Wheaton Precious Metals,55913627648,Canada
+AIG,American International Group,42697076736,United States
 EQT,EQT Corporation,34005620736,United States
 PEG,PSEG,38724366336,United States
 EME,Emcor,29141233664,United States
@@ -253,6 +259,8 @@ WAB,Wabtec,37032742912,United States
 VEEV,Veeva Systems,39344799744,United States
 STT,State Street Corporation,37575446528,United States
 RMD,ResMed,36230291456,United States
+CCI,Crown Castle,37054906368,United States
+ADM,Archer Daniels Midland (ADM),28122941440,United States
 PHM,PulteGroup,23141031936,United States
 WRB,W. R. Berkley,26027651072,United States
 INCY,Incyte,21707401216,United States
@@ -317,6 +325,8 @@ CFG,Citizens Financial Group,26307975168,United States
 CQP,"Cheniere Energy
 Partners",25654788096,United States
 FTAI,FTAI Aviation,24682123264,United States
+PPL,PPL,25476616192,United States
+PODD,Insulet,21059336192,United States
 XPO,XPO Logistics,16945963008,United States
 NI,NiSource,19658080256,United States
 EWBC,East West Bancorp,16053479424,United States
@@ -379,6 +389,9 @@ GPN,Global Payments,18802051072,United States
 JBHT,J. B. Hunt,19729629184,United States
 LUN.TO,Lundin Mining,19204500934,Canada
 SMCI,Supermicro,17915103232,United States
+TTD,The Trade Desk,18897643520,United States
+RS,Reliance,15781744640,United States
+H,Hyatt Hotels,15791308800,United States
 CLH,Clean Harbors,13043449856,United States
 EVR,Evercore,14428870656,United States
 HST,Host Hotels & Resorts,12392095744,United States
@@ -442,6 +455,8 @@ UDR,UDR Apartments,13862327296,United States
 BBY,Best Buy,14461270016,United States
 NDSN,Nordson,14115533824,United States
 JKHY,Jack Henry &amp; Associates,13513547776,United States
+AVY,Avery Dennison,13954137088,United States
+GMED,Globus Medical,12228083712,United States
 BWA,BorgWarner,10267842560,United States
 CMA,Comerica,11677826048,United States
 TIH.TO,Toromont,9784765774,Canada
@@ -505,6 +520,8 @@ SCI,Service Corporation International,11100961792,United States
 BXP,"BXP, Inc.",11698167808,United States
 GL,Globe Life,11321054208,United States
 EHC,HealthSouth,10713993216,United States
+AFG,American Financial Group,11111857152,United States
+MOH,Molina Healthcare,9559796736,United States
 CADE,Cadence Bancorp,8350280192,United States
 ARE,Alexandria Real Estate Equities,9018011648,United States
 DOOO,Bombardier Recreational Products,8023764992,Canada
@@ -568,6 +585,8 @@ FRT,Federal Realty Investment Trust,8824878080,United States
 DOX,Amdocs,9093038080,United States
 TFII,TFI International,8897739776,Canada
 OGE,OGE Energy,8690675712,United States
+HALO,Halozyme Therapeutics,8832710656,United States
+LAD,Lithia Motors,7935337472,United States
 KEY.TO,Keyera,6933279240,Canada
 CS.TO,Capstone Copper,7593465976,Canada
 MTG,MGIC Investment,6625231360,United States
@@ -631,3 +650,5 @@ OR,Osisko Gold Royalties,7211138560,Canada
 EGO,Eldorado Gold,7674605568,Canada
 MASI,Masimo,7363107840,United States
 INGR,Ingredion,7085570048,United States
+TTMI,TTM Technologies,7251750400,United States
+CRK,Comstock Resources,6470915072,United States

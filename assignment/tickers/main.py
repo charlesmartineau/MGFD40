@@ -36,7 +36,7 @@ def main():
         labels=range(1, 11)
     )
 
-    num_students = 120
+    num_students = 128
     samples = {}
     for d in range(1, 11):
         group = valid_market_cap[valid_market_cap['decile'] == d]
