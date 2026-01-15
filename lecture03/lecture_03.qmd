@@ -38,10 +38,10 @@ format:
 Simon (1955) introduced the concept of **bounded rationality** to describe the limitations of human decision-making.
 
   - Individuals are rational within limits imposed by cognitive constraints.
+  - I.e., people try to make rational decisions, but their ability to do so is limited by limited information and limited cognitive processing power.
+  - Created the first AI program, Logical Theorist.
 
-In other words, people try to make rational decisions, but their ability to do so is limited by limited information and limited cognitive processing power.
 
-Simon's work laid the foundation for understanding how people make decisions in real-world situations, leading to the development of behavioral economics and cognitive psychology.
 :::
 
 ::: {.column width="50%"}
@@ -69,7 +69,7 @@ They introduced the concept of **heuristics and biases** to explain how people m
 ![](figures/kahneman.png){.absolute top=150 right=0 width=50%}
 :::
 
----
+# Heuristic-Driven Bias Process
 
 ## Heuristic-Driven Bias Process
 
@@ -127,19 +127,24 @@ In today's USA, which problem is more likely to cause death?
 ::: {style="height: 2em;"}
 :::
 
-**Availability heuristic definition:** "phenomenon of illusory correlation" – a cognitive illusion where you misjudge the frequency of some event or characteristic because of how much you can remember seeing it. 
+<u>Availability heuristic definition</u>:
 
-  - It’s a sampling error: you may think that your memory provides an adequate sample of the whole, and sometimes it might, but often it won’t.
-  - For example, one may assess the divorce rate in a given community by recalling divorces among one’s acquaintances $\Rightarrow$ The sample that you see is not representative of the true population.
+- A cognitive illusion where you misjudge the frequency of some event or characteristic because of how much you can remember seeing it. 
+
+- *It’s a sampling error*: you may think that your memory provides an adequate sample of the whole, and sometimes it might, but often it won’t.
+
+- For example, one may assess the divorce rate in a given community by recalling divorces among one’s acquaintances 
+
+$\Rightarrow$ The sample that you see is not representative of the true population.
 
 ::: {style="height: 1em;"}
 :::
 
-**Familiarity heuristic definition:**
+<u>Familiarity heuristic definition</u>:
 
-People are more comfortable with the familiar. Also, these people dislike ambiguity and look for ways to avoid unrewarded risk.
-
- -Related to “home bias" when it comes to investment which impacts diversification.
+- People are more comfortable with the familiar.
+- Also, these people dislike ambiguity and look for ways to avoid unrewarded risk.
+- Related to “home bias" when it comes to investment which impacts diversification.
 
 --- 
 
@@ -148,10 +153,12 @@ People are more comfortable with the familiar. Also, these people dislike ambigu
 ::: {style="height: 2em;"}
 :::
 
-Home bias:
+<u>Home bias</u>:
 
 - The tendency for investors to favor companies from their own town / country or for whom they work for when constructing their investment portfolios.
-- Benartzi (2000) find that employees of a large US company allocate on average 1/3 of their 401(k) plan contributions to their employer's stock, despite the lack of diversification and higher risk associated with such a strategy.
+
+[Benartzi (2000)](https://onlinelibrary.wiley.com/doi/full/10.1111/0022-1082.00388?casa_token=MNQlNtJh9rIAAAAA%3ALgrOUa6xgl3QVMlblrkGZRBP8DWq388Suo6N4oyBB8QyC4GoK6d-4JeCcfEmGCo6gwR4G666jTBvvLw_) find that employees of a large US company allocate on average 1/3 of their 401(k) plan contributions to their employer's stock, despite the lack of diversification and higher risk associated with such a strategy.
+
   - Employees of firms that experienced the worst stock performance over the last 10 years allocate ~10% percent of their discretionary contributions to company stock, whereas employees, whose firms experienced the best stock performance allocate ~40%.
   - Allocations to company stock do not predict future performance.
 
@@ -159,7 +166,7 @@ Can you think of a famous investor who exhibited home bias?
 
 ---
 
-## Warren Buffett and Home Bias
+### Warren Buffett and Home Bias
 
 ::: {style="height: 3em;"}
 :::
@@ -178,7 +185,39 @@ Warren Buffett
 
 ---
 
-### Naive Diversification Heuristic
+## Coval and Moskowitz (2002): Local Equity Preference
+
+[Coval and Moskowitz (2002)](https://onlinelibrary.wiley.com/doi/full/10.1111/0022-1082.00181?casa_token=EPa8gofN7vAAAAAA%3As-IJmaixyLMIMhjMVEc_ieI6Ccordo6HudKMOqaWb6LwtbttRAB5DQoxh7GchrBTZeq7oplvScrcvg) examines the phenomenon of "local equity preference" among fund managers in the United States.
+
+---
+
+### Coval and Moskowitz (2002)
+
+![](figures/coval_moskowitz.png){.absolute top=50 width=70%}
+
+
+---
+
+### Coval and Moskowitz (2002)
+
+![](figures/coval_moskowitz_tab3.png){.absolute top=50 width=70%}
+
+
+---
+
+### Coval and Moskowitz (2002)
+
+- Investors hold a disproportionate share of their portfolios in local stocks, i.e., stocks of companies headquartered in the same state as the investor.
+- This local bias is particularly pronounced among individual investors and mutual fund managers.
+- The authors suggest that local investors may have better information about local companies, leading to superior investment performance.
+  - Better information because they managers' local holdings tend to be in small, nontraded-goods-producing firms with high degree of financial leverage.
+
+- This finding challenges the traditional finance theory that investors should diversify their portfolios globally to minimize risk.
+
+
+---
+
+## Naive Diversification Heuristic
 
 ::: {style="height: 3em;"}
 :::
@@ -244,7 +283,7 @@ Disadvantages:
 - Base rate neglect  
 - Sample size neglect 
 - Gambler’s fallacy 
-- 
+  
 ---
 
 ## Representativeness Heuristic Experiments: Base-rate
@@ -282,10 +321,12 @@ Which hospital do you think recorded more such days?
 :::
 
 Which of the following sequences is more likely to occur when a fair coin is tossed?
+
 - H-H-H-T-T-T
 - H-T-H-T-T-H
 
 If six tosses of a coin all turn out to be heads, H-H-H-H-H-H, which do you bet on the seventh toss?
+
 - Head (H)
 - Tail (T)
 
@@ -299,9 +340,10 @@ If six tosses of a coin all turn out to be heads, H-H-H-H-H-H, which do you bet 
 
 Investors are subject to representativeness bias 
 
- - They may believe that a stock that has performed well in the past will continue to do so in the future, leading to overconfidence in their investment choices. Investors forget that stock returns, on average, are mean-reverting in the long run.
+ - They may believe that a stock that has performed well in the past will continue to do so in the future, leading to overconfidence in their investment choices. 
+   - Investors forget that stock returns, on average, are mean-reverting in the long run.
  - Investors may also neglect the base rates of stock performance, leading them to make investment decisions based on recent trends rather than long-term averages.
- - Investors see trends where none exist... technical analysis. The trend might just be random noise.
+ - Investors see trends where none exist... E.g., technical analysis. The trend might just be random noise.
    - When someone tries to convince you that a stock is going to go up because of some pattern they see in the stock chart; ask them, "can you convince me that this pattern has any predictive power beyond random chance?"
 
 
@@ -405,14 +447,18 @@ Now the rule of the gamble stays exactly the same. The only difference is that y
 
 Overconfidence leads to an illusion of control when people are given the opportunity to make choices that affect outcomes.
 
---- 
 
-## Implications for retail investors
+# Implications for retail investors
+
+---
+
+## Implications for retail investors: Overconfidence Bias
 
 ::: {style="height: 2em;"}
 :::
 
 Overconfidence bias has significant implications for retail investors, often leading to suboptimal investment decisions.
+
 - Overconfident investors may trade excessively, believing they can time the market or pick winning stocks more accurately than they actually can.
 - They may underestimate risks, leading to portfolios that are not well-diversified.
 - Overconfidence can also lead to a lack of learning from past mistakes, as investors may attribute successes to their skill and failures to external factors.
@@ -425,23 +471,82 @@ Overconfidence bias has significant implications for retail investors, often lea
 ::: {style="height: 2em;"}
 :::
 
-Individuals and institutions trade much more than can be justified on rational grounds.
-
-Barber and Odean (2000, JF) find that:
-
-- After taking trading costs into account, the average return of investors is well below the return of standard benchmarks, largely due to transaction costs.
-- Those that trade most earn an annual return of 11.4%, while the market returns 17.9%.
-- "Trading is hazardous to your wealth!"
-- The effect is actually stronger for men than for women.
+[Barber and Odean (2000, JF)](https://faculty.haas.berkeley.edu/odean/papers%20current%20versions/individual_investor_performance_final.pdf) find that individuals and institutions trade much more than can be justified on rational grounds.
 
 --- 
 
 ## Overconfidence Bias for Retail Investors
 
-::: {style="height: 2em;"}
-:::
 
-![](figures/barber.png){.absolute top=50 width=70%}
+![](figures/barber.png){top=50 width=70%}
+
+- After taking trading costs into account, the average return of investors is well below the return of standard benchmarks, largely due to transaction costs.
+- Those that trade most earn an annual return of 11.4%, while the market returns 17.9%.
+- "Trading is hazardous to your wealth!"
 
 ---
+
+## Overconfidence Bias for Retail Investors
+
+In [Barber and Odean (2002)](https://faculty.haas.berkeley.edu/odean/papers%20current%20versions/online%20rfs.pdf), analyze 1,607 investors who switched from phone-based to online trading during the 1990s.
+
+![](figures/barber_odeal_2001_event.png){top=50 width=70%}
+
+## Overconfidence Bias for Retail Investors
+
+![](figures/barber_odeal_2001_tab6.png){top=50 width=70%}
+
+Going online leads to substantial decrease in net returns due to increased trading.
+
+---
+
+## Attention-induced trading
+
+Investors have time to weigh the merits of only a limited number of stocks. Why do they consider some stocks and not others?
+
+[Barber and Odean (2008)](https://academic.oup.com/rfs/article-abstract/21/2/785/1607197) show that individual investors are net buyers of attention-grabbing stocks, e.g., stocks in the news, stocks experiencing high abnormal trading volume, and stocks with extreme one-day returns.
+
+- Individual investors do not face the same search problem when selling because they tend to sell only stocks they already own. 
+- Thus, attention-induced trading should predominantly affect purchase rather than sale decisions—retail investors can buy any stock that captures their attention but can only sell stocks that they own 
+
+## Attention-induced trading
+
+Results from Barber and Odean (2008)
+
+![](figures/allthatglitter.png)
+
+Note: Buy-Sell imbalance is measured as (Buys - Sells) / (Buys + Sells). It's a buy/sell pressure indicator.
+
+## Robinhood Effect
+
+[Barber et al. (2022)](https://onlinelibrary.wiley.com/doi/epdf/10.1111/jofi.13183) find that Robinhood attracts more inexperienced, overconfident, and attention-grabbing retail investors.
+
+- Especially the feature of "most popular stocks" on the app interface attracts even more attention-grabbing retail investors.
+
+## StockTwits
+
+In [my own research](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4439793), I find that social media attention before earnings announcements is excessively optimistic, fails to predict fundamentals, and generates buying pressure, leading to a 58 bps stock return as intermediaries seek higher returns to mitigate inventory risk.
+
+- Social media like StockTwits attracts attention-grabbing retail investors that distorts price efficiency.
+
+## StockTwits' sentiment
+
+![](figures/stocktwits_sentiment.png)
+
+- Sentiment is overly optimistic before earnings announcements, even for "sophisticated" traders.
+
+## StockTwits 
+
+![](figures/stocktwits_reversal.png)
+
+BHAR difference between high vs low StockTwits attention stocks before earnings announcements.
+
+## StockTwits 
+
+![](figures/stocktwits_reversal2.png)
+
+## StockTwits
+
+![](figures/stocktwits_reg.png){top=50 width=70%}
+
 
