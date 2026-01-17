@@ -64,6 +64,26 @@ def main():
     assignments.to_csv('assignment/tickers/student_assignments.csv', index=False)
     print("Student assignments saved")
 
+def generate_sample():
+    valid_market_cap = pd.read_csv('assignment/tickers/processed_data.csv')
+    valid_market_cap['decile'] = pd.qcut(
+        valid_market_cap['marketcap'].rank(method='first', ascending=False),
+        10,
+        labels=range(1, 11)
+    )
+    random_seed = 67
+    random_sample = {}
+
+    for d in range(1, 11):
+        group = valid_market_cap[valid_market_cap['decile'] == d]
+        if not group.empty:
+            random_sample[d] = group.sample(n=1, random_state=random_seed)['Symbol'].iloc[0]
+
+    for decile, ticker in random_sample.items():
+        print(f"Decile {decile}: {ticker}")
+    print(list(random_sample.values()))
+
 if __name__ == "__main__":
     # process_data()
-    main()
+    # main()
+    generate_sample()
