@@ -235,11 +235,11 @@ Warren Buffett
 ::: {style="height: 3em;"}
 :::
 
-In Benartzi and Thaler (2001), the authors find investors divide their contributions evenly across the funds offered in their contribution plan. 
+In [Benartzi and Thaler (2001)](https://www.aeaweb.org/articles?id=10.1257/aer.91.1.79), the authors find investors divide their contributions evenly across the funds offered in their contribution plan. 
 
 - They did diversify. Is this good or bad? It depends on how the information is presented to them.
 - The authors survey employees of a corporation and ask about their portfolio allocation choices over a stock fund, bond fund, and balance fund (both stocks and bonds).
-- The find that when employees simply naively diversify, they end up with suboptimal allocations, i.e., too much in bonds and too little in stocks or vice versa, depending on how the options are presented to them.
+- They find that when employees naively diversify, they end up with suboptimal allocations, i.e., too much in bonds and too little in stocks or vice versa, depending on how the options are presented to them.
 
 ---
 
@@ -335,17 +335,56 @@ If six tosses of a coin all turn out to be heads, H-H-H-H-H-H, which do you bet 
 
 ## Implications of Representativeness Heuristic in Finance
 
-::: {style="height: 2em;"}
-:::
+**1. Extrapolating past performance**
 
-Investors are subject to representativeness bias 
+ - Investors assume stocks with strong recent performance will continue outperforming
+ - They ignore base rates: most stocks mean-revert over the long run
+ - "Hot" funds or stocks attract excessive attention despite regression to the mean
 
- - They may believe that a stock that has performed well in the past will continue to do so in the future, leading to overconfidence in their investment choices. 
-   - Investors forget that stock returns, on average, are mean-reverting in the long run.
- - Investors may also neglect the base rates of stock performance, leading them to make investment decisions based on recent trends rather than long-term averages.
- - Investors see trends where none exist... E.g., technical analysis. The trend might just be random noise.
-   - When someone tries to convince you that a stock is going to go up because of some pattern they see in the stock chart; ask them, "can you convince me that this pattern has any predictive power beyond random chance?"
+**2. Overweighting recent trends, underweighting base rates**
 
+ - Recent 3-year tech rally → "tech always outperforms" 
+ - Reality: Historical average equity returns are ~7-10% annually across sectors
+ - Small samples treated as more representative than large samples
+
+**3. Seeing patterns in randomness**
+
+ - Technical analysis: identifying "head and shoulders" or "double bottoms"
+ - These patterns often have no predictive power beyond chance
+ - "Can you show me evidence this pattern predicts returns better than random guessing?"
+   - Requires out-of-sample testing, not just finding patterns in historical data
+
+**Key takeaway:** Our minds are wired to find patterns and assume small samples represent the whole. Markets exploit this by being noisier and more mean-reverting than our intuitions suggest.
+
+---
+
+## Representativeness Bias: Chasing Past Performance
+
+**[Sirri and Tufano (1998)](https://onlinelibrary.wiley.com/doi/full/10.1111/0022-1082.00066?casa_token=Pao3OM-01rwAAAAA%3AlatwbggGqH--YNXiVxUBXqhns094EupxL6cTKGGMz8tsTNDhEcg8zzXLmXF2pjm9X8tMAj6YFUlTHOq4) - "Costly Search and Mutual Fund Flows"**
+
+ - Mutual fund flows are strongly convex in past performance
+ - Top-performing funds (top quintile) attract disproportionate inflows
+ - Investors treat recent winners as representative of future winners
+
+**[Chevalier and Ellison (1997)](https://www.journals.uchicago.edu/doi/abs/10.1086/516389?casa_token=AueYxJ1FTEkAAAAA:G_OEbPUKeCd4bK2i16UiQ99N2UWO539PAWhHqRpWZ1cnEVmU1pU09IIRr0QWHwzDXFS-Som1ZpSkZA) - "Risk Taking by Mutual Funds"**
+
+ - Fund managers respond to flow-performance relationship by taking more risk
+ - Younger funds especially sensitive: past performance heavily influences flows
+ - Creates incentives that may not align with investor welfare
+
+**[Berk and Green (2004)](https://www.journals.uchicago.edu/doi/full/10.1086/424739?casa_token=nPTq1Tc5No0AAAAA%3AnLZ2sck7XvSrbsjsQAvgmhiuz0G-plQHeyoRMSGgFHe0XhbFXgwjZbXZDHovEpd5fVhpn-VjLXcUpQ) - "Mutual Fund Flows and Performance in Rational Markets"**
+
+ - Even rational investors should chase performance *if* it signals skill
+ - But: inflows compete away excess returns → diminishing returns to scale
+ - Result: funds with high past performance attract flows but deliver average future returns
+
+## Representativeness Bias: Chasing Past Performance
+
+This leads to the **The representativeness trap:**
+
+Investors see strong past performance → assume fund manager has skill → allocate capital → returns mean-revert → investors earn lower returns than they expected
+
+**Implication:** "Past performance is not indicative of future results" exists for a reason!
 
 ---
 
@@ -391,7 +430,7 @@ Estimate the product of the following equation without actual calculation:
 
 :::{.columns}
 ::: {.column width="100%"}
-George and Hwang (2004): When a price of a stock is near to the 52-week high (or low), the forecasting power to predict future returns increases.
+[George and Hwang (2004)](https://onlinelibrary.wiley.com/doi/full/10.1111/j.1540-6261.2004.00695.x?casa_token=Zj6APjfFmQQAAAAA%3A5VDfHpY_fKE3jVay0QdvDTTKcNwH_4ZmhnSdCCBEQDT7aehx0SJsX1F2nN9K5f4bJewBxjQpMCnNb4DJ): When a price of a stock is near to the 52-week high (or low), the forecasting power to predict future returns increases.
 :::
 
 ::: {.column width="50%"}
@@ -502,7 +541,9 @@ Going online leads to substantial decrease in net returns due to increased tradi
 
 ## Attention-induced trading
 
-Investors have time to weigh the merits of only a limited number of stocks. Why do they consider some stocks and not others?
+Investors have time to weigh the merits of only a limited number of stocks. 
+
+- Why do they consider some stocks and not others? This relates to the availability heuristic.
 
 [Barber and Odean (2008)](https://academic.oup.com/rfs/article-abstract/21/2/785/1607197) show that individual investors are net buyers of attention-grabbing stocks, e.g., stocks in the news, stocks experiencing high abnormal trading volume, and stocks with extreme one-day returns.
 
