@@ -333,7 +333,7 @@ If six tosses of a coin all turn out to be heads, H-H-H-H-H-H, which do you bet 
 
 ---
 
-## Implications of Representativeness Heuristic in Finance
+## Implications of Representativeness Heuristic in Finance {.smaller}
 
 **1. Extrapolating past performance**
 
