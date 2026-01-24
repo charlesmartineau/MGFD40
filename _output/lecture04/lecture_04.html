@@ -424,7 +424,7 @@ Charles Martineau
 </div>
 
 </section>
-<section id="outline" class="slide level2">
+<section id="outline" class="slide level2 smaller">
 <h2>Outline</h2>
 <div style="height: 0.5em;">
 
@@ -473,6 +473,7 @@ Charles Martineau
 <p>In the 1950s and 1960s studies (particularly Eugene Fama and Paul Samuelson) began to provide evidence against this view.</p>
 <ul>
 <li>In particular, researchers found that stock returns (not prices themselves) followed a“random walk” and are unpredictable.</li>
+<li>Suggested reading: <a href="https://www.amazon.ca/Random-Walk-Down-Wall-Street/dp/1324035439/ref=asc_df_1324035439?mcid=a7f45e269a57349bb4ab2ba70b03826b&amp;tag=googleshopc0c-20&amp;linkCode=df0&amp;hvadid=706753823419&amp;hvpos=&amp;hvnetw=g&amp;hvrand=6394472120820618966&amp;hvpone=&amp;hvptwo=&amp;hvqmt=&amp;hvdev=c&amp;hvdvcmdl=&amp;hvlocint=&amp;hvlocphy=9000945&amp;hvtargid=pla-2196126178796&amp;psc=1&amp;hvocijid=6394472120820618966-1324035439-&amp;hvexpln=0&amp;gad_source=1">Random Walk Down Wall Street</a> by Burton Malkiel (1973).</li>
 </ul>
 </section>
 <section id="efficient-market-hypothesis-emh" class="slide level2">
@@ -515,9 +516,6 @@ Charles Martineau
 </div>
 <p><strong>Conservatism (anchoring) bias:</strong> Investors often update their beliefs too slowly when new information arrives. They anchor to prior views and require multiple confirming signals before fully adjusting their valuations. This causes prices to drift gradually toward fundamental values rather than jumping immediately.</p>
 <p><strong>Limited attention:</strong> Investors can’t process all available information simultaneously. They focus on salient news while neglecting subtle signals embedded in financial statements, regulatory filings, or broader market patterns. Information that’s harder to process gets incorporated more slowly.</p>
-<ul>
-<li>More in line with bounded rationality than irrationality.</li>
-</ul>
 <p><strong>Overconfidence and disposition effects:</strong> Some investors hold losing positions too long (unwilling to realize losses) or sell winners too quickly, preventing efficient price discovery. Overconfident traders may also ignore contradictory information, slowing the market’s collective learning process.</p>
 <p><strong>Sentiment and feedback effects:</strong> Positive feedback loops can cause gradual price trends as momentum attracts more buyers, while negative sentiment spreads slowly through social networks and media coverage.</p>
 </section>
@@ -552,7 +550,7 @@ Charles Martineau
 
 </div>
 <p>We’ll test whether monthly S&amp;P 500 returns follow a random walk by checking for autocorrelation:</p>
-<div id="2aaa6d34" class="cell" data-execution_count="1">
+<div id="e8ba64ce" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href=""></a><span class="im">import</span> yfinance <span class="im">as</span> yf</span>
 <span id="cb1-2"><a href=""></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-3"><a href=""></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -605,14 +603,13 @@ Kurtosis: 1.0389</code></pre>
 </section>
 <section id="testing-random-walk-autocorrelation-test-1" class="slide level2">
 <h2>Testing Random Walk: Autocorrelation Test</h2>
-<div id="165965b7" class="cell" data-execution_count="2">
+<div id="3bd13944" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href=""></a><span class="co"># Test for autocorrelation using Ljung-Box test</span></span>
 <span id="cb3-2"><a href=""></a>lb_test <span class="op">=</span> acorr_ljungbox(returns, lags<span class="op">=</span><span class="dv">12</span>, return_df<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb3-3"><a href=""></a></span>
 <span id="cb3-4"><a href=""></a><span class="bu">print</span>(<span class="st">"Ljung-Box Test for Autocorrelation (H0: No autocorrelation)"</span>)</span>
 <span id="cb3-5"><a href=""></a><span class="bu">print</span>(lb_test.head(<span class="dv">6</span>))</span>
-<span id="cb3-6"><a href=""></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">Interpretation: If p-values &gt; 0.05, we fail to reject H0"</span>)</span>
-<span id="cb3-7"><a href=""></a><span class="bu">print</span>(<span class="ss">f"This suggests returns are NOT predictable (consistent with random walk)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-6"><a href=""></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">Interpretation: If p-values &gt; 0.05, we fail to reject H0"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Ljung-Box Test for Autocorrelation (H0: No autocorrelation)
     lb_stat  lb_pvalue
@@ -623,14 +620,14 @@ Kurtosis: 1.0389</code></pre>
 5  2.652196   0.753420
 6  4.762381   0.574631
 
-Interpretation: If p-values &gt; 0.05, we fail to reject H0
-This suggests returns are NOT predictable (consistent with random walk)</code></pre>
+Interpretation: If p-values &gt; 0.05, we fail to reject H0</code></pre>
 </div>
 </div>
+<p>Results suggest that returns are NOT predictable (consistent with random walk).</p>
 </section>
 <section id="autocorrelation-test-visualizations" class="slide level2">
 <h2>Autocorrelation Test Visualizations</h2>
-<div id="530e28c4" class="cell" data-fig-height="4" data-fig-width="12" data-execution_count="3">
+<div id="f263d938" class="cell" data-fig-height="4" data-fig-width="12" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href=""></a><span class="co"># Visualize autocorrelation</span></span>
 <span id="cb5-2"><a href=""></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">4</span>))</span>
 <span id="cb5-3"><a href=""></a></span>
@@ -671,7 +668,7 @@ This suggests returns are NOT predictable (consistent with random walk)</code></
 </section>
 <section id="testing-random-walk-variance-ratio-test-1" class="slide level2">
 <h2>Testing Random Walk: Variance Ratio Test</h2>
-<div id="414ddfb1" class="cell" data-execution_count="4">
+<div id="e9746e21" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href=""></a><span class="kw">def</span> variance_ratio(returns, lag<span class="op">=</span><span class="dv">2</span>):</span>
 <span id="cb6-2"><a href=""></a>    <span class="co">"""</span></span>
 <span id="cb6-3"><a href=""></a><span class="co">    Calculate variance ratio test statistic.</span></span>
@@ -713,6 +710,11 @@ VR &gt; 1 suggests positive autocorrelation (momentum)
 VR &lt; 1 suggests negative autocorrelation (mean reversion)</code></pre>
 </div>
 </div>
+</section>
+<section id="difference-between-ljung-box-and-variance-ratio-tests" class="slide level2">
+<h2>Difference between Ljung-Box and Variance Ratio Tests</h2>
+<p><strong>Ljung-Box test</strong>: Better for detecting short-term autocorrelation spikes</p>
+<p><strong>Variance ratio test</strong>: More powerful for persistent autocorrelation (mean reversion, momentum)</p>
 </section>
 <section id="another-test-for-random-walk" class="slide level2">
 <h2>Another test for random walk</h2>
@@ -828,7 +830,7 @@ VR &lt; 1 suggests negative autocorrelation (mean reversion)</code></pre>
 </section>
 <section id="early-evidence-of-semi-strong-form-efficiency" class="slide level2">
 <h2>Early evidence of Semi-Strong Form Efficiency</h2>
-<p>In Fama, Fisher, Jensen, and Roll (1969), the authors present the first early evidence of semi-strong by examining price reactions around stock splits.</p>
+<p>In <a href="https://www.jstor.org/stable/2525569?casa_token=ipUXBd17BoAAAAAA%3AJFsDsPvupWNYfpOpgjiTP0zsJQiLExdpH0vbutFwkBeQ7nSVzyqpJ5FeJcFaG2JQr4Y5Oy16Q0yMSUpwzQ5Aj4PpE8g1M5LQtI9x7-vvxxtMTrayWh-mZQ">Fama, Fisher, Jensen, and Roll (1969)</a>, the authors present the first early evidence of semi-strong by examining price reactions around stock splits.</p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><img data-src="figures/ffjr.png" style="width:100.0%"></p>
@@ -846,16 +848,16 @@ VR &lt; 1 suggests negative autocorrelation (mean reversion)</code></pre>
 <section id="evidence-against-of-semi-strong-form-efficiency-pead" class="slide level2">
 <h2>Evidence Against of Semi-Strong Form Efficiency: PEAD</h2>
 
-<img data-src="figures/pead.png" style="width:90.0%" class="r-stretch"><p>This figure plots the Cumulative Abnormal Return (CAR) -60 to +60 days aftere arnings announcements – conditioned on earnings surprises. Foster et al.&nbsp;(1984)</p>
+<img data-src="figures/pead.png" style="width:90.0%" class="r-stretch"><p>This figure plots the Cumulative Abnormal Return (CAR) -60 to +60 days after earnings announcements – conditioned on earnings surprises. See <a href="https://www.jstor.org/stable/247321?casa_token=KEOTTjWyDZEAAAAA%3AcRnDBlXFe2yhjP4NIpCllqTPCma9kpl5Pi-JxVCFOIcKEew7lI6vJfQylGUQsQmisrT_ekU49rwL81XUGWpTknR3oXq4XCJZ-PD3AIvhaMMTECZdXq5VqA&amp;seq=3">Foster et al.&nbsp;(1984)</a></p>
 </section>
 <section id="but-markets-have-become-more-efficient-over-time." class="slide level2">
 <h2>But markets have become more efficient over time.</h2>
 
-<img data-src="figures/pead2.png" style="width:90.0%" class="r-stretch"><p>See Martineau (2022).</p>
+<img data-src="figures/pead2.png" style="width:90.0%" class="r-stretch"><p>See <a href="https://www.emerald.com/cfr/article-abstract/11/3-4/613/1324916/Rest-in-Peace-Post-Earnings-Announcement-Drift?redirectedFrom=fulltext">Martineau (2022)</a>.</p>
 </section>
 <section id="additional-evidence-against-semi-strong-the-no-news-is-news" class="slide level2">
 <h2>Additional evidence against semi-strong: The No-News is News</h2>
-<p>Hubermann and Regev (2001) “Contagious Speculation and a Cure for Cancer”:</p>
+<p><a href="https://onlinelibrary.wiley.com/doi/full/10.1111/0022-1082.00330?casa_token=Qk7oi8bpqp8AAAAA%3AlXBHIlYAUJqf2n2lTXeovGjJclwb7urdBFD-nPl4a1By0E7oejsPr1zXeV_Q3NGusAwQKOGlA5ZG2pg4">Hubermann and Regev (2001)</a> “Contagious Speculation and a Cure for Cancer”:</p>
 <ul>
 <li>May 3, 1998, NYT reports on a recent breakthrough in cancer research by ENMD, acompany with licensing rights to the breakthrough. The story’s impact on the stock prices was immediate, huge, and to a large extent permanent.</li>
 </ul>
@@ -882,7 +884,7 @@ VR &lt; 1 suggests negative autocorrelation (mean reversion)</code></pre>
 <ul>
 <li>You need to have evidence that someone has private information.</li>
 <li>You need to compare the effect of a trade on prices of a stock by someone with private information to another similar stock (size, industry, etc) for which one could have private information but did trade on it.</li>
-<li>This was overcome in Akey, Gregoire, Martineau (2022).</li>
+<li>This was overcome in <a href="https://www.sciencedirect.com/science/article/pii/S0304405X21005237">Akey, Gregoire, Martineau (2022)</a>.</li>
 </ul>
 </section>
 <section id="evidence-supporting-strong-form-market-efficiency-akey-et-al-2022" class="slide level2">
@@ -890,7 +892,7 @@ VR &lt; 1 suggests negative autocorrelation (mean reversion)</code></pre>
 <div style="height: 2em;">
 
 </div>
-<p>Akey et al., 2021 examine how private information illegally acquired through hacking is reflected in stock prices in an event study framework.</p>
+<p>Akey et al., 2022 examine how private information illegally acquired through hacking is reflected in stock prices in an event study framework.</p>
 <p>The plot below shows the buy-and-hold cumulative returns for stocks with top quintile and bottom quintile earnings surprises.</p>
 
 <img data-src="figures/hack.png" style="width:90.0%" class="r-stretch"></section>
@@ -902,7 +904,7 @@ VR &lt; 1 suggests negative autocorrelation (mean reversion)</code></pre>
 <p>Limited attention is often the common cause behind “slow price formation”.</p>
 <p>Behavioral explanation to momentum …</p>
 <ul>
-<li>Barberis, Shleifer and Vishny (1998, JFE) suggest the conservatism bias (underreact to information): A “conservatism bias” can lead investors to underreact or underweight new information (related to anchoring bias). That’s related to the “52-week high/low”analogy.</li>
+<li><a href="https://www.sciencedirect.com/science/article/pii/S0304405X98000270?casa_token=cGoe5ME3DekAAAAA:Du2NFJVKmKJ56CKe373SrkLasJyi3eM6_KX49XUaOAkJWTg-tbKtPmYvWcEDMQFvYjvSwyY2RUHI">Barberis, Shleifer and Vishny (1998, JFE)</a> suggest the conservatism bias (underreact to information): A “conservatism bias” can lead investors to underreact or underweight new information (related to anchoring bias). That’s related to the “52-week high/low”analogy.</li>
 </ul>
 <p>Behavioral explanation to contrarian …</p>
 <ul>

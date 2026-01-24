@@ -588,6 +588,8 @@ BHAR difference between high vs low StockTwits attention stocks before earnings 
 
 ## StockTwits
 
-![](figures/stocktwits_reg.png){top=50 width=70%}
+![](figures/stocktwits_reg.png){top=50 width=65%}
+
+- **Important**: Regression that test the significance of the reversals and rules out alternative explanations (institutional investor attention, earnings surprises, news coverage) driving the reversals. 
 
 

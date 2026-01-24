@@ -12,7 +12,7 @@ format:
 jupyter: python3
 ---
 
-## Outline
+## Outline {.smaller}
 
 ::: {style="height: 0.5em;"}
 :::
@@ -56,6 +56,7 @@ Prior to the 1950s it was generally believed among practitioners that the use of
 In the 1950s and 1960s studies (particularly Eugene Fama and Paul Samuelson) began to provide evidence against this view.
 
 - In particular, researchers found that stock returns (not prices themselves) followed a“random walk” and are unpredictable.
+- Suggested reading: [Random Walk Down Wall Street](https://www.amazon.ca/Random-Walk-Down-Wall-Street/dp/1324035439/ref=asc_df_1324035439?mcid=a7f45e269a57349bb4ab2ba70b03826b&tag=googleshopc0c-20&linkCode=df0&hvadid=706753823419&hvpos=&hvnetw=g&hvrand=6394472120820618966&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9000945&hvtargid=pla-2196126178796&psc=1&hvocijid=6394472120820618966-1324035439-&hvexpln=0&gad_source=1) by Burton Malkiel (1973).
 
 ## Efficient Market Hypothesis (EMH)
 
@@ -97,8 +98,6 @@ We will now discuss some of the main frictions that can prevent markets from bei
 **Conservatism (anchoring) bias:** Investors often update their beliefs too slowly when new information arrives. They anchor to prior views and require multiple confirming signals before fully adjusting their valuations. This causes prices to drift gradually toward fundamental values rather than jumping immediately.
 
 **Limited attention:** Investors can't process all available information simultaneously. They focus on salient news while neglecting subtle signals embedded in financial statements, regulatory filings, or broader market patterns. Information that's harder to process gets incorporated more slowly.
-
-  - More in line with bounded rationality than irrationality.
 
 **Overconfidence and disposition effects:** Some investors hold losing positions too long (unwilling to realize losses) or sell winners too quickly, preventing efficient price discovery. Overconfident traders may also ignore contradictory information, slowing the market's collective learning process.
 
@@ -201,8 +200,9 @@ lb_test = acorr_ljungbox(returns, lags=12, return_df=True)
 print("Ljung-Box Test for Autocorrelation (H0: No autocorrelation)")
 print(lb_test.head(6))
 print(f"\nInterpretation: If p-values > 0.05, we fail to reject H0")
-print(f"This suggests returns are NOT predictable (consistent with random walk)")
 ```
+
+Results suggest that returns are NOT predictable (consistent with random walk).
 
 ## Autocorrelation Test Visualizations
 
@@ -289,6 +289,15 @@ print(f"\nConclusion: VR close to 1.0 suggests random walk behavior")
 print(f"VR > 1 suggests positive autocorrelation (momentum)")
 print(f"VR < 1 suggests negative autocorrelation (mean reversion)")
 ```
+
+## Difference between Ljung-Box and Variance Ratio Tests
+
+**Ljung-Box test**: Better for detecting short-term autocorrelation spikes
+
+
+**Variance ratio test**: More powerful for persistent autocorrelation (mean reversion, momentum)
+
+
 
 ## Another test for random walk
 
@@ -410,7 +419,7 @@ The key steps in an event study are:
 
 ## Early evidence of Semi-Strong Form Efficiency
 
-In Fama, Fisher, Jensen, and Roll (1969), the authors present the first early evidence of semi-strong by examining price reactions around stock splits.
+In [Fama, Fisher, Jensen, and Roll (1969)](https://www.jstor.org/stable/2525569?casa_token=ipUXBd17BoAAAAAA%3AJFsDsPvupWNYfpOpgjiTP0zsJQiLExdpH0vbutFwkBeQ7nSVzyqpJ5FeJcFaG2JQr4Y5Oy16Q0yMSUpwzQ5Aj4PpE8g1M5LQtI9x7-vvxxtMTrayWh-mZQ), the authors present the first early evidence of semi-strong by examining price reactions around stock splits.
 
 :::{.columns}
 ::: {.column width="50%"}
@@ -430,18 +439,17 @@ In Fama, Fisher, Jensen, and Roll (1969), the authors present the first early ev
 
 ![](figures/pead.png){width=90%}
 
-This figure plots the Cumulative Abnormal Return (CAR) -60 to +60 days aftere arnings announcements -- conditioned on earnings surprises.
-Foster et al. (1984)
+This figure plots the Cumulative Abnormal Return (CAR) -60 to +60 days after earnings announcements -- conditioned on earnings surprises. See [Foster et al. (1984)](https://www.jstor.org/stable/247321?casa_token=KEOTTjWyDZEAAAAA%3AcRnDBlXFe2yhjP4NIpCllqTPCma9kpl5Pi-JxVCFOIcKEew7lI6vJfQylGUQsQmisrT_ekU49rwL81XUGWpTknR3oXq4XCJZ-PD3AIvhaMMTECZdXq5VqA&seq=3)
 
 ## But markets have become more efficient over time. 
 
 ![](figures/pead2.png){width=90%}
 
-See Martineau (2022).
+See [Martineau (2022)](https://www.emerald.com/cfr/article-abstract/11/3-4/613/1324916/Rest-in-Peace-Post-Earnings-Announcement-Drift?redirectedFrom=fulltext).
 
 ## Additional evidence against semi-strong: The No-News is News
 
-Hubermann and Regev (2001) "Contagious Speculation and a Cure for Cancer":
+[Hubermann and Regev (2001)](https://onlinelibrary.wiley.com/doi/full/10.1111/0022-1082.00330?casa_token=Qk7oi8bpqp8AAAAA%3AlXBHIlYAUJqf2n2lTXeovGjJclwb7urdBFD-nPl4a1By0E7oejsPr1zXeV_Q3NGusAwQKOGlA5ZG2pg4) "Contagious Speculation and a Cure for Cancer":
 
 - May 3, 1998, NYT reports on a recent breakthrough in cancer research by ENMD, acompany with licensing rights to the breakthrough. The story’s impact on the stock prices was immediate, huge, and to a large extent permanent.
 
@@ -466,13 +474,13 @@ To test for strong form market efficiency is not trivial.
 
 - You need to have evidence that someone has private information.
 - You need to compare the effect of a trade on prices of a stock by someone with private information to another similar stock (size, industry, etc) for which one could have private information but did trade on it.
-- This was overcome in Akey, Gregoire, Martineau (2022).
+- This was overcome in [Akey, Gregoire, Martineau (2022)](https://www.sciencedirect.com/science/article/pii/S0304405X21005237).
 
 ## Evidence Supporting Strong Form Market Efficiency (Akey et al, 2022)
 ::: {style="height: 2em;"}
 :::
 
-Akey et al., 2021 examine how private information illegally acquired through hacking is reflected in stock prices in an event study framework.
+Akey et al., 2022 examine how private information illegally acquired through hacking is reflected in stock prices in an event study framework.
 
 The plot below shows the buy-and-hold cumulative returns for stocks with top quintile and bottom quintile earnings surprises.
 
@@ -487,7 +495,7 @@ Limited attention is often the common cause behind "slow price formation".
 
 Behavioral explanation to momentum ...
 
-- Barberis, Shleifer and Vishny (1998, JFE) suggest the conservatism bias (underreact to information): A “conservatism bias” can lead investors to underreact or underweight new information (related to anchoring bias). That's related to the "52-week high/low"analogy.
+- [Barberis, Shleifer and Vishny (1998, JFE)](https://www.sciencedirect.com/science/article/pii/S0304405X98000270?casa_token=cGoe5ME3DekAAAAA:Du2NFJVKmKJ56CKe373SrkLasJyi3eM6_KX49XUaOAkJWTg-tbKtPmYvWcEDMQFvYjvSwyY2RUHI) suggest the conservatism bias (underreact to information): A “conservatism bias” can lead investors to underreact or underweight new information (related to anchoring bias). That's related to the "52-week high/low"analogy.
 
 Behavioral explanation to contrarian ...
 
@@ -503,7 +511,7 @@ Market efficiency theoretically rests on three pillars:
 - Uncorrelated errors
 - Unlimited arbitrage
 
-Only one of these is actually needed to be true for markets to perfectly efficient. If all three fails, then market efficiency is called into question.
+Only one of these is actually needed to be true for markets to be perfectly efficient. If all three fails, then market efficiency is called into question.
 
 Let’s look at all three of these pillars into details and when they can “fall”.
 
@@ -516,7 +524,7 @@ Challenges:
 - We have seen in class many examples of irrationality due to behavioral biases.
 - Such biases can lead you to trade assets not based on fundamental values but on “noise” (i.e., information that is not relevant for the valuation of the securities.
 - Noise is not necessarily a bad thing to the extent that it generates liquidity in financial markets. Without “noise trading”, do you think people would trade? (the no-trade theorem).
-- Also, what if investors are bounded rational? In the no-news example of Huberman andRegev, one reason that can explain this is because we cannot process all the news. We arenot mentally capable! We need event that captures our attention to price asset correctly.
+- Also, what if investors are bounded rational? In the no-news example of Huberman and Regev, one reason that can explain this is because we cannot process all the news. We are not mentally capable! We need event that captures our attention to price asset correctly.
 
 ##  Pillar 2: Investor Errors are Uncorrelated
 Challenge:
@@ -539,7 +547,7 @@ Challenge:
 ::: {style="height: 2em;"}
 :::
 - This figures shows the BHAR differences between stocks with high and low StockTwits attention in the days prior to earnings announcements.
-- Stocks with high stocktwits chatter leads to a price run-up and an immediate price reversals on announcement day.
+- Stocks with high StockTwits chatter leads to a price run-up and an immediate price reversals on announcement day.
 - Retail trading herds on "noise" and markets correct the noise at the time of the announcement.
 :::
 :::
@@ -561,7 +569,7 @@ Challenge:
 :::
 
 - High attention == Top quintile in StockTwits post activity 5 days before earnings announcement.
-- Stocktwits attention leads to price run-up before earnings announcement, for both positive and negative earnings surprises. It distorts price formation for negative earnings surprises.
+- StockTwits attention leads to price run-up before earnings announcement, for both positive and negative earnings surprises. It distorts price formation for negative earnings surprises.
 
 ## Pillar 3: Unlimited arbitrage
 
