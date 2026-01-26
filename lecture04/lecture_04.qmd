@@ -191,8 +191,8 @@ where $n$ is the sample size, $m$ is the number of lags tested, and $\hat{\rho}_
 
 
 ```{python}
-#| echo: true
-#| eval: true
+# | echo: true
+# | eval: true
 
 # Test for autocorrelation using Ljung-Box test
 lb_test = acorr_ljungbox(returns, lags=12, return_df=True)
@@ -200,6 +200,10 @@ lb_test = acorr_ljungbox(returns, lags=12, return_df=True)
 print("Ljung-Box Test for Autocorrelation (H0: No autocorrelation)")
 print(lb_test.head(6))
 print(f"\nInterpretation: If p-values > 0.05, we fail to reject H0")
+print(
+    f"\nInterpretation: If p-values < 0.05, we reject H0 that returns are unpredictable and provide evidence of return predictability."
+)
+
 ```
 
 Results suggest that returns are NOT predictable (consistent with random walk).

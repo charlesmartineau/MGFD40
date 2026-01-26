@@ -586,9 +586,23 @@ BHAR difference between high vs low StockTwits attention stocks before earnings 
 
 ![](figures/stocktwits_reversal2.png)
 
-## StockTwits
+## StockTwits - Regression analysis
 
-![](figures/stocktwits_reg.png){top=50 width=65%}
+Can other variables explain the price reversals? 
+
+- Control for institutional investor attention, earnings surprises, news coverage, news sentiment, analyst sentiment, implied volatility, and past returns.
+- These are other variables that could explain the reversals. 
+
+$$BHAR = \alpha+\beta \mathbb{1}^{Att}_{i,t}+\Gamma^\prime Controls_{i,t}+\varepsilon_{i,t}$$
+
+where Controls stand for the other variables listed above.
+
+## StockTwits - Regression analysis
+
+
+The table below shows the loadings, the standard errors in parentheses, and the significance levels (stars).
+
+![](figures/stocktwits_reg.png){top=50 width=50%}
 
 - **Important**: Regression that test the significance of the reversals and rules out alternative explanations (institutional investor attention, earnings surprises, news coverage) driving the reversals. 
 

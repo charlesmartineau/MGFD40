@@ -550,7 +550,7 @@ Charles Martineau
 
 </div>
 <p>We’ll test whether monthly S&amp;P 500 returns follow a random walk by checking for autocorrelation:</p>
-<div id="e8ba64ce" class="cell" data-execution_count="1">
+<div id="8d05fefe" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href=""></a><span class="im">import</span> yfinance <span class="im">as</span> yf</span>
 <span id="cb1-2"><a href=""></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-3"><a href=""></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -603,13 +603,13 @@ Kurtosis: 1.0389</code></pre>
 </section>
 <section id="testing-random-walk-autocorrelation-test-1" class="slide level2">
 <h2>Testing Random Walk: Autocorrelation Test</h2>
-<div id="3bd13944" class="cell" data-execution_count="2">
+<div id="70666edb" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href=""></a><span class="co"># Test for autocorrelation using Ljung-Box test</span></span>
 <span id="cb3-2"><a href=""></a>lb_test <span class="op">=</span> acorr_ljungbox(returns, lags<span class="op">=</span><span class="dv">12</span>, return_df<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb3-3"><a href=""></a></span>
 <span id="cb3-4"><a href=""></a><span class="bu">print</span>(<span class="st">"Ljung-Box Test for Autocorrelation (H0: No autocorrelation)"</span>)</span>
 <span id="cb3-5"><a href=""></a><span class="bu">print</span>(lb_test.head(<span class="dv">6</span>))</span>
-<span id="cb3-6"><a href=""></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">Interpretation: If p-values &gt; 0.05, we fail to reject H0"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-6"><a href=""></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">Interpretation: If p-values &lt; 0.05, we fail to reject H0"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Ljung-Box Test for Autocorrelation (H0: No autocorrelation)
     lb_stat  lb_pvalue
@@ -620,14 +620,14 @@ Kurtosis: 1.0389</code></pre>
 5  2.652196   0.753420
 6  4.762381   0.574631
 
-Interpretation: If p-values &gt; 0.05, we fail to reject H0</code></pre>
+Interpretation: If p-values &lt; 0.05, we fail to reject H0</code></pre>
 </div>
 </div>
 <p>Results suggest that returns are NOT predictable (consistent with random walk).</p>
 </section>
 <section id="autocorrelation-test-visualizations" class="slide level2">
 <h2>Autocorrelation Test Visualizations</h2>
-<div id="f263d938" class="cell" data-fig-height="4" data-fig-width="12" data-execution_count="3">
+<div id="d4b8de8c" class="cell" data-fig-height="4" data-fig-width="12" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href=""></a><span class="co"># Visualize autocorrelation</span></span>
 <span id="cb5-2"><a href=""></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">4</span>))</span>
 <span id="cb5-3"><a href=""></a></span>
@@ -668,7 +668,7 @@ Interpretation: If p-values &gt; 0.05, we fail to reject H0</code></pre>
 </section>
 <section id="testing-random-walk-variance-ratio-test-1" class="slide level2">
 <h2>Testing Random Walk: Variance Ratio Test</h2>
-<div id="e9746e21" class="cell" data-execution_count="4">
+<div id="bef6688e" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href=""></a><span class="kw">def</span> variance_ratio(returns, lag<span class="op">=</span><span class="dv">2</span>):</span>
 <span id="cb6-2"><a href=""></a>    <span class="co">"""</span></span>
 <span id="cb6-3"><a href=""></a><span class="co">    Calculate variance ratio test statistic.</span></span>
@@ -922,7 +922,7 @@ VR &lt; 1 suggests negative autocorrelation (mean reversion)</code></pre>
 <li>Uncorrelated errors</li>
 <li>Unlimited arbitrage</li>
 </ul>
-<p>Only one of these is actually needed to be true for markets to perfectly efficient. If all three fails, then market efficiency is called into question.</p>
+<p>Only one of these is actually needed to be true for markets to be perfectly efficient. If all three fails, then market efficiency is called into question.</p>
 <p>Let’s look at all three of these pillars into details and when they can “fall”.</p>
 </section>
 <section id="pillar-1-all-investors-are-always-rational" class="slide level2">
@@ -935,7 +935,7 @@ VR &lt; 1 suggests negative autocorrelation (mean reversion)</code></pre>
 <li>We have seen in class many examples of irrationality due to behavioral biases.</li>
 <li>Such biases can lead you to trade assets not based on fundamental values but on “noise” (i.e., information that is not relevant for the valuation of the securities.</li>
 <li>Noise is not necessarily a bad thing to the extent that it generates liquidity in financial markets. Without “noise trading”, do you think people would trade? (the no-trade theorem).</li>
-<li>Also, what if investors are bounded rational? In the no-news example of Huberman andRegev, one reason that can explain this is because we cannot process all the news. We arenot mentally capable! We need event that captures our attention to price asset correctly.</li>
+<li>Also, what if investors are bounded rational? In the no-news example of Huberman and Regev, one reason that can explain this is because we cannot process all the news. We are not mentally capable! We need event that captures our attention to price asset correctly.</li>
 </ul>
 </section>
 <section id="pillar-2-investor-errors-are-uncorrelated" class="slide level2">
@@ -961,7 +961,7 @@ VR &lt; 1 suggests negative autocorrelation (mean reversion)</code></pre>
 </div>
 <ul>
 <li>This figures shows the BHAR differences between stocks with high and low StockTwits attention in the days prior to earnings announcements.</li>
-<li>Stocks with high stocktwits chatter leads to a price run-up and an immediate price reversals on announcement day.</li>
+<li>Stocks with high StockTwits chatter leads to a price run-up and an immediate price reversals on announcement day.</li>
 <li>Retail trading herds on “noise” and markets correct the noise at the time of the announcement.</li>
 </ul>
 </div></div>
@@ -982,7 +982,7 @@ VR &lt; 1 suggests negative autocorrelation (mean reversion)</code></pre>
 </div></div>
 <ul>
 <li>High attention == Top quintile in StockTwits post activity 5 days before earnings announcement.</li>
-<li>Stocktwits attention leads to price run-up before earnings announcement, for both positive and negative earnings surprises. It distorts price formation for negative earnings surprises.</li>
+<li>StockTwits attention leads to price run-up before earnings announcement, for both positive and negative earnings surprises. It distorts price formation for negative earnings surprises.</li>
 </ul>
 </section>
 <section id="pillar-3-unlimited-arbitrage" class="slide level2">

@@ -883,9 +883,20 @@ Charles Martineau
 <h2>StockTwits</h2>
 
 <img data-src="figures/stocktwits_reversal2.png" class="r-stretch"></section>
-<section id="stocktwits-3" class="slide level2">
-<h2>StockTwits</h2>
-<p><img data-src="figures/stocktwits_reg.png" style="width:65.0%" data-top="50"></p>
+<section id="stocktwits---regression-analysis" class="slide level2">
+<h2>StockTwits - Regression analysis</h2>
+<p>Can other variables explain the price reversals?</p>
+<ul>
+<li>Control for institutional investor attention, earnings surprises, news coverage, news sentiment, analyst sentiment, implied volatility, and past returns.</li>
+<li>These are other variables that could explain the reversals.</li>
+</ul>
+<p><span class="math display">BHAR = \alpha+\beta \mathbb{1}^{Att}_{i,t}+\Gamma^\prime Controls_{i,t}+\varepsilon_{i,t}</span></p>
+<p>where Controls stand for the other variables listed above.</p>
+</section>
+<section id="stocktwits---regression-analysis-1" class="slide level2">
+<h2>StockTwits - Regression analysis</h2>
+<p>The table below shows the loadings, the standard errors in parentheses, and the significance levels (stars).</p>
+<p><img data-src="figures/stocktwits_reg.png" style="width:50.0%" data-top="50"></p>
 <ul>
 <li><strong>Important</strong>: Regression that test the significance of the reversals and rules out alternative explanations (institutional investor attention, earnings surprises, news coverage) driving the reversals.</li>
 </ul>

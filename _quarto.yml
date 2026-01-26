@@ -10,7 +10,7 @@ preview:
   browser: true
   watch-inputs: true
 execute:
-  python: venv/bin/python
+  python: .venv/bin/python
 format:
   revealjs:
     theme: [default, custom.scss]
