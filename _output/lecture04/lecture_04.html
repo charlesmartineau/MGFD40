@@ -550,7 +550,7 @@ Charles Martineau
 
 </div>
 <p>We’ll test whether monthly S&amp;P 500 returns follow a random walk by checking for autocorrelation:</p>
-<div id="8d05fefe" class="cell" data-execution_count="1">
+<div id="2de87de7" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href=""></a><span class="im">import</span> yfinance <span class="im">as</span> yf</span>
 <span id="cb1-2"><a href=""></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-3"><a href=""></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -603,13 +603,16 @@ Kurtosis: 1.0389</code></pre>
 </section>
 <section id="testing-random-walk-autocorrelation-test-1" class="slide level2">
 <h2>Testing Random Walk: Autocorrelation Test</h2>
-<div id="70666edb" class="cell" data-execution_count="2">
+<div id="e32c873b" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href=""></a><span class="co"># Test for autocorrelation using Ljung-Box test</span></span>
 <span id="cb3-2"><a href=""></a>lb_test <span class="op">=</span> acorr_ljungbox(returns, lags<span class="op">=</span><span class="dv">12</span>, return_df<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb3-3"><a href=""></a></span>
 <span id="cb3-4"><a href=""></a><span class="bu">print</span>(<span class="st">"Ljung-Box Test for Autocorrelation (H0: No autocorrelation)"</span>)</span>
 <span id="cb3-5"><a href=""></a><span class="bu">print</span>(lb_test.head(<span class="dv">6</span>))</span>
-<span id="cb3-6"><a href=""></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">Interpretation: If p-values &lt; 0.05, we fail to reject H0"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-6"><a href=""></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">Interpretation: If p-values &gt; 0.05, we fail to reject H0"</span>)</span>
+<span id="cb3-7"><a href=""></a><span class="bu">print</span>(</span>
+<span id="cb3-8"><a href=""></a>    <span class="ss">f"</span><span class="ch">\n</span><span class="ss">Interpretation: If p-values &lt;= 0.05, we reject H0 that returns are unpredictable and provide evidence of return predictability."</span></span>
+<span id="cb3-9"><a href=""></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Ljung-Box Test for Autocorrelation (H0: No autocorrelation)
     lb_stat  lb_pvalue
@@ -620,14 +623,16 @@ Kurtosis: 1.0389</code></pre>
 5  2.652196   0.753420
 6  4.762381   0.574631
 
-Interpretation: If p-values &lt; 0.05, we fail to reject H0</code></pre>
+Interpretation: If p-values &gt; 0.05, we fail to reject H0
+
+Interpretation: If p-values &lt;= 0.05, we reject H0 that returns are unpredictable and provide evidence of return predictability.</code></pre>
 </div>
 </div>
 <p>Results suggest that returns are NOT predictable (consistent with random walk).</p>
 </section>
 <section id="autocorrelation-test-visualizations" class="slide level2">
 <h2>Autocorrelation Test Visualizations</h2>
-<div id="d4b8de8c" class="cell" data-fig-height="4" data-fig-width="12" data-execution_count="3">
+<div id="6f479274" class="cell" data-fig-height="4" data-fig-width="12" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href=""></a><span class="co"># Visualize autocorrelation</span></span>
 <span id="cb5-2"><a href=""></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">4</span>))</span>
 <span id="cb5-3"><a href=""></a></span>
@@ -668,7 +673,7 @@ Interpretation: If p-values &lt; 0.05, we fail to reject H0</code></pre>
 </section>
 <section id="testing-random-walk-variance-ratio-test-1" class="slide level2">
 <h2>Testing Random Walk: Variance Ratio Test</h2>
-<div id="bef6688e" class="cell" data-execution_count="4">
+<div id="6465cfd6" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href=""></a><span class="kw">def</span> variance_ratio(returns, lag<span class="op">=</span><span class="dv">2</span>):</span>
 <span id="cb6-2"><a href=""></a>    <span class="co">"""</span></span>
 <span id="cb6-3"><a href=""></a><span class="co">    Calculate variance ratio test statistic.</span></span>
@@ -721,13 +726,13 @@ VR &lt; 1 suggests negative autocorrelation (mean reversion)</code></pre>
 <p>In the assignment, I ask you to run a simple OLS regression of the form: <span class="math display">r_t = \alpha + \beta r_{t-1} + \epsilon_t</span></p>
 <ul>
 <li>If returns follow a random walk, we expect <span class="math inline">\beta = 0</span></li>
-<li>If we find <span class="math inline">\beta \neq 0</span>, it suggests returns are predictable and violate weak form market efficiency.</li>
+<li>If we find <span class="math inline">\beta \neq 0</span>, and statistically significant (<span class="math inline">p</span> values <span class="math inline">\le 0.05</span>), it suggests returns are predictable and violate weak form market efficiency.</li>
 </ul>
 </section>
 <section id="other-factors-can-predict-market-returns" class="slide level2">
 <h2>Other factors can predict market returns …</h2>
 <p>Price-to-dividend ratios was shown to predict market returns in the long run (Fama and French, 1988). Regression:</p>
-<p><span class="math display">r_{t + T} = \alpha + \beta \log\left(\frac{P_t}{D_{t-1}}\right) + \epsilon_t</span></p>
+<p><span class="math display">r_{t + T} = \alpha + \beta \log\left(\frac{D_{t}}{p_{t}}\right) + \epsilon_t</span></p>
 
 <img data-src="figures/dP-reg.png" style="width:70.0%" class="r-stretch"><p>But, these results are <strong>in-sample</strong>. Do you know the difference between in- and out-of-sample?</p>
 <ul>
@@ -773,7 +778,7 @@ VR &lt; 1 suggests negative autocorrelation (mean reversion)</code></pre>
 <p><span class="math display">CAR_{i,t} = \sum_{\tau=1}^{t} (R_{i,\tau} - E[R_{i,\tau}])</span></p>
 <p>OR</p>
 <p><span class="math display">BHAR_{i,t} = \prod_{\tau=1}^{t} (1 + R_{i,\tau}) - \prod_{\tau=1}^{t} (1 + E[R_{i,\tau}])</span></p>
-<p>where <span class="math inline">E[R_{i,\tau}]</span> is the expected return based on a market model. It can also be just the market return.</p></li>
+<p>where <span class="math inline">E[R_{i,\tau}]</span> is the expected return based on a market model (here you are assuming that the CAPM <span class="math inline">\beta == 1</span>). It can also be just the market return.</p></li>
 <li><p>The difference in cumulative average returns (CAR) between the extreme portfolios equals 24.6%.</p></li>
 <li><p>How to compute BHAR or CAR is also part of the assignment!</p></li>
 </ul>

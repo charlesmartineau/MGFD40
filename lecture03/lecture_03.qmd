@@ -564,6 +564,8 @@ Note: Buy-Sell imbalance is measured as (Buys - Sells) / (Buys + Sells). It's a 
 
 - Especially the feature of "most popular stocks" on the app interface attracts even more attention-grabbing retail investors.
 
+![](figures/robinhood.png)
+
 ## StockTwits
 
 In [my own research](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4439793), I find that social media attention before earnings announcements is excessively optimistic, fails to predict fundamentals, and generates buying pressure, leading to a 58 bps stock return as intermediaries seek higher returns to mitigate inventory risk.
@@ -600,7 +602,7 @@ where Controls stand for the other variables listed above.
 ## StockTwits - Regression analysis
 
 
-The table below shows the loadings, the standard errors in parentheses, and the significance levels (stars).
+The table below shows the loadings, the standard errors in parentheses, and the significance levels ($p$-values: $^{***}$<0.01, $^{**}$ betw. 0.01-0.05, $^{*}$ betw. 0.05-0.1).
 
 ![](figures/stocktwits_reg.png){top=50 width=50%}
 

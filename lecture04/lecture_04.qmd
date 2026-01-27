@@ -201,7 +201,7 @@ print("Ljung-Box Test for Autocorrelation (H0: No autocorrelation)")
 print(lb_test.head(6))
 print(f"\nInterpretation: If p-values > 0.05, we fail to reject H0")
 print(
-    f"\nInterpretation: If p-values < 0.05, we reject H0 that returns are unpredictable and provide evidence of return predictability."
+    f"\nInterpretation: If p-values <= 0.05, we reject H0 that returns are unpredictable and provide evidence of return predictability."
 )
 
 ```
@@ -309,13 +309,13 @@ In the assignment, I ask you to run a simple OLS regression of the form:
 $$r_t = \alpha + \beta r_{t-1} + \epsilon_t$$
 
 - If returns follow a random walk, we expect $\beta = 0$
-- If we find $\beta \neq 0$, it suggests returns are predictable and violate weak form market efficiency.
+- If we find $\beta \neq 0$, and statistically significant ($p$ values $\le 0.05$), it suggests returns are predictable and violate weak form market efficiency.
 
 ## Other factors can predict market returns ...
 
 Price-to-dividend ratios was shown to predict market returns in the long run (Fama and French, 1988). Regression:
 
-$$r_{t + T} = \alpha + \beta \log\left(\frac{P_t}{D_{t-1}}\right) + \epsilon_t$$
+$$r_{t + T} = \alpha + \beta \log\left(\frac{D_{t}}{p_{t}}\right) + \epsilon_t$$
 
 ![](figures/dP-reg.png){width=70%}
 
@@ -367,7 +367,7 @@ De Bondt and Thaler (1985) were the first to find evidence of inefficiencies usi
 
   $$BHAR_{i,t} = \prod_{\tau=1}^{t} (1 + R_{i,\tau}) - \prod_{\tau=1}^{t} (1 + E[R_{i,\tau}])$$
 
-  where $E[R_{i,\tau}]$ is the expected return based on a market model. It can also be just the market return.
+  where $E[R_{i,\tau}]$ is the expected return based on a market model (here you are assuming that the CAPM $\beta == 1$). It can also be just the market return.
 - The difference in cumulative average returns (CAR) between the extreme portfolios equals 24.6%.
 - How to compute BHAR or CAR is also part of the assignment!
 
