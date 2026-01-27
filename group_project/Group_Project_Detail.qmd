@@ -1,0 +1,97 @@
+---
+title: |
+  MGFD40\
+  Investor Psychology and Behavioral Finance\
+  \
+  Final Group Project Guidelines
+author:
+  - name: Charles Martineau
+    affiliations:
+      - name: UTSC Management, University of Toronto
+        address: 1095 Military Trail, Toronto ON, Canada, M1C 1A4
+    email: charles.martineau@utoronto.ca
+format:
+  pdf:
+    documentclass: article
+    classoption: [12pt, letter]
+    geometry: margin=1in
+    fontsize: 12pt
+    linestretch: 1.8
+    colorlinks: true
+    linkcolor: "red!50!black"
+    citecolor: "blue!50!black"
+    urlcolor: "blue!80!black"
+---
+
+This note details your final project for this course. 
+
+- This project is worth 45% of your final grade.
+- Due date: One week after your presentation (last class).
+- Submission: Submit your report as a PDF file on Quercus. You must also submit your code (Jupyter notebook or Python script file) and data files on Quercus.
+
+# Objectives
+
+Propose a trading strategy based on an event study, long-short portfolio strategy, or return predictability.
+
+1. You must explain your hypothesis.
+2. You must explain your empirical methodology (data, time-period, implementation).
+3. You must also back-test your proposed strategy.
+
+I do not care if the strategy yields profits or not. Your grade does not depend on whether the strategy is profitable. It depends on the quality of your hypothesis, the rigor of your backtesting, and the clarity of your reporting. I encourage you to look at academic papers on how to write a paper.
+
+[You do not have to focus on stocks]{.underline}. Cryptocurrencies, foreign exchange, bonds, prediction markets, etc. is all good. I encourage you to think of new data sources, e.g., twitter feeds, reddit, measures of political uncertainty, social media, etc... search online for a new data source. There are many.
+
+# Content of your report
+
+All the sections below must be included in your report.
+
+1. Brief summary (about 200 words)
+2. Introduction: Motivation and research question
+3. Literature review and hypothesis development
+4. Empirical methods: Data source, how you retrieved the data, regression specifications
+5. Results (descriptive statistics of your data, regression results, plots, etc.)
+6. Short conclusion
+7. References
+8. Short description of the contribution of each member to the project
+
+Your report will be about 8-10 pages long, 1.5 space -- excluding Figure and Tables (reported at the end of the report).
+
+# Additional details
+
+- Your hypotheses: Make sure you state clearly your null and alternative hypotheses. Find academic studies that support or can explain why your trading strategy or event study might work.
+- Describe the empirical methodology (data, time-period, and the implementation).
+- What are your assumptions when proposing such strategy? Are there foreseeable difficulties in implementing this strategy? This should be described in the hypotheses' development section of your report.
+- For event studies, there are key assumptions you are assuming about the price formation process, what are they?
+- For time-series predictability, please do a in- and out-of-sample regression.
+- When reporting tables and figures, you must also write the title of your tables and the caption. Make sure in your text you clearly refer to the appropriate figure / table numbers.
+
+# Evaluation
+
+Your evaluation will consist of three parts (out of 45 marks):
+
+1. Python code - 10 points
+  - Graded on the cleanliness of your code and I must be able to run the code without any error. Therefore, you must **submit** your data.
+  - You can submit your code in a Jupyter notebook or Python script file (.py). I encourage you to use GitHub or any version control system to share your code within your group.
+2. Presentation - 5 points
+3. Written report - 30 points:
+  - Hypothesis clarity: /5, 
+  - Literature review: /5, 
+  - Methodology: /10, 
+  - Results: /5, 
+  - Writing quality: /5
+
+## Python code
+
+I must be able to run your code to examine your overall analysis without any error. Your code must be easily readable even if I do not run the code. Use comments to explain your lines of code.
+
+## Presentation
+
+Each group has 5 minutes for the presentation. For the presentation, there is no restriction on the format as well as the number of presenters. Please keep it short.
+
+The presentation is on the last class. I want **a copy of your slides before your presentation**
+
+# Teamwork - Peer evaluation form
+
+I will ask for each team to provide me with a short description of the contribution of each member to the project. This must be included in your report.
+
+To make sure that free-riding within the group is "detected", "monitored" and "reflected" in the grades, each group member must submit a peer evaluation form **(not an obligation)** that is posted [here](https://www.dropbox.com/scl/fi/kgbwkafd4bkz1yahytav5/peer_evaluation.docx?rlkey=awd8rx5ymh4ue9amgv5r8vyk1&dl=0). This form must be submitted to me, by email, before or on the due date of the written report. Only I can see the peer evaluation form.
