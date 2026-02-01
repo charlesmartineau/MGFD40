@@ -25,15 +25,17 @@ jupyter: python3
 4. **Testing Weak Form Market Efficiency**
    - Random Walk Tests (Ljung-Box, Variance Ratio)
    - Return Predictability (Price-to-Dividend Ratios)
-   - Contrarian and Momentum Strategies
+   - Contrarian and Momentum Strategies (De Bondt & Thaler, Jegadeesh & Titman)
 5. **Testing Semi-Strong Form Market Efficiency**
-   - Event Studies
+   - Event Studies (FFJR 1969)
    - Post-Earnings Announcement Drift (PEAD)
+   - No-News is News (Huberman & Regev), Merger Arbitrage
 6. **Testing Strong Form Market Efficiency**
+   - Evidence Against: Insider Trading (Lakonishok & Lee)
+   - Evidence For: Hacking and Private Information (Akey et al.)
 7. **Limits to Market Efficiency: Three Pillars**
-   - Investor Rationality
-   - Uncorrelated Errors
-   - Unlimited Arbitrage
+   - Investor Rationality, Uncorrelated Errors, Unlimited Arbitrage
+   - Example: Social Media and Stock Prices
 
 ## History of the Efficient Market Hypothesis (EMH)
 
@@ -465,12 +467,72 @@ However:
 
 ![](figures/hr.png){width=90%}
 
+## Merger arbitrage spreads
+
+After the announcement of a M&A, the target company's stock typically trades at a discount to the price offered by the acquiring company. 
+
+- The difference between the target's stock price and the offer price is known as the arbitrage spread. 
+- Risk arbitrage (merger arbitrage), refers to an investment strategy that attempts to profit from this spread. 
+  - If the merger is successful, the arbitrageur captures the arbitrage spread. 
+  - If it fails, the arbitrageur incurs a loss, (usually much greater than the profits obtained if the deal succeeds).
+
+[Mitchell and Pulvino (2001)](https://onlinelibrary.wiley.com/doi/full/10.1111/0022-1082.00401?casa_token=CF1BCEXb6HEAAAAA%3A-P56VV1L528ZdjP9Egc1jb7HcYsMQ5ONwAa9nng6dCrhv4Z9FDF64Q9nwq9RpMD-jh-k9nobRDoUBA) find that a M&A risk arbitrage strategy, you earn small consistent gains but face occasional large losses. 
+
+- After adjusting for this asymmetric risk profile, abnormal profits largely disappear, which actually supports semi-strong efficiency.
+
+## Merger Arbitrage: Semi-strong efficient vs. Inefficient Markets
+
+**Example:** Company A announces acquisition of Target Co. at \$100/share. Deal closes in 6 months. Prob(success) = 90%, price if deal fails = \$70.
+
+::: {.columns}
+::: {.column width="50%"}
+**If Markets Are Efficient**
+
+Fair price reflects all public info:
+
+$$P = 0.90 \times \$100 + 0.10 \times \$70 = \$97$$
+
+- Target trades at \$97 immediately
+- Spread of \$3 = fair compensation for 10% chance of losing \$27
+- Expected profit = 0 (risk-adjusted)
+- **No arbitrage opportunity**
+:::
+
+::: {.column width="50%"}
+**If Markets Are Inefficient**
+
+Price underreacts to announcement:
+
+- Target trades at \$92 (not \$97)
+- Spread of \$8 is "too large"
+- Expected profit: $0.90 \times \$8 - 0.10 \times \$22 = \$5$
+- **Abnormal profit exists**
+- Arbitrageurs can exploit this
+:::
+:::
+
+::: {style="height: 1em;"}
+:::
+
+$\Rightarrow$ Persistent abnormal profits in merger arbitrage would violate semi-strong form EMH.
+- Note: This example is for a cash deal. Stock deals introduce additional complexities (long-short position).
+
 ## Strong form market efficiency
 
 The strong form says that prices fully reflect ALL information, including public and private information.
 
 - Even the knowledge of material, non-public information cannot be used to earnsuperior results.
 - The strong form EMH, if correct, repudiates the need to monitor insider trading. 
+
+## Evidence Against Strong Form Market Efficiency
+
+[Lakonishok and Lee (2001)](https://academic.oup.com/rfs/article/14/1/79/1587398) examine the stock price reaction to insider trading.
+
+- Insider trades predict future returns, especially purchases in small firms.
+
+![](figures/lakonishok.png){width=90%}
+
+- Note: NPR (x-axis, in decile cut) stands for "Net Purchase Ratio" = (Insider Buys - Insider Sells) / Total Insider Trades
 
 ## Evidence Supporting Strong Form Market Efficiency
 

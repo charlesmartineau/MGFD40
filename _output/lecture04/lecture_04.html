@@ -441,19 +441,23 @@ Charles Martineau
 <ul>
 <li>Random Walk Tests (Ljung-Box, Variance Ratio)</li>
 <li>Return Predictability (Price-to-Dividend Ratios)</li>
-<li>Contrarian and Momentum Strategies</li>
+<li>Contrarian and Momentum Strategies (De Bondt &amp; Thaler, Jegadeesh &amp; Titman)</li>
 </ul></li>
 <li><strong>Testing Semi-Strong Form Market Efficiency</strong>
 <ul>
-<li>Event Studies</li>
+<li>Event Studies (FFJR 1969)</li>
 <li>Post-Earnings Announcement Drift (PEAD)</li>
+<li>No-News is News (Huberman &amp; Regev), Merger Arbitrage</li>
 </ul></li>
-<li><strong>Testing Strong Form Market Efficiency</strong></li>
+<li><strong>Testing Strong Form Market Efficiency</strong>
+<ul>
+<li>Evidence Against: Insider Trading (Lakonishok &amp; Lee)</li>
+<li>Evidence For: Hacking and Private Information (Akey et al.)</li>
+</ul></li>
 <li><strong>Limits to Market Efficiency: Three Pillars</strong>
 <ul>
-<li>Investor Rationality</li>
-<li>Uncorrelated Errors</li>
-<li>Unlimited Arbitrage</li>
+<li>Investor Rationality, Uncorrelated Errors, Unlimited Arbitrage</li>
+<li>Example: Social Media and Stock Prices</li>
 </ul></li>
 </ol>
 </section>
@@ -550,7 +554,7 @@ Charles Martineau
 
 </div>
 <p>We’ll test whether monthly S&amp;P 500 returns follow a random walk by checking for autocorrelation:</p>
-<div id="2de87de7" class="cell" data-execution_count="1">
+<div id="de5448bf" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href=""></a><span class="im">import</span> yfinance <span class="im">as</span> yf</span>
 <span id="cb1-2"><a href=""></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-3"><a href=""></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -603,7 +607,7 @@ Kurtosis: 1.0389</code></pre>
 </section>
 <section id="testing-random-walk-autocorrelation-test-1" class="slide level2">
 <h2>Testing Random Walk: Autocorrelation Test</h2>
-<div id="e32c873b" class="cell" data-execution_count="2">
+<div id="4fdd471c" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href=""></a><span class="co"># Test for autocorrelation using Ljung-Box test</span></span>
 <span id="cb3-2"><a href=""></a>lb_test <span class="op">=</span> acorr_ljungbox(returns, lags<span class="op">=</span><span class="dv">12</span>, return_df<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb3-3"><a href=""></a></span>
@@ -632,7 +636,7 @@ Interpretation: If p-values &lt;= 0.05, we reject H0 that returns are unpredicta
 </section>
 <section id="autocorrelation-test-visualizations" class="slide level2">
 <h2>Autocorrelation Test Visualizations</h2>
-<div id="6f479274" class="cell" data-fig-height="4" data-fig-width="12" data-execution_count="3">
+<div id="f5a83587" class="cell" data-fig-height="4" data-fig-width="12" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href=""></a><span class="co"># Visualize autocorrelation</span></span>
 <span id="cb5-2"><a href=""></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">4</span>))</span>
 <span id="cb5-3"><a href=""></a></span>
@@ -673,7 +677,7 @@ Interpretation: If p-values &lt;= 0.05, we reject H0 that returns are unpredicta
 </section>
 <section id="testing-random-walk-variance-ratio-test-1" class="slide level2">
 <h2>Testing Random Walk: Variance Ratio Test</h2>
-<div id="6465cfd6" class="cell" data-execution_count="4">
+<div id="6e013ac8" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href=""></a><span class="kw">def</span> variance_ratio(returns, lag<span class="op">=</span><span class="dv">2</span>):</span>
 <span id="cb6-2"><a href=""></a>    <span class="co">"""</span></span>
 <span id="cb6-3"><a href=""></a><span class="co">    Calculate variance ratio test statistic.</span></span>
@@ -875,12 +879,69 @@ VR &lt; 1 suggests negative autocorrelation (mean reversion)</code></pre>
 <h2>Huberman and Regev (2001)</h2>
 
 <img data-src="figures/hr.png" style="width:90.0%" class="r-stretch"></section>
+<section id="merger-arbitrage-spreads" class="slide level2">
+<h2>Merger arbitrage spreads</h2>
+<p>After the announcement of a M&amp;A, the target company’s stock typically trades at a discount to the price offered by the acquiring company.</p>
+<ul>
+<li>The difference between the target’s stock price and the offer price is known as the arbitrage spread.</li>
+<li>Risk arbitrage (merger arbitrage), refers to an investment strategy that attempts to profit from this spread.
+<ul>
+<li>If the merger is successful, the arbitrageur captures the arbitrage spread.</li>
+<li>If it fails, the arbitrageur incurs a loss, (usually much greater than the profits obtained if the deal succeeds).</li>
+</ul></li>
+</ul>
+<p><a href="https://onlinelibrary.wiley.com/doi/full/10.1111/0022-1082.00401?casa_token=CF1BCEXb6HEAAAAA%3A-P56VV1L528ZdjP9Egc1jb7HcYsMQ5ONwAa9nng6dCrhv4Z9FDF64Q9nwq9RpMD-jh-k9nobRDoUBA">Mitchell and Pulvino (2001)</a> find that a M&amp;A risk arbitrage strategy, you earn small consistent gains but face occasional large losses.</p>
+<ul>
+<li>After adjusting for this asymmetric risk profile, abnormal profits largely disappear, which actually supports semi-strong efficiency.</li>
+</ul>
+</section>
+<section id="merger-arbitrage-semi-strong-efficient-vs.-inefficient-markets" class="slide level2">
+<h2>Merger Arbitrage: Semi-strong efficient vs.&nbsp;Inefficient Markets</h2>
+<p><strong>Example:</strong> Company A announces acquisition of Target Co.&nbsp;at $100/share. Deal closes in 6 months. Prob(success) = 90%, price if deal fails = $70.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>If Markets Are Efficient</strong></p>
+<p>Fair price reflects all public info:</p>
+<p><span class="math display">P = 0.90 \times \$100 + 0.10 \times \$70 = \$97</span></p>
+<ul>
+<li>Target trades at $97 immediately</li>
+<li>Spread of $3 = fair compensation for 10% chance of losing $27</li>
+<li>Expected profit = 0 (risk-adjusted)</li>
+<li><strong>No arbitrage opportunity</strong></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>If Markets Are Inefficient</strong></p>
+<p>Price underreacts to announcement:</p>
+<ul>
+<li>Target trades at $92 (not $97)</li>
+<li>Spread of $8 is “too large”</li>
+<li>Expected profit: <span class="math inline">0.90 \times \$8 - 0.10 \times \$22 = \$5</span></li>
+<li><strong>Abnormal profit exists</strong></li>
+<li>Arbitrageurs can exploit this</li>
+</ul>
+</div></div>
+<div style="height: 1em;">
+
+</div>
+<p><span class="math inline">\Rightarrow</span> Persistent abnormal profits in merger arbitrage would violate semi-strong form EMH. - Note: This example is for a cash deal. Stock deals introduce additional complexities (long-short position).</p>
+</section>
 <section id="strong-form-market-efficiency" class="slide level2">
 <h2>Strong form market efficiency</h2>
 <p>The strong form says that prices fully reflect ALL information, including public and private information.</p>
 <ul>
 <li>Even the knowledge of material, non-public information cannot be used to earnsuperior results.</li>
 <li>The strong form EMH, if correct, repudiates the need to monitor insider trading.</li>
+</ul>
+</section>
+<section id="evidence-against-strong-form-market-efficiency" class="slide level2">
+<h2>Evidence Against Strong Form Market Efficiency</h2>
+<p><a href="https://academic.oup.com/rfs/article/14/1/79/1587398">Lakonishok and Lee (2001)</a> examine the stock price reaction to insider trading.</p>
+<ul>
+<li>Insider trades predict future returns, especially purchases in small firms.</li>
+</ul>
+
+<img data-src="figures/lakonishok.png" style="width:90.0%" class="r-stretch"><ul>
+<li>Note: NPR (x-axis, in decile cut) stands for “Net Purchase Ratio” = (Insider Buys - Insider Sells) / Total Insider Trades</li>
 </ul>
 </section>
 <section id="evidence-supporting-strong-form-market-efficiency" class="slide level2">
