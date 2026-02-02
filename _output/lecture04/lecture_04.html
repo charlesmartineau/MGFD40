@@ -447,7 +447,8 @@ Charles Martineau
 <ul>
 <li>Event Studies (FFJR 1969)</li>
 <li>Post-Earnings Announcement Drift (PEAD)</li>
-<li>No-News is News (Huberman &amp; Regev), Merger Arbitrage</li>
+<li>No-News is News (Huberman &amp; Regev)</li>
+<li>Merger Arbitrage</li>
 </ul></li>
 <li><strong>Testing Strong Form Market Efficiency</strong>
 <ul>
@@ -554,7 +555,7 @@ Charles Martineau
 
 </div>
 <p>We’ll test whether monthly S&amp;P 500 returns follow a random walk by checking for autocorrelation:</p>
-<div id="de5448bf" class="cell" data-execution_count="1">
+<div id="0cdc3dbb" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href=""></a><span class="im">import</span> yfinance <span class="im">as</span> yf</span>
 <span id="cb1-2"><a href=""></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-3"><a href=""></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -607,7 +608,7 @@ Kurtosis: 1.0389</code></pre>
 </section>
 <section id="testing-random-walk-autocorrelation-test-1" class="slide level2">
 <h2>Testing Random Walk: Autocorrelation Test</h2>
-<div id="4fdd471c" class="cell" data-execution_count="2">
+<div id="5f3cf50b" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href=""></a><span class="co"># Test for autocorrelation using Ljung-Box test</span></span>
 <span id="cb3-2"><a href=""></a>lb_test <span class="op">=</span> acorr_ljungbox(returns, lags<span class="op">=</span><span class="dv">12</span>, return_df<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb3-3"><a href=""></a></span>
@@ -636,7 +637,7 @@ Interpretation: If p-values &lt;= 0.05, we reject H0 that returns are unpredicta
 </section>
 <section id="autocorrelation-test-visualizations" class="slide level2">
 <h2>Autocorrelation Test Visualizations</h2>
-<div id="f5a83587" class="cell" data-fig-height="4" data-fig-width="12" data-execution_count="3">
+<div id="24085e3f" class="cell" data-fig-height="4" data-fig-width="12" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href=""></a><span class="co"># Visualize autocorrelation</span></span>
 <span id="cb5-2"><a href=""></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">4</span>))</span>
 <span id="cb5-3"><a href=""></a></span>
@@ -677,7 +678,7 @@ Interpretation: If p-values &lt;= 0.05, we reject H0 that returns are unpredicta
 </section>
 <section id="testing-random-walk-variance-ratio-test-1" class="slide level2">
 <h2>Testing Random Walk: Variance Ratio Test</h2>
-<div id="6e013ac8" class="cell" data-execution_count="4">
+<div id="e79cbedf" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href=""></a><span class="kw">def</span> variance_ratio(returns, lag<span class="op">=</span><span class="dv">2</span>):</span>
 <span id="cb6-2"><a href=""></a>    <span class="co">"""</span></span>
 <span id="cb6-3"><a href=""></a><span class="co">    Calculate variance ratio test statistic.</span></span>
@@ -941,7 +942,8 @@ VR &lt; 1 suggests negative autocorrelation (mean reversion)</code></pre>
 </ul>
 
 <img data-src="figures/lakonishok.png" style="width:90.0%" class="r-stretch"><ul>
-<li>Note: NPR (x-axis, in decile cut) stands for “Net Purchase Ratio” = (Insider Buys - Insider Sells) / Total Insider Trades</li>
+<li>Note: NPR (x-axis, in decile cut) stands for “Net Purchase Ratio” = (Insider Buys - Insider Sells) / Total Insider Trades. Post stand for “post-insider buy/sell” and Prior stand for “prior-insider buy/sell”.</li>
+<li>Corporate insider is valuable information for market participants, e.g., see the <a href="https://www.insiderscreener.com/en/">Insider Screener website</a></li>
 </ul>
 </section>
 <section id="evidence-supporting-strong-form-market-efficiency" class="slide level2">
@@ -958,7 +960,7 @@ VR &lt; 1 suggests negative autocorrelation (mean reversion)</code></pre>
 <div style="height: 2em;">
 
 </div>
-<p>Akey et al., 2022 examine how private information illegally acquired through hacking is reflected in stock prices in an event study framework.</p>
+<p>Akey et al., 2022 examine how private information (earnings) illegally acquired through hacking is reflected in stock prices in an event study framework.</p>
 <p>The plot below shows the buy-and-hold cumulative returns for stocks with top quintile and bottom quintile earnings surprises.</p>
 
 <img data-src="figures/hack.png" style="width:90.0%" class="r-stretch"></section>
@@ -968,17 +970,9 @@ VR &lt; 1 suggests negative autocorrelation (mean reversion)</code></pre>
 
 </div>
 <p>Limited attention is often the common cause behind “slow price formation”.</p>
-<p>Behavioral explanation to momentum …</p>
-<ul>
-<li><a href="https://www.sciencedirect.com/science/article/pii/S0304405X98000270?casa_token=cGoe5ME3DekAAAAA:Du2NFJVKmKJ56CKe373SrkLasJyi3eM6_KX49XUaOAkJWTg-tbKtPmYvWcEDMQFvYjvSwyY2RUHI">Barberis, Shleifer and Vishny (1998, JFE)</a> suggest the conservatism bias (underreact to information): A “conservatism bias” can lead investors to underreact or underweight new information (related to anchoring bias). That’s related to the “52-week high/low”analogy.</li>
-</ul>
-<p>Behavioral explanation to contrarian …</p>
-<ul>
-<li>The “representative heuristic,” which suggests that investors may overly extrapolate a firm’s past extraordinary earning growths into the future and hence overreact to positive (or negative) information that is preceded by positive (or negative) information. That’s related to the “good company” survey paper discussed in the prior lecture notes.</li>
-</ul>
 </section>
-<section id="but-behavioral-forces-is-only-part-of-the-story" class="slide level2">
-<h2>But behavioral forces is only part of the story…</h2>
+<section id="the-pillars-of-market-efficiency" class="slide level2">
+<h2>The pillars of Market Efficiency</h2>
 <div style="height: 2em;">
 
 </div>
@@ -993,15 +987,15 @@ VR &lt; 1 suggests negative autocorrelation (mean reversion)</code></pre>
 </section>
 <section id="pillar-1-all-investors-are-always-rational" class="slide level2">
 <h2>Pillar 1: All Investors Are Always Rational</h2>
-<div style="height: 2em;">
-
-</div>
 <p>Challenges:</p>
 <ul>
-<li>We have seen in class many examples of irrationality due to behavioral biases.</li>
-<li>Such biases can lead you to trade assets not based on fundamental values but on “noise” (i.e., information that is not relevant for the valuation of the securities.</li>
-<li>Noise is not necessarily a bad thing to the extent that it generates liquidity in financial markets. Without “noise trading”, do you think people would trade? (the no-trade theorem).</li>
-<li>Also, what if investors are bounded rational? In the no-news example of Huberman and Regev, one reason that can explain this is because we cannot process all the news. We are not mentally capable! We need event that captures our attention to price asset correctly.</li>
+<li>Behavioral biases lead investors to trade on “noise” (irrelevant information)
+<ul>
+<li>Noise trading provides liquidity (see “no-trade theorem”)</li>
+</ul></li>
+<li><strong>Momentum strategies:</strong> Conservatism (anchoring) bias → underreaction to new information (<a href="https://www.sciencedirect.com/science/article/pii/S0304405X98000270">Barberis, Shleifer &amp; Vishny, 1998</a>)</li>
+<li><strong>Contrarian strategies:</strong> Representative heuristic → overreaction by extrapolating past trends</li>
+<li><strong>Bounded rationality:</strong> We can’t process all news → attention-driven pricing (e.g., Huberman &amp; Regev; PEAD)</li>
 </ul>
 </section>
 <section id="pillar-2-investor-errors-are-uncorrelated" class="slide level2">
@@ -1079,7 +1073,7 @@ VR &lt; 1 suggests negative autocorrelation (mean reversion)</code></pre>
 <p><span class="math inline">\Rightarrow</span> If international financial markets are perfectly integrated, then a given set of risky cash flows has the same value and risk characteristics when its trade is redistributed across markets and investors.</p>
 <ul>
 <li>A multinational company that has its shares traded on multiple markets, its twin charters imply that the twins’ stock prices should move in lockstep, in a ratio given by the proportional division of cash flows.</li>
-<li>Froot and Dabora (1999) find that this is not the case for Royal Dutch and Shell, which are independently incorporated in the Netherlands and England, respectively.</li>
+<li><a href="https://www.sciencedirect.com/science/article/pii/S0304405X99000203?casa_token=qqnmNOMI50oAAAAA:4yTg--w-I2UApla1Y8HDfLxLlcn-PkumpFWe9of5CjlkTx87w-NRrpx0hJpJzDh4ZMahEyi6eIIG">Froot and Dabora (1999)</a> find that this is not the case for Royal Dutch and Shell, which are independently incorporated in the Netherlands and England, respectively.</li>
 <li>The structure has grown out of a 1907 alliance between Royal Dutch and Shell Transport by which the two companies agreed to merge their interests on a 60:40 basis (parity) while remaining separate and distinct entities.</li>
 </ul>
 </section>

@@ -29,7 +29,8 @@ jupyter: python3
 5. **Testing Semi-Strong Form Market Efficiency**
    - Event Studies (FFJR 1969)
    - Post-Earnings Announcement Drift (PEAD)
-   - No-News is News (Huberman & Regev), Merger Arbitrage
+   - No-News is News (Huberman & Regev)
+   - Merger Arbitrage
 6. **Testing Strong Form Market Efficiency**
    - Evidence Against: Insider Trading (Lakonishok & Lee)
    - Evidence For: Hacking and Private Information (Akey et al.)
@@ -532,7 +533,8 @@ The strong form says that prices fully reflect ALL information, including public
 
 ![](figures/lakonishok.png){width=90%}
 
-- Note: NPR (x-axis, in decile cut) stands for "Net Purchase Ratio" = (Insider Buys - Insider Sells) / Total Insider Trades
+- Note: NPR (x-axis, in decile cut) stands for "Net Purchase Ratio" = (Insider Buys - Insider Sells) / Total Insider Trades. Post stand for "post-insider buy/sell" and Prior stand for "prior-insider buy/sell".
+- Corporate insider is valuable information for market participants, e.g., see the [Insider Screener website](https://www.insiderscreener.com/en/)
 
 ## Evidence Supporting Strong Form Market Efficiency
 
@@ -546,7 +548,7 @@ To test for strong form market efficiency is not trivial.
 ::: {style="height: 2em;"}
 :::
 
-Akey et al., 2022 examine how private information illegally acquired through hacking is reflected in stock prices in an event study framework.
+Akey et al., 2022 examine how private information (earnings) illegally acquired through hacking is reflected in stock prices in an event study framework.
 
 The plot below shows the buy-and-hold cumulative returns for stocks with top quintile and bottom quintile earnings surprises.
 
@@ -559,15 +561,7 @@ The plot below shows the buy-and-hold cumulative returns for stocks with top qui
 
 Limited attention is often the common cause behind "slow price formation". 
 
-Behavioral explanation to momentum ...
-
-- [Barberis, Shleifer and Vishny (1998, JFE)](https://www.sciencedirect.com/science/article/pii/S0304405X98000270?casa_token=cGoe5ME3DekAAAAA:Du2NFJVKmKJ56CKe373SrkLasJyi3eM6_KX49XUaOAkJWTg-tbKtPmYvWcEDMQFvYjvSwyY2RUHI) suggest the conservatism bias (underreact to information): A “conservatism bias” can lead investors to underreact or underweight new information (related to anchoring bias). That's related to the "52-week high/low"analogy.
-
-Behavioral explanation to contrarian ...
-
-- The “representative heuristic,” which suggests that investors may overly extrapolate a firm’s past extraordinary earning growths into the future and hence overreact to positive (or negative) information that is preceded by positive (or negative) information. That's related to the "good company" survey paper discussed in the prior lecture notes.
-
-## But behavioral forces is only part of the story...
+## The pillars of Market Efficiency
 ::: {style="height: 2em;"}
 :::
 
@@ -582,15 +576,14 @@ Only one of these is actually needed to be true for markets to be perfectly effi
 Let’s look at all three of these pillars into details and when they can “fall”.
 
 ## Pillar 1: All Investors Are Always Rational
-::: {style="height: 2em;"}
-:::
 
 Challenges:
 
-- We have seen in class many examples of irrationality due to behavioral biases.
-- Such biases can lead you to trade assets not based on fundamental values but on “noise” (i.e., information that is not relevant for the valuation of the securities.
-- Noise is not necessarily a bad thing to the extent that it generates liquidity in financial markets. Without “noise trading”, do you think people would trade? (the no-trade theorem).
-- Also, what if investors are bounded rational? In the no-news example of Huberman and Regev, one reason that can explain this is because we cannot process all the news. We are not mentally capable! We need event that captures our attention to price asset correctly.
+- Behavioral biases lead investors to trade on "noise" (irrelevant information)
+  - Noise trading provides liquidity (see "no-trade theorem")
+- **Momentum strategies:** Conservatism (anchoring) bias → underreaction to new information ([Barberis, Shleifer & Vishny, 1998](https://www.sciencedirect.com/science/article/pii/S0304405X98000270))
+- **Contrarian strategies:** Representative heuristic → overreaction by extrapolating past trends
+- **Bounded rationality:** We can't process all news → attention-driven pricing (e.g., Huberman & Regev; PEAD)
 
 ##  Pillar 2: Investor Errors are Uncorrelated
 Challenge:
@@ -660,7 +653,7 @@ The classical finance paradigm predicts that an asset’s price is unaffected by
 $\Rightarrow$ If international financial markets are perfectly integrated, then a given set of risky cash flows has the same value and risk characteristics when its trade is redistributed across markets and investors.
 
 - A multinational company that has its shares traded on multiple markets, its twin charters imply that the twins’ stock prices should move in lockstep, in a ratio given by the proportional division of cash flows.
-- Froot and Dabora (1999) find that this is not the case for Royal Dutch and Shell, which are independently incorporated in the Netherlands and England, respectively.
+- [Froot and Dabora (1999)](https://www.sciencedirect.com/science/article/pii/S0304405X99000203?casa_token=qqnmNOMI50oAAAAA:4yTg--w-I2UApla1Y8HDfLxLlcn-PkumpFWe9of5CjlkTx87w-NRrpx0hJpJzDh4ZMahEyi6eIIG) find that this is not the case for Royal Dutch and Shell, which are independently incorporated in the Netherlands and England, respectively.
 - The structure has grown out of a 1907 alliance between Royal Dutch and Shell Transport by which the two companies agreed to merge their interests on a 60:40 basis (parity) while remaining separate and distinct entities.
 
 ## Example of Limits to Arb.: Froot and Dabora (1999)
