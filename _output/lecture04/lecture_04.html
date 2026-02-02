@@ -555,7 +555,7 @@ Charles Martineau
 
 </div>
 <p>We’ll test whether monthly S&amp;P 500 returns follow a random walk by checking for autocorrelation:</p>
-<div id="b2ed8ef5" class="cell" data-execution_count="1">
+<div id="8bd6c80f" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href=""></a><span class="im">import</span> yfinance <span class="im">as</span> yf</span>
 <span id="cb1-2"><a href=""></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-3"><a href=""></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -608,7 +608,7 @@ Kurtosis: 1.0389</code></pre>
 </section>
 <section id="testing-random-walk-autocorrelation-test-1" class="slide level2">
 <h2>Testing Random Walk: Autocorrelation Test</h2>
-<div id="0b15b328" class="cell" data-execution_count="2">
+<div id="64ede6fe" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href=""></a><span class="co"># Test for autocorrelation using Ljung-Box test</span></span>
 <span id="cb3-2"><a href=""></a>lb_test <span class="op">=</span> acorr_ljungbox(returns, lags<span class="op">=</span><span class="dv">12</span>, return_df<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb3-3"><a href=""></a></span>
@@ -637,7 +637,7 @@ Interpretation: If p-values &lt;= 0.05, we reject H0 that returns are unpredicta
 </section>
 <section id="autocorrelation-test-visualizations" class="slide level2">
 <h2>Autocorrelation Test Visualizations</h2>
-<div id="44547bed" class="cell" data-fig-height="4" data-fig-width="12" data-execution_count="3">
+<div id="c4e78388" class="cell" data-fig-height="4" data-fig-width="12" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href=""></a><span class="co"># Visualize autocorrelation</span></span>
 <span id="cb5-2"><a href=""></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">4</span>))</span>
 <span id="cb5-3"><a href=""></a></span>
@@ -678,7 +678,7 @@ Interpretation: If p-values &lt;= 0.05, we reject H0 that returns are unpredicta
 </section>
 <section id="testing-random-walk-variance-ratio-test-1" class="slide level2">
 <h2>Testing Random Walk: Variance Ratio Test</h2>
-<div id="8050f350" class="cell" data-execution_count="4">
+<div id="f23a7b0c" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href=""></a><span class="kw">def</span> variance_ratio(returns, lag<span class="op">=</span><span class="dv">2</span>):</span>
 <span id="cb6-2"><a href=""></a>    <span class="co">"""</span></span>
 <span id="cb6-3"><a href=""></a><span class="co">    Calculate variance ratio test statistic.</span></span>
@@ -967,13 +967,6 @@ VR &lt; 1 suggests negative autocorrelation (mean reversion)</code></pre>
 <p>The plot below shows the buy-and-hold cumulative returns for stocks with top quintile and bottom quintile earnings surprises for prosecuted (hacked) firms versus non-prosecuted (non-hacked) firms.</p>
 
 <img data-src="figures/hack.png" style="width:90.0%" class="r-stretch"></section>
-<section id="so-what-are-the-forces-limiting-market-efficiency" class="slide level2">
-<h2>So what are the forces limiting market efficiency?</h2>
-<div style="height: 2em;">
-
-</div>
-<p>Limited attention is often the common cause behind “slow price formation”.</p>
-</section>
 <section id="the-pillars-of-market-efficiency" class="slide level2">
 <h2>The pillars of Market Efficiency</h2>
 <div style="height: 2em;">

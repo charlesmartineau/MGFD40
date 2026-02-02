@@ -557,12 +557,6 @@ The plot below shows the buy-and-hold cumulative returns for stocks with top qui
 ![](figures/hack.png){width=90%}
 
 
-## So what are the forces limiting market efficiency? 
-::: {style="height: 2em;"}
-:::
-
-Limited attention is often the common cause behind "slow price formation". 
-
 ## The pillars of Market Efficiency
 ::: {style="height: 2em;"}
 :::
