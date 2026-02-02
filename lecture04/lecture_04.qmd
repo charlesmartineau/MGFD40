@@ -544,13 +544,15 @@ To test for strong form market efficiency is not trivial.
 - You need to compare the effect of a trade on prices of a stock by someone with private information to another similar stock (size, industry, etc) for which one could have private information but did trade on it.
 - This was overcome in [Akey, Gregoire, Martineau (2022)](https://www.sciencedirect.com/science/article/pii/S0304405X21005237).
 
-## Evidence Supporting Strong Form Market Efficiency (Akey et al, 2022)
+## Evidence Supporting Strong Form Market Efficiency (Akey et al, 2022) {.smaller}
 ::: {style="height: 2em;"}
 :::
 
 Akey et al., 2022 examine how private information (earnings) illegally acquired through hacking is reflected in stock prices in an event study framework.
 
-The plot below shows the buy-and-hold cumulative returns for stocks with top quintile and bottom quintile earnings surprises.
+- To see the entire history of the hacking incident, see [this "The Verge" article](https://www.theverge.com/2018/8/22/17716622/sec-business-wire-hack-stolen-press-release-fraud-ukraine).
+
+The plot below shows the buy-and-hold cumulative returns for stocks with top quintile and bottom quintile earnings surprises for prosecuted (hacked) firms versus non-prosecuted (non-hacked) firms.
 
 ![](figures/hack.png){width=90%}
 
