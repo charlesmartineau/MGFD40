@@ -1,0 +1,285 @@
+---
+title: "Lecture 5:<br><span style='color:#045282'>Anomalies, Risk, and Factor Models</span>"
+author: "Charles Martineau"
+institute: "UTSC and Rotman | [www.charlesmartineau.com](https://www.charlesmartineau.com)"
+bibliography: ../lit.bib
+format:
+  revealjs:
+    theme: default
+    slide-number: true
+    chalkboard: true
+    incremental: false
+jupyter: python3
+---
+
+## Recap: Evidence of Anomalies
+::: {style="height: 1em;"}
+:::
+
+We have seen evidence that certain strategies earn abnormal returns:
+
+- **Momentum**: Buy past winners, sell past losers → positive returns
+- **Contrarian**: Buy past losers, sell past winners → positive returns (longer horizons)
+
+These strategies use **long-short portfolios** to isolate the effect.
+
+**Key question**: Are these returns compensation for risk, or evidence of market inefficiency?
+
+## The Zoo of Anomalies
+::: {style="height: 1em;"}
+:::
+
+| Anomaly | Authors | Long-Short Strategy | Behavioral Explanation |
+|---------|---------|---------------------|------------------------|
+| **Value** | Fama & French (1992) | Long high B/M, short low B/M | Overreaction to bad news |
+| **Size** | Banz (1981) | Long small caps, short large caps | Neglect, limited attention |
+| **Momentum** | Jegadeesh & Titman (1993) | Long winners, short losers | Underreaction, slow info diffusion |
+| **Low Volatility** | Ang et al. (2006) | Long low-vol, short high-vol | Lottery preferences, overconfidence |
+| **Profitability** | Novy-Marx (2013) | Long profitable, short unprofitable | Mispricing of earnings quality |
+| **Investment** | Titman et al. (2004) | Long conservative, short aggressive | Overoptimism about growth |
+
+## More Anomalies and Their Behavioral Roots
+::: {style="height: 1em;"}
+:::
+
+| Anomaly | Authors | Long-Short Strategy | Behavioral Explanation |
+|---------|---------|---------------------|------------------------|
+| **Accruals** | Sloan (1996) | Long low accruals, short high accruals | Fixation on earnings, ignoring cash flows |
+| **Asset Growth** | Cooper et al. (2008) | Long low growth, short high growth | Extrapolation bias |
+| **Net Issuance** | Pontiff & Woodgate (2008) | Long repurchasers, short issuers | Market timing by managers |
+| **Earnings Momentum** | Ball & Brown (1968) | Long positive SUE, short negative SUE | Underreaction to earnings news |
+| **Idiosyncratic Vol** | Ang et al. (2006) | Long low IVOL, short high IVOL | Gambling preferences |
+
+Harvey, Liu, and Zhu (2016): "...there are now more than 300 documented anomalies."
+
+## Anomaly or Risk Factor?
+::: {style="height: 2em;"}
+:::
+
+When we observe that a strategy earns positive returns, two interpretations:
+
+**Risk-Based Explanation:**
+
+- The strategy is exposed to systematic risk
+- Returns are compensation for bearing that risk
+- Investors require higher returns for holding risky assets
+
+**Behavioral/Mispricing Explanation:**
+
+- Markets are inefficient
+- Investors make systematic errors
+- Returns are "free lunch" (until arbitraged away)
+
+## How to Distinguish Risk from Mispricing?
+::: {style="height: 1em;"}
+:::
+
+**Evidence for RISK:**
+
+- ✓ Returns covary with bad economic states (recessions, crises)
+- ✓ Strategy is painful to hold when you need money most
+- ✓ Persistent across time periods and markets
+- ✓ Clear economic rationale for the risk
+
+**Evidence for MISPRICING:**
+
+- ✓ Linked to documented behavioral biases
+- ✓ Limits to arbitrage prevent correction
+- ✓ Varies with investor sentiment/attention
+- ✓ Diminishes after publication (arbitraged away)
+
+## Testing Anomalies: The Methodology
+::: {style="height: 1em;"}
+:::
+
+**Step 1:** Form long-short portfolios based on the characteristic
+
+- Sort stocks into deciles/quintiles
+- Go long top decile, short bottom decile
+- Track returns over time
+
+**Step 2:** Regress portfolio returns on factor models
+
+$$R_{LS,t} - R_f = \alpha + \beta_1 (R_m - R_f) + \beta_2 SMB + \beta_3 HML + \epsilon_t$$
+
+**Step 3:** Examine the alpha (intercept)
+
+- Significant $\alpha > 0$ → anomaly not explained by model
+- $\alpha \approx 0$ → returns explained by factor exposures
+
+## Factor Models: From CAPM to Multi-Factor
+::: {style="height: 1em;"}
+:::
+
+**CAPM (1 factor):**
+$$E(R_i) - R_f = \beta_i (E(R_m) - R_f)$$
+
+**Fama-French 3-Factor (1993):**
+$$E(R_i) - R_f = \beta_{MKT}(R_m - R_f) + \beta_{SMB} \cdot SMB + \beta_{HML} \cdot HML$$
+
+**Carhart 4-Factor (1997):** adds Momentum (UMD)
+
+**Fama-French 5-Factor (2015):** adds Profitability (RMW) and Investment (CMA)
+
+Each additional factor potentially "explains away" anomalies.
+
+## What Are These Factors?
+::: {style="height: 1em;"}
+:::
+
+| Factor | Construction | Interpretation |
+|--------|--------------|----------------|
+| **MKT-RF** | Market return minus risk-free | Equity risk premium |
+| **SMB** | Small minus Big (size) | Small firm risk |
+| **HML** | High minus Low (B/M) | Value/distress risk |
+| **UMD** | Up minus Down (momentum) | Momentum risk |
+| **RMW** | Robust minus Weak (profitability) | Earnings quality |
+| **CMA** | Conservative minus Aggressive (investment) | Growth risk |
+
+All factors are **long-short portfolios** themselves!
+
+## Interpreting Regression Output
+::: {style="height: 1em;"}
+:::
+
+Example regression output for a momentum strategy:
+
+| Coefficient | Estimate | t-stat |
+|-------------|----------|--------|
+| Alpha | 0.50% | 2.45 |
+| MKT-RF | 0.05 | 0.82 |
+| SMB | -0.15 | -1.91 |
+| HML | -0.42 | -3.67 |
+
+**Interpretation:**
+
+- **Alpha = 0.50%**: Monthly abnormal return not explained by factors
+- **MKT-RF ≈ 0**: Little market exposure (market neutral)
+- **SMB < 0**: Tilts toward large caps
+- **HML < 0**: Tilts toward growth (momentum loads negatively on value)
+
+## What Does Alpha Tell Us?
+::: {style="height: 2em;"}
+:::
+
+**Significant positive alpha:**
+
+- The anomaly generates returns beyond factor exposures
+- Either: (1) missing risk factor, or (2) true mispricing
+
+**Alpha ≈ 0:**
+
+- Factor model "explains" the anomaly
+- Returns are compensation for factor exposures
+- Not necessarily "free money"
+
+**But**: Explaining ≠ Understanding
+
+- Saying "momentum is explained by HML loading" doesn't tell us WHY
+
+## Real Example: Media Coverage Anomaly
+::: {style="height: 1em;"}
+:::
+
+Fang and Peress (2009) find that stocks with low media coverage earn higher returns.
+
+**Strategy:** Long low-coverage stocks, short high-coverage stocks
+
+![](figures/fang.png){width=80%, .center}
+
+
+**Interpretation:** Alpha shrinks but remains marginally significant. Some of the effect is explained by size/value/momentum, but not fully.
+
+## The Joint Hypothesis Problem
+::: {style="height: 2em;"}
+:::
+
+Fama (1970): "Tests of market efficiency are joint tests of:
+
+1. The efficiency hypothesis, AND
+2. A particular asset-pricing model"
+
+**Implication:** When we find significant alpha, we cannot tell if:
+
+- Markets are **inefficient** (mispricing), OR
+- Our **model is wrong** (missing risk factor)
+
+This is the fundamental identification problem in empirical asset pricing.
+
+## The Joint Hypothesis in Practice
+::: {style="height: 1em;"}
+:::
+
+**Scenario:** You find a strategy with significant CAPM alpha.
+
+**Interpretation A (Mispricing):**
+
+- "CAPM is correct, markets are inefficient"
+- Behavioral biases create exploitable patterns
+
+**Interpretation B (Risk):**
+
+- "Markets are efficient, CAPM is incomplete"
+- The strategy captures a missing risk factor
+- Add the factor to the model (SMB, HML, etc.)
+
+**Reality:** We can never fully resolve this. The debate continues.
+
+## Do Anomalies Survive Publication?
+::: {style="height: 1em;"}
+:::
+
+If anomalies reflect mispricing, arbitrageurs should trade them away once known.
+
+**Key finding:** Many anomalies weaken significantly after publication.
+
+| Study | Finding |
+|-------|---------|
+| McLean & Pontiff (2016) | Returns decline 58% post-publication on average |
+| Schwert (2003) | Size, value, weekend effects weakened after discovery |
+| Chordia et al. (2014) | Short-term reversals disappeared due to algorithmic trading |
+| Martineau (2022) | Post-earnings announcement drift gradually disappeared over time|
+
+**Implication:** Post-publication decay supports the mispricing view—informed traders arbitrage away the profits.
+
+## Why Do Some Anomalies Persist?
+::: {style="height: 1em;"}
+:::
+
+Not all anomalies disappear. Persistence may indicate:
+
+**1. Limits to Arbitrage** (Shleifer & Vishny, 1997)
+
+- Transaction costs, short-selling constraints
+- Idiosyncratic risk deters arbitrageurs
+- Noise trader risk
+
+**2. Continued Behavioral Biases**
+
+- New investors keep making the same mistakes
+- Institutional constraints prevent exploitation
+
+**3. Compensation for Risk**
+
+- If it's truly a risk factor, returns should persist
+- No "free lunch" to arbitrage away
+
+**Key insight:** Anomalies that persist despite publication are more likely risk-based.
+
+## Summary: How to Think About Anomalies
+::: {style="height: 1em;"}
+:::
+
+1. **Document the anomaly** using long-short portfolios
+
+2. **Test against factor models** to see if alpha persists
+
+3. **Consider both explanations:**
+   - Risk: Does it hurt in bad times? Economic rationale?
+   - Mispricing: Behavioral bias? Limits to arbitrage?
+
+4. **Remember the joint hypothesis:**
+   - Rejection of a model ≠ market inefficiency
+   - Could be a missing factor, i.e., you don't have the right asset pricing model!
+
+5. **Beware of data mining:** 300+ anomalies suggests many are spurious

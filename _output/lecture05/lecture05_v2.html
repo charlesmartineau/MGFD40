@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="lecture_05_files/libs/clipboard/clipboard.min.js"></script>
-<script src="lecture_05_files/libs/quarto-html/tabby.min.js"></script>
-<script src="lecture_05_files/libs/quarto-html/popper.min.js"></script>
-<script src="lecture_05_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="lecture_05_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="lecture_05_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="lecture_05_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="lecture_05_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="lecture05_v2_files/libs/clipboard/clipboard.min.js"></script>
+<script src="lecture05_v2_files/libs/quarto-html/tabby.min.js"></script>
+<script src="lecture05_v2_files/libs/quarto-html/popper.min.js"></script>
+<script src="lecture05_v2_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="lecture05_v2_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="lecture05_v2_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="lecture05_v2_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="lecture05_v2_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.55">
 
   <meta name="author" content="Charles Martineau">
-  <title>Lecture 5: Cross-Sectional Asset Pricing Test: Biases and Sentiment Distorting Valuation</title>
+  <title>Lecture 5: Anomalies, Risk, and Factor Models</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="lecture_05_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="lecture_05_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="lecture05_v2_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="lecture05_v2_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -29,73 +29,8 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="lecture_05_files/libs/revealjs/dist/theme/quarto.css">
+  <link rel="stylesheet" href="lecture05_v2_files/libs/revealjs/dist/theme/quarto.css">
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
  var mathElements = document.getElementsByClassName("math");
@@ -112,12 +47,12 @@
 }}});
   </script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
-  <link href="lecture_05_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="lecture_05_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="lecture_05_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="lecture_05_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-  <link href="lecture_05_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
-  <link href="lecture_05_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link href="lecture05_v2_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="lecture05_v2_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="lecture05_v2_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="lecture05_v2_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="lecture05_v2_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="lecture05_v2_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -410,7 +345,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Lecture 5:<br><span style="color:#045282">Cross-Sectional Asset Pricing Test: Biases and Sentiment Distorting Valuation</span></h1>
+  <h1 class="title">Lecture 5:<br><span style="color:#045282">Anomalies, Risk, and Factor Models</span></h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -424,298 +359,446 @@ Charles Martineau
 </div>
 
 </section>
-<section id="capm" class="slide level2">
-<h2>CAPM</h2>
-<p>The Capital Asset Pricing Model (CAPM) is a foundational model in finance that describes the relationship between systematic risk and expected return for stocks.</p>
-<p>Formula: <span class="math display">E(R_i) = R_f + \beta_i (E(R_m) - R_f)</span></p>
-<p>Where:</p>
+<section id="recap-evidence-of-anomalies" class="slide level2">
+<h2>Recap: Evidence of Anomalies</h2>
+<div style="height: 1em;">
+
+</div>
+<p>We have seen evidence that certain strategies earn abnormal returns:</p>
 <ul>
-<li><span class="math inline">E(R_i)</span>: Expected return of asset (i)</li>
-<li><span class="math inline">R_f</span>: Risk-free rate</li>
-<li><span class="math inline">\beta_i</span>: Beta of asset (i) (measure of its sensitivity to market movements)</li>
-<li><span class="math inline">E(R_m)</span>: Expected return of the market portfolio</li>
-<li><span class="math inline">E(R_m) - R_f</span>: Market risk premium</li>
-<li><span class="math inline">\beta_i</span> = <span class="math inline">\frac{Cov(R_i, R_m)}{Var(R_m)}</span></li>
-<li>Assumptions: Investors are rational, markets are efficient, and there are no taxes or transaction costs.</li>
+<li><strong>Momentum</strong>: Buy past winners, sell past losers → positive returns</li>
+<li><strong>Contrarian</strong>: Buy past losers, sell past winners → positive returns (longer horizons)</li>
 </ul>
+<p>These strategies use <strong>long-short portfolios</strong> to isolate the effect.</p>
+<p><strong>Key question</strong>: Are these returns compensation for risk, or evidence of market inefficiency?</p>
 </section>
-<section id="security-market-line-sml" class="slide level2">
-<h2>Security Market Line (SML)</h2>
+<section id="the-zoo-of-anomalies" class="slide level2">
+<h2>The Zoo of Anomalies</h2>
+<div style="height: 1em;">
+
+</div>
+<table class="caption-top">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 33%">
+<col style="width: 38%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Anomaly</th>
+<th>Authors</th>
+<th>Long-Short Strategy</th>
+<th>Behavioral Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Value</strong></td>
+<td>Fama &amp; French (1992)</td>
+<td>Long high B/M, short low B/M</td>
+<td>Overreaction to bad news</td>
+</tr>
+<tr class="even">
+<td><strong>Size</strong></td>
+<td>Banz (1981)</td>
+<td>Long small caps, short large caps</td>
+<td>Neglect, limited attention</td>
+</tr>
+<tr class="odd">
+<td><strong>Momentum</strong></td>
+<td>Jegadeesh &amp; Titman (1993)</td>
+<td>Long winners, short losers</td>
+<td>Underreaction, slow info diffusion</td>
+</tr>
+<tr class="even">
+<td><strong>Low Volatility</strong></td>
+<td>Ang et al.&nbsp;(2006)</td>
+<td>Long low-vol, short high-vol</td>
+<td>Lottery preferences, overconfidence</td>
+</tr>
+<tr class="odd">
+<td><strong>Profitability</strong></td>
+<td>Novy-Marx (2013)</td>
+<td>Long profitable, short unprofitable</td>
+<td>Mispricing of earnings quality</td>
+</tr>
+<tr class="even">
+<td><strong>Investment</strong></td>
+<td>Titman et al.&nbsp;(2004)</td>
+<td>Long conservative, short aggressive</td>
+<td>Overoptimism about growth</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="more-anomalies-and-their-behavioral-roots" class="slide level2">
+<h2>More Anomalies and Their Behavioral Roots</h2>
+<div style="height: 1em;">
+
+</div>
+<table class="caption-top">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 33%">
+<col style="width: 38%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Anomaly</th>
+<th>Authors</th>
+<th>Long-Short Strategy</th>
+<th>Behavioral Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Accruals</strong></td>
+<td>Sloan (1996)</td>
+<td>Long low accruals, short high accruals</td>
+<td>Fixation on earnings, ignoring cash flows</td>
+</tr>
+<tr class="even">
+<td><strong>Asset Growth</strong></td>
+<td>Cooper et al.&nbsp;(2008)</td>
+<td>Long low growth, short high growth</td>
+<td>Extrapolation bias</td>
+</tr>
+<tr class="odd">
+<td><strong>Net Issuance</strong></td>
+<td>Pontiff &amp; Woodgate (2008)</td>
+<td>Long repurchasers, short issuers</td>
+<td>Market timing by managers</td>
+</tr>
+<tr class="even">
+<td><strong>Earnings Momentum</strong></td>
+<td>Ball &amp; Brown (1968)</td>
+<td>Long positive SUE, short negative SUE</td>
+<td>Underreaction to earnings news</td>
+</tr>
+<tr class="odd">
+<td><strong>Idiosyncratic Vol</strong></td>
+<td>Ang et al.&nbsp;(2006)</td>
+<td>Long low IVOL, short high IVOL</td>
+<td>Gambling preferences</td>
+</tr>
+</tbody>
+</table>
+<p>Harvey, Liu, and Zhu (2016): “…there are now more than 300 documented anomalies.”</p>
+</section>
+<section id="anomaly-or-risk-factor" class="slide level2">
+<h2>Anomaly or Risk Factor?</h2>
 <div style="height: 2em;">
 
 </div>
-<p>The Security Market Line (SML) is a graphical representation of the CAPM. It plots the expected return of securities against their beta (systematic risk).</p>
-<p><strong>Key properties:</strong></p>
+<p>When we observe that a strategy earns positive returns, two interpretations:</p>
+<p><strong>Risk-Based Explanation:</strong></p>
 <ul>
-<li>The SML has a y-intercept equal to the risk-free rate <span class="math inline">R_f</span></li>
-<li>The slope of the SML equals the market risk premium <span class="math inline">E(R_m) - R_f</span></li>
-<li>All correctly priced assets should lie on the SML</li>
+<li>The strategy is exposed to systematic risk</li>
+<li>Returns are compensation for bearing that risk</li>
+<li>Investors require higher returns for holding risky assets</li>
+</ul>
+<p><strong>Behavioral/Mispricing Explanation:</strong></p>
+<ul>
+<li>Markets are inefficient</li>
+<li>Investors make systematic errors</li>
+<li>Returns are “free lunch” (until arbitraged away)</li>
 </ul>
 </section>
-<section id="sml-simulated-data" class="slide level2">
-<h2>SML: Simulated Data</h2>
-<div id="05e50295" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href=""></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-2"><a href=""></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-3"><a href=""></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-4"><a href=""></a></span>
-<span id="cb1-5"><a href=""></a><span class="co"># Set random seed for reproducibility</span></span>
-<span id="cb1-6"><a href=""></a>np.random.seed(<span class="dv">42</span>)</span>
-<span id="cb1-7"><a href=""></a></span>
-<span id="cb1-8"><a href=""></a><span class="co"># Define CAPM parameters</span></span>
-<span id="cb1-9"><a href=""></a>R_f <span class="op">=</span> <span class="fl">0.01</span>  <span class="co"># Risk-free rate (3%)</span></span>
-<span id="cb1-10"><a href=""></a>E_R_m <span class="op">=</span> <span class="fl">0.07</span>  <span class="co"># Expected market return (10%)</span></span>
-<span id="cb1-11"><a href=""></a>market_risk_premium <span class="op">=</span> E_R_m <span class="op">-</span> R_f</span>
-<span id="cb1-12"><a href=""></a></span>
-<span id="cb1-13"><a href=""></a><span class="co"># Generate 10 securities with different betas</span></span>
-<span id="cb1-14"><a href=""></a>n_securities <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb1-15"><a href=""></a>betas <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="fl">1.5</span>, n_securities)</span>
-<span id="cb1-16"><a href=""></a></span>
-<span id="cb1-17"><a href=""></a><span class="co"># Calculate expected returns based on CAPM (these will lie perfectly on SML)</span></span>
-<span id="cb1-18"><a href=""></a>expected_returns <span class="op">=</span> betas <span class="op">*</span> market_risk_premium <span class="op">+</span> R_f</span>
-<span id="cb1-19"><a href=""></a></span>
-<span id="cb1-20"><a href=""></a><span class="co"># Add small random noise to make it more realistic</span></span>
-<span id="cb1-21"><a href=""></a>noise <span class="op">=</span> np.random.normal(<span class="dv">0</span>, <span class="fl">0.005</span>, n_securities)</span>
-<span id="cb1-22"><a href=""></a>actual_returns <span class="op">=</span> expected_returns <span class="op">+</span> noise</span>
-<span id="cb1-23"><a href=""></a></span>
-<span id="cb1-24"><a href=""></a><span class="co"># Create DataFrame for display</span></span>
-<span id="cb1-25"><a href=""></a>securities_df <span class="op">=</span> pd.DataFrame(</span>
-<span id="cb1-26"><a href=""></a>    {</span>
-<span id="cb1-27"><a href=""></a>        <span class="st">"Security"</span>: [<span class="ss">f"Stock </span><span class="sc">{</span>i <span class="op">+</span> <span class="dv">1</span><span class="sc">}</span><span class="ss">"</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n_securities)],</span>
-<span id="cb1-28"><a href=""></a>        <span class="st">"Beta"</span>: betas,</span>
-<span id="cb1-29"><a href=""></a>        <span class="st">"Expected Return (%)"</span>: expected_returns <span class="op">*</span> <span class="dv">100</span>,</span>
-<span id="cb1-30"><a href=""></a>        <span class="st">"Actual Return (%)"</span>: actual_returns <span class="op">*</span> <span class="dv">100</span>,</span>
-<span id="cb1-31"><a href=""></a>    }</span>
-<span id="cb1-32"><a href=""></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="sml-simulated-data-1" class="slide level2">
-<h2>SML: Simulated Data</h2>
-<div id="2f0dc8be" class="cell" data-execution_count="2">
-<div class="cell-output cell-output-stdout">
-<pre><code>Simulated Securities Data:
-   Security   Beta  Expected Return (%)  Actual Return (%)
-0   Stock 1  0.000                  1.0              1.248
-1   Stock 2  0.167                  2.0              1.931
-2   Stock 3  0.333                  3.0              3.324
-3   Stock 4  0.500                  4.0              4.762
-4   Stock 5  0.667                  5.0              4.883
-5   Stock 6  0.833                  6.0              5.883
-6   Stock 7  1.000                  7.0              7.790
-7   Stock 8  1.167                  8.0              8.384
-8   Stock 9  1.333                  9.0              8.765
-9  Stock 10  1.500                 10.0             10.271
+<section id="how-to-distinguish-risk-from-mispricing" class="slide level2">
+<h2>How to Distinguish Risk from Mispricing?</h2>
+<div style="height: 1em;">
 
-Risk-free rate: 1.00%
-Market return: 7.00%
-Market risk premium: 6.00%</code></pre>
 </div>
-</div>
-</section>
-<section id="sml-visualization" class="slide level2">
-<h2>SML: Visualization</h2>
-
-<img data-src="lecture_05_files/figure-revealjs/cell-4-output-1.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="but-does-capm-hold-up" class="slide level2">
-<h2>But Does CAPM Hold Up?</h2>
-<p>Let’s test the CAPM using real data: 10 beta-sorted portfolios from Kenneth French’s data library.</p>
-</section>
-<section id="capm-test-french-beta-portfolios" class="slide level2">
-<h2>CAPM Test: French Beta Portfolios</h2>
-<div id="1bfbacc5" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href=""></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb3-2"><a href=""></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb3-3"><a href=""></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb3-4"><a href=""></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
-<span id="cb3-5"><a href=""></a></span>
-<span id="cb3-6"><a href=""></a><span class="co"># Load Fama-French factors data (contains RF and Mkt-RF)</span></span>
-<span id="cb3-7"><a href=""></a>ff_factors <span class="op">=</span> pd.read_excel(<span class="st">"data/ff_portfolios.xlsx"</span>)</span>
-<span id="cb3-8"><a href=""></a>ff_factors[<span class="st">"date"</span>] <span class="op">=</span> pd.to_datetime(ff_factors[<span class="st">"date"</span>], <span class="bu">format</span><span class="op">=</span><span class="st">"%Y%m"</span>)</span>
-<span id="cb3-9"><a href=""></a>ff_factors <span class="op">=</span> ff_factors.set_index(<span class="st">"date"</span>)</span>
-<span id="cb3-10"><a href=""></a></span>
-<span id="cb3-11"><a href=""></a><span class="co"># Load 10 beta-sorted portfolios</span></span>
-<span id="cb3-12"><a href=""></a>beta_portfolios <span class="op">=</span> pd.read_excel(<span class="st">"data/ff_beta_sorted_portfolios.xlsx"</span>)</span>
-<span id="cb3-13"><a href=""></a>beta_portfolios[<span class="st">"date"</span>] <span class="op">=</span> pd.to_datetime(beta_portfolios[<span class="st">"date"</span>], <span class="bu">format</span><span class="op">=</span><span class="st">"%Y%m"</span>)</span>
-<span id="cb3-14"><a href=""></a>beta_portfolios <span class="op">=</span> beta_portfolios.set_index(<span class="st">"date"</span>)</span>
-<span id="cb3-15"><a href=""></a></span>
-<span id="cb3-16"><a href=""></a><span class="co"># Align dates between the two datasets</span></span>
-<span id="cb3-17"><a href=""></a>common_dates <span class="op">=</span> beta_portfolios.index.intersection(ff_factors.index)</span>
-<span id="cb3-18"><a href=""></a>beta_portfolios <span class="op">=</span> beta_portfolios.loc[common_dates]</span>
-<span id="cb3-19"><a href=""></a>ff_factors <span class="op">=</span> ff_factors.loc[common_dates]</span>
-<span id="cb3-20"><a href=""></a></span>
-<span id="cb3-21"><a href=""></a><span class="co"># Get portfolio column names (excluding date if present)</span></span>
-<span id="cb3-22"><a href=""></a>portfolio_cols <span class="op">=</span> [col <span class="cf">for</span> col <span class="kw">in</span> beta_portfolios.columns <span class="cf">if</span> col <span class="kw">not</span> <span class="kw">in</span> [<span class="st">"date"</span>]]</span>
-<span id="cb3-23"><a href=""></a></span>
-<span id="cb3-24"><a href=""></a><span class="co"># Calculate betas for each portfolio using OLS regression</span></span>
-<span id="cb3-25"><a href=""></a>betas <span class="op">=</span> []</span>
-<span id="cb3-26"><a href=""></a><span class="cf">for</span> col <span class="kw">in</span> portfolio_cols:</span>
-<span id="cb3-27"><a href=""></a>    <span class="co"># Portfolio excess returns</span></span>
-<span id="cb3-28"><a href=""></a>    portfolio_excess <span class="op">=</span> beta_portfolios[col] <span class="op">-</span> ff_factors[<span class="st">"RF"</span>]</span>
-<span id="cb3-29"><a href=""></a>    market_excess <span class="op">=</span> ff_factors[<span class="st">"MKT_RF"</span>]</span>
-<span id="cb3-30"><a href=""></a></span>
-<span id="cb3-31"><a href=""></a>    <span class="co"># Run OLS regression: portfolio_excess = alpha + beta * market_excess</span></span>
-<span id="cb3-32"><a href=""></a>    X <span class="op">=</span> sm.add_constant(market_excess)</span>
-<span id="cb3-33"><a href=""></a>    model <span class="op">=</span> sm.OLS(portfolio_excess, X)</span>
-<span id="cb3-34"><a href=""></a>    results <span class="op">=</span> model.fit()</span>
-<span id="cb3-35"><a href=""></a>    beta <span class="op">=</span> results.params[<span class="dv">1</span>]  <span class="co"># Beta is the slope coefficient</span></span>
-<span id="cb3-36"><a href=""></a>    betas.append(beta)</span>
-<span id="cb3-37"><a href=""></a></span>
-<span id="cb3-38"><a href=""></a><span class="co"># Calculate average returns for each portfolio (annualized)</span></span>
-<span id="cb3-39"><a href=""></a>avg_returns <span class="op">=</span> beta_portfolios[portfolio_cols].mean() <span class="op">*</span> <span class="dv">12</span></span>
-<span id="cb3-40"><a href=""></a></span>
-<span id="cb3-41"><a href=""></a><span class="co"># Get risk-free rate and market return (annualized)</span></span>
-<span id="cb3-42"><a href=""></a>rf_rate <span class="op">=</span> ff_factors[<span class="st">"RF"</span>].mean() <span class="op">*</span> <span class="dv">12</span></span>
-<span id="cb3-43"><a href=""></a>market_return <span class="op">=</span> (ff_factors[<span class="st">"MKT_RF"</span>].mean() <span class="op">+</span> ff_factors[<span class="st">"RF"</span>].mean()) <span class="op">*</span> <span class="dv">12</span></span>
-<span id="cb3-44"><a href=""></a></span>
-<span id="cb3-45"><a href=""></a><span class="co"># Create results DataFrame</span></span>
-<span id="cb3-46"><a href=""></a>results_df <span class="op">=</span> pd.DataFrame(</span>
-<span id="cb3-47"><a href=""></a>    {</span>
-<span id="cb3-48"><a href=""></a>        <span class="st">"Portfolio"</span>: [<span class="ss">f"Beta </span><span class="sc">{</span>i <span class="op">+</span> <span class="dv">1</span><span class="sc">}</span><span class="ss">"</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(portfolio_cols))],</span>
-<span id="cb3-49"><a href=""></a>        <span class="st">"Beta"</span>: betas,</span>
-<span id="cb3-50"><a href=""></a>        <span class="st">"Avg Return (%)"</span>: avg_returns.values,</span>
-<span id="cb3-51"><a href=""></a>    }</span>
-<span id="cb3-52"><a href=""></a>)</span>
-<span id="cb3-53"><a href=""></a></span>
-<span id="cb3-54"><a href=""></a><span class="bu">print</span>(<span class="st">"Beta-Sorted Portfolios (Kenneth French Data):"</span>)</span>
-<span id="cb3-55"><a href=""></a><span class="bu">print</span>(results_df.<span class="bu">round</span>(<span class="dv">3</span>))</span>
-<span id="cb3-56"><a href=""></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">Risk-free rate: </span><span class="sc">{</span>rf_rate<span class="sc">:.2f}</span><span class="ss">%"</span>)</span>
-<span id="cb3-57"><a href=""></a><span class="bu">print</span>(<span class="ss">f"Market return: </span><span class="sc">{</span>market_return<span class="sc">:.2f}</span><span class="ss">%"</span>)</span>
-<span id="cb3-58"><a href=""></a><span class="bu">print</span>(<span class="ss">f"Market risk premium: </span><span class="sc">{</span>(market_return <span class="op">-</span> rf_rate)<span class="sc">:.2f}</span><span class="ss">%"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="capm-test-does-it-hold" class="slide level2">
-<h2>CAPM Test: Does It Hold?</h2>
-<div id="f62fec58" class="cell" data-execution_count="5">
-
-<div class="cell-output cell-output-stdout">
-<pre><code>
-CAPM Prediction vs. Actual Returns:
-Portfolio | Beta  | Predicted Return | Actual Return | Alpha
-----------------------------------------------------------------------
-Beta  1   | 0.599 |   8.65% |  10.90% |  +2.24%
-Beta  2   | 0.728 |   9.57% |  10.56% |  +0.99%
-Beta  3   | 0.848 |  10.43% |  11.79% |  +1.36%
-Beta  4   | 0.972 |  11.32% |  12.68% |  +1.36%
-Beta  5   | 1.019 |  11.65% |  12.03% |  +0.38%
-Beta  6   | 1.099 |  12.23% |  12.26% |  +0.03%
-Beta  7   | 1.175 |  12.77% |  12.26% |  -0.51%
-Beta  8   | 1.275 |  13.49% |  13.98% |  +0.49%
-Beta  9   | 1.407 |  14.44% |  14.93% |  +0.49%
-Beta 10   | 1.604 |  15.85% |  13.15% |  -2.70%</code></pre>
-</div>
-</div>
-<img data-src="lecture_05_files/figure-revealjs/cell-6-output-1.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="buy-and-hold-returns" class="slide level2">
-<h2>Buy-and-Hold Returns</h2>
-
-<img data-src="lecture_05_files/figure-revealjs/cell-7-output-1.png" class="quarto-figure quarto-figure-center r-stretch"><ul>
-<li>High-<span class="math inline">\beta</span> stocks earn less than predicted</li>
-<li>Low-<span class="math inline">\beta</span> stocks earn more than predicted</li>
+<p><strong>Evidence for RISK:</strong></p>
+<ul>
+<li>✓ Returns covary with bad economic states (recessions, crises)</li>
+<li>✓ Strategy is painful to hold when you need money most</li>
+<li>✓ Persistent across time periods and markets</li>
+<li>✓ Clear economic rationale for the risk</li>
+</ul>
+<p><strong>Evidence for MISPRICING:</strong></p>
+<ul>
+<li>✓ Linked to documented behavioral biases</li>
+<li>✓ Limits to arbitrage prevent correction</li>
+<li>✓ Varies with investor sentiment/attention</li>
+<li>✓ Diminishes after publication (arbitraged away)</li>
 </ul>
 </section>
-<section id="other-challenges-to-the-capm" class="slide level2">
-<h2>Other challenges to the CAPM</h2>
+<section id="testing-anomalies-the-methodology" class="slide level2">
+<h2>Testing Anomalies: The Methodology</h2>
+<div style="height: 1em;">
+
+</div>
+<p><strong>Step 1:</strong> Form long-short portfolios based on the characteristic</p>
+<ul>
+<li>Sort stocks into deciles/quintiles</li>
+<li>Go long top decile, short bottom decile</li>
+<li>Track returns over time</li>
+</ul>
+<p><strong>Step 2:</strong> Regress portfolio returns on factor models</p>
+<p><span class="math display">R_{LS,t} - R_f = \alpha + \beta_1 (R_m - R_f) + \beta_2 SMB + \beta_3 HML + \epsilon_t</span></p>
+<p><strong>Step 3:</strong> Examine the alpha (intercept)</p>
+<ul>
+<li>Significant <span class="math inline">\alpha &gt; 0</span> → anomaly not explained by model</li>
+<li><span class="math inline">\alpha \approx 0</span> → returns explained by factor exposures</li>
+</ul>
+</section>
+<section id="factor-models-from-capm-to-multi-factor" class="slide level2">
+<h2>Factor Models: From CAPM to Multi-Factor</h2>
+<div style="height: 1em;">
+
+</div>
+<p><strong>CAPM (1 factor):</strong> <span class="math display">E(R_i) - R_f = \beta_i (E(R_m) - R_f)</span></p>
+<p><strong>Fama-French 3-Factor (1993):</strong> <span class="math display">E(R_i) - R_f = \beta_{MKT}(R_m - R_f) + \beta_{SMB} \cdot SMB + \beta_{HML} \cdot HML</span></p>
+<p><strong>Carhart 4-Factor (1997):</strong> adds Momentum (UMD)</p>
+<p><strong>Fama-French 5-Factor (2015):</strong> adds Profitability (RMW) and Investment (CMA)</p>
+<p>Each additional factor potentially “explains away” anomalies.</p>
+</section>
+<section id="what-are-these-factors" class="slide level2">
+<h2>What Are These Factors?</h2>
+<div style="height: 1em;">
+
+</div>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Factor</th>
+<th>Construction</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>MKT-RF</strong></td>
+<td>Market return minus risk-free</td>
+<td>Equity risk premium</td>
+</tr>
+<tr class="even">
+<td><strong>SMB</strong></td>
+<td>Small minus Big (size)</td>
+<td>Small firm risk</td>
+</tr>
+<tr class="odd">
+<td><strong>HML</strong></td>
+<td>High minus Low (B/M)</td>
+<td>Value/distress risk</td>
+</tr>
+<tr class="even">
+<td><strong>UMD</strong></td>
+<td>Up minus Down (momentum)</td>
+<td>Momentum risk</td>
+</tr>
+<tr class="odd">
+<td><strong>RMW</strong></td>
+<td>Robust minus Weak (profitability)</td>
+<td>Earnings quality</td>
+</tr>
+<tr class="even">
+<td><strong>CMA</strong></td>
+<td>Conservative minus Aggressive (investment)</td>
+<td>Growth risk</td>
+</tr>
+</tbody>
+</table>
+<p>All factors are <strong>long-short portfolios</strong> themselves!</p>
+</section>
+<section id="interpreting-regression-output" class="slide level2">
+<h2>Interpreting Regression Output</h2>
+<div style="height: 1em;">
+
+</div>
+<p>Example regression output for a momentum strategy:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Coefficient</th>
+<th>Estimate</th>
+<th>t-stat</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Alpha</td>
+<td>0.50%</td>
+<td>2.45</td>
+</tr>
+<tr class="even">
+<td>MKT-RF</td>
+<td>0.05</td>
+<td>0.82</td>
+</tr>
+<tr class="odd">
+<td>SMB</td>
+<td>-0.15</td>
+<td>-1.91</td>
+</tr>
+<tr class="even">
+<td>HML</td>
+<td>-0.42</td>
+<td>-3.67</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Interpretation:</strong></p>
+<ul>
+<li><strong>Alpha = 0.50%</strong>: Monthly abnormal return not explained by factors</li>
+<li><strong>MKT-RF ≈ 0</strong>: Little market exposure (market neutral)</li>
+<li><strong>SMB &lt; 0</strong>: Tilts toward large caps</li>
+<li><strong>HML &lt; 0</strong>: Tilts toward growth (momentum loads negatively on value)</li>
+</ul>
+</section>
+<section id="what-does-alpha-tell-us" class="slide level2">
+<h2>What Does Alpha Tell Us?</h2>
 <div style="height: 2em;">
 
 </div>
+<p><strong>Significant positive alpha:</strong></p>
 <ul>
-<li><strong>Fama-French Three-Factor Model</strong>: Adds size and value factors to better explain returns.</li>
-<li><strong>Momentum Effect</strong>: Stocks that have performed well in the past tend to continue performing well in the short term.</li>
-<li><strong>Behavioral Biases</strong>: Investor psychology can lead to mispricings that CAPM does not account for.</li>
-<li><strong>Liquidity Risk</strong>: Assets with lower liquidity may require higher expected returns, which CAPM does not consider.</li>
-<li><strong>Empirical Anomalies</strong>: Various market anomalies (e.g., January effect, low-volatility anomaly) that CAPM cannot explain.</li>
+<li>The anomaly generates returns beyond factor exposures</li>
+<li>Either: (1) missing risk factor, or (2) true mispricing</li>
+</ul>
+<p><strong>Alpha ≈ 0:</strong></p>
+<ul>
+<li>Factor model “explains” the anomaly</li>
+<li>Returns are compensation for factor exposures</li>
+<li>Not necessarily “free money”</li>
+</ul>
+<p><strong>But</strong>: Explaining ≠ Understanding</p>
+<ul>
+<li>Saying “momentum is explained by HML loading” doesn’t tell us WHY</li>
 </ul>
 </section>
-<section id="how-to-test-alternative-asset-pricing-models" class="slide level2">
-<h2>How to test alternative asset pricing models?</h2>
+<section id="real-example-media-coverage-anomaly" class="slide level2">
+<h2>Real Example: Media Coverage Anomaly</h2>
+<div style="height: 1em;">
+
+</div>
+<p>Fang and Peress (2009) find that stocks with low media coverage earn higher returns.</p>
+<p><strong>Strategy:</strong> Long low-coverage stocks, short high-coverage stocks</p>
+
+<img data-src="figures/fang.png" class="center r-stretch"><p><strong>Interpretation:</strong> Alpha shrinks but remains marginally significant. Some of the effect is explained by size/value/momentum, but not fully.</p>
+</section>
+<section id="the-joint-hypothesis-problem" class="slide level2">
+<h2>The Joint Hypothesis Problem</h2>
 <div style="height: 2em;">
 
 </div>
-<p>Fama-French 1993 find that size and book-to-market factors help explain the cross-section of average returns better than CAPM alone. Therefore, one should test models by including additional factors.</p>
-<p><span class="math display">E(R_i) = R_f + \beta_{i,MKT} (E(R_m) - R_f) + \beta_{i,SMB} E(SMB) + \beta_{i,HML} E(HML)</span></p>
-<p>Where:</p>
-<ul>
-<li>(SMB): Small Minus Big (size factor)</li>
-<li>(HML): High Minus Low (value factor)</li>
-</ul>
-<p>Fama-French have argued that these additional factors capture systematic risks not accounted for by CAPM.</p>
-</section>
-<section id="anomalies" class="slide level2">
-<h2>Anomalies</h2>
-<div style="height: 2em;">
-
-</div>
-<p>If you find an anomaly that contradicts CAPM, you can:</p>
+<p>Fama (1970): “Tests of market efficiency are joint tests of:</p>
 <ol type="1">
-<li>Propose a new risk factor that explains the anomaly.</li>
-<li>Argue that the anomaly is due to behavioral biases or market frictions.</li>
-<li>Test the anomaly across different markets and time periods to assess its robustness.</li>
-<li>Examine whether the anomaly persists after controlling for known risk factors.</li>
+<li>The efficiency hypothesis, AND</li>
+<li>A particular asset-pricing model”</li>
 </ol>
-<p>How to test these explanations empirically?</p>
+<p><strong>Implication:</strong> When we find significant alpha, we cannot tell if:</p>
 <ul>
-<li>Form a long-short portfolio based on the anomaly. E.g., for the momentum anomaly, go long past winners and short past losers.</li>
-<li>Regress the returns of this long-short portfolio on the factors of the asset pricing model being tested.</li>
-<li>If the alpha (intercept) is statistically significant, it suggests that the anomaly is not fully explained by the model.</li>
+<li>Markets are <strong>inefficient</strong> (mispricing), OR</li>
+<li>Our <strong>model is wrong</strong> (missing risk factor)</li>
 </ul>
+<p>This is the fundamental identification problem in empirical asset pricing.</p>
 </section>
-<section id="testing-an-anomaly-an-example" class="slide level2">
-<h2>Testing an Anomaly: An Example</h2>
-<p>Fang and Peress (2009) find that stocks with high media coverage earn lower returns.</p>
-<ul>
-<li>Form a long-short portfolio: Long low media coverage stocks, short high media coverage stocks.</li>
-</ul>
-
-<img data-src="figures/fang.png" class="center r-stretch"><p>What can you conclude from this regression / findings?</p>
-</section>
-<section id="your-alpha-is-it-risk-or-mispricing" class="slide level2">
-<h2>Your “alpha” is it risk or mispricing?</h2>
-<div style="height: 2em;">
+<section id="the-joint-hypothesis-in-practice" class="slide level2">
+<h2>The Joint Hypothesis in Practice</h2>
+<div style="height: 1em;">
 
 </div>
-<p>RISK-BASED:</p>
+<p><strong>Scenario:</strong> You find a strategy with significant CAPM alpha.</p>
+<p><strong>Interpretation A (Mispricing):</strong></p>
 <ul>
-<li>✓ Does it covary with bad economic states?</li>
-<li>✓ Is it persistent across time/markets?</li>
-<li>✓ Does it capture systematic covariation?</li>
-<li>✓ Can you identify the economic risk?</li>
+<li>“CAPM is correct, markets are inefficient”</li>
+<li>Behavioral biases create exploitable patterns</li>
 </ul>
-<p>MISPRICING-BASED:</p>
+<p><strong>Interpretation B (Risk):</strong></p>
 <ul>
-<li>✓ Is there a behavioral bias that explains it?</li>
-<li>✓ Are there limits to arbitrage?</li>
-<li>✓ Does it vary with sentiment/attention?</li>
-<li>✓ Is there evidence of correction over time?</li>
+<li>“Markets are efficient, CAPM is incomplete”</li>
+<li>The strategy captures a missing risk factor</li>
+<li>Add the factor to the model (SMB, HML, etc.)</li>
 </ul>
+<p><strong>Reality:</strong> We can never fully resolve this. The debate continues.</p>
 </section>
-<section id="zoo-of-anomalies-factors" class="slide level2">
-<h2>Zoo of Anomalies / Factors</h2>
-<p>Campbell R. Harvey, Yan Liu, and Heqing Zhu (2016) “…there are now more than 300 documented anomalies in the asset pricing literature.”</p>
-<ul>
-<li>Is it too easy to find anomalies?</li>
-<li>Data mining concerns</li>
-<li>Publication bias</li>
-<li>P-hacking</li>
-<li>Multiple testing problem</li>
-<li>Lack of out-of-sample validation</li>
-<li>Economic significance vs.&nbsp;statistical significance</li>
-<li>Robustness across different markets and time periods</li>
-<li>Theoretical justification for the anomaly</li>
-<li>Practical implementability (transaction costs, liquidity)</li>
-<li>Survivorship bias in datasets</li>
-</ul>
-</section>
-<section id="joint-hypothesis-problem" class="slide level2">
-<h2>Joint Hypothesis Problem</h2>
-<div style="height: 2em;">
+<section id="do-anomalies-survive-publication" class="slide level2">
+<h2>Do Anomalies Survive Publication?</h2>
+<div style="height: 1em;">
 
 </div>
-<p>Fama (1970) argued that “tests of the efficiency of markets are joint tests of the efficiency hypothesis and of a particular asset-pricing model.”</p>
-<p><strong>Implication:</strong> Rejection of an asset pricing model does not necessarily imply market inefficiency; it could also indicate that the model is misspecified.</p>
+<p>If anomalies reflect mispricing, arbitrageurs should trade them away once known.</p>
+<p><strong>Key finding:</strong> Many anomalies weaken significantly after publication.</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 43%">
+<col style="width: 56%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Study</th>
+<th>Finding</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>McLean &amp; Pontiff (2016)</td>
+<td>Returns decline 58% post-publication on average</td>
+</tr>
+<tr class="even">
+<td>Schwert (2003)</td>
+<td>Size, value, weekend effects weakened after discovery</td>
+</tr>
+<tr class="odd">
+<td>Chordia et al.&nbsp;(2014)</td>
+<td>Short-term reversals disappeared due to algorithmic trading</td>
+</tr>
+<tr class="even">
+<td>Martineau (2022)</td>
+<td>Post-earnings announcement drift gradually disappeared over time</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Implication:</strong> Post-publication decay supports the mispricing view—informed traders arbitrage away the profits.</p>
 </section>
-<section id="is-the-capm-really-dead" class="slide level2">
-<h2>Is the CAPM really dead?</h2>
-<p>Hasler and Martineau (2022) find that the conditional CAPM holds up well when accounting for time-varying betas and risk premia.</p>
+<section id="why-do-some-anomalies-persist" class="slide level2">
+<h2>Why Do Some Anomalies Persist?</h2>
+<div style="height: 1em;">
+
+</div>
+<p>Not all anomalies disappear. Persistence may indicate:</p>
+<p><strong>1. Limits to Arbitrage</strong> (Shleifer &amp; Vishny, 1997)</p>
+<ul>
+<li>Transaction costs, short-selling constraints</li>
+<li>Idiosyncratic risk deters arbitrageurs</li>
+<li>Noise trader risk</li>
+</ul>
+<p><strong>2. Continued Behavioral Biases</strong></p>
+<ul>
+<li>New investors keep making the same mistakes</li>
+<li>Institutional constraints prevent exploitation</li>
+</ul>
+<p><strong>3. Compensation for Risk</strong></p>
+<ul>
+<li>If it’s truly a risk factor, returns should persist</li>
+<li>No “free lunch” to arbitrage away</li>
+</ul>
+<p><strong>Key insight:</strong> Anomalies that persist despite publication are more likely risk-based.</p>
+</section>
+<section id="summary-how-to-think-about-anomalies" class="slide level2">
+<h2>Summary: How to Think About Anomalies</h2>
+<div style="height: 1em;">
+
+</div>
+<ol type="1">
+<li><p><strong>Document the anomaly</strong> using long-short portfolios</p></li>
+<li><p><strong>Test against factor models</strong> to see if alpha persists</p></li>
+<li><p><strong>Consider both explanations:</strong></p>
+<ul>
+<li>Risk: Does it hurt in bad times? Economic rationale?</li>
+<li>Mispricing: Behavioral bias? Limits to arbitrage?</li>
+</ul></li>
+<li><p><strong>Remember the joint hypothesis:</strong></p>
+<ul>
+<li>Rejection of a model ≠ market inefficiency</li>
+<li>Could be a missing factor, i.e., you don’t have the right asset pricing model!</li>
+</ul></li>
+<li><p><strong>Beware of data mining:</strong> 300+ anomalies suggests many are spurious</p></li>
+</ol>
 <div class="quarto-auto-generated-content">
 <p><img src="../logos/uoft.png" class="slide-logo"></p>
 <div class="footer footer-default">
@@ -727,19 +810,19 @@ Beta 10   | 1.604 |  15.85% |  13.15% |  -2.70%</code></pre>
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="lecture_05_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="lecture05_v2_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="lecture_05_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="lecture_05_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="lecture_05_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="lecture_05_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="lecture_05_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
-  <script src="lecture_05_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="lecture05_v2_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="lecture05_v2_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="lecture05_v2_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="lecture05_v2_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="lecture05_v2_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="lecture05_v2_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="lecture_05_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="lecture_05_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="lecture_05_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="lecture05_v2_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="lecture05_v2_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="lecture05_v2_files/libs/revealjs/plugin/zoom/zoom.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
