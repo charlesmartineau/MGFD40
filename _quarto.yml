@@ -13,11 +13,9 @@ execute:
   python: .venv/bin/python
 format:
   revealjs:
+    embed-resources: true
     theme: [default, custom.scss]
     html-math-method: katex
-    chalkboard:
-      theme: whiteboard
-      buttons: false
     slide-number: true
     footer: "MGFD40"
     logo: "logos/uoft.png"

@@ -7,9 +7,7 @@ format:
   revealjs:
     theme: default
     slide-number: true
-    chalkboard: true
     incremental: false
-jupyter: python3
 ---
 
 ## Recap: Evidence of Anomalies
