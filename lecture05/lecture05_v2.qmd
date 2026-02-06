@@ -19,9 +19,11 @@ We have seen evidence that certain strategies earn abnormal returns:
 - **Momentum**: Buy past winners, sell past losers → positive returns
 - **Contrarian**: Buy past losers, sell past winners → positive returns (longer horizons)
 
+[Harvey, Liu, and Zhu (2016)](http://www.aea.ru/data/pdf/campbell.pdf) document that "...there are now more than 300 documented anomalies."
+
 These strategies use **long-short portfolios** to isolate the effect.
 
-**Key question**: Are these returns compensation for risk, or evidence of market inefficiency?
+**Key question**: Are these returns *compensation for risk*, or evidence of *market inefficiency* caused by some behavioral bias?
 
 ## The Zoo of Anomalies
 ::: {style="height: 1em;"}
@@ -29,12 +31,11 @@ These strategies use **long-short portfolios** to isolate the effect.
 
 | Anomaly | Authors | Long-Short Strategy | Behavioral Explanation |
 |---------|---------|---------------------|------------------------|
-| **Value** | Fama & French (1992) | Long high B/M, short low B/M | Overreaction to bad news |
-| **Size** | Banz (1981) | Long small caps, short large caps | Neglect, limited attention |
-| **Momentum** | Jegadeesh & Titman (1993) | Long winners, short losers | Underreaction, slow info diffusion |
-| **Low Volatility** | Ang et al. (2006) | Long low-vol, short high-vol | Lottery preferences, overconfidence |
-| **Profitability** | Novy-Marx (2013) | Long profitable, short unprofitable | Mispricing of earnings quality |
-| **Investment** | Titman et al. (2004) | Long conservative, short aggressive | Overoptimism about growth |
+| **Value** | [Fama & French (1992)](https://home.cerge-ei.cz/petrz/gdn/Fama_French_92_tables.pdf)| Long high B/M, short low B/M | Overreaction to bad news |
+| **Size** | [Banz (1981)](https://www.sciencedirect.com/science/article/abs/pii/0304405X81900180) | Long small caps, short large caps | Neglect, limited attention |
+| **Momentum** | [Jegadeesh & Titman (1993)](https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=Jegadeesh+%26+Titman+(1993)&btnG=) | Long winners, short losers | Underreaction, slow info diffusion |
+| **Profitability** | [Novy-Marx (2013)](https://www.sciencedirect.com/science/article/pii/S0304405X13000044?casa_token=dQlBOOOdJGsAAAAA:IWPGOOetAF4inFBn8Q8fzmrUoJw1Fvd8OMZaIRvYmYal3IAQNn51g6gVW0Nmg839hljqVhkGi4U) | Long profitable, short unprofitable | Mispricing of earnings quality |
+| **Investment** | [Titman et al. (2004)](https://www.cambridge.org/core/journals/journal-of-financial-and-quantitative-analysis/article/abs/capital-investments-and-stock-returns/2C5E2AD6BEBB31D61A126FC4AB6FBFA2) | Long conservative, short aggressive | Overoptimism about growth |
 
 ## More Anomalies and Their Behavioral Roots
 ::: {style="height: 1em;"}
@@ -42,13 +43,12 @@ These strategies use **long-short portfolios** to isolate the effect.
 
 | Anomaly | Authors | Long-Short Strategy | Behavioral Explanation |
 |---------|---------|---------------------|------------------------|
-| **Accruals** | Sloan (1996) | Long low accruals, short high accruals | Fixation on earnings, ignoring cash flows |
-| **Asset Growth** | Cooper et al. (2008) | Long low growth, short high growth | Extrapolation bias |
-| **Net Issuance** | Pontiff & Woodgate (2008) | Long repurchasers, short issuers | Market timing by managers |
-| **Earnings Momentum** | Ball & Brown (1968) | Long positive SUE, short negative SUE | Underreaction to earnings news |
-| **Idiosyncratic Vol** | Ang et al. (2006) | Long low IVOL, short high IVOL | Gambling preferences |
+| **Accruals** | [Sloan (1996)](https://www.jstor.org/stable/pdf/248290.pdf) | Long low accruals, short high accruals | Fixation on earnings, ignoring cash flows |
+| **Asset Growth** | [Cooper et al. (2008)](https://onlinelibrary.wiley.com/doi/full/10.1111/j.1540-6261.2008.01370.x?casa_token=2inImveenesAAAAA%3A6wAS6Zr0_02SaUyik0sj8blRxY49yEWlh5TIsYx62_PLfsb7UOmJAD8u6npcFNxUo8dR9SDkYDKfpUM) | Long low growth, short high growth | Extrapolation bias |
+| **Net Issuance** | [Pontiff & Woodgate (2008)](https://onlinelibrary.wiley.com/doi/full/10.1111/j.1540-6261.2008.01335.x) | Long repurchasers, short issuers | Market timing by managers |
+| **Earnings Momentum** | [Ball & Brown (1968)](https://www.jstor.org/stable/2490232?seq=1) | Long positive SUE, short negative SUE | Limited attention |
+| **Idiosyncratic Vol** | [Ang et al. (2006)](https://onlinelibrary.wiley.com/doi/full/10.1111/j.1540-6261.2006.00836.x?casa_token=DsIr1L8WGcMAAAAA%3AP_31X37c42Ln1Bm5cpUBIdYSq35HW3qfpSXgJUxSY9g3bmNrZpU6GM7AGYSpL3ypZ_yaxKGccNia3pg) | Long low IVOL, short high IVOL | Gambling preferences |
 
-Harvey, Liu, and Zhu (2016): "...there are now more than 300 documented anomalies."
 
 ## Anomaly or Risk Factor?
 ::: {style="height: 2em;"}
@@ -115,10 +115,6 @@ $$E(R_i) - R_f = \beta_i (E(R_m) - R_f)$$
 **Fama-French 3-Factor (1993):**
 $$E(R_i) - R_f = \beta_{MKT}(R_m - R_f) + \beta_{SMB} \cdot SMB + \beta_{HML} \cdot HML$$
 
-**Carhart 4-Factor (1997):** adds Momentum (UMD)
-
-**Fama-French 5-Factor (2015):** adds Profitability (RMW) and Investment (CMA)
-
 Each additional factor potentially "explains away" anomalies.
 
 ## What Are These Factors?
@@ -130,9 +126,6 @@ Each additional factor potentially "explains away" anomalies.
 | **MKT-RF** | Market return minus risk-free | Equity risk premium |
 | **SMB** | Small minus Big (size) | Small firm risk |
 | **HML** | High minus Low (B/M) | Value/distress risk |
-| **UMD** | Up minus Down (momentum) | Momentum risk |
-| **RMW** | Robust minus Weak (profitability) | Earnings quality |
-| **CMA** | Conservative minus Aggressive (investment) | Growth risk |
 
 All factors are **long-short portfolios** themselves!
 
@@ -140,7 +133,7 @@ All factors are **long-short portfolios** themselves!
 ::: {style="height: 1em;"}
 :::
 
-Example regression output for a momentum strategy:
+Example regression output for an hypothetical momentum strategy:
 
 | Coefficient | Estimate | t-stat |
 |-------------|----------|--------|
@@ -175,24 +168,25 @@ Example regression output for a momentum strategy:
 
 - Saying "momentum is explained by HML loading" doesn't tell us WHY
 
+
 ## Real Example: Media Coverage Anomaly
 ::: {style="height: 1em;"}
 :::
 
-Fang and Peress (2009) find that stocks with low media coverage earn higher returns.
+[Fang and Peress (2009)](https://onlinelibrary.wiley.com/doi/full/10.1111/j.1540-6261.2009.01493.x?casa_token=w2rYYekmgB0AAAAA%3AQg2eWRKBIyM8ZyGbPuThAiPnEszKAygMLU2--wrUg2renEg6gLDP2Wle20pEoFj91r7nM8wtwBBrJi4) find that stocks with low media coverage earn higher returns.
 
 **Strategy:** Long low-coverage stocks, short high-coverage stocks
 
 ![](figures/fang.png){width=80%, .center}
 
 
-**Interpretation:** Alpha shrinks but remains marginally significant. Some of the effect is explained by size/value/momentum, but not fully.
+**Interpretation:** Alpha shrinks but remains marginally significant. Some of the effect is explained by size/value/momentum, but not fully. This could be a risk factor (e.g., illiquidity) or mispricing (neglected stocks). Its up to the authors to make the case.
 
 ## The Joint Hypothesis Problem
 ::: {style="height: 2em;"}
 :::
 
-Fama (1970): "Tests of market efficiency are joint tests of:
+[Fama (1970)](https://www.jstor.org/stable/2325486?casa_token=5LwsiVj8NS4AAAAA%3A_1laeZh-bmCY0nq5gVUUpGBdjJ-fuiOEQ7LmUdMIGTNzmN1xj4xrBgNtaguAw4seQetevB63j1ybU9a5Dn1lpJntC568LXV3tLmmfkUP_F4bznlzhL_K): "Tests of market efficiency are joint tests of:
 
 1. The efficiency hypothesis, AND
 2. A particular asset-pricing model"
@@ -233,16 +227,14 @@ If anomalies reflect mispricing, arbitrageurs should trade them away once known.
 
 | Study | Finding |
 |-------|---------|
-| McLean & Pontiff (2016) | Returns decline 58% post-publication on average |
-| Schwert (2003) | Size, value, weekend effects weakened after discovery |
-| Chordia et al. (2014) | Short-term reversals disappeared due to algorithmic trading |
-| Martineau (2022) | Post-earnings announcement drift gradually disappeared over time|
+| [McLean & Pontiff (2016)](https://onlinelibrary.wiley.com/doi/full/10.1111/jofi.12365?casa_token=WmhogPE-jNMAAAAA%3A8KLJnkzDVcySZ4PjXKJXi_GJcANdkrp4jMiGJbaLv13EdlsvChnekFcZK0VLLpSZIKpmTBz196dwQuo) | Returns decline 58% post-publication on average |
+| [Schwert (2003)](https://www.sciencedirect.com/science/chapter/handbook/abs/pii/S1574010203010240) | Size, value, weekend effects weakened after discovery |
+| [Chordia et al. (2014)](https://www.sciencedirect.com/science/article/pii/S0165410114000275?casa_token=bMCOJbsOp3kAAAAA:WEodC3OXjDn6eRfJoe7pMqxYnC0QK5th5zO5aNLEZo0CXWRT33PS69poGllHj6IDeTBVNjSD3Ro) | Short-term reversals disappeared due to algorithmic trading |
+| [Martineau (2022)](https://www.emerald.com/cfr/article-abstract/11/3-4/613/1324916/Rest-in-Peace-Post-Earnings-Announcement-Drift) | Post-earnings announcement drift gradually disappeared over time|
 
 **Implication:** Post-publication decay supports the mispricing view—informed traders arbitrage away the profits.
 
 ## Why Do Some Anomalies Persist?
-::: {style="height: 1em;"}
-:::
 
 Not all anomalies disappear. Persistence may indicate:
 
@@ -262,7 +254,7 @@ Not all anomalies disappear. Persistence may indicate:
 - If it's truly a risk factor, returns should persist
 - No "free lunch" to arbitrage away
 
-**Key insight:** Anomalies that persist despite publication are more likely risk-based.
+**Key insight:** Anomalies that persist despite publication *might suggest* that they are more likely risk-based.
 
 ## Summary: How to Think About Anomalies
 ::: {style="height: 1em;"}
