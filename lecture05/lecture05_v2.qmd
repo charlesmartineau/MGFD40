@@ -60,7 +60,7 @@ When we observe that a strategy earns positive returns, two interpretations:
 
 - The strategy is exposed to systematic risk
 - Returns are compensation for bearing that risk
-- Investors require higher returns for holding risky assets
+- Investors require higher returns for holding risky assets, i.e., strategy returns covary with bad economic states, generating losses when marginal utility is high
 
 **Behavioral/Mispricing Explanation:**
 
@@ -115,7 +115,7 @@ $$E(R_i) - R_f = \beta_i (E(R_m) - R_f)$$
 **Fama-French 3-Factor (1993):**
 $$E(R_i) - R_f = \beta_{MKT}(R_m - R_f) + \beta_{SMB} \cdot SMB + \beta_{HML} \cdot HML$$
 
-Each additional factor potentially "explains away" anomalies.
+Each additional factor potentially "explains away" anomalies. You saw in your investment management course that the 3-factor model captures size premium (small-minus-big, SMB, size factor) and value premium (high-minus-low, HML, book-to-market) effects.
 
 ## What Are These Factors?
 ::: {style="height: 1em;"}
@@ -147,7 +147,7 @@ Example regression output for an hypothetical momentum strategy:
 - **Alpha = 0.50%**: Monthly abnormal return not explained by factors
 - **MKT-RF ≈ 0**: Little market exposure (market neutral)
 - **SMB < 0**: Tilts toward large caps
-- **HML < 0**: Tilts toward growth (momentum loads negatively on value)
+- **HML < 0**: Tilts toward growth (momentum loads negatively on value stocks)
 
 ## What Does Alpha Tell Us?
 ::: {style="height: 2em;"}

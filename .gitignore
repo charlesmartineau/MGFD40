@@ -213,3 +213,6 @@ __marimo__/
 
 # Mac files
 .DS_Store
+
+# ignore folder question in root
+/question/
