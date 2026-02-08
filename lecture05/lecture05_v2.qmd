@@ -14,6 +14,10 @@ format:
 ::: {style="height: 1em;"}
 :::
 
+Behavioral finance excels at documenting many anomalies that challenge the traditional view of efficient markets. 
+
+- These anomalies suggest that investors may not always act rationally, leading to predictable patterns in stock returns.
+
 We have seen evidence that certain strategies earn abnormal returns:
 
 - **Momentum**: Buy past winners, sell past losers → positive returns
@@ -61,12 +65,13 @@ When we observe that a strategy earns positive returns, two interpretations:
 - The strategy is exposed to systematic risk
 - Returns are compensation for bearing that risk
 - Investors require higher returns for holding risky assets, i.e., strategy returns covary with bad economic states, generating losses when marginal utility is high
+- I.e., You can't diversify away this risk, so you get paid for bearing it.
 
 **Behavioral/Mispricing Explanation:**
 
 - Markets are inefficient
 - Investors make systematic errors
-- Returns are "free lunch" (until arbitraged away)
+- Returns are achievable until arbitraged away
 
 ## How to Distinguish Risk from Mispricing?
 ::: {style="height: 1em;"}
@@ -96,14 +101,14 @@ When we observe that a strategy earns positive returns, two interpretations:
 - Go long top decile, short bottom decile
 - Track returns over time
 
-**Step 2:** Regress portfolio returns on factor models
+**Step 2:** Regress the long-short portfolio returns on factor models
 
-$$R_{LS,t} - R_f = \alpha + \beta_1 (R_m - R_f) + \beta_2 SMB + \beta_3 HML + \epsilon_t$$
+$$R_{LS,t} - R_f = \alpha + \beta^\prime Factors + \epsilon_t$$
 
 **Step 3:** Examine the alpha (intercept)
 
-- Significant $\alpha > 0$ → anomaly not explained by model
-- $\alpha \approx 0$ → returns explained by factor exposures
+- Significant $\alpha > 0$, with $t$-statistic significant → anomaly not explained by model
+- $\alpha \approx 0$ with $t$-statistic insignificant → returns explained by factor exposures
 
 ## Factor Models: From CAPM to Multi-Factor
 ::: {style="height: 1em;"}
@@ -162,7 +167,6 @@ Example regression output for an hypothetical momentum strategy:
 
 - Factor model "explains" the anomaly
 - Returns are compensation for factor exposures
-- Not necessarily "free money"
 
 **But**: Explaining ≠ Understanding
 
@@ -180,7 +184,7 @@ Example regression output for an hypothetical momentum strategy:
 ![](figures/fang.png){width=80%, .center}
 
 
-**Interpretation:** Alpha shrinks but remains marginally significant. Some of the effect is explained by size/value/momentum, but not fully. This could be a risk factor (e.g., illiquidity) or mispricing (neglected stocks). Its up to the authors to make the case.
+**Interpretation:** Alpha shrinks but remains marginally significant. Some of the effect is explained by size/value/momentum, but not fully. This could be a risk factor (e.g., illiquidity) or mispricing (neglected stocks). It's up to the authors to make the case.
 
 ## The Joint Hypothesis Problem
 ::: {style="height: 2em;"}
