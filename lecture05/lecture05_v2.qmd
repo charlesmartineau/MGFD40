@@ -99,9 +99,9 @@ When we observe that a strategy earns positive returns, two interpretations:
 
 - Sort stocks into deciles/quintiles
 - Go long top decile, short bottom decile
-- Track returns over time
+- Track the long-short returns over time
 
-**Step 2:** Regress the long-short portfolio returns on factor models
+**Step 2:** Regress the long-short portfolio returns $R_{LS,t}$ on factor models
 
 $$R_{LS,t} - R_f = \alpha + \beta^\prime Factors + \epsilon_t$$
 
@@ -115,10 +115,10 @@ $$R_{LS,t} - R_f = \alpha + \beta^\prime Factors + \epsilon_t$$
 :::
 
 **CAPM (1 factor):**
-$$E(R_i) - R_f = \beta_i (E(R_m) - R_f)$$
+$$R_{LS,t} = \beta_i (E(R_m) - R_f)$$
 
 **Fama-French 3-Factor (1993):**
-$$E(R_i) - R_f = \beta_{MKT}(R_m - R_f) + \beta_{SMB} \cdot SMB + \beta_{HML} \cdot HML$$
+$$R_{LS,t} = \beta_{MKT}(R_m - R_f) + \beta_{SMB} \cdot SMB + \beta_{HML} \cdot HML$$
 
 Each additional factor potentially "explains away" anomalies. You saw in your investment management course that the 3-factor model captures size premium (small-minus-big, SMB, size factor) and value premium (high-minus-low, HML, book-to-market) effects.
 
@@ -132,7 +132,7 @@ Each additional factor potentially "explains away" anomalies. You saw in your in
 | **SMB** | Small minus Big (size) | Small firm risk |
 | **HML** | High minus Low (B/M) | Value/distress risk |
 
-All factors are **long-short portfolios** themselves!
+All factors are **long-short portfolios** themselves! There are more complicated factor models out there. 
 
 ## Interpreting Regression Output
 ::: {style="height: 1em;"}
@@ -192,7 +192,7 @@ Example regression output for an hypothetical momentum strategy:
 
 [Fama (1970)](https://www.jstor.org/stable/2325486?casa_token=5LwsiVj8NS4AAAAA%3A_1laeZh-bmCY0nq5gVUUpGBdjJ-fuiOEQ7LmUdMIGTNzmN1xj4xrBgNtaguAw4seQetevB63j1ybU9a5Dn1lpJntC568LXV3tLmmfkUP_F4bznlzhL_K): "Tests of market efficiency are joint tests of:
 
-1. The efficiency hypothesis, AND
+1. The efficiency hypothesis, **AND**
 2. A particular asset-pricing model"
 
 **Implication:** When we find significant alpha, we cannot tell if:
