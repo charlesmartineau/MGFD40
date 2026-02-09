@@ -54,33 +54,15 @@ These strategies use **long-short portfolios** to isolate the effect.
 | **Idiosyncratic Vol** | [Ang et al. (2006)](https://onlinelibrary.wiley.com/doi/full/10.1111/j.1540-6261.2006.00836.x?casa_token=DsIr1L8WGcMAAAAA%3AP_31X37c42Ln1Bm5cpUBIdYSq35HW3qfpSXgJUxSY9g3bmNrZpU6GM7AGYSpL3ypZ_yaxKGccNia3pg) | Long low IVOL, short high IVOL | Gambling preferences |
 
 
-## Anomaly or Risk Factor?
-::: {style="height: 2em;"}
-:::
-
-When we observe that a strategy earns positive returns, two interpretations:
-
-**Risk-Based Explanation:**
-
-- The strategy is exposed to systematic risk
-- Returns are compensation for bearing that risk
-- Investors require higher returns for holding risky assets, i.e., strategy returns covary with bad economic states, generating losses when marginal utility is high
-- I.e., You can't diversify away this risk, so you get paid for bearing it.
-
-**Behavioral/Mispricing Explanation:**
-
-- Markets are inefficient
-- Investors make systematic errors
-- Returns are achievable until arbitraged away
-
 ## How to Distinguish Risk from Mispricing?
 ::: {style="height: 1em;"}
 :::
 
+When we observe that a strategy earns positive returns, two interpretations:
+
 **Evidence for RISK:**
 
 - ✓ Returns covary with bad economic states (recessions, crises)
-- ✓ Strategy is painful to hold when you need money most
 - ✓ Persistent across time periods and markets
 - ✓ Clear economic rationale for the risk
 
@@ -120,7 +102,7 @@ $$R_{LS,t} = \beta_i (E(R_m) - R_f)$$
 **Fama-French 3-Factor (1993):**
 $$R_{LS,t} = \beta_{MKT}(R_m - R_f) + \beta_{SMB} \cdot SMB + \beta_{HML} \cdot HML$$
 
-Each additional factor potentially "explains away" anomalies. You saw in your investment management course that the 3-factor model captures size premium (small-minus-big, SMB, size factor) and value premium (high-minus-low, HML, book-to-market) effects.
+Each additional factor potentially "explains away" anomalies. 
 
 ## What Are These Factors?
 ::: {style="height: 1em;"}
