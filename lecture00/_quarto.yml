@@ -1,0 +1,40 @@
+project:
+  type: default
+  output-dir: ../_output/lecture00
+
+# Standalone HTML "companion website" for the statistics refresher (Issue #2).
+# Rendered independently of the slide decks:  cd lecture00 && quarto render
+format:
+  html:
+    theme: [cosmo, styles.scss]
+    toc: true
+    toc-depth: 3
+    toc-location: left
+    toc-title: "On this page"
+    number-sections: true
+    number-depth: 2
+    code-fold: false
+    code-tools: true
+    code-copy: true
+    code-overflow: scroll
+    highlight-style: github
+    html-math-method: katex
+    fig-width: 8
+    fig-height: 4.5
+    fig-align: center
+    smooth-scroll: true
+    link-external-newwindow: true
+    df-print: paged
+
+execute:
+  python: ../.venv/bin/python
+  freeze: auto
+  warning: false
+  message: false
+
+author:
+  - name: Charles Martineau
+    affiliation: "UTSC and Rotman"
+    url: "https://www.charlesmartineau.com"
+
+bibliography: ../lit.bib

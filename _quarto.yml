@@ -2,6 +2,7 @@ project:
   output-dir: _output
   render:
     - "lecture*/*.qmd"
+    - "!lecture00/**"   # lecture00 is a standalone HTML companion site (its own _quarto.yml)
   resources:
     - "logos/**"
     - "lecture*/figures/**"

@@ -1,0 +1,49 @@
+/*-- scss:defaults --*/
+
+// Reuse the course brand palette (see custom.scss)
+$primary:        #0072ce;   // dark-blue
+$link-color:     #055f96;
+$body-color:     #1f2933;
+$font-family-sans-serif: "Noto Serif", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+$font-family-monospace:  "Fira Mono", monospace;
+$headings-font-family:   Poppins, "Noto Sans", sans-serif;
+$h1-font-size:  2.1rem;
+$h2-font-size:  1.6rem;
+$toc-color:     #055f96;
+
+/*-- scss:rules --*/
+
+// Brand color helpers (mirrors custom.scss so we can reuse spans)
+.primary-color   { color: #055f96; }
+.dark-blue       { color: #0072ce; }
+.dark-green      { color: #26d07c; }
+.dark-red        { color: #ff585d; }
+
+h1, h2, h3 { color: #0072ce; }
+
+// Callout-style "key idea" boxes
+.keyidea {
+  background: #e8f2fc;
+  border-left: 5px solid #0072ce;
+  padding: 1rem 1.25rem;
+  border-radius: 6px;
+  margin: 1.25rem 0;
+}
+.keyidea > p:first-child { margin-top: 0; }
+.keyidea > p:last-child  { margin-bottom: 0; }
+
+.warn {
+  background: #fff1f2;
+  border-left: 5px solid #ff585d;
+  padding: 1rem 1.25rem;
+  border-radius: 6px;
+  margin: 1.25rem 0;
+}
+
+// Make regression / code output readable
+pre code { font-size: 0.82em; line-height: 1.35; }
+
+table { font-size: 0.95em; }
+
+// A little breathing room in the reading column
+.page-columns .content { max-width: 52rem; }
