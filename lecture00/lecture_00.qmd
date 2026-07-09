@@ -12,8 +12,6 @@ tables, you can read the paper. These notes teach you exactly that, and pair eve
 statistical idea with the Python that produces it, so you can see how the code maps
 onto the output you'll be reading.
 
-Prerequisites are light: MGEB12 (Quantitative Methods II) and a bit of Python. If a
-term is fuzzy, that's fine — that's what this refresher is for.
 :::
 
 # How to read a finance paper's tables {#sec-motivation}
