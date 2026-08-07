@@ -1,0 +1,824 @@
+---
+title: "A Statistics Refresher for Reading Finance Research"
+subtitle: "MGFD40 — companion notes"
+date: last-modified
+---
+
+::: {.keyidea}
+**Why these notes exist.** Almost every empirical finance paper — and every
+empirical lecture in this course — communicates its findings through *regression
+tables*: a grid of numbers with stars next to them. If you can read one of those
+tables, you can read the paper. These notes teach you exactly that, and pair every
+statistical idea with the Python that produces it, so you can see how the code maps
+onto the output you'll be reading.
+
+Prerequisites are light: MGEB12 (Quantitative Methods II) and a bit of Python. If a
+term is fuzzy, that's fine — that's what this refresher is for.
+:::
+
+# How to read a finance paper's tables {#sec-motivation}
+
+Here is a *stylized* version of the kind of table you'll meet again and again (this
+one echoes the factor-model output from Lecture 5 and the StockTwits regression from
+Lecture 3):
+
+| Variable            | Estimate | Std. Error |    t   |
+|---------------------|:--------:|:----------:|:------:|
+| Alpha ($\alpha$)    | 0.50%*** |  (0.20%)   |  2.45  |
+| MKT-RF ($\beta$)    |   0.05   |  (0.06)    |  0.82  |
+| SMB                 |  −0.15*  |  (0.08)    | −1.91  |
+| HML                 | −0.42*** |  (0.11)    | −3.67  |
+| $N$                 |   360    |            |        |
+| $R^2$               |   0.18   |            |        |
+
+: Stylized factor-model regression. Stars: `*` p<0.10, `**` p<0.05, `***` p<0.01.
+
+Right now this might look like a wall of numbers. By the end of these notes you'll
+read it fluently:
+
+- The **rows** are the variables in a regression. The dependent variable (here, a
+  strategy's monthly return) is *explained by* the variables listed.
+- The **Estimate** column is the coefficient — the *size and direction* of each
+  relationship. `HML = −0.42` means the strategy moves opposite to value stocks.
+- The number **in parentheses** is the standard error — how *precisely* we
+  estimated the coefficient. Smaller = more precise.
+- The **t** column and the **stars** tell you whether the coefficient is
+  *statistically distinguishable from zero*.
+- **Alpha** is usually the punchline: the average return *left over* after
+  accounting for the known risk factors. A positive, significant alpha is the whole
+  ballgame in asset pricing.
+- $N$ is the number of observations; $R^2$ is how much of the variation the model
+  explains (and — spoiler — a small $R^2$ is completely normal here; see
+  @sec-r2).
+
+We'll build up to reading this table cell by cell. Let's start with the raw
+material: data.
+
+# The data you'll meet in finance {#sec-data}
+
+Finance data comes in three shapes, and knowing which one you're looking at tells you
+what a regression *means*.
+
+- **Time series** — one entity, many dates. *Example:* the S&P 500's monthly return
+  from 1990–2024. Used to study how something evolves over time (Lecture 4's
+  random-walk tests).
+- **Cross-section** — many entities, one date. *Example:* the return of every stock
+  in the market this month. Used to ask "what characteristics explain differences
+  *across* stocks?"
+- **Panel** — many entities × many dates. *Example:* a **stock-month** dataset: for
+  each stock, a return every month for years. This is the workhorse of modern
+  empirical finance (the StockTwits study in Lecture 3 is a stock-event panel).
+
+::: {.keyidea}
+**The single most important fact about finance data:** individual stock returns are
+*mostly noise*. Month to month, the vast majority of a single stock's return is
+unpredictable, idiosyncratic movement. This one fact explains why finance
+regressions look the way they do — especially the small $R^2$ values that would
+alarm someone coming from other fields. Hold onto this; it comes back in @sec-r2.
+:::
+
+Let's pull a small panel so we have something concrete to work with throughout.
+
+```{python}
+#| label: load-data
+import numpy as np
+import pandas as pd
+import yfinance as yf
+import statsmodels.api as sm
+import matplotlib.pyplot as plt
+
+tickers = ["AAPL", "MSFT", "JPM", "XOM", "^GSPC"]  # 4 stocks + the market index
+
+prices = yf.download(tickers, start="2005-01-01", end="2024-12-31",
+                     interval="1mo", auto_adjust=True, progress=False)["Close"]
+
+# Monthly simple returns
+rets = prices.pct_change().dropna()
+rets = rets.rename(columns={"^GSPC": "MKT"})
+
+print("Shape (rows = months, cols = assets):", rets.shape)
+rets.head()
+```
+
+`rets.shape` tells you the size of your data: rows are months, columns are assets.
+`rets.head()` shows the first few rows. Getting in the habit of *looking at your
+data* — its shape, its first rows, its summary statistics — before running any
+regression will save you from most beginner mistakes.
+
+# Refresher: mean, variance, covariance, correlation {#sec-moments}
+
+Before regressions, the building blocks. These four quantities *are* the raw
+ingredients of everything that follows — a regression coefficient is quite literally
+built out of covariances and variances.
+
+| Concept | In finance it is… | Python |
+|---|---|---|
+| **Mean** $\bar r$ | average / *expected* return | `rets.mean()` |
+| **Variance** $\sigma^2$ / **Std. dev.** $\sigma$ | *risk* (volatility) | `rets.var()`, `rets.std()` |
+| **Covariance** $\sigma_{ij}$ | do two assets move together? | `rets.cov()` |
+| **Correlation** $\rho_{ij}$ | covariance, rescaled to [−1, 1] | `rets.corr()` |
+
+```{python}
+#| label: moments
+summary = pd.DataFrame({
+    "mean_monthly":  rets.mean(),
+    "std_monthly":   rets.std(),
+    "mean_annual":   rets.mean() * 12,        # annualize the mean
+    "vol_annual":    rets.std() * np.sqrt(12) # annualize the volatility
+})
+summary.style.format("{:.3f}")
+```
+
+Two things to notice, because they recur constantly in finance:
+
+1. **We annualize** by multiplying the mean by 12 and the volatility by
+   $\sqrt{12}$ (not 12). Returns add over time; variance adds over time, so *standard
+   deviation* scales with the square root of time. This is exactly the logic behind
+   the variance-ratio test in Lecture 4.
+2. **An estimate is not the truth.** `rets.mean()` is a *sample* mean computed from
+   *this particular* stretch of history. Run it on a different sample and you'd get a
+   different number. The whole machinery of standard errors, t-stats, and p-values
+   (@sec-inference) exists to quantify *how much we should trust* a number computed
+   from a finite, noisy sample.
+
+```{python}
+#| label: corr
+rets.corr().style.format("{:.2f}").background_gradient(cmap="Blues")
+```
+
+Every stock is positively correlated with the market (`MKT`) — that shared,
+market-wide movement is what the CAPM regression below is going to isolate.
+
+# OLS regression: the core {#sec-ols}
+
+Ordinary Least Squares (OLS) is the single most important tool in empirical finance.
+The model, in its simplest form, is:
+
+$$
+y_t = \alpha + \beta\, x_t + \varepsilon_t
+$$
+
+- $y_t$ — the **dependent variable** (what we're explaining), e.g. a stock's return.
+- $x_t$ — the **independent variable** (the explanation), e.g. the market's return.
+- $\alpha$ — the **intercept**: the value of $y$ when $x = 0$.
+- $\beta$ — the **slope**: how much $y$ moves for a one-unit move in $x$.
+- $\varepsilon_t$ — the **residual/error**: everything about $y$ the model doesn't capture.
+
+**What "least squares" does.** For any candidate line $\alpha + \beta x$, each point
+has a residual (vertical distance from the line). OLS chooses the $\alpha$ and
+$\beta$ that make the **sum of squared residuals** as small as possible — the
+single best-fitting line through the cloud of points.
+
+## The finance translation: CAPM / the market model {#sec-capm}
+
+Regress a stock's return on the market's return and the two coefficients have names
+you already know from the course:
+
+$$
+\underbrace{R_{i,t}}_{\text{stock }i} = \underbrace{\alpha_i}_{\text{Jensen's alpha}} + \underbrace{\beta_i}_{\text{market beta}}\, \underbrace{R_{m,t}}_{\text{market}} + \varepsilon_{i,t}
+$$
+
+- $\beta_i$ — the stock's **market beta**: its sensitivity to market moves. $\beta =
+  1.3$ means that when the market's return is 1% higher, the stock's return is, on
+  average, 1.3% higher (or lower, if $\beta$ is negative). This *is* the slope of the
+  regression.
+- $\alpha_i$ — **Jensen's alpha**: the average return the stock earns *beyond* what
+  its market exposure explains. This *is* the intercept. A reliably positive alpha is
+  what every fund manager claims to have.
+
+::: {.keyidea}
+The abstract regression and the finance concept are the *same object*:
+**slope = beta = risk exposure**, **intercept = alpha = abnormal return.** Learn to
+see them as interchangeable and factor-model tables stop being intimidating.
+:::
+
+## Running it in Python {#sec-run-ols}
+
+We'll run the market model for Apple. (Proper CAPM uses returns *in excess of* the
+risk-free rate; we ignore the risk-free rate here to keep the example self-contained,
+and add it back in the full Fama-French example in @sec-endtoend.)
+
+```{python}
+#| label: capm-fit
+y = rets["AAPL"]                 # dependent variable: Apple's return
+X = rets["MKT"]                  # independent variable: the market's return
+X = sm.add_constant(X)           # add a column of 1s so the model estimates alpha
+
+model = sm.OLS(y, X).fit()
+print(model.summary())
+```
+
+`sm.add_constant(X)` is the step beginners forget: without a column of ones,
+`statsmodels` estimates **no intercept**, forcing $\alpha = 0$. Since alpha is often
+the whole point in finance, always add the constant.
+
+## Reading every number in that output {#sec-read-summary}
+
+That `.summary()` block is dense but it is *the* thing to get comfortable with —
+it contains almost everything a paper would report. The pieces that matter:
+
+- **`coef`** — the estimates $\hat\alpha$ (the `const` row) and $\hat\beta$ (the
+  `MKT` row). The `MKT` coefficient is Apple's estimated market beta.
+- **`std err`** — the standard error of each coefficient: how precise the estimate
+  is. (@sec-inference.)
+- **`t`** — the t-statistic, `coef / std err`. Roughly, $|t| > 1.96$ means
+  "significantly different from zero at the 5% level."
+- **`P>|t|`** — the p-value. Below 0.05 → the coefficient is statistically
+  significant at 5%. This is what the stars in published tables encode.
+- **`[0.025  0.975]`** — the 95% confidence interval for the coefficient.
+- **`R-squared`** — the fraction of Apple's return variation explained by the market
+  (@sec-r2).
+
+You can pull any of these out directly instead of reading the printed block — this is
+the "code ↔ output" mapping in action:
+
+```{python}
+#| label: capm-extract
+print(f"alpha (monthly): {model.params['const']:.4f}   "
+      f"t = {model.tvalues['const']:.2f}   p = {model.pvalues['const']:.3f}")
+print(f"beta (market):   {model.params['MKT']:.3f}   "
+      f"t = {model.tvalues['MKT']:.2f}   p = {model.pvalues['MKT']:.3f}")
+print(f"R-squared:       {model.rsquared:.3f}")
+```
+
+And the picture behind the numbers — the regression line is just the best-fit line
+through the scatter of (market return, Apple return) points:
+
+```{python}
+#| label: capm-plot
+#| fig-cap: "Apple monthly returns vs. the market. The slope of the fitted line is beta."
+fig, ax = plt.subplots()
+ax.scatter(rets["MKT"], rets["AAPL"], s=14, alpha=0.5)
+xx = np.linspace(rets["MKT"].min(), rets["MKT"].max(), 100)
+ax.plot(xx, model.params["const"] + model.params["MKT"] * xx, color="#ff585d", lw=2)
+ax.axhline(0, color="gray", lw=0.6); ax.axvline(0, color="gray", lw=0.6)
+ax.set_xlabel("Market monthly return"); ax.set_ylabel("Apple monthly return")
+plt.show()
+```
+
+# Interpreting coefficients {#sec-coefficients}
+
+A coefficient is only meaningful once you know the **units** of $y$ and $x$. The
+universal template is:
+
+> *A one-**unit** increase in $x$ is associated with a change of $\hat\beta$ **units**
+> in $y$, holding the other variables fixed.*
+
+In our CAPM regression both variables are monthly returns in decimals, so:
+
+```{python}
+#| label: interp
+b = model.params["MKT"]; a = model.params["const"]
+print(f"beta = {b:.2f}: when the market return is 1 percentage point higher,")
+print(f"         Apple's return is about {b:.2f} percentage points higher.")
+print(f"alpha = {a:.4f} per month  ->  {a*12:.2%} per year of return")
+print(f"         not explained by market exposure.")
+```
+
+## Economic vs. statistical significance {#sec-econ-sig}
+
+These are two *different* questions, and a good paper always addresses both:
+
+- **Statistical** significance: *are we confident the coefficient isn't zero?* (the
+  t-stat / p-value; @sec-inference.)
+- **Economic** significance: *is the coefficient big enough to matter?*
+
+A number can be one without the other. With enough data you can get a statistically
+significant coefficient that is far too small to trade on (this happens constantly in
+return-prediction studies). Conversely, a large, economically interesting coefficient
+estimated on 20 noisy observations may not be statistically distinguishable from zero.
+**Always ask both.**
+
+## Multiple regression and "controls" {#sec-controls}
+
+Real studies rarely use one explanatory variable. The multiple-regression model just
+adds terms:
+
+$$
+y = \alpha + \beta_1 x_1 + \beta_2 x_2 + \dots + \varepsilon
+$$
+
+The phrase to internalize is **"holding the other variables fixed."** Each
+$\beta_k$ is the effect of $x_k$ *after removing what the other variables already
+explain*. This is the single most important difference from simple regression: a
+coefficient in a multiple regression is never just "the relationship between $x_k$
+and $y$," it is that relationship net of everything else in the model. Add or drop a
+variable and the remaining coefficients generally change. The Lecture 3 StockTwits
+regression is this idea in practice. Without the $\Gamma' Controls$ term, $\beta$
+would pick up not just retail attention but everything that moves with it:
+
+$$
+BHAR = \alpha + \beta\, \mathbb{1}^{Att}_{i,t} + \Gamma' Controls_{i,t} + \varepsilon_{i,t}
+$$
+
+The controls (institutional attention, earnings surprises, news sentiment, …) are
+there to answer the skeptic: *"isn't your 'attention' effect just earnings news in
+disguise?"* Putting them in the regression lets the coefficient on attention,
+$\beta$, speak to the effect **that remains after** those alternatives are accounted
+for.
+
+## Dummy variables {#sec-dummies}
+
+A **dummy** (indicator) variable is 0/1 — like the $\mathbb{1}^{Att}$ attention flag.
+Its coefficient is the *average difference in $y$* between the "1" group and the "0"
+group, holding everything else fixed. Let's add a January dummy to test the folklore
+"January effect" (calendar anomalies come up in Lecture 4/5):
+
+```{python}
+#| label: dummy
+df = rets[["AAPL", "MKT"]].copy()
+df["Jan"] = (df.index.month == 1).astype(int)      # 1 in January, else 0
+
+Xd = sm.add_constant(df[["MKT", "Jan"]])
+mdl_d = sm.OLS(df["AAPL"], Xd).fit()
+print(mdl_d.params.round(4))
+print(f"\nJanuary coefficient = {mdl_d.params['Jan']:.4f} "
+      f"(t = {mdl_d.tvalues['Jan']:.2f})")
+print("Reading: holding the market fixed, January months earn on average")
+print(f"about {mdl_d.params['Jan']:.2%} more (or less) than other months for AAPL.")
+```
+
+Whether that January coefficient is *real* or just noise is a question of
+**hypothesis testing** — the framework covered next, which the t-stat and p-value
+(the following section) make precise.
+
+# The logic of hypothesis testing {#sec-testing}
+
+This section sets up the framework that the **t-statistic**, **p-value**, and $R^2$
+sections ahead will make precise: **hypothesis testing.**
+
+- **Null hypothesis ($H_0$)** — the "nothing interesting" baseline, usually
+  "the coefficient is zero" / "returns are unpredictable."
+- **Alternative ($H_1$)** — what you're arguing for: the effect exists.
+- **The test statistic.** $t = (\hat\beta - \beta_0) / SE(\hat\beta)$. It measures
+  how many standard errors the estimate sits away from the null value.
+- **The decision.** The p-value is the probability, if $H_0$ were true, of drawing a
+  sample whose t-statistic is at least this far from zero. Reject $H_0$ when that
+  probability falls below the significance level $\alpha$ you fixed in advance.
+
+This is precisely the logic of the Lecture 4 random-walk tests: the Ljung-Box test's
+$H_0$ is "no autocorrelation (returns unpredictable)," and a small p-value is evidence
+*against* the random walk.
+
+**Two-sided vs one-sided.** "Is $\beta \ne 0$?" is two-sided (the usual default).
+"Is $\beta > 0$ (or $\beta < 0$)?" is one-sided — appropriate only when theory rules
+out the other direction beforehand.
+
+**Two ways to be wrong.** No test is perfect:
+
+| | $H_0$ actually true | $H_0$ actually false |
+|---|---|---|
+| **Reject $H_0$** | Type I error (false positive) | ✅ correct |
+| **Don't reject** | ✅ correct | Type II error (missed effect) |
+
+**Why we need a threshold.** Even when $\beta$ is truly zero, sampling noise means
+$\hat\beta$ almost never comes out exactly zero. So the question is never "is the
+estimate nonzero" but "is it far enough from zero to count as evidence." The
+significance level $\alpha$ is where you draw that line.
+
+**What the level means.** $\alpha$ is a conditional probability: given that $H_0$ is
+true, it is the probability that the test rejects it. Setting $\alpha = 0.05$ says
+that among many independent samples drawn under $H_0$, the rule would reject in 5% of
+them. The condition is what makes the number meaningful, and it is also what makes it
+easy to misread. $\alpha$ is not the probability that $H_0$ is true, and it is not
+the probability that this particular rejection is a mistake.
+
+**Seeing it happen.** The claim above is about repeated sampling, which you never
+observe in practice but can simulate. Below, $H_0$ is true by construction: $x$ and
+$y$ are generated independently, so $\beta$ is zero. We draw 2,000 independent
+samples, run the regression on each, and count how often the test rejects at $\alpha
+= 0.05$.
+
+```{python}
+#| label: type1-sim
+rng = np.random.default_rng(0)
+n_tests, n_obs, false_pos = 2000, 240, 0
+for _ in range(n_tests):
+    noise = rng.normal(size=n_obs)          # pure noise: true effect is ZERO
+    t = noise.mean() / (noise.std(ddof=1) / np.sqrt(n_obs))
+    if abs(t) > 1.96:
+        false_pos += 1
+print(f"{n_tests} tests on pure noise -> {false_pos} 'significant' at 5% "
+      f"({false_pos/n_tests:.1%})")
+print("Right around 5%: exactly the false-positive rate we signed up for.")
+```
+
+# Standard errors, t-values, p-values, confidence intervals {#sec-inference}
+
+Every estimate we compute is from *one finite, noisy sample*. If history had played
+out slightly differently, we'd have gotten a different $\hat\beta$. The tools in this
+section quantify **how much to trust** an estimate.
+
+## Standard error = precision {#sec-se}
+
+The **standard error (SE)** is the estimated standard deviation of the coefficient
+across hypothetical repeated samples. A small SE means the estimate is precise; a
+large SE means it's shaky. Two things shrink the SE, both intuitive:
+
+- **More data** (larger $N$).
+- **Less noise** (smaller residual variance).
+
+This is *the* reason finance uses huge panels: millions of stock-months drive SEs down
+far enough to detect the tiny-but-real effects that dominate asset pricing.
+
+## t-statistic and p-value {#sec-t-p}
+
+A t-statistic is always a test of a specific null. Write $H_0$ as $\beta = \beta_0$.
+The statistic is
+
+$$
+t = \frac{\hat\beta - \beta_0}{\operatorname{SE}(\hat\beta)}
+$$
+
+which asks: how many standard errors does the estimate sit away from the value $H_0$
+claims? If $H_0$ is true, $\hat\beta$ should land near $\beta_0$, and $t$ should be
+near zero. A large $|t|$ is exactly what "the data look unlikely under $H_0$" means
+in numbers.
+
+Software defaults to $\beta_0 = 0$, so the reported $t$ collapses to
+$\hat\beta / \operatorname{SE}(\hat\beta)$. That is a choice of null, not a
+definition of $t$. In the @sec-read-summary CAPM regression the interesting question
+is whether $\beta = 1$, and answering it means computing
+$(\hat\beta - 1) / \operatorname{SE}(\hat\beta)$ yourself.
+
+In practice people read $t$ against fixed cutoffs:
+
+::: {.keyidea}
+$|t| > 1.96 \;\Rightarrow\;$ significant at the **5%** level.
+$\;\;|t| > 1.65 \Rightarrow 10\%$, $\;\;|t| > 2.58 \Rightarrow 1\%$.
+These are two-sided critical values: 1.96 cuts off 5% of the normal distribution,
+split between the two tails. They are accurate once df exceeds about 100. Below
+that, use the $t$-distribution, where the cutoffs are somewhat larger.
+:::
+
+The **p-value** is the same information on a 0–1 scale: *if the true coefficient were
+exactly zero, what's the probability of seeing an estimate at least this extreme, just
+by chance?* Small p-value → such a large estimate would be a fluke under "no effect",
+so we doubt "no effect."
+
+::: {.warn}
+**Two ways people misread the p-value — don't be one of them.**
+
+1. A p-value is **not** the probability that the null (no effect) is true. It's
+   computed *assuming* the null is true.
+2. `p = 0.05` does **not** mean "95% chance the effect is real." It means "if there
+   were no effect, results this strong would show up 5% of the time."
+:::
+
+## The stars convention {#sec-stars}
+
+Published tables (like the StockTwits table in Lecture 3) compress p-values into
+stars. The footnote there — `*** <0.01, ** 0.01–0.05, * 0.05–0.1` — is *exactly* this
+mapping:
+
+| p-value | Stars | Significant at |
+|---|:---:|---|
+| $p < 0.01$ | `***` | 1% |
+| $0.01 \le p < 0.05$ | `**` | 5% |
+| $0.05 \le p < 0.10$ | `*` | 10% |
+| $p \ge 0.10$ | (none) | not significant |
+
+## Confidence intervals {#sec-ci}
+
+A **95% confidence interval** is $\hat\beta \pm 1.96 \times \operatorname{SE}(\hat\beta)$,
+where 1.96 is the two-sided critical value from @sec-t-p (1.65 for a 90% interval,
+2.58 for a 99% one). The 95% describes the *procedure*, not this particular interval:
+if you repeated the study on many independent samples and built an interval each
+time, 95% of those intervals would contain the true $\beta$. The one in front of you
+either contains it or does not, and you cannot tell which.
+
+Here it is for our CAPM:
+
+```{python}
+#| label: ci
+ci = model.conf_int().rename(columns={0: "2.5%", 1: "97.5%"})
+ci["coef"] = model.params
+ci["std err"] = model.bse
+ci["t"] = model.tvalues
+ci["p"] = model.pvalues
+ci[["coef", "std err", "t", "p", "2.5%", "97.5%"]].round(4)
+```
+
+Read the MKT row two ways. The interval excludes zero, which is the same verdict as
+$t = 11.48$ and $p \approx 0$. But it also excludes 1, which the reported $t$ and $p$
+cannot tell you: they are computed against $\beta_0 = 0$. Apple moved more than
+one-for-one with the market over this sample, and the interval rules out one-for-one
+at the 5% level.
+
+## Robust, clustered, and Newey-West standard errors {#sec-robust}
+
+The SE formula in @sec-se rests on two assumptions: every observation has the same
+error variance, and the errors are uncorrelated with each other. Neither holds in
+most financial data, and the rest of this section is about what to do instead.
+
+When these assumptions fail, $\hat\beta$ is still unbiased. What breaks is the SE,
+and it usually breaks in one direction: too small, which makes t-statistics too
+large. Corrected standard errors change the SE and therefore the t-stat, never the
+coefficient.
+
+The three names you will meet differ in what they allow the residuals to do. Each
+panel below is the covariance matrix of the residuals: cell $(i, j)$ is the
+covariance between observation $i$ and observation $j$, and a filled cell means the
+correction allows it to be non-zero.
+
+```{python}
+#| echo: false
+#| fig-cap: "What each correction allows the residuals to do."
+#| file: scripts/se_correction_panels.py
+```
+
+- **Heteroskedasticity-robust (White / HC)** frees the diagonal. Each observation
+  gets its own variance, but residuals still cannot be correlated with one another.
+  This is the default for cross-sectional regressions.
+- **Newey-West (HAC)** adds a band around the diagonal. Residuals close together in
+  time may be correlated, with the correlation assumed to die out beyond a chosen
+  number of lags. The `maxlags` argument sets the width of that band.
+- **Clustered** frees whole blocks. Residuals within a group — all months of the
+  same firm, say — may be correlated in any pattern, while different groups are
+  assumed independent. This is the standard choice for panels.
+
+**Why the correction can be large.** Suppose a panel of 500 firms over 120 months,
+60,000 observations. Firm-level shocks such as management or industry cycles keep
+each firm's residuals correlated across its own months, so those 120 observations
+are far from 120 independent pieces of information. The plain formula treats them as
+if they were, and reports an SE built on a sample size the data do not really
+deliver. Overlapping windows do the same thing along the time dimension: a 12-month
+cumulative return computed every month shares 11 months of data with the observation
+next to it. In both settings a corrected t-statistic can come in at half the plain
+OLS value.
+
+Watch what changes and what does not:
+
+```{python}
+#| label: robust
+ols  = sm.OLS(y, X).fit()
+hac  = sm.OLS(y, X).fit(cov_type="HAC", cov_kwds={"maxlags": 6})
+
+compare = pd.DataFrame({
+    "coef":          ols.params,
+    "t (plain OLS)": ols.tvalues,
+    "t (Newey-West)": hac.tvalues,
+})
+compare.round(3)
+```
+
+Same coefficients, different t-stats — which is why methodology footnotes ("standard
+errors are clustered by firm and month") matter so much when you judge a result.
+
+# R² and why a small R² is normal {#sec-r2}
+
+$R^2$ is the fraction of the variation in $y$ that the model explains:
+
+$$
+R^2 = 1 - \frac{\text{SS}_{\text{residual}}}{\text{SS}_{\text{total}}}
+= 1 - \frac{\text{unexplained variance}}{\text{total variance}}
+$$
+
+It runs from 0 (the model explains nothing) to 1 (the model explains everything).
+**Adjusted $R^2$** penalizes adding useless variables, so it's the honest number to
+compare models of different sizes.
+
+```{python}
+#| label: r2
+print(f"CAPM R-squared:          {model.rsquared:.3f}")
+print(f"CAPM adjusted R-squared: {model.rsquared_adj:.3f}")
+print(f"-> the market explains about {model.rsquared:.0%} of Apple's monthly return;")
+print(f"   the other ~{1-model.rsquared:.0%} is Apple-specific (idiosyncratic).")
+```
+
+## Why a tiny R² is normal — and often fine {#sec-low-r2}
+
+Coming from other fields, an $R^2$ of 0.01 looks like a failed model. In asset
+pricing it is business as usual, for a concrete reason:
+
+::: {.keyidea}
+**A single stock's return is almost all idiosyncratic noise.** Firm-specific
+surprises — a product launch, a lawsuit, a CEO tweet — swamp the systematic, market-
+wide component month to month. So *any* model of an individual stock's return will
+leave most of the variance unexplained. Low $R^2$ is a property of the **data**, not
+a flaw in the model.
+:::
+
+The key is that **$R^2$ and the reliability of a coefficient are different things.**
+Diversification makes this vivid: pool stocks into a portfolio and the idiosyncratic
+noise cancels out, so the *same* market factor suddenly explains far more — even
+though nothing about the market's true relationship changed.
+
+```{python}
+#| label: diversify
+port = rets[["AAPL", "MSFT", "JPM", "XOM"]].mean(axis=1)   # equal-weight portfolio
+r2_port = sm.OLS(port, sm.add_constant(rets["MKT"])).fit().rsquared
+
+print("R-squared of MKT explaining...")
+for tk in ["AAPL", "MSFT", "JPM", "XOM"]:
+    r2 = sm.OLS(rets[tk], sm.add_constant(rets["MKT"])).fit().rsquared
+    print(f"  {tk:5s} (single stock): {r2:.2f}")
+print(f"  4-stock portfolio      : {r2_port:.2f}  <- higher: noise diversified away")
+```
+
+This is the difference between the two *purposes* of finance regressions:
+
+- **Time-series, portfolio-on-factors** (e.g. a diversified strategy on the
+  Fama-French factors): $R^2$ can be **0.9+**, because factors genuinely drive a
+  diversified portfolio. A *low* $R^2$ here would be a red flag.
+- **Cross-sectional return prediction** (e.g. "does last month's characteristic
+  predict next month's return?" across millions of stock-months): $R^2 \approx
+  0.01$, **and that is a success.** With millions of observations, a *reliable*
+  non-zero slope — even one explaining 1% of variance — is a tradable edge worth
+  billions. Fit is beside the point.
+
+::: {.keyidea}
+**Punchline.** In return prediction you are hunting a *dependable small $\beta$* (is
+the slope reliably non-zero?), **not** a high $R^2$. Judge such studies by the t-stat
+on the coefficient of interest, not by how much variance the model explains.
+:::
+
+# Reading a real regression table {#sec-real-table}
+
+Now we can return to the stylized table from @sec-motivation and read it fluently. A
+regression table is just a `.summary()` reformatted for print:
+
+| Element in the table | What it is | Where it came from |
+|---|---|---|
+| A **row** | one explanatory variable (+ the intercept/alpha) | `model.params` index |
+| **Estimate** | the coefficient $\hat\beta$ | `.params` |
+| Number in **(parentheses)** | standard error (sometimes it's the t-stat in `[brackets]` — check the note!) | `.bse` |
+| **Stars** `*/**/***` | p-value buckets | `.pvalues` |
+| $N$ | number of observations | `.nobs` |
+| $R^2$ | variance explained | `.rsquared` |
+
+**How to actually read one, in order:** (1) find the row you care about — usually
+**alpha** or the key characteristic; (2) check its **sign** — right direction? (3)
+check its **stars/t** — reliably non-zero? (4) check its **magnitude** — economically
+big? (5) glance at $N$ and $R^2$ for context (remembering @sec-r2). The alpha row is
+usually the punchline: a positive, starred alpha is the paper's headline claim.
+
+You rarely format these by hand — `summary_col` stacks several models into one
+publication-style table:
+
+```{python}
+#| label: summary-col
+from statsmodels.iolib.summary2 import summary_col
+
+capm_m = sm.OLS(df["AAPL"], sm.add_constant(df["MKT"])).fit()
+tbl = summary_col(
+    [capm_m, mdl_d],
+    model_names=["(1) CAPM", "(2) + January"],
+    stars=True,
+    info_dict={"N": lambda x: f"{int(x.nobs)}",
+               "R2": lambda x: f"{x.rsquared:.3f}"},
+)
+print(tbl)
+```
+
+Read column (2): the `const` row is alpha, the `MKT` row is beta, the `Jan` row is the
+January effect — each with its SE beneath in parentheses and stars for significance.
+That is *exactly* the anatomy of every table in the papers you'll read.
+
+# Pitfalls in finance empirics {#sec-pitfalls}
+
+Knowing how to *read* a table also means knowing when to *distrust* one.
+
+- **Multiple testing / data mining.** From @sec-testing, 5% of pure-noise tests look
+  significant. Test 300 "anomalies" and ~15 will appear real by chance alone — which
+  is why Lecture 5 flags that "300+ anomalies suggests many are spurious," and why
+  Harvey, Liu & Zhu argue finance should demand $|t| > 3$, not 2. A quick illustration
+  of the trap:
+
+```{python}
+#| label: data-mining
+rng = np.random.default_rng(42)
+mkt = rets["MKT"].values
+hits = 0
+for _ in range(300):                                  # 300 fake "signals"
+    fake_signal = rng.normal(size=len(mkt))
+    Xf = sm.add_constant(fake_signal)
+    if sm.OLS(mkt, Xf).fit().pvalues[1] < 0.05:
+        hits += 1
+print(f"Out of 300 completely random 'signals', {hits} 'significantly' "
+      f"predict the market at 5%.")
+print("None are real. This is how a 'zoo of anomalies' gets manufactured.")
+```
+
+- **Post-publication decay.** McLean & Pontiff (2016) find anomaly returns fall ~58%
+  after publication — consistent with some being statistical flukes and others being
+  arbitraged away once known (Lecture 5).
+- **Look-ahead bias.** Using information that wasn't available in real time (e.g.
+  restated earnings, or a signal computed with future data). A backtest that peeks
+  ahead will look spectacular and fail live.
+- **Overlapping returns.** Regressions using multi-month holding-period returns induce
+  autocorrelation and *overstate* significance — a classic reason to use Newey-West
+  SEs (@sec-robust).
+- **Correlation ≠ causation.** A significant $\beta$ means association, not cause.
+  Reverse causality and omitted variables lurk everywhere; controls (@sec-controls)
+  help but never fully settle it without a real research design.
+
+::: {.warn}
+**Healthy skepticism checklist:** Is the t-stat comfortably above 2 (ideally 3)? Was
+the signal knowable in real time? Are the SEs corrected for autocorrelation /
+clustering? Is the effect economically large, not just statistically detectable? Does
+it survive out of sample and after publication?
+:::
+
+# Full end-to-end example {#sec-endtoend}
+
+Let's put it all together the way a paper would: build **excess** returns using the
+real risk-free rate, run CAPM *and* the Fama-French 3-factor model, and lay the
+results side by side. Factors come straight from Ken French's data library.
+
+```{python}
+#| label: ff-download
+import urllib.request, zipfile, io
+
+url = ("https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/"
+       "ftp/F-F_Research_Data_Factors_CSV.zip")
+z = zipfile.ZipFile(io.BytesIO(urllib.request.urlopen(url, timeout=30).read()))
+raw = z.read(z.namelist()[0]).decode("latin-1")
+
+ff = pd.read_csv(io.StringIO(raw), skiprows=3)
+ff = ff.rename(columns={ff.columns[0]: "date"})
+ff["date"] = ff["date"].astype(str).str.strip()
+ff = ff[ff["date"].str.match(r"^\d{6}$")]                 # keep monthly rows only
+ff["date"] = pd.to_datetime(ff["date"], format="%Y%m").dt.to_period("M")
+ff = ff.set_index("date").astype(float) / 100.0          # percent -> decimal
+print("Factors:", list(ff.columns))
+ff.tail(3)
+```
+
+```{python}
+#| label: ff-merge
+# Apple monthly returns, aligned to the factor calendar
+stock = yf.download("AAPL", start="2005-01-01", end="2024-12-31",
+                    interval="1mo", auto_adjust=True, progress=False)["Close"]
+stock = stock.pct_change().dropna()
+stock.index = stock.index.to_period("M")
+stock = stock.iloc[:, 0].rename("AAPL")   # squeeze to a Series
+
+data = ff.join(stock, how="inner").dropna()
+data["exret"] = data["AAPL"] - data["RF"]  # EXCESS return: the proper CAPM LHS
+print(f"Merged sample: {len(data)} months, "
+      f"{data.index.min()} to {data.index.max()}")
+data.head(3)
+```
+
+```{python}
+#| label: ff-regressions
+capm = sm.OLS(data["exret"],
+              sm.add_constant(data[["Mkt-RF"]])).fit()
+ff3  = sm.OLS(data["exret"],
+              sm.add_constant(data[["Mkt-RF", "SMB", "HML"]])).fit()
+
+tbl = summary_col(
+    [capm, ff3],
+    model_names=["CAPM", "Fama-French 3"],
+    stars=True,
+    info_dict={"N":  lambda x: f"{int(x.nobs)}",
+               "R2": lambda x: f"{x.rsquared:.3f}",
+               "Adj R2": lambda x: f"{x.rsquared_adj:.3f}"},
+)
+print(tbl)
+```
+
+**How to read this — the full loop in action:**
+
+- The **`const`** row is **alpha**. Notice how it changes from the CAPM to the FF3
+  model: adding size (SMB) and value (HML) exposures absorbs part of what the CAPM
+  called "abnormal." That is the exact move Lecture 5 describes — *"each additional
+  factor potentially explains away the anomaly."*
+- **`Mkt-RF`** is the market beta; **`SMB`** and **`HML`** are Apple's size and value
+  tilts (a big growth firm typically loads *negatively* on HML).
+- The stars tell you which loadings are reliable; the **$R^2$** rises as factors are
+  added — but recall @sec-r2: for a single stock it stays modest, and that's expected.
+- If you were testing a *strategy* rather than one stock, the alpha row would be the
+  whole point: a positive, starred FF3 alpha = returns the known factors can't
+  explain.
+
+# Cheat sheet {#sec-cheatsheet}
+
+One-page reference. Assume `m = sm.OLS(y, sm.add_constant(X)).fit()`.
+
+| Symbol / term | Meaning | Python |
+|---|---|---|
+| $\bar r$ | mean / expected return | `rets.mean()` |
+| $\sigma$ | volatility (risk) | `rets.std()` |
+| $\sigma_{ij}$, $\rho_{ij}$ | covariance, correlation | `rets.cov()`, `rets.corr()` |
+| annualize mean / vol | scale to yearly | `mean*12`, `std*np.sqrt(12)` |
+| fit OLS | estimate the regression | `sm.OLS(y, sm.add_constant(X)).fit()` |
+| $\alpha$ (Jensen's alpha) | intercept = abnormal return | `m.params["const"]` |
+| $\beta$ (loading) | slope = risk exposure | `m.params[...]` |
+| SE | precision of estimate | `m.bse` |
+| $t$ | `coef / SE`; $\|t\|>1.96 \to 5\%$ | `m.tvalues` |
+| $p$ | significance ($<0.05 \to$ `**`) | `m.pvalues` |
+| 95% CI | plausible range for coef | `m.conf_int()` |
+| $R^2$, adj. $R^2$ | variance explained | `m.rsquared`, `m.rsquared_adj` |
+| robust / HAC SE | corrected standard errors | `.fit(cov_type="HC1")` / `"HAC"` |
+| $N$ | number of observations | `m.nobs` |
+| full report | everything at once | `m.summary()` |
+| publication table | stack models | `summary_col([m1, m2], stars=True)` |
+
+::: {.keyidea}
+**The one habit that matters most:** for any coefficient in any table, ask the five
+questions in order — *sign? significance (t/stars)? magnitude (economic)? how much
+data (N)? what's the model's job (R² context)?* Do that and you can read the empirical
+results of essentially any finance paper in this course.
+:::
