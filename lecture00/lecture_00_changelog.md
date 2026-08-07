@@ -29,8 +29,6 @@
 **After:**
 > The Lecture 3 StockTwits regression is this idea in practice. Without the Γ′Controls term, β would pick up not just retail attention but everything that moves with it:
 
-**Reason:** To make explicit and stress a point that was previously only implicit in "holding the other variables fixed" — that a multiple-regression coefficient's meaning is conditional on which other variables are in the model, and that this is the key conceptual departure from simple regression. Stating it directly, rather than leaving it to be inferred, reduces the risk that students read $\beta_k$ as a fixed, model-independent quantity.
-
 **Transition sentence revised for flow:**
 
 **Before:**
@@ -38,8 +36,6 @@
 
 **After:**
 > The Lecture 3 StockTwits regression is this idea in practice. Without the Γ′Controls term, β would pick up not just retail attention but everything that moves with it:
-
-**Reason:** After inserting the new sentence above, the paragraph had two sentences in a row both opening with "This is...", which read as repetitive. The transition sentence was rewritten to connect the new content to the StockTwits example while removing the repeated construction, and to more directly set up *why* the controls matter (β would otherwise absorb confounding effects) before the reader sees the equation.
 
 ---
 
@@ -65,8 +61,6 @@
 **After:**
 > "Is β ≠ 0?" is two-sided (the usual default). "Is β > 0 (or β < 0)?" is one-sided — appropriate only when theory rules out the other direction beforehand.
 
-**Reason:** To clarify that a one-sided test is not restricted to the ">0" direction. The original example only showed "β > 0," which could leave the impression that one-sided tests always test for a positive effect. Adding "(or β < 0)" makes clear that the direction is set by the researcher's theory beforehand and could equally be tested as β < 0.
-
 ---
 
 ## 5. Section 8 (`#sec-testing`) — significance level α, rewritten as three bold-lead-in bullets
@@ -82,8 +76,6 @@
 > **Seeing it happen.** The claim above is about repeated sampling, which you never observe in practice but can simulate. Below, H₀ is true by construction: x and y are generated independently, so β is zero. We draw 2,000 independent samples, run the regression on each, and count how often the test rejects at α = 0.05.
 
 **Reason:** To build the significance-level concept in a coherent sequence — why a threshold is needed at all, what α precisely means as a conditional probability (and what it does *not* mean, addressing the P(reject | H₀ true) vs. P(H₀ true | rejected) confusion directly), and then bridge into the simulation that follows. The bold-lead-in, short-paragraph format matches the style already used elsewhere in this section (e.g. "Two ways to be wrong").
-
-**Note:** the original sentence also carried a forward pointer to Section 10 ("quietly catastrophic when a whole literature runs thousands of them") — the multiple-testing motivation. The new version drops that pointer. Flagging in case you want it preserved somewhere (e.g. added to the end of the "Seeing it happen" bullet, or left for Section 10 to pick up on its own).
 
 ---
 
@@ -112,8 +104,6 @@ New top-level order: 1 Motivation → 2 Data → 3 Moments → 4 OLS → 5 Inter
 
 **After:**
 > This section sets up the framework that the t-statistic, p-value, and R² sections ahead will make precise: hypothesis testing.
-
-**Reason:** Both sentences were written when hypothesis testing came *after* the t-stat/p-value/R² material and referred back to it ("the next section" pointing to t-stat/p-value; "everything above" summarizing t-stat/p-value/R²). After the move, hypothesis testing now comes *before* that material, so both sentences pointed the wrong direction. Rewritten to point forward instead: Section 5's closing line now names hypothesis testing (not t-stat/p-value) as what comes next, and Section 6's opening line frames itself as the setup that later sections will make precise, rather than a recap of content not yet introduced.
 
 ---
 
@@ -206,17 +196,6 @@ This is the Quarto-native way to source an external code file into a chunk (the 
 
 **Reason:** To make the previously compressed one-line summary clearer. The original bullet packed the definition of the t-statistic, the definition of the p-value, and the decision rule into a single sentence, which left the mechanics vague (what exactly is being measured, what "small enough" means). Splitting it into two parallel bullets — one defining the test statistic explicitly with its formula, one defining the p-value and stating the decision rule in terms of α — matches the structure of the $H_0$/$H_1$ bullets above and gives each concept room to be stated precisely.
 
----
-
-## 4. Section 8 (`#sec-testing`) — two-sided vs one-sided example
-
-**Before:**
-> "Is β ≠ 0?" is two-sided (the usual default). "Is β > 0?" is one-sided — appropriate only when theory rules out the other direction beforehand.
-
-**After:**
-> "Is β ≠ 0?" is two-sided (the usual default). "Is β > 0 (or β < 0)?" is one-sided — appropriate only when theory rules out the other direction beforehand.
-
-**Reason:** The original example only illustrated one-sided testing with $\beta > 0$, which could leave the impression that one-sided tests always point in the positive direction. Adding "(or $\beta < 0$)" makes clear that a one-sided test can be framed in either direction, depending on what theory predicts.
 
 ---
 
