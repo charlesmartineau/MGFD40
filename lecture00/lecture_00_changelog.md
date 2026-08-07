@@ -45,7 +45,7 @@
 > We compute a statistic (a t-stat), ask how likely it is under H₀ (the p-value), and reject H₀ if that's small enough.
 
 **After (split into two bullets):**
-> The test statistic. t = (β̂ − β₀) / SE(β̂). It measures how many standard errors the estimate sits away from the null value.
+> The test statistic. t = ($\hat{\beta}$− β₀) / SE($\hat{\beta}$). It measures how many standard errors the estimate sits away from the null value.
 >
 > The decision. The p-value is the probability, if H₀ were true, of drawing a sample whose t-statistic is at least this far from zero. Reject H₀ when that probability falls below the significance level α you fixed in advance.
 
@@ -112,7 +112,7 @@ New top-level order: 1 Motivation → 2 Data → 3 Moments → 4 OLS → 5 Inter
 **Before:**
 > The **t-statistic** rescales the estimate by its own precision:
 >
-> t = β̂ / SE(β̂)
+> t = $\hat{\beta}$/ SE($\hat{\beta}$)
 >
 > It answers: *how many standard errors is the estimate away from zero?* The rule of thumb everyone uses:
 >
@@ -121,11 +121,11 @@ New top-level order: 1 Motivation → 2 Data → 3 Moments → 4 OLS → 5 Inter
 **After:**
 > A t-statistic is always a test of a specific null. Write H₀ as β = β₀. The statistic is
 >
-> t = (β̂ − β₀) / SE(β̂)
+> t = ($\hat{\beta}$ − β₀) / SE($\hat{\beta}$)
 >
-> which asks: how many standard errors does the estimate sit away from the value H₀ claims? If H₀ is true, β̂ should land near β₀, and t should be near zero. A large |t| is exactly what "the data look unlikely under H₀" means in numbers.
+> which asks: how many standard errors does the estimate sit away from the value H₀ claims? If H₀ is true, $\hat{\beta}$ should land near β₀, and t should be near zero. A large |t| is exactly what "the data look unlikely under H₀" means in numbers.
 >
-> Software defaults to β₀ = 0, so the reported t collapses to β̂ / SE(β̂). That is a choice of null, not a definition of t. In the Section 4.3 CAPM regression the interesting question is whether β = 1, and answering it means computing (β̂ − 1) / SE(β̂) yourself.
+> Software defaults to β₀ = 0, so the reported t collapses to $\hat{\beta}$/ SE($\hat{\beta}$). That is a choice of null, not a definition of t. In the Section 4.3 CAPM regression the interesting question is whether β = 1, and answering it means computing ($\hat{\beta}$ − 1) / SE($\hat{\beta}$) yourself.
 >
 > In practice people read t against fixed cutoffs:
 >
@@ -140,12 +140,12 @@ New top-level order: 1 Motivation → 2 Data → 3 Moments → 4 OLS → 5 Inter
 ## 9. Section (`#sec-ci`) — Confidence intervals rewritten
 
 **Before:**
-> A **95% confidence interval** is the range of plausible values for the true coefficient: roughly β̂ ± 1.96 × SE. If it excludes zero, the coefficient is significant at 5% — the same verdict as the t-stat, but it also shows you the *magnitude* uncertainty. Here it is for our CAPM:
+> A **95% confidence interval** is the range of plausible values for the true coefficient: roughly $\hat{\beta}$ ± 1.96 × SE. If it excludes zero, the coefficient is significant at 5% — the same verdict as the t-stat, but it also shows you the *magnitude* uncertainty. Here it is for our CAPM:
 >
 > [code block for ci table]
 
 **After:**
-> A **95% confidence interval** is β̂ ± 1.96 × SE(β̂), where 1.96 is the two-sided critical value from Section 6.2 (1.65 for a 90% interval, 2.58 for a 99% one). The 95% describes the *procedure*, not this particular interval: if you repeated the study on many independent samples and built an interval each time, 95% of those intervals would contain the true β. The one in front of you either contains it or does not, and you cannot tell which.
+> A **95% confidence interval** is $\hat{\beta}$ ± 1.96 × SE($\hat{\beta}$), where 1.96 is the two-sided critical value from Section 6.2 (1.65 for a 90% interval, 2.58 for a 99% one). The 95% describes the *procedure*, not this particular interval: if you repeated the study on many independent samples and built an interval each time, 95% of those intervals would contain the true β. The one in front of you either contains it or does not, and you cannot tell which.
 >
 > Here it is for our CAPM:
 >
@@ -190,7 +190,7 @@ This is the Quarto-native way to source an external code file into a chunk (the 
 > We compute a statistic (a t-stat), ask how likely it is under H₀ (the p-value), and reject H₀ if that's small enough.
 
 **After (split into two bullets):**
-> The test statistic. t = (β̂ − β₀) / SE(β̂). It measures how many standard errors the estimate sits away from the null value.
+> The test statistic. t = ($\hat{\beta}$ − β₀) / SE($\hat{\beta}$). It measures how many standard errors the estimate sits away from the null value.
 >
 > The decision. The p-value is the probability, if H₀ were true, of drawing a sample whose t-statistic is at least this far from zero. Reject H₀ when that probability falls below the significance level α you fixed in advance.
 
