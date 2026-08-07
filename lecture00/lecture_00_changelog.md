@@ -1,7 +1,5 @@
 # Changelog — lecture_00.qmd
 
-记录对 `lecture_00.qmd` 的每次修改:改动位置、修改前 → 修改后、修改原因。
-
 ---
 
 ## 1. Section 4.1 (`#sec-capm`) — beta interpretation
