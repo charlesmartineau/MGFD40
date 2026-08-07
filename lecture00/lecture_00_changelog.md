@@ -10,7 +10,7 @@
 **After:**
 > β = 1.3 means that when the market's return is 1% higher, the stock's return is, on average, 1.3% higher (or lower, if β is negative).
 
-**Reason:** To make the direction of the relationship explicit. The original phrasing ("tends to move X% when the market moves Y%") is ambiguous about direction — it doesn't clarify that beta describes the sign of the co-movement, not just its magnitude. The revised wording states explicitly that a higher market return is associated with a higher (or lower, for negative beta) stock return, and adds "on average" to flag that this is an expected relationship, not a deterministic one.
+**Reason:** To make the direction of the relationship explicit. The original phrasing ("tends to move X% when the market moves Y%") is ambiguous about direction.
 
 ---
 
@@ -19,7 +19,7 @@
 **Added (after "...after removing what the other variables already explain."):**
 > This is the single most important difference from simple regression: a coefficient in a multiple regression is never just "the relationship between xₖ and y," it is that relationship net of everything else in the model. Add or drop a variable and the remaining coefficients generally change.
 
-**Reason:** To make explicit and stress a point that was previously only implicit in "holding the other variables fixed" — that a multiple-regression coefficient's meaning is conditional on which other variables are in the model, and that this is the key conceptual departure from simple regression. Stating it directly, rather than leaving it to be inferred, reduces the risk that students read $\beta_k$ as a fixed, model-independent quantity.
+**Reason:** To make explicit and stress a point that was previously only implicit in "holding the other variables fixed" — that a multiple-regression coefficient's meaning is conditional on which other variables are in the model, and that this is the key conceptual departure from simple regression.
 
 **Transition sentence revised for flow:**
 
@@ -49,7 +49,7 @@
 >
 > The decision. The p-value is the probability, if H₀ were true, of drawing a sample whose t-statistic is at least this far from zero. Reject H₀ when that probability falls below the significance level α you fixed in advance.
 
-**Reason:** To make the previously compressed one-line summary clearer. The original bullet packed the definition of the t-statistic, the definition of the p-value, and the decision rule into a single sentence, which left the mechanics vague (what exactly is being measured, what "small enough" means). Splitting it into two parallel bullets — one defining the test statistic explicitly with its formula, one defining the p-value and stating the decision rule in terms of α — matches the structure of the $H_0$/$H_1$ bullets above and gives each concept room to be stated precisely.
+**Reason:** To make the previously compressed one-line summary clearer. The original bullet packed the definition of the t-statistic, the definition of the p-value, and the decision rule into a single sentence, which left the mechanics vague (what exactly is being measured, what "small enough" means). Splitting it into two parallel bullets — one defining the test statistic explicitly with its formula, one defining the p-value and stating the decision rule in terms of α — matches the structure of the $H_0$ / $H_1$ bullets above and gives each concept room to be stated precisely.
 
 ---
 
@@ -75,7 +75,7 @@
 >
 > **Seeing it happen.** The claim above is about repeated sampling, which you never observe in practice but can simulate. Below, H₀ is true by construction: x and y are generated independently, so β is zero. We draw 2,000 independent samples, run the regression on each, and count how often the test rejects at α = 0.05.
 
-**Reason:** To build the significance-level concept in a coherent sequence — why a threshold is needed at all, what α precisely means as a conditional probability (and what it does *not* mean, addressing the P(reject | H₀ true) vs. P(H₀ true | rejected) confusion directly), and then bridge into the simulation that follows. The bold-lead-in, short-paragraph format matches the style already used elsewhere in this section (e.g. "Two ways to be wrong").
+**Reason:** To build the significance-level concept in a coherent sequence — why a threshold is needed at all, what α precisely means as a conditional probability (and what it does *not* mean, addressing the P(reject | H₀ true) vs. P(H₀ true | rejected) confusion directly), and then bridge into the simulation that follows.
 
 ---
 
@@ -87,7 +87,7 @@
 
 New top-level order: 1 Motivation → 2 Data → 3 Moments → 4 OLS → 5 Interpreting coefficients → **6 The logic of hypothesis testing** → 7 Standard errors/t-values/p-values/CI → 8 R² → 9 Real regression table → 10 Pitfalls → 11 End-to-end example → 12 Cheat sheet.
 
-**Reason:** It is more natural to introduce the hypothesis-testing framework (H₀, H₁, test statistic, decision rule) before the mechanics of the t-statistic and p-value, rather than after. All cross-references in the document use Quarto's `@sec-xxx` label syntax, which renumbers automatically, so no other section numbers needed manual edits.
+**Reason:** It is more natural to introduce the hypothesis-testing framework (H₀, H₁, test statistic, decision rule) before the mechanics of the t-statistic and p-value, rather than after.
 
 ---
 
@@ -131,9 +131,7 @@ New top-level order: 1 Motivation → 2 Data → 3 Moments → 4 OLS → 5 Inter
 >
 > |t| > 1.96 ⇒ significant at the **5%** level. |t| > 1.65 ⇒ 10%, |t| > 2.58 ⇒ 1%. These are two-sided critical values: 1.96 cuts off 5% of the normal distribution, split between the two tails. They are accurate once df exceeds about 100. Below that, use the t-distribution, where the cutoffs are somewhat larger.
 
-**Reason (per user):** Rewrite the t-statistic half of the section to make clear that a t-statistic is always defined relative to a specific null ($\beta_0$), not just $\beta = 0$ by default — using the general form $t = (\hat\beta - \beta_0)/SE(\hat\beta)$ and pointing to the CAPM $\beta = 1$ case as a concrete example where $\beta_0 \ne 0$. Also folds in the previously agreed "two-sided critical values" clarification directly into the cutoffs callout, replacing the vaguer "(these come from the normal distribution...)" parenthetical.
-
-**Implementation note:** the CAPM example is referenced via `@sec-read-summary` (Quarto crossref) rather than a hardcoded "Section 4.3," consistent with how every other section reference in the document is written.
+**Reason:** Rewrite the t-statistic half of the section to make clear that a t-statistic is always defined relative to a specific null ($\beta_0$), not just $\beta = 0$ by default — using the general form $t = (\hat\beta - \beta_0)/SE(\hat\beta)$ and pointing to the CAPM $\beta = 1$ case as a concrete example where $\beta_0 \ne 0$..
 
 ---
 
@@ -153,9 +151,7 @@ New top-level order: 1 Motivation → 2 Data → 3 Moments → 4 OLS → 5 Inter
 >
 > Read the MKT row two ways. The interval excludes zero, which is the same verdict as t = 11.48 and p ≈ 0. But it also excludes 1, which the reported t and p cannot tell you: they are computed against β₀ = 0. Apple moved more than one-for-one with the market over this sample, and the interval rules out one-for-one at the 5% level.
 
-**Reason (per user):** Gives the CI section a distinct purpose rather than restating the t-stat's zero-vs-nonzero verdict. The rewrite (1) gives the correct repeated-sampling interpretation of "95%" instead of the loose "range of plausible values," (2) explicitly ties the 1.96 critical value back to the two-sided cutoffs established when the t-statistic was introduced, and (3) adds a worked reading of the MKT row showing that the CI can answer a question — is β = 1? — that the default-null t and p (computed against β₀ = 0) cannot, directly following up on the β₀ generalization made in the t-statistic rewrite above.
-
-**Implementation note:** "Section 6.2" is written via `@sec-t-p` (Quarto crossref), consistent with the rest of the document.
+**Reason:** Gives the CI section a distinct purpose rather than restating the t-stat's zero-vs-nonzero verdict. The rewrite (1) gives the correct repeated-sampling interpretation of "95%" instead of the loose "range of plausible values," (2) explicitly ties the 1.96 critical value back to the two-sided cutoffs established when the t-statistic was introduced, and (3) adds a worked reading of the MKT row showing that the CI can answer a question — is β = 1? — that the default-null t and p (computed against β₀ = 0) cannot, directly following up on the β₀ generalization made in the t-statistic rewrite above.
 
 ---
 
@@ -170,9 +166,9 @@ New top-level order: 1 Motivation → 2 Data → 3 Moments → 4 OLS → 5 Inter
 - A new **"Why the correction can be large"** paragraph with a worked panel-data example (500 firms × 120 months) and an overlapping-window example, explaining *why* corrected t-stats can differ substantially from plain OLS.
 - The closing code comparison and last line are unchanged.
 
-**Reason (per user):** Ties the three correction names to a visual (which covariance-matrix cells each one frees up), replaces the vague "you don't need the theory yet" framing with a concrete account of *why* the plain SE formula breaks (clustering / overlapping windows shrink effective sample size), and grounds "the correction can be large" with actual numbers instead of leaving it asserted.
+**Reason:** Ties the three correction names to a visual (which covariance-matrix cells each one frees up), replaces the vague "you don't need the theory yet" framing with a concrete account of *why* the plain SE formula breaks (clustering / overlapping windows shrink effective sample size), and grounds "the correction can be large" with actual numbers instead of leaving it asserted.
 
-**Figure code externalized:** Per the user's request, the plotting code for the new figure is **not** inlined in `lecture_00.qmd`. It now lives in `scripts/se_correction_panels.py`, and the qmd chunk pulls it in via Quarto's `file` chunk option:
+**Figure code externalized:** the plotting code for the new figure is **not** inlined in `lecture_00.qmd`. It now lives in `scripts/se_correction_panels.py`, and the qmd chunk pulls it in via Quarto's `file` chunk option:
 
 ```{{python}}
 #| echo: false
@@ -180,21 +176,7 @@ New top-level order: 1 Motivation → 2 Data → 3 Moments → 4 OLS → 5 Inter
 #| file: scripts/se_correction_panels.py
 ```
 
-This is the Quarto-native way to source an external code file into a chunk (the file's contents execute exactly as if written inline). `scripts/se_correction_panels.py` was created alongside `lecture_00.qmd` — it will need to sit at that relative path (`scripts/` next to the `.qmd`) for the render to find it; update the `file:` path if you place it elsewhere.
-
----
-
-## 3. Section 8 (`#sec-testing`) — H₀/H₁ bullet list: test statistic and decision rule
-
-**Before:**
-> We compute a statistic (a t-stat), ask how likely it is under H₀ (the p-value), and reject H₀ if that's small enough.
-
-**After (split into two bullets):**
-> The test statistic. t = ($\hat{\beta}$ − β₀) / SE($\hat{\beta}$). It measures how many standard errors the estimate sits away from the null value.
->
-> The decision. The p-value is the probability, if H₀ were true, of drawing a sample whose t-statistic is at least this far from zero. Reject H₀ when that probability falls below the significance level α you fixed in advance.
-
-**Reason:** To make the previously compressed one-line summary clearer. The original bullet packed the definition of the t-statistic, the definition of the p-value, and the decision rule into a single sentence, which left the mechanics vague (what exactly is being measured, what "small enough" means). Splitting it into two parallel bullets — one defining the test statistic explicitly with its formula, one defining the p-value and stating the decision rule in terms of α — matches the structure of the $H_0$/$H_1$ bullets above and gives each concept room to be stated precisely.
+This is the Quarto-native way to source an external code file into a chunk (the file's contents execute exactly as if written inline). `scripts/se_correction_panels.py` was created alongside `lecture_00.qmd` — it will need to sit at that relative path (`scripts/` next to the `.qmd`) for the render to find it.
 
 
 ---
