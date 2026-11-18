@@ -1,0 +1,89 @@
+% MGFD40 slide theme
+% Clean and minimal: black titles and text, blue bullets and keywords.
+\ProvidesPackage{mgfd40theme}
+
+% ---------- Packages ----------
+\RequirePackage[T1]{fontenc}
+\RequirePackage[sfdefault]{FiraSans}
+\RequirePackage{tikz}
+\RequirePackage{fontawesome5}
+\RequirePackage{xcolor}
+\usetikzlibrary{positioning,calc}
+
+% ---------- Colors ----------
+\definecolor{mblue}{RGB}{0,90,180}     % bullets, keywords, links
+\definecolor{mblack}{RGB}{20,20,20}    % titles and text
+\definecolor{mgrey}{RGB}{130,130,130}  % secondary text
+\definecolor{mlight}{RGB}{232,240,250} % light blue fill
+
+\setbeamercolor{normal text}{fg=mblack,bg=white}
+\setbeamercolor{frametitle}{fg=mblack,bg=white}
+\setbeamercolor{title}{fg=mblack}
+\setbeamercolor{subtitle}{fg=mblue}
+\setbeamercolor{author}{fg=mblack}
+\setbeamercolor{institute}{fg=mgrey}
+\setbeamercolor{date}{fg=mgrey}
+\setbeamercolor{structure}{fg=mblue}
+\setbeamercolor{itemize item}{fg=mblue}
+\setbeamercolor{itemize subitem}{fg=mblue}
+\setbeamercolor{enumerate item}{fg=mblue}
+\setbeamercolor{alerted text}{fg=mblue}
+
+\hypersetup{colorlinks=true,urlcolor=mblue,linkcolor=mblack}
+
+% ---------- Fonts ----------
+\setbeamerfont{frametitle}{size=\LARGE,series=\bfseries}
+\setbeamerfont{title}{size=\Huge,series=\bfseries}
+\setbeamerfont{subtitle}{size=\Large}
+\setbeamerfont{itemize/enumerate body}{size=\large}
+\setbeamerfont{itemize/enumerate subbody}{size=\normalsize}
+
+% ---------- Layout ----------
+\setbeamertemplate{navigation symbols}{}
+\setbeamersize{text margin left=1.2cm,text margin right=1.2cm}
+
+% Frame title: black, bold, with a short blue accent underneath
+\setbeamertemplate{frametitle}{%
+  \vspace*{0.6cm}%
+  {\usebeamerfont{frametitle}\usebeamercolor[fg]{frametitle}\insertframetitle}\par
+  \vspace{0.15cm}%
+  {\color{mblue}\rule{1.2cm}{2pt}}%
+  \vspace{0.2cm}%
+}
+
+% Bullets: blue dots and dashes
+\setbeamertemplate{itemize item}{\raisebox{0.15ex}{\tikz\fill[mblue] circle (2.6pt);}}
+\setbeamertemplate{itemize subitem}{\raisebox{0.35ex}{\tikz\fill[mblue] (0,0) rectangle (6pt,1.6pt);}}
+\setbeamertemplate{enumerate item}{\color{mblue}\bfseries\insertenumlabel.}
+\setlength{\leftmargini}{1.4em}
+
+% Slide number, bottom right
+\setbeamertemplate{footline}{%
+  \hfill{\color{mgrey}\scriptsize\insertframenumber}\hspace*{0.6cm}\vspace*{0.4cm}%
+}
+
+% Title page
+\setbeamertemplate{title page}{%
+  \vfill
+  {\usebeamerfont{title}\usebeamercolor[fg]{title}\inserttitle}\par
+  \vspace{0.2cm}
+  {\color{mblue}\rule{2cm}{3pt}}\par
+  \vspace{0.4cm}
+  {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle}\par
+  \vspace{1cm}
+  {\large\bfseries\insertauthor}\par
+  \vspace{0.1cm}
+  {\usebeamercolor[fg]{institute}\insertinstitute}\par
+  \vfill
+}
+
+% ---------- Helpers ----------
+% Emphasize a keyword in blue
+\newcommand{\key}[1]{\textcolor{mblue}{\textbf{#1}}}
+% Secondary (grey) text
+\newcommand{\muted}[1]{\textcolor{mgrey}{#1}}
+% Big centered statement slide content
+\newcommand{\bigstatement}[1]{%
+  \vfill\begin{center}{\Huge\bfseries #1}\end{center}\vfill}
+% Blue icon
+\newcommand{\icon}[1]{\textcolor{mblue}{#1}}

@@ -216,3 +216,6 @@ __marimo__/
 
 # ignore folder question in root
 /question/
+
+# no epub
+*.epub

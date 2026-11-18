@@ -1,0 +1,222 @@
+\documentclass[aspectratio=169,11pt]{beamer}
+\usepackage{mgfd40theme}
+
+\title{Investor Psychology}
+\subtitle{MGFD40 \,\textbar\, Lecture 1: Introduction}
+\author{Charles Martineau}
+\institute{University of Toronto Scarborough \& Rotman}
+\date{}
+
+\begin{document}
+
+% ------------------------------------------------------------
+\begin{frame}[plain]
+  \titlepage
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=south east] at ($(current page.south east)+(-0.8,0.6)$)
+      {\includegraphics[height=1.1cm]{uoft.png}};
+  \end{tikzpicture}
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{About me}
+  \vfill
+  \begin{itemize}\setlength{\itemsep}{0.9em}
+    \item From \key{Montreal}
+    \item PhD in Finance, \key{UBC}
+    \item Research: \key{information economics}
+      \begin{itemize}
+        \item How information is produced, spread, and used in markets
+      \end{itemize}
+    \item At UTSC \& Rotman since \key{2017}
+    \item Taught MGFD40 2019--2023 \muted{(then a 2-year sabbatical)}
+  \end{itemize}
+  \vfill
+  \muted{\faGlobe\ \href{https://www.charlesmartineau.com}{charlesmartineau.com}}
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Course material}
+  \vfill
+  \begin{center}
+    {\Large \icon{\faLink}\ \href{https://www.charlesmartineau.com/MGFD40}{\textbf{charlesmartineau.com/MGFD40}}}
+
+    \vspace{1.2cm}
+    \begin{tabular}{c@{\hspace{2.5cm}}c}
+      {\Huge\icon{\faChalkboard}} & {\Huge\icon{\faLaptopCode}} \\[0.4cm]
+      \large Lecture notes & \large Assignment
+    \end{tabular}
+  \end{center}
+  \vfill
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Requirements}
+  \vfill
+  \begin{columns}[T]
+    \column{0.32\textwidth}
+      \centering{\Huge\icon{\faBook}}\par\vspace{0.3cm}
+      \key{Prerequisites}\par\vspace{0.3cm}
+      MGFC10H3\par MGEB12H3
+    \column{0.32\textwidth}
+      \centering{\Huge\icon{\faPython}}\par\vspace{0.3cm}
+      \key{Programming}\par\vspace{0.3cm}
+      Python\par AI is welcome
+    \column{0.32\textwidth}
+      \centering{\Huge\icon{\faChartLine}}\par\vspace{0.3cm}
+      \key{Econometrics}\par\vspace{0.3cm}
+      Regression basics
+  \end{columns}
+  \vfill
+  \pause
+  \begin{center}
+    {\Large Come to \key{every} class.}
+  \end{center}
+  \vfill
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{A better name for this course}
+  \vfill
+  \begin{center}
+    {\Huge\bfseries
+      \alt<2->{%
+        \tikz[baseline=(t.base)]{
+          \node[inner sep=2pt,text=mgrey](t){Investor Psychology};
+          \draw[mblue,line width=4pt,line cap=round]
+            ($(t.west)+(-0.1,-0.05)$) -- ($(t.east)+(0.1,0.12)$);
+        }}{Investor Psychology}}
+
+    \vspace{1cm}
+    \onslide<3->{%
+      {\fontsize{36}{44}\selectfont\bfseries\color{mblue}\mbox{The Madness of Markets}}
+
+      \vspace{0.8cm}
+      \muted{Inspired by Alex Edmans}}
+  \end{center}
+  \vfill
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Objectives}
+  \vfill
+  \begin{columns}[T]
+    \column{0.46\textwidth}
+      {\Large\icon{\faBrain}\ \ \textbf{Theory}}
+      \vspace{0.5cm}
+      \begin{itemize}\setlength{\itemsep}{0.7em}
+        \item \key{Rationality} \& the \key{EMH}, and how they fail
+        \item \key{Behavioral biases} and their effect on prices \& firms
+        \item \key{Limits to arbitrage}
+      \end{itemize}
+    \column{0.46\textwidth}
+      \pause
+      {\Large\icon{\faCode}\ \ \textbf{Practice}}
+      \vspace{0.5cm}
+      \begin{itemize}\setlength{\itemsep}{0.7em}
+        \item Code \key{trading strategies} in Python
+        \item Design \key{statistical tests} to find inefficiencies
+        \item \key{Exploit} the mispricing
+      \end{itemize}
+  \end{columns}
+  \vfill
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Themes of the course}
+  \vfill
+  \begin{center}
+    \begin{tikzpicture}[
+        box/.style={draw=mblue,line width=1.5pt,rounded corners=6pt,
+                    minimum width=3.8cm,minimum height=1.4cm,
+                    font=\Large\bfseries,text=mblack},
+        base/.style={fill=mlight,rounded corners=6pt,
+                     minimum width=12.6cm,minimum height=1.2cm,
+                     font=\large,text=mblack}]
+      \node[base] (f) at (0,0) {Behavioral finance \& decision-making under uncertainty};
+      \node[above=0.2cm of f,font=\normalsize,text=mgrey] {Foundations (mostly theory)};
+      \node[box,anchor=north] (u) at ($(f.south)+(0,-1.1)$) {Underreaction};
+      \node[box,left=0.6cm of u]  (o) {Overreaction};
+      \node[box,right=0.6cm of u] (m) {Mispricing};
+      \node[above=0.1cm of u,font=\normalsize,text=mgrey] {The 3 big themes};
+    \end{tikzpicture}
+  \end{center}
+  \vfill
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}[fragile]{Course syllabus}
+  \bigstatement{%
+    \icon{\faFilePdf}\ \href{https://www.dropbox.com/scl/fi/bpbmgzatjmjnqw69x10jm/MGFD40H3S-2026_Winter_Syllabus-20251125.pdf?rlkey=imn1hhmnx2dwwn084nyiokanq&dl=0}{Read the syllabus}}
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Coding}
+  \vfill
+  \begin{itemize}\setlength{\itemsep}{1em}
+    \item \key{Python} is essential for your \key{final project}
+    \item \key{AI tools} make coding easier than ever. Use them!
+    \item The Python \key{assignment} is already online
+  \end{itemize}
+  \vfill
+  \pause
+  \begin{center}
+    {\Large \icon{\faExclamationCircle}\ No live coding in class.}\par
+    \vspace{0.2cm}
+    \muted{Questions? Ask, and I will cover them in class.}
+  \end{center}
+  \vfill
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Get set up}
+  \vfill
+  \begin{center}
+    \begin{tabular}{c@{\hspace{3cm}}c}
+      {\Huge\icon{\faWindows}} & {\Huge\icon{\faApple}} \\[0.4cm]
+      \href{https://www.youtube.com/watch?v=uxgkWssqkAU}{\large\textbf{Windows video}} &
+      \href{https://www.youtube.com/watch?v=0wj8F_oBYEE}{\large\textbf{Mac video}}
+    \end{tabular}
+
+    \vspace{1.2cm}
+    We use \key{uv}. \muted{Already on Anaconda? That's fine.}
+  \end{center}
+  \vfill
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Reference letters}
+  \vfill
+  \begin{center}
+    {\Large Necessary condition: \key{A or above}}
+  \end{center}
+  \vfill
+  \pause
+  \textbf{Send me:}
+  \begin{itemize}\setlength{\itemsep}{0.5em}
+    \item CV \& personal statement
+    \item Unofficial transcript
+    \item Scanned UofT ID card
+  \end{itemize}
+  \vfill
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Want a strong letter?}
+  \vfill
+  \begin{itemize}\setlength{\itemsep}{1.2em}
+    \item \key{Speak up}. Leave an impression.
+    \item I discuss your \key{group project} in my letter
+    \item Show \key{leadership} and do very well on it
+  \end{itemize}
+  \vfill
+  \muted{The group project is how I assess your potential for graduate school.}
+  \vfill
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}[plain]
+  \bigstatement{Questions?}
+\end{frame}
+
+\end{document}
